@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/main.css">
+    <title>Nasza strona</title>
+</head>
+<body>
+    <h1>Nasza strona główna</h1>
+    <nav>
+        <ul>
+            <li><a asp-page="/Index">Główna strona</a></li>
+            <li><a asp-page="/Nowa1">Pierwsza podstrona</a></li>
+            <li><a asp-page="/Nowa2">Druga podstrona</a></li>
+        </ul>
+
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿@page
+@model MyApp.Namespace.Nowa1Model
+@{
+}
+<h3>Pierwsza podstrona</h3>
+<div>
+    <ol>
+        @foreach (var kwiat in Model.Kwiaty)
+        {
+            <li>@kwiat</li>
+        }
+    </ol>
+</div>
