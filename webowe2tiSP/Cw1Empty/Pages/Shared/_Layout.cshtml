@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja strona Asp.Net Core 3.1</title>
+    <link rel="stylesheet" href="~/css/main.css">
+</head>
+<body>
+    <h1>Moja strona Asp.Net Core 3.1</h1>
+    <nav>
+        <ul>
+            <li><a asp-page="/Index" >Strona główna</a></li>
+            <li><a asp-page="/Nowa1" >Podstrona pierwsza</a></li>
+            <li><a asp-page="/Nowa2" >Podstrona druga</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>

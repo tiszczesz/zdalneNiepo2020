@@ -36,3 +36,15 @@ function insertPacjent(array $dane){
     $conn->close();
     return $dane;
 }
+function getAll(){
+    $conn = getConnection();
+    if($conn==null) die("ERROR!!!");
+    $sql = "SELECT imie,nazwisko,dataWizyty FROM pacjenci ";
+    echo "<ul>";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_row()){
+        echo "<li>{$row[0]} {$row[1]} data wizyty: {$row[2]}</li>";
+    }
+    echo "</ul>";
+    $conn->close();    
+}

@@ -1,0 +1,12 @@
+﻿@page
+@model MyApp.Namespace.Nowa1Model
+@{
+}
+<h3>Nowa1</h3>
+<div>
+    @foreach (var item in Model.Numbers)
+    {
+        //@string.Format("{0} ",item);
+        <span>@item </span>
+    }
+</div>

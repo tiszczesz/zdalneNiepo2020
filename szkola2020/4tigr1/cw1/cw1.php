@@ -11,7 +11,7 @@
     <h1>Przychodnia</h1>
     <h3>Dodaj wizytę</h3>
     <section id="main">
-        <form action="dodajWizytę.php" method="post">
+        <form action="dodajWizytę.php" method="post" id="form1">
 
             <div class="line">
                 <label for="imie">Podaj imię: </label>
@@ -45,6 +45,13 @@
             </div>
         </form>
     </section>
+    <script>
+        window.onload = function(){
+            document.querySelector("#form1").onsubmit = function(){
+                return document.querySelector("#zgoda").checked;
+            }
+        }
+    </script>
 </body>
 
 </html>

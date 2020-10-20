@@ -16,7 +16,9 @@
         $lekarzID = trim($_POST['lekarzID']);
         $opis = trim($_POST['opis']);
         insertPacjent([$imie,$nazwisko,$data,$opis,$lekarzID]);
+        echo "<div>Dodano wizytę</div>";
     }
     ?>
+    <div><a href="all.php">Zobacz wszystkie wizyty</a></div>
 </body>
 </html>
