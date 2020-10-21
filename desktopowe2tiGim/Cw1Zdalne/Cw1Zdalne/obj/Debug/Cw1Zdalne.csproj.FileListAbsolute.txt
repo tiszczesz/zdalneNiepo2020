@@ -1,0 +1,7 @@
+D:\zdalne\zdalneNiepo2020\desktopowe2tiGim\Cw1Zdalne\Cw1Zdalne\bin\Debug\Cw1Zdalne.exe.config
+D:\zdalne\zdalneNiepo2020\desktopowe2tiGim\Cw1Zdalne\Cw1Zdalne\bin\Debug\Cw1Zdalne.exe
+D:\zdalne\zdalneNiepo2020\desktopowe2tiGim\Cw1Zdalne\Cw1Zdalne\bin\Debug\Cw1Zdalne.pdb
+D:\zdalne\zdalneNiepo2020\desktopowe2tiGim\Cw1Zdalne\Cw1Zdalne\obj\Debug\Cw1Zdalne.csprojAssemblyReference.cache
+D:\zdalne\zdalneNiepo2020\desktopowe2tiGim\Cw1Zdalne\Cw1Zdalne\obj\Debug\Cw1Zdalne.csproj.CoreCompileInputs.cache
+D:\zdalne\zdalneNiepo2020\desktopowe2tiGim\Cw1Zdalne\Cw1Zdalne\obj\Debug\Cw1Zdalne.exe
+D:\zdalne\zdalneNiepo2020\desktopowe2tiGim\Cw1Zdalne\Cw1Zdalne\obj\Debug\Cw1Zdalne.pdb

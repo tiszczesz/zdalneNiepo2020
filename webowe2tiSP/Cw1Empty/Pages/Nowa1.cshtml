@@ -4,9 +4,15 @@
 }
 <h3>Nowa1</h3>
 <div>
-    @foreach (var item in Model.Numbers)
-    {
-        //@string.Format("{0} ",item);
-        <span>@item </span>
-    }
+    <table>
+   @{int index = 0;}
+   @for(var i=0; i < Model.Numbers.Length/6;i++){
+       <tr>
+           @for(var j=0; j<6;j++){
+               <td>@Model.Numbers[@index]</td>
+               index++;
+           }
+        </tr>
+   }
+    </table>
 </div>

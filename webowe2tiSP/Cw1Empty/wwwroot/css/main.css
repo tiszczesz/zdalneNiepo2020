@@ -1,2 +1,4 @@
 h1{text-align: center;border-bottom: solid 1px green;}
 h3{text-align: right;color: brown;}
+table{border-collapse: collapse; margin: 30px;}
+td{border: solid 1px brown; padding: 6px;text-align: right;}

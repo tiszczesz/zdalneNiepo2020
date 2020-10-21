@@ -15,7 +15,7 @@ namespace MyApp.Namespace
             fillNumbers();
         }
         private void fillNumbers(){
-            if(Numbers==null) Numbers = new int[20];
+            if(Numbers==null) Numbers = new int[60];
             Random rnd = new Random();
             for(var i=0;i<Numbers.Length;i++){
                 Numbers[i] = rnd.Next(0,100);
