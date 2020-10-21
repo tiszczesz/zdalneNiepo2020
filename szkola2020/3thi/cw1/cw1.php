@@ -9,6 +9,7 @@
         label{display: inline-block;width: 150px;text-align: right;}
         table{border-collapse: collapse;margin: 30px 20px;}
         td{border:solid 1px brown;padding: 6px;text-align: right;}
+        .wyr{background-color: lightblue;color: blue;}
     </style>
 </head>
 <body>
@@ -41,6 +42,7 @@
             echo generTab($rows,$cols);
         }
         ?>
+        <!-- tiszczesz@gmail.com -->
     </div>
 </body>
 </html>

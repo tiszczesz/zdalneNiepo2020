@@ -8,6 +8,7 @@
         .line{margin: 20px 30px;}
         label{display: inline-block; width: 180px;text-align: right;}
         input[type=radio],input[type=checkbox]{margin-left: 180px;}
+      
     </style>
 </head>
 <body>
