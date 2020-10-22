@@ -45,6 +45,20 @@
             </div>
         </form>
     </section>
+    <div id="footer">Ilość odwiedzin: <?php
+        $f = fopen("dane.txt","r");
+        if($f){
+            $licznik = fgets($f);
+            $licznik++;
+            echo $licznik;
+            fclose($f);
+        }
+        $f = fopen("dane.txt",'w');
+        if($f){
+            fwrite($f,$licznik);
+            fclose($f);
+        }
+      ?></div>
     <script>
         window.onload = function(){
             document.querySelector("#form1").onsubmit = function(){
