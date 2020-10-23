@@ -18,6 +18,7 @@
                 $licznik  = fgets($f);
                 echo $licznik;
                 fclose($f);
+                echo __DIR__;
             }
             $licznik++;
             $f = fopen("dane.txt",'w');
