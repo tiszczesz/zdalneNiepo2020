@@ -1,4 +1,3 @@
 ﻿  cw1SP.cpp
-  functions.cpp
-  Generating Code...
+D:\zdalne\zdalneNiepo2020\obiektowe 2tiSP\cw1SP\cw1SP\cw1SP.cpp(34,16): warning C4018: '<': signed/unsigned mismatch
   cw1SP.vcxproj -> D:\zdalne\zdalneNiepo2020\obiektowe 2tiSP\cw1SP\Debug\cw1SP.exe
