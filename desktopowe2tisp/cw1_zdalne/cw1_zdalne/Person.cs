@@ -11,14 +11,18 @@ namespace cw1_zdalne
         private int age;
         private string lastName;
 
+        public string LastName {
+            get { return lastName; }
+            set { lastName = value; }
+        }
+
         public Person() {
             name = "noname";
             age = 20;
             lastName = "noname";
         }
-        public string Name {
-            get { return name; }
-            set { name = value; }
+        public string Name {// Console.WriteLine(p1.Name)
+            set { name = value; }   //p1.Name = "Jancio";
         }
         public int Age {
             get { return age; }
@@ -32,7 +36,7 @@ namespace cw1_zdalne
         }
 
         public override string ToString() {
-            return "To jest osoba: " + name + " w wieku: " + age;
+            return "To jest osoba: " + name +" "+ lastName+ " w wieku: " + age;
         }
     }
 }

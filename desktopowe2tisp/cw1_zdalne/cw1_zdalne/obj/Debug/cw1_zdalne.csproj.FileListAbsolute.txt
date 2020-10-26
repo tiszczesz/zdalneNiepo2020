@@ -5,3 +5,10 @@ D:\zdalne\desktopowe2tisp\cw1_zdalne\cw1_zdalne\obj\Debug\cw1_zdalne.csprojAssem
 D:\zdalne\desktopowe2tisp\cw1_zdalne\cw1_zdalne\obj\Debug\cw1_zdalne.csproj.CoreCompileInputs.cache
 D:\zdalne\desktopowe2tisp\cw1_zdalne\cw1_zdalne\obj\Debug\cw1_zdalne.exe
 D:\zdalne\desktopowe2tisp\cw1_zdalne\cw1_zdalne\obj\Debug\cw1_zdalne.pdb
+D:\zdalne\zdalneNiepo2020\desktopowe2tisp\cw1_zdalne\cw1_zdalne\bin\Debug\cw1_zdalne.exe.config
+D:\zdalne\zdalneNiepo2020\desktopowe2tisp\cw1_zdalne\cw1_zdalne\bin\Debug\cw1_zdalne.exe
+D:\zdalne\zdalneNiepo2020\desktopowe2tisp\cw1_zdalne\cw1_zdalne\bin\Debug\cw1_zdalne.pdb
+D:\zdalne\zdalneNiepo2020\desktopowe2tisp\cw1_zdalne\cw1_zdalne\obj\Debug\cw1_zdalne.csprojAssemblyReference.cache
+D:\zdalne\zdalneNiepo2020\desktopowe2tisp\cw1_zdalne\cw1_zdalne\obj\Debug\cw1_zdalne.csproj.CoreCompileInputs.cache
+D:\zdalne\zdalneNiepo2020\desktopowe2tisp\cw1_zdalne\cw1_zdalne\obj\Debug\cw1_zdalne.exe
+D:\zdalne\zdalneNiepo2020\desktopowe2tisp\cw1_zdalne\cw1_zdalne\obj\Debug\cw1_zdalne.pdb
