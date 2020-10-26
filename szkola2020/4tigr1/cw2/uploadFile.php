@@ -15,6 +15,7 @@
       $sprawdz = getimagesize($_FILES['plik']['tmp_name']);
       $imType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
       if($sprawdz!==false){
+        //  var_dump($sprawdz);
           echo "<div>To jest obrazek {$sprawdz['mime']}</div>";
           $isOk = true;
       }else{
