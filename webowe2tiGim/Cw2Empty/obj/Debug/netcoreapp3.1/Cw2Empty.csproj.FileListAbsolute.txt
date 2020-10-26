@@ -7,7 +7,6 @@ D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\bin\Debug\netcoreapp3.1\Cw2Empty
 D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\bin\Debug\netcoreapp3.1\Cw2Empty.runtimeconfig.dev.json
 D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\bin\Debug\netcoreapp3.1\Cw2Empty.dll
 D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\bin\Debug\netcoreapp3.1\Cw2Empty.pdb
-D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\obj\Debug\netcoreapp3.1\Cw2Empty.csprojAssemblyReference.cache
 D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\obj\Debug\netcoreapp3.1\Cw2Empty.AssemblyInfoInputs.cache
 D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\obj\Debug\netcoreapp3.1\Cw2Empty.AssemblyInfo.cs
 D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\obj\Debug\netcoreapp3.1\Cw2Empty.csproj.CoreCompileInputs.cache
@@ -34,3 +33,4 @@ D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\obj\Debug\netcoreapp3.1\Razor\Pa
 D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
 D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\obj\Debug\netcoreapp3.1\Razor\Pages\Nowa1.cshtml.g.cs
 D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\obj\Debug\netcoreapp3.1\Razor\Pages\Nowa2.cshtml.g.cs
+D:\zdalne\zdalneNiepo2020\webowe2tiGim\Cw2Empty\obj\Debug\netcoreapp3.1\Cw2Empty.csprojAssemblyReference.cache

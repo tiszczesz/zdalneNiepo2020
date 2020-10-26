@@ -1,5 +1,30 @@
 ﻿@page
-@model MyApp.Namespace.Nowa2Model
+@model Cw2Empty.Nowa2Model
 @{
 }
 <h3>Druga podstrona</h3>
+
+<div>
+    <form method="post">
+        <div class="line">
+            <label for="A">Podaj A: </label>
+            <input type="number" name="a" />
+        </div>
+        <div class="line">
+            <label for="B">Podaj B: </label>
+            <input type="number" name="b" />
+        </div>
+        <div class="line">
+            <input type="submit" value="Oblicz"/>
+        </div>
+
+    </form>
+</div>
+@if (Model.A != null) {
+    <div>
+        @{
+            int? wynik = Model.A + Model.B;
+        }
+        <span>@Model.A</span> +<span>@Model.B</span> =@wynik
+    </div>
+}
