@@ -7,12 +7,29 @@
     <form method="post">
         <div class="line">
             <label for="A">Podaj A: </label>
-            <input type="number" name="A" />
+            <input type="number" name="A" min="1" max="50"/>
         </div>
         <div class="line">
             <label for="B">Podaj B: </label>
-            <input type="number" name="B" />
+            <input type="number" name="B" min="1" max="50" />
         </div>
         <input type="submit" value="Zapisz" />
     </form>
 </div>
+@if (Model.IsPost) {
+    <div>
+        <table>
+            @{ int liczba = 0;}
+            @for (var i = 0; i < Model.A; i++) {
+                <tr>
+                    @for (var j = 0; j < Model.B; j++) {
+                        liczba++;
+                        <td>@liczba</td>
+                        
+                    }
+                </tr>
+            }
+        </table>
+
+    </div>
+}
