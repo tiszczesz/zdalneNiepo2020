@@ -8,7 +8,7 @@
         .line{margin: 20px 30px;}
         label{display: inline-block; width: 180px;text-align: right;}
         input[type=radio],input[type=checkbox]{margin-left: 180px;}
-      
+        .wynik{border: solid 1px green;padding: 10px;px;margin: 30px 20px;}
     </style>
 </head>
 <body>
@@ -54,9 +54,31 @@
     </div>
     <div>
         <?php
-        var_dump($_POST);
+      //  var_dump($_POST);
         if(isset($_POST['imie'])){
             //todo tiszczesz@gmail.com
+            $imie = trim($_POST['imie']);
+            $nazwisko = trim($_POST['nazwisko']);
+            $data = trim($_POST['data']);
+            $klasa = trim($_POST['klasa']);
+            //todo
+            $plec = $_POST['plec'];
+            if(isset($_POST['zaint'])){
+                $zaint = $_POST['zaint'];
+            }else{
+                $zaint = [];
+            }
+            $html = "<div>Zarejestrowano {$imie} {$nazwisko} plec: {$plec} z datą: {$data} do klasy: {$klasa}</div>\n";
+            if(count($zaint)>0){
+                $html .= "Twoje zainteresowania: ";
+                $html .= "<ul>";
+                foreach($zaint as $z){
+                    $html .= "<li>{$z}</li>";
+                }
+            }else{
+                $html .= "Nie wybrano żadnych zainteresowań!!!!";
+            }
+            echo "<div class='wynik'>{$html}</div>";
         }
         ?>
     </div>
