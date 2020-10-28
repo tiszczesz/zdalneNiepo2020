@@ -1,5 +1,2 @@
 ﻿  cw1Cpp.cpp
-  functions.cpp
-D:\zdalne\zdalneNiepo2020\obiektowe2tiGim\cw1Cpp\cw1Cpp\functions.cpp(30,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
   cw1Cpp.vcxproj -> D:\zdalne\zdalneNiepo2020\obiektowe2tiGim\cw1Cpp\Debug\cw1Cpp.exe

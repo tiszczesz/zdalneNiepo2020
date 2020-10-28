@@ -5,3 +5,4 @@ void Licz(int ile);
 void showPrimes(std::vector<int> primes);
 std::vector<int> getPrimes(unsigned int limit);
 bool isPrime(int number);
+std::vector<int> GetRandoms(int limit);

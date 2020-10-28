@@ -36,6 +36,14 @@ std::vector<int> getPrimes(unsigned int limit) {
 	}
 	return primes;
 }
+std::vector<int> GetRandoms(int limit) {
+	std::vector<int> liczby;
+	srand(time(0));
+	for(auto i=0;i<limit;i++) {
+		liczby.push_back(rand());
+	}
+	return liczby;
+}
 void showPrimes(std::vector<int> primes) {
 	for (auto value : primes) {
 		std::cout << value << " ";

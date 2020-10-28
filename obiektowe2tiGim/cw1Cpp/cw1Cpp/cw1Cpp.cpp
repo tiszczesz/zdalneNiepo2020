@@ -35,6 +35,10 @@ void Ex4() {
 	cin >> ile;
 	vector<int> dane = getPrimes(ile);
 	showPrimes(dane);
+	cout << "Podaj ilosc liczb losowych: ";
+	cin >> ile;
+	vector<int> losowe = GetRandoms(ile);
+	showPrimes(losowe);
 }
 int main()
 {
@@ -42,6 +46,7 @@ int main()
 	//Ex2();
 	//Ex3();
 	Ex4();
+	//todo Ex5 - generator liczb podzielnych przez np 3 (ogolnie przez liczbe podana jako argument funkcji
 	return 0;
 }
 
