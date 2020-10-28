@@ -41,12 +41,18 @@ void Ex3() {
 	cin >> ile;
 	vector<int> primes = GetPrimeNumbers(ile);
 	ShowNumbers(primes);
+	cout << "Podaj ile chcesz liczb losowych: ";
+	cin >> ile;
+	vector<int> liczby =  GetRandomNumbers(ile);
+	ShowNumbers(liczby);
 }
 int main()
 {
 	//Ex1();
 	//Ex2();
 	Ex3();
+	//todo Wygenerowanie liczb losowych
+	//todo Ex4 Wygenerowanie ustalonej jako arg funcji liczb losowych podzielnych przez np 3
     return 0;
 }
 

@@ -20,6 +20,8 @@ namespace Cw1Zdalne
             foreach (Student s in Students) {
                 Console.WriteLine(s.ShowStudent());
             }
+            Console.WriteLine("===============================================");
+            getAdd();
         }
 
         public SetOfStudents() {
@@ -29,7 +31,7 @@ namespace Cw1Zdalne
             if(Students==null) Students = new Student[6];
             Students[0] = new Student("Adam","Glowa",15,"1A");
             Students[1] = new Student("Tomasz", "Torek", 15, "1A");
-            Students[2] = new Student("Monika", "Rybnik", 15, "1A");
+            Students[2] = new Student("Monika", "Rybnik", 16, "1A");
             Students[3] = new Student("Ryszard", "Glowa", 15, "1A");
             Students[4] = new Student("Boleslaw", "Kowalski", 15, "1A");
             Students[5] = new Student("Boleslaw", "Kowalski", 21, "1A");
@@ -42,6 +44,13 @@ namespace Cw1Zdalne
             }
 
             return result;
+        }
+
+        private void getAdd() {
+            var result = Students.AsEnumerable().Where(s => s.Age % 2 == 0).ToArray();
+            foreach (var s in result) {
+                Console.WriteLine(s.ShowStudent());
+            }
         }
     }
 }

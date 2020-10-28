@@ -40,3 +40,11 @@ void ShowNumbers(vector<int> numbers) {
 		cout << number << " ";
 	}
 }
+std::vector<int> GetRandomNumbers(int limit) {
+	std::vector<int> dane;
+	srand(time(0));
+	for(int i=0;i<limit;i++) {
+		dane.push_back(rand());
+	}
+	return dane;
+}

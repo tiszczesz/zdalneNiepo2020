@@ -1,0 +1,6 @@
+Open the file for writing only. If the file does not exist, it is created. If it exists, 
+it is neither truncated (as opposed to 'w'), nor the call to this function fails (as is the case with 'x').
+ The file pointer is positioned on the beginning of the file. This may be useful if it's desired to get an advisory lock
+  (see flock()) before attempting to modify the file, as using 'w' could truncate the file before the lock was obtained (if truncation is desired,
+ ftruncate() can be used after the lock is requested). 
+ To jest faktycznie z pliku dane.txt
