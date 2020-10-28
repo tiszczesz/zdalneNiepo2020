@@ -28,8 +28,9 @@ namespace Cw1Zdalne
         static void Ex2() {
             SetOfStudents students = new SetOfStudents();
             students.ShowAll();
-            //todo dolozenie informacji o ilosci studentow w ShowAll
+           
             //todo napisanie metody ktora oblicza ile jest studentow w danym zakresie wiekowym 
+            //todo wyswietlic wszystkich studentow o nazwisko dluzszym niz arg funkcji ShowOver(6)
         }
     }
 }

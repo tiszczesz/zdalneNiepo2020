@@ -50,5 +50,9 @@ namespace Cw1Zdalne
             return "Informacje o uczniu: " + this.firstName + " " + this.lastName
                    + " wiek: " + this.age+" klasa: "+this.division;
         }
+
+        public bool IsAdult() {
+            return this.age >= 18;
+        }
     }
 }
