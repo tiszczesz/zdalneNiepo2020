@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    #obrazki{display: flex;}
+    body{background-color: lightblue;}
+    </style>
 </head>
 <body>
     <?php
@@ -44,8 +48,14 @@
               echo "<div>ERROR!!!!</div>";
           }
       }
-
-       // var_dump($imType);
+      $pliki = scandir($kat);
+      echo "<div id='obrazki'>";
+      foreach($pliki as $p){
+          if($p=='.' || $p=='..') continue;
+          echo "<img src='uploads\\".$p."' alt='{$p}'>\n";
+      }
+      echo "</div>";
+       // var_dump($pliki);
     }
    // var_dump($_FILES);
     ?>
