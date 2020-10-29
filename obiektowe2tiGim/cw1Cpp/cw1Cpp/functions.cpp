@@ -49,3 +49,15 @@ void showPrimes(std::vector<int> primes) {
 		std::cout << value << " ";
 	}
 }
+
+std::vector<int> GenerDividedBy(int limit=10,int divided=2) {
+	std::vector<int> liczby;
+	srand(time(0));
+	while(liczby.size()<limit) {
+		int losowa = rand() % 1000;
+		if(losowa%divided==0) {
+			liczby.push_back(losowa);
+		}
+	}
+	return liczby;
+}

@@ -40,13 +40,24 @@ void Ex4() {
 	vector<int> losowe = GetRandoms(ile);
 	showPrimes(losowe);
 }
+void Ex5() {
+	cout << "Ile chcesz liczb: ";
+	int ile;
+	cin >> ile;
+	cout << "Przez ile maja byc podzielne: ";
+	int div;
+	cin >> div;
+	vector<int> dane = GenerDividedBy(ile, div);
+	showPrimes(dane);
+}
 int main()
 {
 	//Ex1();
 	//Ex2();
 	//Ex3();
-	Ex4();
+	//Ex4();
 	//todo Ex5 - generator liczb podzielnych przez np 3 (ogolnie przez liczbe podana jako argument funkcji
+	Ex5();
 	return 0;
 }
 
