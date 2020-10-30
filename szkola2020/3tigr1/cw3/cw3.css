@@ -1,0 +1,9 @@
+.line{
+    margin: 20px 40px;
+}
+label{display: inline-block;text-align: right; width: 200px;}
+select,input[type=submit]{margin-left: 210px;}
+table{border-collapse: collapse;width: 400px;}
+th,td{border: solid 1px black; padding: 10px;}
+th{background-color: lightslategray;}
+

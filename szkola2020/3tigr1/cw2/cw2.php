@@ -19,9 +19,9 @@
         }
         fclose($f);
        }
-       $f = fopen("wynik.txt",'w');
+       $f = fopen("wynik.txt",'a');
        if($f){
-           fwrite($f,"ala ma kota małego!!!!!!");
+           fwrite($f,"ala ma kota małego!!!!!!".PHP_EOL);
            fclose($f);
        }
     ?>

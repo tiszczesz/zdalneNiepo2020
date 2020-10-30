@@ -52,8 +52,8 @@
                     echo "<div>brak znajomości języków programowania</div>";
                 }
             }
-            //todo Porządny formularz z inputami: text number date radio checkbox i obsługa formularza
-            //po stronie serwera (z walidacją)
+            //todo Porządny formularz z inputami: text number date radio checkbox select i obsługa formularza 
+            //po stronie serwera (z walidacją) 
         }
         ?>
     </div>
