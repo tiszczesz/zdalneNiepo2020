@@ -19,7 +19,7 @@ namespace MyApp.Namespace
         public void OnPost() {
             IsPost = true;
             try {
-                A = Convert.ToInt32(Request.Form["A"]);
+                A = Convert.ToInt32(Request.Form["A"]);//$_POST['nazwa']
                 B = Convert.ToInt32(Request.Form["B"]);
             }
             catch (System.FormatException ex) {
