@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body>
+<h1>Strona Layout</h1>
+<nav>
+    <ul>
+        <li><a asp-page="/Index">Główna strona</a></li>
+        <li><a asp-page="/Nowa1">Podstrona 1</a></li>
+    </ul>
+</nav>
+<div>
+    @RenderBody()
+</div>
+</body>
+</html>

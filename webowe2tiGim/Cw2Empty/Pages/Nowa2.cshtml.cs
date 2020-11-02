@@ -17,8 +17,15 @@ namespace Cw2Empty
         }
 
         public void OnPost() {
-            A = Convert.ToInt32(Request.Form["a"]);
-            B = Convert.ToInt32(Request.Form["b"]);
+            try {
+                A = Convert.ToInt32(Request.Form["a"]);
+                B = Convert.ToInt32(Request.Form["b"]);
+            }
+            catch (FormatException ex) {
+                A = 20;
+                B = 20;
+            }
+          
         }
     }
 }

@@ -19,20 +19,25 @@ namespace cw1_zdalne
         }
 
         private void fillPersons() {
-            if(persons==null) persons = new Person[5];
+            if(persons==null) persons = new Person[6];
             persons[0] = new Person("Adam","Nowak",33,salary:1000);
             persons[1] = new Person(){Name = "Tomasz",LastName="Rocki",Age=22,Salary = 6500};
             persons[2] = new Person();
             persons[3] = new Person(){Name = "Ryszard",LastName = "Jarecki",Age=22,Salary = 3900};
             persons[4] = new Person() { Name = "Monika", LastName = "Tomaszek", Age = 25 ,Salary = 5300};
+            persons[5] = new Person() { Name = "Monika", LastName = "Adamczyk", Age = 67, Salary = 2100 };
         }
 
         public void ShowAll() {
             foreach (Person p in persons) {
                 Console.WriteLine(p);
             }
-            Console.WriteLine($"Srednia pensja pracownikow: {GetAVGSalary()} zl");
+            Console.WriteLine($"Srednia pensja pracownikow: {Math.Round(GetAVGSalary(),2)} zl");
             Console.WriteLine($"Maksymalna pensja pracownikow: {GetMaxSalry()} zl");
+            Console.WriteLine($"Mninimalny wiek  pracownikow: {GetMinAge()}");
+            Console.WriteLine($"Srednia dlugosc nazwiska  pracownikow: {GetAVGLastNameLength()}");
+            Console.WriteLine("=====================================================");
+            GetLastNameSort();
         }
 
         public decimal GetAVGSalary() {
@@ -41,6 +46,21 @@ namespace cw1_zdalne
 
         public decimal GetMaxSalry() {
             return persons.Max(p => p.Salary);
+        }
+
+        public int GetMinAge() {
+            return persons.Min(p => p.Age);
+        }
+
+        public double GetAVGLastNameLength() {
+            return persons.Average(p => p.LastName.Length);
+        }
+
+        public void GetLastNameSort() {
+            Person[] lista = persons.OrderBy(p => p.LastName).ToArray();
+            foreach (Person p in lista) {
+                Console.WriteLine(p);
+            }
         }
     }
 }

@@ -8,11 +8,11 @@
     <form method="post">
         <div class="line">
             <label for="A">Podaj A: </label>
-            <input type="number" name="a" />
+            <input type="number" name="a" required>
         </div>
         <div class="line">
             <label for="B">Podaj B: </label>
-            <input type="number" name="b" />
+            <input type="number" name="b" required/>
         </div>
         <div class="line">
             <input type="submit" value="Oblicz"/>
@@ -21,10 +21,12 @@
     </form>
 </div>
 @if (Model.A != null) {
-    <div>
-        @{
-            int? wynik = Model.A + Model.B;
-        }
-        <span>@Model.A</span> +<span>@Model.B</span> =@wynik
-    </div>
+<div class="wynik">
+    @{
+        int? wynik1 = Model.A + Model.B;
+        int? wynik2 = Model.A - Model.B;
+    }
+    <span>@Model.A</span> +<span>@Model.B</span> =@wynik1 <br/>
+    <span>@Model.A</span> -<span>@Model.B</span> =@wynik2 <br/>
+</div>
 }

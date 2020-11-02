@@ -3,3 +3,6 @@ h1{text-align: center;border: solid 1px green;}
 .line{ margin: 25px;}
 label{ display: inline-block; width: 150px;text-align: right;}
 input[type=submit]{ padding: 10px;width: 150px;margin-left: 150px;}
+.wynik{ margin: 40px; padding: 20px; background-color: lightcoral;border: solid 2px black;
+    border-radius: 10px;
+}
