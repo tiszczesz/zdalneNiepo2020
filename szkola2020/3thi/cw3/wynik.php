@@ -16,7 +16,7 @@
     $data = trim($_POST['data']);
     $funkcja = trim($_POST['funkcja']);
     if($imie=='' || $nazwisko=='' || $data==''){
-        header("Location: cw3.php");
+       // header("Location: cw3.php");
     }
     $f = fopen("dane.txt","a");
     if($f){

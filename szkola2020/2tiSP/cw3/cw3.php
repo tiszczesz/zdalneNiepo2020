@@ -37,9 +37,23 @@
             $login = trim($_POST['login']);
             $plec = $_POST['plec'];
             $um = isset($_POST['um'])? $_POST['um']:[];
+          //$um = $_POST['um'];
+            if($login!=''){
+                echo "<div>Zarejestrowano kandydata: {$login} płeć: {$plec}</div>";
+                if(count($um)>0){
+                    echo "<div>Twoje umiejętności:</div>";
+                    echo "<ul>";
+                    foreach($um as $item){
+                        echo "<li>{$item}</li>";
+                    }
+                    echo "</ul>";
+                }else{
+                    echo "<div>Chyba brak Ci umiejętności!!!!</div>";
+                }
+            }
         }
         
-        var_dump($_POST);
+        //var_dump($_POST);
         ?>
     </div>
 </body>

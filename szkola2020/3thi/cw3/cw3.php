@@ -15,15 +15,15 @@
     <form action="wynik.php" method="post">
     <div class="line">
         <label for="imie">Podaj imię: </label>
-        <input type="text" name="imie" id="imie">
+        <input type="text" name="imie" id="imie" required>
     </div>
     <div class="line">
         <label for="nazwisko">Podaj nazwisko: </label>
-        <input type="text" name="nazwisko" id="nazwisko">
+        <input type="text" name="nazwisko" id="nazwisko" required>
     </div>
     <div class="line">
         <label for="data">Podaj datę: </label>
-        <input type="date" name="data" id="data">
+        <input type="date" name="data" id="data" required>
     </div>
     <div class="line">
         <label for="funkcja">Wybierz funkcję</label>

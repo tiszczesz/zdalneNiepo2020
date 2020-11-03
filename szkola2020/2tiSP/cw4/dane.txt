@@ -1,0 +1,7 @@
+Different operating system families have different line-ending conventions. 
+When you write a text file and want to insert a line break, you need to use the
+ correct line-ending character(s) for your operating system. Unix based systems 
+ use \n as the line ending character, Windows based systems use \r\n as the line ending 
+ characters and Macintosh based systems (Mac OS Classic) used \r as the 
+line ending character. 
+Jeśli nie to to co???
