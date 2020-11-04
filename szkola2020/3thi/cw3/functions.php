@@ -20,3 +20,10 @@ function showInTable(array $dane){
     }
     return $html."</table>\n";
 }
+function showInList(array $dane):string{
+    $html = "<ul>\n";
+    foreach($dane as $row){
+        $html .= "<li>{$row[0]} {$row[1]} data przyjazdu: {$row[2]} funkcja: {$row[3]}</li>\n";
+    }
+    return $html."</ul>";
+}

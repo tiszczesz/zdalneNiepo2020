@@ -15,8 +15,8 @@
     ?>
     <div><a href="cw3.php">Powrót na główną stronę</a></div>
     <h3>Tu ma być lista numerowana uczestników imię nnazwisko funkcja</h3>
-    <!--
-        Prosze wygenerowac liste numerowana dla danych z pliku dane.txt
-     -->
+    <?php
+    echo showInList($dane);
+    ?>
 </body>
 </html>

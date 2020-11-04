@@ -1,0 +1,7 @@
+stworzyć stronę z prduktami: nazwa, cena, kategoria
+formularz do dodawania produktów do pliku dane.txt
+pole nazwa to input:text
+pole cena to input:number (łącznie z groszami) 45.99
+select z wyborem katogorii towaru (spożywcze, AGD, wędliny ....)chociaż 4 kategorie
+przeglądanie listy towarów
+dla ambitnych(wszystkich) całkowita cena za towary, średnia cena, najtańszy towar....
