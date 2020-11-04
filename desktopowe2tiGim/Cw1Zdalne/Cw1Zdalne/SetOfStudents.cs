@@ -61,6 +61,11 @@ namespace Cw1Zdalne
                 Console.WriteLine(student.ShowStudent());
             }
         }
+
+        public int CountAllBetween(int low, int up) {
+            return Students.Where(s => (s.Age >= low && s.Age <= up)).ToArray().Length;
+           //return Students.Count(s => (s.Age >= low && s.Age <= up));
+        }
        
     }
 }

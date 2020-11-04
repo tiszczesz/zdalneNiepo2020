@@ -35,7 +35,9 @@ namespace Cw1Zdalne
             Console.WriteLine("=========================================================");
             students.ShowAllBelow(avg);
             //todo napisanie metody ktora oblicza ile jest studentow w danym zakresie wiekowym 
+            Console.WriteLine($"Ilosc z przedzialu: {students.CountAllBetween(16,22)}");
             //todo wyswietlic wszystkich studentow o nazwisko dluzszym niz arg funkcji ShowOver(6)
+
         }
     }
 }
