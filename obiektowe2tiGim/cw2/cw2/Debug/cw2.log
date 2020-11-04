@@ -1,4 +1,5 @@
 ﻿  cw2.cpp
   functions.cpp
+D:\zdalne\zdalneNiepo2020\obiektowe2tiGim\cw2\cw2\functions.cpp(27,10): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
   cw2.vcxproj -> D:\zdalne\zdalneNiepo2020\obiektowe2tiGim\cw2\Debug\cw2.exe

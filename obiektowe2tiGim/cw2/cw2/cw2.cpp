@@ -11,10 +11,20 @@ void Ex1() {
 }
 void Ex2() {
 	Powtorz(4);
+	cout << " ================================================= \n";
+	string text = "ala ma Kota malego123";
+	Reverse2(text,0);
+}
+void Ex3() {
+	cout << "Podaj n: ";
+	long long n;
+	cin >> n;
+	cout << "SilniaRek(" << n << ") = " << SilniaRek(n) << endl;
 }
 int main()
 {
-	Ex2();
+	Ex3();
+	//Ex2();
 	//Ex1();
    return 0;
 }
