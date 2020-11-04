@@ -21,7 +21,7 @@ namespace Cw1Zdalne
                 Console.WriteLine(s.ShowStudent());
             }
             Console.WriteLine("===============================================");
-            getAdd();
+           
         }
 
         public SetOfStudents() {
@@ -46,11 +46,6 @@ namespace Cw1Zdalne
             return result;
         }
 
-        private void getAdd() {
-            var result = Students.AsEnumerable().Where(s => s.Age % 2 == 0).ToArray();
-            foreach (var s in result) {
-                Console.WriteLine(s.ShowStudent());
-            }
-        }
+       
     }
 }
