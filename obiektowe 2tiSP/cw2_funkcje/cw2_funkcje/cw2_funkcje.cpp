@@ -31,7 +31,15 @@ void Ex1() {
 	cout << "liczba1 = " << liczba1 << " liczba2  = " << liczba2 << endl;
 }
 void Ex2() {
-	vector<int> liczby = GenerVec(20);
+	cout << "Podaj rozmiar wektora: ";
+	int size;
+	cin >> size;
+	vector<int> liczby = GenerVec(size);
+	ShowAll(liczby);
+	//cout << "index = " << GetMax(liczby, 0) << endl;
+	//SortWyb(liczby);
+	//jakas wasza funkcja
+	cout << "po posortowaniu: " << endl;
 	ShowAll(liczby);
 }
 int main()

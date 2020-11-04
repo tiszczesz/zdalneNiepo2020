@@ -1,2 +1,5 @@
-﻿  cw2_funkcje.cpp
+﻿  functions.cpp
+D:\zdalne\zdalneNiepo2020\obiektowe 2tiSP\cw2_funkcje\cw2_funkcje\functions.cpp(8,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\zdalne\zdalneNiepo2020\obiektowe 2tiSP\cw2_funkcje\cw2_funkcje\functions.cpp(25,23): warning C4018: '<': signed/unsigned mismatch
+D:\zdalne\zdalneNiepo2020\obiektowe 2tiSP\cw2_funkcje\cw2_funkcje\functions.cpp(39,15): warning C4018: '<': signed/unsigned mismatch
   cw2_funkcje.vcxproj -> D:\zdalne\zdalneNiepo2020\obiektowe 2tiSP\cw2_funkcje\Debug\cw2_funkcje.exe
