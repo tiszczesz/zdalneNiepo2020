@@ -28,13 +28,14 @@ namespace Cw1Zdalne
             fillStudents();
         }
         private void fillStudents() {
-            if(Students==null) Students = new Student[6];
-            Students[0] = new Student("Adam","Glowa",15,"1A");
-            Students[1] = new Student("Tomasz", "Torek", 15, "1A");
-            Students[2] = new Student("Monika", "Rybnik", 16, "1A");
-            Students[3] = new Student("Ryszard", "Glowa", 15, "1A");
+            if(Students==null) Students = new Student[7];
+            Students[0] = new Student("Adam","Glowa",15,"1A",5.0);
+            Students[1] = new Student("Tomasz", "Torek", 15, "1A",4.0);
+            Students[2] = new Student("Monika", "Rybnik", 16, "1A",3.75);
+            Students[3] = new Student("Ryszard", "Glowa", 15, "1A",2.5);
             Students[4] = new Student("Boleslaw", "Kowalski", 15, "1A");
-            Students[5] = new Student("Boleslaw", "Kowalski", 21, "1A");
+            Students[5] = new Student("Boleslaw", "Kowalski", 21, "1A",2.0);
+            Students[6] = new Student(){Age = 23,AvgGrade = 6.0,Division = "1A",LastName = "Rybnicka",FirstName = "Anna"};
         }
 
         private int countAdultStudents() {
@@ -46,6 +47,20 @@ namespace Cw1Zdalne
             return result;
         }
 
+        public void ShowAllAbove(double avg) {
+            Student[] list = Students.Where(s => s.AvgGrade >= avg).ToArray();
+            foreach (Student student in list) {
+                Console.WriteLine(student.ShowStudent());
+            }
+        }
+
+        public void ShowAllBelow(double avg) {
+            Student[] list = Students.Where(s => s.AvgGrade < avg).ToArray();
+            foreach (Student student in list)
+            {
+                Console.WriteLine(student.ShowStudent());
+            }
+        }
        
     }
 }

@@ -16,7 +16,7 @@ namespace Cw1Zdalne
             get { return firstName; }
             set { firstName = value; }
         }
-
+        public double AvgGrade { get; set; } //automatyczna wlasciwosc
         public string Division {
             get { return division; }
             set { division = value; }
@@ -37,18 +37,20 @@ namespace Cw1Zdalne
             lastName = "Nowak";
             age = 20;
             division = "2A";
+            AvgGrade = 4.0;
         }
 
-        public Student(string firstName, string lastName, int age,string division) {
+        public Student(string firstName, string lastName, int age,string division,double avg=3.5) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = age;
             this.division = division;
+            this.AvgGrade = avg;
         }
 
         public string ShowStudent() {
             return "Informacje o uczniu: " + this.firstName + " " + this.lastName
-                   + " wiek: " + this.age+" klasa: "+this.division;
+                   + " wiek: " + this.age+" klasa: "+this.division+ " srednia ocen: "+AvgGrade;
         }
 
         public bool IsAdult() {
