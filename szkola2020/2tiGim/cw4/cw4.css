@@ -1,0 +1,32 @@
+.line {
+    margin: 20px 30px;
+}
+
+label {
+    display: inline-block;
+    width: 180px;
+    text-align: right;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    margin-left: 180px;
+}
+
+.wynik {
+    border: solid 1px green;
+    padding: 10px;
+    margin: 30px 20px;
+}
+.error{
+    color: red;
+    font-weight: bold;
+}
+#main ul{list-style: none;}
+#main ul li a{display:inline-block;text-decoration: none;color:brown;}
+#main ul li a:hover{font-weight: bold;color: darkred;}
+#main{display: flex;flex-direction: row;}
+nav{width: 300px;}
+table{border-collapse: collapse;width: 80%; margin: 20px;}
+td,th{border: solid 1px rgb(58, 52, 39);padding: 6px;}
+th{background-color: rgb(150, 95, 95);color: lightcyan;}
