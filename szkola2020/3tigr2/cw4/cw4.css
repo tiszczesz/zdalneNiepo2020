@@ -1,0 +1,4 @@
+.line{margin: 20px 30px;}
+label{display: inline-block;width: 160px;text-align: right;}
+input[type=submit]{width: 150px;padding: 10px;margin-left: 170px;}
+input[type="checkbox"],input[type=radio]{margin-left: 150px;}

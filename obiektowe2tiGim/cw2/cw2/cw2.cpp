@@ -20,10 +20,22 @@ void Ex3() {
 	long long n;
 	cin >> n;
 	cout << "SilniaRek(" << n << ") = " << SilniaRek(n) << endl;
+	cout << "SilniaIter(" << n << ") = " << SilniaIter(n) << endl;
+}
+void Ex4() {
+	cout << "Podaj a: ";
+	int a;
+	cin >> a;
+	cout << "Podaj b: ";
+	int b;
+	cin >> b;
+	cout << "NWDIter(" << a << "," << b << ") = " << NWDIter(a, b) << endl;
+	cout << "NWDRek(" << a << "," << b << ") = " << NWDRek(a, b) << endl;
 }
 int main()
 {
-	Ex3();
+	Ex4();
+	//Ex3();
 	//Ex2();
 	//Ex1();
    return 0;

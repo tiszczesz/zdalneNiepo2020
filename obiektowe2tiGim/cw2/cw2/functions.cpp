@@ -31,3 +31,25 @@ long long SilniaRek(long long n) {
 	if (n <= 1) return 1;
 	return SilniaRek(n - 1) * n;
 }
+long long SilniaIter(long long n) {
+	if (n <= 1) return 1;
+	long long wynik = 1;
+	for(long long i=2;i<=n;i++) {
+		wynik *= i;  // wynik = wynik*i;
+	}
+	return wynik;
+}
+int NWDIter(int a, int b) {
+	int temp;
+	while(b!=0) {
+		temp = a;
+		a = b;
+		b = temp % b;
+	}
+	return a;
+}
+int NWDRek(int a,int b) {
+	static int a = 12;
+	if (b == 0) return a;
+	return NWDRek(b, a % b);
+}

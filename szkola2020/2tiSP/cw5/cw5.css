@@ -1,0 +1,4 @@
+.line{margin:20px;}
+label{display: inline-block; text-align: right;width: 200px;}
+div.main{display:flex; flex-direction: row;}
+input[type=submit]{margin-left: 200px; width: 120px;padding: 8px;}

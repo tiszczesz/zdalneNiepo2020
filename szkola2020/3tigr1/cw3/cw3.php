@@ -49,6 +49,7 @@
         }
         ?>
         <div><a href="lista.php">Zobacz wszystkich uczestników</a></div>
+        <div><a href="admin.php">Administracja użytkowniakami uczestników</a></div>
     </div>
 </body>
 </html>
