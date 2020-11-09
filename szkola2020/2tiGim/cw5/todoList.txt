@@ -1,0 +1,7 @@
+1. strona z formularzem dodawanie produktu (nazwa cena data ważności)
+2. produkt dodaje się do listy produktów w pliku produkty.txt  
+bułka|4.99|2020-11-12
+
+3. Wyświtlanie listy wszystkich produktów
+    - w tabelce lub liście numerowanej
+    - (trudniejsza wersja) możliwosć wyboru czy tabelka czy lista (np select option)

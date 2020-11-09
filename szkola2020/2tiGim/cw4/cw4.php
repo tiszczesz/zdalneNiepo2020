@@ -21,11 +21,11 @@
             <form method="post">
                 <div class="line">
                     <label for="login">Podaj login</label>
-                    <input type="text" name="login" id="login">
+                    <input type="text" name="login" id="login" required>
                 </div>
                 <div class="line">
                     <label for="data">Wybierz datę przyjazdu</label>
-                    <input type="date" name="data" id="data">
+                    <input type="date" name="data" id="data" required>
                 </div>
                 <div class="line">
                     <label for="funkcja">Wybierz funkcję na konferencji</label>

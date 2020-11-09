@@ -3,3 +3,32 @@
 @{
 }
 <h1>Współczynnik BMI</h1>
+<!--TODO formularz oraz obliczenie BMI-->
+<div class="content">
+    <div>
+        <form method="post">
+            <div class="line">
+                <label for="masa">Podaj masę: </label>
+                <input type="number" name="masa" id="masa" required/>
+                <span>kg</span>
+            </div>
+            <div class="line">
+                <label for="wzrost">Podaj wzrost: </label>
+                <input type="number" name="wzrost" id="wzrost" required />
+                <span>cm</span>
+            </div>
+            <div>
+                <label>Wybierz płeć: </label>
+                <input type="radio" name="plec" value="Kobieta" checked />Kobieta<br />
+                <input type="radio" name="plec" value="Mężczyzna"  />Mężczyzna<br />
+            </div>
+            <input type="submit" value="Oblicz"/>
+        </form>
+    </div>
+    @if (Model.IsPost) {
+        <div>
+            <img src="media/bmi.jpg" alt="obrazek BMI" />
+        </div>
+    }
+    
+</div>

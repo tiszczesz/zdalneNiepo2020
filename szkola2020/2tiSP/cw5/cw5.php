@@ -21,11 +21,11 @@
             <form action="wynik.php" method="post">
                 <div class="line">
                     <label for="imie">Podaj imię: </label>
-                    <input type="text" name="imie" id="imie">
+                    <input type="text" name="imie" id="imie" required>
             </div>
                 <div class="line">
                     <label for="data">Wybierz datę imprezy: </label>
-                    <input type="date" name="data" id="data">
+                    <input type="date" name="data" id="data" required>
             </div>
                 <div class="line">
                     <label for="item">Co przyniesiesz: </label>
@@ -39,6 +39,9 @@
             <input type="submit" value="Zapisz">
             </form>
         </div>
+        <div>
+        <a href="lista.php">Zobacz listę</a><br>        
+    </div>
     </div>
 </body>
 

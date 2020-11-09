@@ -1,0 +1,15 @@
+1. Strona Firmy turystycznej - wycieczki za grosze (font family)
+2. Baner w Gimpie z użyciem warstw(3)
+3. Można użyć elementów grafiki wektorowej - transormacja tekstu InkScape
+4. Szablon menu prawa strona baner góra stopka dół
+5. Pierwsza podstrona Wykaz wycieczek Miejsce cena data (ilość miejsc) (aktualna ilość miejsc)
+6. Podstrona z dopisaniem sie do danej wycieczki
+7. Podstrona z wykazem uczestników danej wycieczki
+------
+edycja wycieczki (zmiany cen terminów usuwanie uczestników)
+
+W DB wycieczki i uczestnicy lub wiecej np adres   można też kategorie wycieczek
+Wykorzystać wiele do wiele    tab1 --> tabPołaczeniowa <-- tab2
+Można wykorzystać też 1-1  np uczestnik - adres
+
+------ Statystyki  ------ np tabelka z nazwa wycieczki i iloscią uczestników 
