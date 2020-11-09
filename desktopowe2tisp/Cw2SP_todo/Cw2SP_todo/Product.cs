@@ -27,8 +27,10 @@ namespace Cw2SP_todo
             DateOfExpiry = dateOfExpiry;
         }
 
+       
         public override string ToString() {
-            return $"Informacje o prdukcie: {Name} cena: {Price} kategoria: {Category} data ważności: {DateOfExpiry}";
+            return $"{Name} cena: {Price} zł kategoria: {Category} "
+                        +$"data ważności: {DateOfExpiry.ToShortDateString()}";
         }
     }
 }
