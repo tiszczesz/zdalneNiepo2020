@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -20,8 +21,8 @@ namespace FromEmptyToRP_SP.Pages
 
         public void OnPost() {
             IsPost = true;
-            Masa = Convert.ToDouble(Request.Form["masa"]);
-            Wzrost = Convert.ToDouble(Request.Form["wzrost"]);
+            Masa = Convert.ToDouble(Request.Form["masa"],CultureInfo.InvariantCulture);
+            Wzrost = Convert.ToDouble(Request.Form["wzrost"], CultureInfo.InvariantCulture);
             BMI = countBMI(Wzrost, Masa);
         }
         private double countBMI(double wzrost, double masa) {

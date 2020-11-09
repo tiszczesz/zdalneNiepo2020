@@ -22,3 +22,8 @@
         </div>
     </form>
 </div>
+@if (Model.IsPost) {
+    <div>
+        Wartość współczynnika BMI: @Model.BMI
+    </div>
+}
