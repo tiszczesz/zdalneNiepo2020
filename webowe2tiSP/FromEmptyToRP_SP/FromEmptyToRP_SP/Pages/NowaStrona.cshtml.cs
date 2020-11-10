@@ -22,8 +22,8 @@ namespace FromEmptyToRP_SP.Pages
         public void OnPost() {
             IsPost = true;
             Masa = Convert.ToDouble(Request.Form["masa"],CultureInfo.InvariantCulture);
-            Wzrost = Convert.ToDouble(Request.Form["wzrost"], CultureInfo.InvariantCulture);
-            BMI = countBMI(Wzrost, Masa);
+            Wzrost = Convert.ToDouble(Request.Form["wzrost"],CultureInfo.InvariantCulture);
+            BMI = Math.Round(countBMI(Wzrost, Masa),2);
         }
         private double countBMI(double wzrost, double masa) {
             if (wzrost == 0) return 0;
