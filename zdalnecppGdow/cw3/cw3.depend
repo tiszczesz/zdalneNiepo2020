@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1605000250 source:d:\zdalne\zdalnecppgdow\cw3\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+
