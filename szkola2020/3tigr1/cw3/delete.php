@@ -1,5 +1,5 @@
     <?php
-    var_dump($_GET['id']);
+   // var_dump($_GET['id']);
      $dane = file("rejestracja.txt",FILE_IGNORE_NEW_LINES);
      if($_GET['id']){
          $id = intval($_GET['id']);

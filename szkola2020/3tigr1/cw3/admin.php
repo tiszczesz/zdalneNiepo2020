@@ -9,13 +9,13 @@
 <body>
     <?php
     $dane = file("rejestracja.txt",FILE_IGNORE_NEW_LINES);
-    var_dump($dane);
+   // var_dump($dane);
     echo "<table>";
     echo "<tr><th>Login</th><th>Data</th><th>Funkcja</th><th>Zarządzanie</th></tr>";
     foreach($dane as $k=>$line){        
         $row = explode('|',$line);
         echo "<tr><td>{$row[0]}</td><td>{$row[1]}</td><td>{$row[2]}</td>".
-          "<td><a href='delete.php?id={$k}'>Usuń</a></td></tr>\n";
+          "<td><a href='delete.php?id={$k}'>Usuń</a> <a href='edit.php?id={$k}'>Edytuj</a></td></tr>\n";
     }
     
     echo "<ol>";
