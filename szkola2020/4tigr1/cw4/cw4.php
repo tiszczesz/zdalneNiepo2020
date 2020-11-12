@@ -13,21 +13,21 @@
             <ul>
                 <li><a href="cw4.php">Strona główna</a></li>
                 <li><a href="lista.php">Lista wycieczek</a></li>
-                <li><a href="">coś</a></li>
+                <li><a href="zapisz.php">Zapisz się na wycieczkę</a></li>
                 <li><a href="">coś</a></li>
             </ul>
         </nav>
         <section class="main">
-
+            <?php
+            require "functions.php";
+            $dane = getAllWycieczki();
+            //var_dump($dane);
+            echo wycieczkiToList($dane);
+            ?>
         </section>
 
     </section>
     <section class="footer">Stopka do zrobienia</section>
-    <script>
-        window.onload = function(){
-            console.log(document.querySelector(".wrapper").style);
-        }
-        
-    </script>
+    
 </body>
 </html>

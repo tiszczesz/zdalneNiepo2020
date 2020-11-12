@@ -5,5 +5,5 @@ body{
 .wrapper{
     display: flex;
     flex-direction: row;
-    background-color: yellow;
+    background-color: rgb(213, 214, 214);
 }

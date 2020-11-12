@@ -16,15 +16,12 @@
         $data = trim($_POST['data']);
         $items = trim($_POST['items']);
         if ($imie != '' && $data != '') {
-            $plik = fopen("lista.txt", "a");
-            if ($plik) {
-                fwrite($plik,$imie.'|'.$data.'|'.$items.PHP_EOL);
-                fclose($plik);
-                echo "<div style='color:green;'>Zapisano na imprezę {$imie} z datą {$data}</div>";
-            }
-        }else{
-                echo "<div style='color:red;'>Błąd zapisu lub brak danych!!</div>";
-            }
+            echo saveToFile("lista.txt",[$imie,$data,$items])?
+                "<div style='color:green;'>Zapisano na imprezę {$imie} z datą {$data}</div>"
+                :"<div style='color:red;'>Błąd zapisu </div>";
+        } else {
+            echo "<div style='color:red;'>Brak danych!!</div>";
+        }
     }
     ?>
     <div>
