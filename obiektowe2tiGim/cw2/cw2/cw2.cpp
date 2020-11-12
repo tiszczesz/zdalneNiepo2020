@@ -34,6 +34,7 @@ void Ex4() {
 }
 int main()
 {
+	//todo zamiana 10 na 2 system     6 -> 110    cout w funkcji a ambitni string i potem cout
 	Ex4();
 	//Ex3();
 	//Ex2();
