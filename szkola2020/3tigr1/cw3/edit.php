@@ -35,14 +35,19 @@
             </div>
             <div class="line">
                 <label for="funkcja">Wybierz fukcję: </label><br>
-                <select name="fun" id="fun">
-                    <option value="uczestnik">uczestnik</option>
-                    <option value="organizator">organizator</option>
-                    <option value="prelegent">prelegent</option>
-                    <option value="obsługa techniczna">obsługa techniczna</option>
-                </select>
+                
+                <?php
+                echo "<select name='fun' id='fun'>";
+                $fun = ["uczestnik","organizator","prelegent","obsługa techniczna"];
+                foreach($fun as $item){
+                    $selected = $item==$toEdit[2] ? "selected": "";
+                    echo "<option value='{$item}' {$selected}>{$item}</option>\n";
+                }
+                echo "</select>\n";
+                ?>
+                    
             </div>
-            <input type="submit" value="Zarejestruj na konferencję">
+            <input type="submit" value="Zaktualizuj dane">
         </form>
     </div>
 </body>
