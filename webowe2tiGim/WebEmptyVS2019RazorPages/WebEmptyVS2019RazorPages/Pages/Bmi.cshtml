@@ -5,6 +5,7 @@
 <h1>Współczynnik BMI</h1>
 <!--TODO formularz oraz obliczenie BMI-->
 <div class="content">
+    <div class="baner"><div>Obliczanie współczynnika BMI </div><img src="media/bmi.jpg" alt="obrazek BMI" /></div>
     <div>
         <form method="post">
             <div class="line">
@@ -14,22 +15,22 @@
             </div>
             <div class="line">
                 <label for="wzrost">Podaj wzrost: </label>
-                <input type="number" name="wzrost" id="wzrost" required min="10" max="290" />
+                <input type="number" name="wzrost" id="wzrost" required min="10" max="290"/>
                 <span>cm</span>
             </div>
             <div>
                 <label>Wybierz płeć: </label><br/>
-                <input type="radio" name="plec" value="Kobieta" checked />Kobieta<br />
-                <input type="radio" name="plec" value="Mężczyzna"  />Mężczyzna<br />
+                <input type="radio" name="plec" value="Kobieta" checked/>Kobieta<br/>
+                <input type="radio" name="plec" value="Mężczyzna"/>Mężczyzna<br/>
             </div>
             <input type="submit" value="Oblicz"/>
         </form>
     </div>
     @if (Model.IsPost) {
         <div>
-        <div>Obliczony współczynnik BMI: @Model.BMI co daje nam: @Model.Description() dla płci: @Model.Plec</div>
-            <img src="media/bmi.jpg" alt="obrazek BMI"/>
+            <div>Obliczony współczynnik BMI: @Model.BMI co daje nam: @Model.Description() dla płci: @Model.Plec</div>
+
         </div>
     }
-    
+
 </div>

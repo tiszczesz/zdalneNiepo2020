@@ -26,7 +26,6 @@ namespace WebEmptyVS2019RazorPages.Pages
             Masa = Convert.ToDouble(Request.Form["masa"], CultureInfo.InvariantCulture);
             Wzrost = Convert.ToDouble(Request.Form["wzrost"], CultureInfo.InvariantCulture);
             Plec = Request.Form["plec"];
-            //var plec = Request.Form["plec"];
             Wzrost = Wzrost > 3 ? Wzrost / 100 : Wzrost;
             double roznica = Plec == "Kobieta" ? 2 : 0;
             BMI = Math.Round(Masa / (Wzrost * Wzrost),2)-roznica;

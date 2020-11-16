@@ -7,3 +7,5 @@
 }
 .content img{ width: 200px;}
 .content div{ width: 50%;}
+.baner{display: flex;}
+.baner>div{ background-color: lightcoral; text-transform: capitalize;}
