@@ -16,8 +16,12 @@
     $imie = trim($_POST['imie']);
     $data = trim($_POST['data']);
     $item = trim($_POST['item']);
-    if (saveToFile("lista.txt", $imie, $data, $item)) echo "<div>Zapisano na imprezę</div>";
-    else echo "<div style='color:red;font-weight:bold;'>Błąd przy zapisie na imprezę</div>"
+    if(empty($imie) || empty($data)) echo "<div>Błedne lub brak danych!!!</div>"; //header("Location: cw5.php");
+    else{
+         if (saveToFile("lista.txt", $imie, $data, $item)) echo "<div>Zapisano na imprezę</div>";
+        else echo "<div style='color:red;font-weight:bold;'>Błąd przy zapisie na imprezę</div>";
+    }
+   
     ?>
     <div>
         <a href="lista.php">Zobacz listę</a><br>

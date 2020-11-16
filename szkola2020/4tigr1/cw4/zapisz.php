@@ -43,6 +43,7 @@
                     echo wycieczkiToSelect($wycieczki);
                     ?>
                 </div>
+                <input type="submit" value="Zapisz">
             </form>
         </section>
 

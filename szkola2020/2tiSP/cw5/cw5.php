@@ -21,7 +21,7 @@
             <form action="wynik.php" method="post">
                 <div class="line">
                     <label for="imie">Podaj imię: </label>
-                    <input type="text" name="imie" id="imie" required>
+                    <input type="text" name="imie" id="imie" >
             </div>
                 <div class="line">
                     <label for="data">Wybierz datę imprezy: </label>

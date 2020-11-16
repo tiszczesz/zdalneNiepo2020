@@ -27,11 +27,21 @@ function showList(array $dane):string{
 }
 function toTable(array $dane):string{
     $html = "<table>";
-    $html .= "<tr><th>Imię</th><th>Data</th><th>Przyniesie</th></tr>\n";
-    foreach($dane as $row){
+    $html .= "<tr><th>Imię</th><th>Data</th><th>Przyniesie</th><th>Operacje na danych</th></tr>\n";
+    foreach($dane as $k=> $row){
         $line = explode('|',$row);
         //var_dump($line);
-        $html .= "<tr><td>{$line[0]}</td> <td>{$line[1]}</td><td>{$line[2]}</td> </tr>\n";
+        $html .= "<tr><td>{$line[0]}</td> <td>{$line[1]}</td><td>{$line[2]}</td>"
+        ."<td><a href='edit.php?id={$k}'>Edytuj</a> <a href='delete.php?id={$k}'>Usuń</a></td> </tr>\n";
     }  
     return $html."</table>\n";
+}
+function saveAllToFile(string $filename,array $dane):bool{
+    //tylko tablica w formacie xxxxx|12-22-1899|eeeee
+    $plik = fopen($filename,'w');
+    if(!$plik) return false;
+    foreach($dane as $line){
+        fwrite($plik,$line.PHP_EOL);
+    }
+    return true;
 }
