@@ -9,16 +9,16 @@
         <form method="post">
             <div class="line">
                 <label for="masa">Podaj masę: </label>
-                <input type="number" name="masa" id="masa" required/>
+                <input type="number" name="masa" id="masa" required step="0.1" min="1" max="300"/>
                 <span>kg</span>
             </div>
             <div class="line">
                 <label for="wzrost">Podaj wzrost: </label>
-                <input type="number" name="wzrost" id="wzrost" required />
+                <input type="number" name="wzrost" id="wzrost" required min="10" max="290" />
                 <span>cm</span>
             </div>
             <div>
-                <label>Wybierz płeć: </label>
+                <label>Wybierz płeć: </label><br/>
                 <input type="radio" name="plec" value="Kobieta" checked />Kobieta<br />
                 <input type="radio" name="plec" value="Mężczyzna"  />Mężczyzna<br />
             </div>
@@ -27,7 +27,8 @@
     </div>
     @if (Model.IsPost) {
         <div>
-            <img src="media/bmi.jpg" alt="obrazek BMI" />
+        <div>Obliczony współczynnik BMI: @Model.BMI co daje nam: @Model.Description() dla płci: @Model.Plec</div>
+            <img src="media/bmi.jpg" alt="obrazek BMI"/>
         </div>
     }
     
