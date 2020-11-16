@@ -73,5 +73,6 @@ namespace Cw2SP_todo
         public Product[] GetAllFromMonth(int month) {
             return Products.Where(p => p.DateOfExpiry.Month == month).ToArray();
         }
+
     }
 }
