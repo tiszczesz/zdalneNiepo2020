@@ -29,7 +29,14 @@
     @if (Model.IsPost) {
         <div>
             <div>Obliczony współczynnik BMI: @Model.BMI co daje nam: @Model.Description() dla płci: @Model.Plec</div>
-
+            @if (@Model.BMI < 18.5) {
+                <img src="media/niedowaga.jpg" alt="niedowaga"/>
+            }else if (@Model.BMI >= 18.5 && @Model.BMI < 25) {
+                <img src="media/normana.jpg" alt="norma"/>
+            }
+            else {
+                <img src="media/nadwaga.jpg" alt="nadwaga"/>
+            }
         </div>
     }
 
