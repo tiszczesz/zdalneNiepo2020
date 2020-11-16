@@ -14,6 +14,12 @@ namespace Cw2SP_todo
             setOfProducts.ShowAll();
             Console.WriteLine("Produkt o najwyższej cenie: "+setOfProducts.GetProductWithMaxPrice());
             Console.WriteLine("Produkt o najwyższej cenie: " + setOfProducts.GetProductWithMaxPrice2());
+            Console.Write("Podaj miesiac (1-12): ");
+            int month = Convert.ToInt32(Console.ReadLine());
+            Product[] result = setOfProducts.GetAllFromMonth(month);
+            foreach (Product p in result) {
+                Console.WriteLine(p);
+            }
             Console.ReadKey();
         }
     }
