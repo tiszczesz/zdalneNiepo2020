@@ -1,1 +1,5 @@
 ww|www|4|Geografia
+Tomcio|Paluch|6|Matematyka
+Ryszard|Hajduk|4|Geografia
+Roman|Banan|3|Fizyka
+Grażyna|Sprężyna|3|Geografia

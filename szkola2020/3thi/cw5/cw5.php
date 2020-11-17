@@ -23,12 +23,12 @@
     </div>
     <div class="line">
         <label for="przedmiot">Wybierz przedmiot</label>
-        <select name="przedmiot" id="przedmiot">
-            <option value="Język polski">Język polski</option>
-            <option value="Matematyka">Matematyka</option>
-            <option value="Geografia">Geografia</option>
-            <option value="Historia">Historia</option>
-        </select>
+       <?php
+        require "functions.php";
+        $topics = getAllTopic("przedmioty.txt");
+        echo topicToSelect($topics);
+       ?>
+       
     </div>
     <div class="line">
         <input type="submit" value="Zapisz informację">
