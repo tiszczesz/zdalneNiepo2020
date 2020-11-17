@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 13 Lis 2020, 14:48
+-- Czas generowania: 17 Lis 2020, 16:04
 -- Wersja serwera: 10.4.11-MariaDB
 -- Wersja PHP: 7.4.5
 
@@ -36,6 +36,14 @@ CREATE TABLE `adresy` (
   `miasto` varchar(50) COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
+--
+-- Zrzut danych tabeli `adresy`
+--
+
+INSERT INTO `adresy` (`id`, `ulica`, `miasto`) VALUES
+(3, 'uuuu', 'mmm'),
+(4, 'Grocka 12/4', 'Firany Dolne');
+
 -- --------------------------------------------------------
 
 --
@@ -45,8 +53,22 @@ CREATE TABLE `adresy` (
 DROP TABLE IF EXISTS `funkcje`;
 CREATE TABLE `funkcje` (
   `id` int(11) NOT NULL,
-  `nazwa` int(11) NOT NULL
+  `nazwa` varchar(50) COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `funkcje`
+--
+
+INSERT INTO `funkcje` (`id`, `nazwa`) VALUES
+(1, 'kierownik'),
+(2, 'sprzedawca'),
+(3, 'sekretarka/sekretarz'),
+(4, 'kierowca'),
+(5, 'asystent'),
+(6, 'dyrektor'),
+(7, 'sprzątaczka'),
+(8, 'konserwator');
 
 -- --------------------------------------------------------
 
@@ -61,6 +83,14 @@ CREATE TABLE `pracownicy` (
   `nazwisko` varchar(50) COLLATE utf8_polish_ci NOT NULL,
   `opis` varchar(100) COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `pracownicy`
+--
+
+INSERT INTO `pracownicy` (`id`, `imie`, `nazwisko`, `opis`) VALUES
+(3, 'iiiii', 'nnnnnn', 'oooo'),
+(4, 'Roman', 'Nowak', 'ssf fsfsfsfsf');
 
 -- --------------------------------------------------------
 
@@ -111,13 +141,13 @@ ALTER TABLE `prac_funkcja`
 -- AUTO_INCREMENT dla tabeli `funkcje`
 --
 ALTER TABLE `funkcje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT dla tabeli `pracownicy`
 --
 ALTER TABLE `pracownicy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `prac_funkcja`

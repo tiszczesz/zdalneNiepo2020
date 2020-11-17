@@ -29,3 +29,25 @@ function insertToAdresy($id, $m,$u){
     $conn->close();
     return $result;
 }
+function getAllWorkersAdr():array{
+  $conn = getConnection();  
+  if($conn==null) die("ERROR");
+  $sql = "SELECT imie,nazwisko,ulica, miasto FROM pracownicy "
+          ."INNER JOIN adresy on pracownicy.id=adresy.id";
+  $result = $conn->query($sql); 
+  $dane = [];
+  while($row = $result->fetch_assoc()){
+    $dane[] = $row;
+  }   
+  $conn->close();
+  return $dane;
+}
+function toTable(array $dane):string{
+  $html = "<table>";
+  $html .= "<tr><th>Imię</th><th>Nazwisko</th><th>Ulica</th><th>Miasto</th></tr>";
+  foreach($dane as $row){
+    $html .= "<tr><td>{$row['imie']}</td><td>{$row['nazwisko']}</td>".
+    "<td>{$row['ulica']}</td><td>{$row['miasto']}</td></tr>";
+  }
+  return $html."</table>\n";
+}
