@@ -67,8 +67,10 @@ function insertToWycieczkiUczestnicy(int $id,int $wycieczkaID):void{
     $conn = getConnection();
     if($conn==null) return;
     $sql = "INSERT INTO wycieczka_uzytkownik(wycieczka_id,uczestnik_id) VALUES({$id},{$wycieczkaID})";
-    echo $sql;
-
+    //echo $sql;
+    $conn->query($sql);
+    $conn->close();
+    
 }
 function wycieczkiToTable(array $dane):string{
     $html = "<table class='wycieczki'>";
@@ -78,4 +80,19 @@ function wycieczkiToTable(array $dane):string{
         ."<td><a href='uczestnicy.php?id={$wycieczka[0]}'>Zobacz uczestników</a></td></tr>";
     }
     return $html ."</table>";
+}
+function getWycieczkaById(int $wycieczkaId):array{
+    $conn=getConnection();
+    if($conn==null) return [];
+    $sql = "SELECT * FROM wycieczki WHERE id={$wycieczkaId}";
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result->fetch_row();
+}
+function getAllUczWycieczki(int $id){
+    $conn=getConnection();
+    if($conn==null) return [];
+    $sql = "SELECT imie,nazwisko FROM uczestnicy INNER JOIN wycieczka_uzytkownik "
+        ." on uczestnicy.id=wycieczka_uzytkownik";//TODO
+   
 }

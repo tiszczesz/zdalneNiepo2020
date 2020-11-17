@@ -22,7 +22,7 @@
             require "functions.php";
             $dane = getAllWycieczki();
 
-            var_dump($dane);
+           // var_dump($dane);
             echo wycieczkiToTable($dane);
             ?>
         </section>
