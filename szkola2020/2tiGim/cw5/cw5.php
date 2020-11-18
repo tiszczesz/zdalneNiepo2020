@@ -16,7 +16,10 @@
         echo "<br>";
         echo InsertIntoText("sdsfsfsfsfsfs",'-');
         echo "<br>";
-        echo InsertIntoText("Bardzo Fajny długi tekst do sprawdzenia łódka",'_');
+        echo InsertIntoText("Bardzo Fajny długi tekst do sprawdzenia łódka",'_')."<br>";
+        echo Reverse("Bardzo Fajny długi tekst do sprawdzenia łódka")."<br>";
+        echo implode("",array_reverse(mb_str_split("Bardzo Fajny długi tekst do sprawdzenia łódka")));
+        //todo wyszukiwanie w stringu fragmentu tekstu ASCII   utf8
         ?>
     </div>
 
