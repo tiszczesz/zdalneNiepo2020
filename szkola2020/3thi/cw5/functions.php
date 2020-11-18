@@ -32,3 +32,12 @@ function topicToSelect(array $topics):string{
     }
     return $html."</select>\n";
 }
+function getAllByTopic(array $dane,string $topic):array{
+    $result = [];
+    foreach($dane as $item){
+        if($item[3]==$topic){
+            $result[]=$item;
+        }
+    }
+    return $result;
+}
