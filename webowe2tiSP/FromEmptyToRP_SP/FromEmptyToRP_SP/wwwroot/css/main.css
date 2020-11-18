@@ -5,3 +5,15 @@ h1{ text-align: center;border-bottom: solid 2px grey;
 }
 img{ height: 300px;
 }
+.wyr {
+    text-decoration: underline;
+    color: green;
+    font-style: italic;
+}
+#wrapper {
+    display: flex;
+    flex-direction: row;
+}
+#wrapper>div {
+    width: 50%;
+}
