@@ -12,5 +12,7 @@ int main()
 	d2.Info();
 	(*pd3).Info();
 	pd3->Info();
+	delete pd3;
+	pd3 = nullptr;
     return 0;
 }
