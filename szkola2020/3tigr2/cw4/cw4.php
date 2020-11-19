@@ -22,12 +22,11 @@
         </div>
         <div class="line">
             <label for="items">Co przyniosę: </label>
-            <select name="items" id="items">
-                <option value="żarcie">żarcie</option>
-                <option value="picie">picie</option>
-                <option value="towarzystwo">towarzystwo</option>
-                <option value="dobre słowo">dobre słowo</option>
-            </select>
+           <?php
+            require "functions.php";
+            $items = getAllItems("items.txt");
+            echo itemsToSelect($items);
+           ?>
         </div>
         <div class="line">
             <label for=""></label>

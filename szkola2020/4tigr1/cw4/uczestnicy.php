@@ -14,7 +14,7 @@
         $wycieczka = getWycieczkaById($id);
         echo "<h3>Uczestnicy wycieczki: {$wycieczka[1]} za cenę: {$wycieczka[4]} zł w dniu: {$wycieczka[2]}</h3>";
         $lista = getAllUczWycieczki($id);
-       // echo toList($lista);
+        echo toList($lista);
     }
     ?>
 </body>

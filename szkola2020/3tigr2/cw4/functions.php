@@ -22,7 +22,8 @@ function daneToList(array $dane):string{
     $html = "<ol>\n";
     foreach($dane as $k=>$row){
         $html .= "<li><span class='wyr'>{$row[0]}</span> data: <span class='wyr'>{$row[1]}</span> ".
-                 "przyniesie: <span class='wyr'>{$row[2]}</span> <a href='usun.php?id={$k}'>USUWANIE</a></li>\n";
+                 "przyniesie: <span class='wyr'>{$row[2]}</span> <a class='btn' href='usun.php?id={$k}'>USUWANIE</a>".
+                 " <a class='btn' href='edit.php?id={$k}'>EDYTOWNIE</a></li>\n";
     }
     return $html."</ol>\n";
 }
@@ -36,4 +37,16 @@ function saveAll(string $filename,array $dane):bool{
         return true;
     }
     return false;
+}
+function getAllItems(string $filename):array{
+    $all = file($filename,FILE_IGNORE_NEW_LINES);    
+    return $all;
+}
+function itemsToSelect(array $items,string $toMark=""):string{
+    $html = "<select name='items' id='items'>\n";
+    foreach($items as $i){
+        $wyr = $i==$toMark ? " selected ": "";
+        $html .= "<option value='{$i}' {$wyr}>{$i}</option>\n";
+    }
+    return $html."</select>\n";
 }
