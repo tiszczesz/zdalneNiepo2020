@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{55c85328-4f81-4e54-b132-3896b093ce9f}</ProjectGuid>
-    <RootNamespace>cw3obiektowe1G</RootNamespace>
+    <ProjectGuid>{1a4da070-bf25-4a48-8117-b2f388301e25}</ProjectGuid>
+    <RootNamespace>Obiektowe2SP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,11 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Book.cpp" />
-    <ClCompile Include="cw3_obiektowe1_G.cpp" />
+    <ClCompile Include="Document.cpp" />
+    <ClCompile Include="Obiektowe2_SP.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Book.h" />
+    <ClInclude Include="Document.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
