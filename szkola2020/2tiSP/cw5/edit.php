@@ -33,6 +33,7 @@
             <form action="wynikEdit.php" method="post">
                 <div class="line">
                     <label for="imie">Podaj imię: </label>
+                    <input type="hidden" name="id" value='<?php echo $id;  ?>'>
                     <input type="text" name="imie" id="imie" required value='<?php echo $row[0]; ?>'>
             </div>
                 <div class="line">

@@ -20,9 +20,10 @@
         <section class="main">
             <?php
             require "functions.php";
-            $dane = getAllWycieczki();
-            //var_dump($dane);
-            echo wycieczkiToList($dane);
+            
+            $ucz = getAllUczestnicy();
+            //var_dump($ucz);
+            echo toListUczestnicy($ucz);
             ?>
         </section>
 

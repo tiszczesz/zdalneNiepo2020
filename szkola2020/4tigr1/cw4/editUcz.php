@@ -20,9 +20,15 @@
         <section class="main">
             <?php
             require "functions.php";
-            $dane = getAllWycieczki();
-            //var_dump($dane);
-            echo wycieczkiToList($dane);
+            if(!isset($_GET['id'])){header("Location: uczestnicyAll.php");  }
+            $id = intval($_GET['id']);
+            $ucz = getUczestnikById($id);
+            echo "<h2>Wycieczki uczestnika: {$ucz[1]} {$ucz[2]}</h2>";
+            //var_dump($ucz);
+            $wycieczki = getAllWycieczki();
+            $wycById = getWycieczkiByIdUczestnika($id);
+            var_dump($wycById);
+            echo wycieczkiToListCB($wycieczki,$wycById);
             ?>
         </section>
 

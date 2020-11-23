@@ -98,13 +98,15 @@ function getWycieczkaById(int $wycieczkaId): array
     $conn->close();
     return $result->fetch_row();
 }
-function getAllUczWycieczki(int $id):array
+function getAllUczWycieczki(int $id=-1):array
 {
     $conn = getConnection();
     if ($conn == null) return [];
-    $sql = "SELECT imie,nazwisko FROM uczestnicy INNER JOIN wycieczka_uzytkownik "
+    $sql = $id!=-1 ? "SELECT  imie,nazwisko,uczestnicy.id FROM uczestnicy INNER JOIN wycieczka_uzytkownik "
         . " on uczestnicy.id=wycieczka_uzytkownik.uczestnik_id WHERE  "
-        . " wycieczka_uzytkownik.wycieczka_id={$id}";
+        . " wycieczka_uzytkownik.wycieczka_id={$id}"
+        :"SELECT imie,nazwisko,uczestnicy.id FROM uczestnicy INNER JOIN wycieczka_uzytkownik "
+        . " on uczestnicy.id=wycieczka_uzytkownik.uczestnik_id ";
     //echo $sql;
     $result = $conn->query($sql);
     $wynik = [];
@@ -118,7 +120,59 @@ function toList(array $uczestnicy): string
 {
     $html = "<ol>";
     foreach($uczestnicy as $u){
-        $html .= "<li>{$u[0]} {$u[1]}</li>\n";
+        $html .= "<li>{$u[0]} {$u[1]} <a href='editUcz.php?id={$u[2]}'>Edytuj uczestnika</a></li>\n";
+    }
+    return $html . "</ol>\n";
+}
+function getUczestnikById(int $id):array{
+    $conn = getConnection();
+    if ($conn == null) return [];
+    $sql = "SELECT * FROM uczestnicy WHERE id={$id}";
+    //echo $sql;
+    $result = $conn->query($sql);   
+    $wynik = $result->fetch_row();
+    $conn->close();
+    return $wynik;
+}
+function wycieczkiToListCB(array $dane ,array $wycById=[]):string{
+    $html = "<div><form method='post'>\n";
+    foreach($dane as $w){
+        $checked = in_array($w[0],$wycById)? " checked" :"";
+        $html .= "<div><input type='checkbox' value='$w[0]' name='wyc[]' {$checked}>{$w[1]} {$w[2]} cena: {$w[4]} zł</div>\n";
+    }
+    return $html."<input type='submit' value='Zapisz'></form></div>\n";
+}
+
+function getWycieczkiByIdUczestnika(int $iduczestnika):array{
+    $conn = getConnection();
+    if($conn==null) return [];
+    $sql = "SELECT wycieczka_id FROM `wycieczka_uzytkownik` WHERE uczestnik_id={$iduczestnika}";
+   // var_dump($sql);
+    $result = $conn->query($sql);
+    $wycieczki = [];
+    while($row = $result->fetch_row()){
+        $wycieczki[] = $row[0];
+    }
+    $conn->close();
+    return $wycieczki;
+}
+function getAllUczestnicy():array{
+    $conn = getConnection();
+    if($conn==null) return [];
+    $sql = "SELECT * FROM uczestnicy";
+   // var_dump($sql);
+    $result = $conn->query($sql);
+    $uczestnicy = [];
+    while($row = $result->fetch_row()){
+        $uczestnicy[] = $row;
+    }
+    $conn->close();
+    return $uczestnicy;
+}
+function toListUczestnicy(array $dane):string{
+    $html = "<ol>";
+    foreach($dane as $u){
+        $html .= "<li>{$u[1]} {$u[2]} <a href='editUcz.php?id={$u[0]}'>Edytuj uczestnika</a></li>\n";
     }
     return $html . "</ol>\n";
 }

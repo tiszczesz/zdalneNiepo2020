@@ -9,3 +9,8 @@
 .content div{ width: 50%;}
 .baner{display: flex;}
 .baner>div{ background-color: lightcoral; text-transform: capitalize;}
+.line{ margin: 20px;}
+label{ display: inline-block; width: 130px;text-align: right;padding-right: 5px;}
+input[type=submit]{ padding: 6px;width: 150px;margin-left: 140px;}
+input[type=radio] {margin-left: 140px;}
+#wynik{ text-align: center;border: solid 2px green; padding: 20px; background-color: lightgreen;}

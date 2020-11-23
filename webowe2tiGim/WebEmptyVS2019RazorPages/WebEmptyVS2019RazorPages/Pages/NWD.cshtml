@@ -1,0 +1,30 @@
+﻿@page
+@model WebEmptyVS2019RazorPages.Pages.NWDModel
+@{
+}
+
+<div>
+    <form method="post">
+        <div class="line">
+            <label for="a">Podaj a: </label>
+            <input type="number" min="0" name="a" id="a" required />
+        </div>
+        <div class="line">
+            <label for="b">Podaj b: </label>
+            <input type="number" min="0" name="b" id="b" required />
+        </div>
+        <div class="line">
+            <label for="b">Wybierz metodę: </label><br />
+            <input type="radio" name="metoda" value="iter" checked="" /> Iteracyjnie<br />
+            <input type="radio" name="metoda" value="rek" /> Rekurencyjnie<br />
+        </div>
+        <input type="submit" value="Oblicz" />
+    </form>
+</div>
+@if (Model.IsPost && Model.IsOk) {
+    <div id="wynik">
+        NWD(@Model.NWD_M.A, @Model.NWD_M.B) = @Model.ResultNWD
+    </div>
+}else if (!Model.IsOk) {
+    <div style="color: red; font-weight: bold;">@Model.Info</div>
+}

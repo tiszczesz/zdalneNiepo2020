@@ -14,7 +14,7 @@
                 <li><a href="cw4.php">Strona główna</a></li>
                 <li><a href="lista.php">Lista wycieczek</a></li>
                 <li><a href="zapisz.php">Zapisz się na wycieczkę</a></li>
-                <li><a href="">coś</a></li>
+                <li><a href="uczestnicyAll.php">Lista uczestników wycieczek</a></li>
             </ul>
         </nav>
         <section class="main">
