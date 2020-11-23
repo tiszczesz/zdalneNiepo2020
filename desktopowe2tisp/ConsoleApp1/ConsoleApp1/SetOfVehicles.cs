@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         public List<Vehicle> Vehicles { get; set; }
 
-        private void fillCars() {
+        private void fillVehicles() {
             if(Vehicles==null) Vehicles = new List<Vehicle>();
             Vehicles.Add(new Vehicle(){Name = "Fiat 125p",Mass=1200,MaxSpeed=140});
             Vehicles.Add(new Vehicle() { Name = "Fiat 126p", Mass = 700, MaxSpeed = 120 });
@@ -19,7 +19,7 @@ namespace ConsoleApp1
         }
 
         public SetOfVehicles() {
-            fillCars();
+            fillVehicles();
         }
 
         public void ShowAll() {
@@ -28,8 +28,9 @@ namespace ConsoleApp1
             }
         }
 
-        public void AddNewCar() {
-            //todo
+        public void AddNewVehicle() {
+            Vehicles.Add(Vehicle.FillOneVehicle());
         }
+       
     }
 }

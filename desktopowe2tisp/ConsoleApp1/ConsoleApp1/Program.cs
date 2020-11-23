@@ -11,7 +11,11 @@ namespace ConsoleApp1
         static void Main(string[] args) {
             SetOfVehicles vehicles = new SetOfVehicles();
             vehicles.ShowAll();
-            vehicles.AddNewCar();//todo
+           // vehicles.AddNewVehicle();
+           // vehicles.ShowAll();
+            Console.WriteLine("==============================================");
+            Bicycle b1 = new Bicycle();
+            Car c1 = new Car();
             Console.ReadKey();
         }
     }

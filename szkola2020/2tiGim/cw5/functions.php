@@ -20,3 +20,27 @@ function Reverse(string $text):string{
     }
     return $result;
 }
+function countAllAlpha(string $text):int{
+    $result = 0;
+    $polchars = mb_str_split("ąężźćńłóś");
+    $length = mb_strlen($text);
+    for($i=0;$i<$length;$i++){
+        $char = mb_strtolower( mb_substr($text,$i,1));
+        if($char>='a' && $char<='z' || in_array($char,$polchars)){
+            $result++;
+        }
+    }
+    return $result;
+}
+function countAllVowels(string $text):int{
+    $result = 0;
+    $vowels = mb_str_split("aeiouąęy");
+    $length = mb_strlen($text);
+    for($i=0;$i<$length;$i++){
+        $char = mb_strtolower( mb_substr($text,$i,1));
+        if( in_array($char,$vowels)){
+            $result++;
+        }
+    }
+    return $result;
+}

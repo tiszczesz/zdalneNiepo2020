@@ -12,6 +12,7 @@
         <?php
         require "functions.php";
         $tekst = "Alą ma kołta";
+        $tekst2 = "Żółtego";
         echo InsertIntoText($tekst, '-');
         echo "<br>";
         echo InsertIntoText("sdsfsfsfsfsfs",'-');
@@ -19,6 +20,9 @@
         echo InsertIntoText("Bardzo Fajny długi tekst do sprawdzenia łódka",'_')."<br>";
         echo Reverse("Bardzo Fajny długi tekst do sprawdzenia łódka")."<br>";
         echo implode("",array_reverse(mb_str_split("Bardzo Fajny długi tekst do sprawdzenia łódka")));
+        echo "<div>Ilość liter w tekście <b>{$tekst}</b> wynosi: ".countAllAlpha($tekst)."</div>";
+        echo "<div>Ilość liter w tekście <b>{$tekst2}</b> wynosi: ".countAllAlpha($tekst2)."</div>";
+        echo "<div>Ilość samogłosek w tekście <b>{$tekst2}</b> wynosi: ".countAllVowels($tekst2)."</div>";
         //todo wyszukiwanie w stringu fragmentu tekstu ASCII   utf8
         ?>
     </div>
