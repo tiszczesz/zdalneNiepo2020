@@ -44,3 +44,12 @@ function countAllVowels(string $text):int{
     }
     return $result;
 }
+function getRandomText():string
+{
+    $texts = [
+        "ala ma kota","Robaki nie płaczą","Wlazł kotek na płotek","Ryby głosu nie mają",
+        "Witaj dobry człowieku","programowanie w php nie jest takie trudne","Już za chwilę święta"
+    ];
+    $k = array_rand($texts);
+    return $texts[$k];
+}

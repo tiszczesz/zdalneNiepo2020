@@ -26,6 +26,22 @@
         //todo wyszukiwanie w stringu fragmentu tekstu ASCII   utf8
         ?>
     </div>
+    <div>
+        <form method="post">
+            <p>
+                <?php echo getRandomText();?>
+            </p>
+            <input type="text" name="wynik" id="wynik" required>
+            <input type="submit" value="Szukaj tekstu">
+        </form>
+    </div>
+    <div>
+        <?php
+            if(isset($_POST['wynik'])){
+                echo "todo";
+            }
+        ?>
+    </div>
 
 </body>
 

@@ -1,5 +1,5 @@
 label{display: inline-block;text-align: right;width: 170px;}
 .line{margin: 30px 20px;}
-table{border-collapse: collapse;width: 60%;margin-left: 20px;}
+table{border-collapse: collapse;width: 60%;margin: 20px;}
 th,td{border: solid 1px lightseagreen;padding: 7px;}
 th{background-color: blue;color: white;}

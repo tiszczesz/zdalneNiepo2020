@@ -17,3 +17,5 @@ img{ height: 300px;
 #wrapper>div {
     width: 50%;
 }
+.line{ margin: 20px;}
+label{ display: inline-block; width: 120px;text-align: right;}

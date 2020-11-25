@@ -41,3 +41,21 @@ function getAllByTopic(array $dane,string $topic):array{
     }
     return $result;
 }
+function getAVGforTopic(array $dane,string $topic):string{
+    $sum = 0;
+    $count = 0;
+    foreach($dane as $item){
+        if($item[3]==$topic){
+            $sum += $item[2];
+            $count++;
+        }
+    }
+    return $count==0 ? "<div style='color:red;'>Brak ocen z przedmiotu: {$topic}</div>\n"
+           :"<div style='color:green;'>Średnia ocen z przedmiotu {$topic} wynosi: ".round($sum/$count,2)."</div>\n";
+}
+function getMax(array $dane,string $topic):string{
+    return "Do zrobienia!!!!";
+}
+function getMin(array $dane,string $topic):string{
+    return "Do zrobienia!!!!";
+}

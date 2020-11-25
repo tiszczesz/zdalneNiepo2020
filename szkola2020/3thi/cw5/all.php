@@ -33,6 +33,10 @@
            $topic = $_POST['przedmiot'];
            $wynik = getAllByTopic($dane,$topic);
            echo toTable($wynik);
+           echo getAVGforTopic($wynik,$topic);
+           echo getMax($wynik,$topic);
+           echo getMin($wynik,$topic);
+           
         }
         ?>
     </div>
