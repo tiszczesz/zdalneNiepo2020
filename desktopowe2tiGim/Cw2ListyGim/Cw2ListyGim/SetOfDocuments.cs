@@ -30,6 +30,10 @@ namespace Cw2ListyGim
            
         }
 
+        public void RemoveDocument(Document doc) {
+            Documents.Remove(doc);
+        }
+
         public string GetInfo() {
             StringBuilder sb = new StringBuilder();
             sb.Append($"Ilosc dokumentow: {Documents.Count}").Append(Environment.NewLine);
