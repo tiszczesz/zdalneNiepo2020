@@ -27,16 +27,19 @@
         ?>
     </div>
     <div>
+        <?php $mojText = getRandomText();?>
         <form method="post">
-            <p>
-                <?php echo getRandomText();?>
+            <p >
+                <?php echo $mojText ?>
             </p>
+            <input type="hidden" name="text" value='<?php echo $mojText;?>'>
             <input type="text" name="wynik" id="wynik" required>
             <input type="submit" value="Szukaj tekstu">
         </form>
     </div>
     <div>
         <?php
+            var_dump($_POST);
             if(isset($_POST['wynik'])){
                 echo "todo";
             }
