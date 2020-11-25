@@ -140,9 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cw3Obiektowe_GIM.cpp" />
+    <ClCompile Include="DocText.cpp" />
     <ClCompile Include="Document.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DocText.h" />
     <ClInclude Include="Document.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

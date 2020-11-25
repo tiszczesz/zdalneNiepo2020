@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "Document.h"
+#include "DocText.h"
 
 int main()
 {
@@ -14,5 +15,12 @@ int main()
 	pd3->Info();
 	delete pd3;
 	pd3 = nullptr;
+	DocText dt;
+	if(pd3!=nullptr) {
+		cout << "Obiekt istnieje" << endl;
+		pd3->Info();
+	}else {
+		cout << "Obiekt nie istnieje" << endl;
+	}
     return 0;
 }
