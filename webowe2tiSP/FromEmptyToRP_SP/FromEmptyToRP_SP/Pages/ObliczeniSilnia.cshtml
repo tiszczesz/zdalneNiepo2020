@@ -4,13 +4,7 @@
 }
 <h3>Obliczanie <span class="wyr">NWD</span> oraz <span class="wyr"> Silnia</span> rekurencyjnie i iteracyjnie</h3>
 <div id="wrapper">
-    <div>
-        <form id="nwd" method="post">
-            <fieldset>
-                <legend>Największy wspólny dzielnik</legend>
-            </fieldset>
-        </form>
-    </div>
+
     <div>
         <form id="silnia" method="post">
             <fieldset>
@@ -23,7 +17,7 @@
                     <label for="n">Wybierz metodę: </label><br />
                     <input type="radio" name="metoda" value="rek" />Rekurencyjnie<br />
                     <input type="radio" name="metoda" value="iter" />Iteracyjnie<br />
-                    <input type="radio" name="metoda" value="obie"  checked />Rekurencyjnie iteracyjnie<br />
+                    <input type="radio" name="metoda" value="obie" checked />Rekurencyjnie iteracyjnie<br />
                 </div>
                 <div class="line">
                     <label for="n"></label>
@@ -31,5 +25,12 @@
                 </div>
             </fieldset>
         </form>
+
     </div>
+    @if (Model.IsPost)
+    {
+        <div class="silniaWynik">
+            @Model.ReturnSilnia()
+        </div>
+    }
 </div>

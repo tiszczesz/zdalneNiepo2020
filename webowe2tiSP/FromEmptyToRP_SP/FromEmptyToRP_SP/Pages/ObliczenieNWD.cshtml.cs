@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FromEmptyToRP_SP.Pages
 {
-    public class RekeruncjaModel : PageModel
+    public class ObliczenieNWDModel : PageModel
     {
         public void OnGet()
         {
