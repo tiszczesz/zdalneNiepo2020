@@ -9,11 +9,13 @@
     <?php
     require "functions.php";
     $t1 = "Jabłko żółte i czerwone"; // R-y-b-k-a
+    $t2 = "Łódka";
     echo insertChar($t1,'_').'<br>';
     echo "Ilość znaków: ".mb_strlen($t1).'<br>';
     echo reverse($t1).'<br>';
     echo reverse2($t1).'<br>';
-    var_dump(mb_str_split2($t1));
+   // var_dump(mb_str_split2($t1));
+   echo "<div>Ilość liter w \"{$t2}\" wynosi: ".countAlpha($t2)."</div>";
     ?>
 </body>
 </html>

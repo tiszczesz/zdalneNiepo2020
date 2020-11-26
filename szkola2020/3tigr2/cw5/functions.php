@@ -34,5 +34,14 @@ function mb_str_split2(string $t):array{
     return $wynik;
 }
 function countAlpha(string $t):int{
-    
+    $znakiPL = mb_str_split("ąężćśółźĄĘŹŻŚĆŁÓ");
+    $length = mb_strlen($t);
+    $wynik = 0;
+    for($i=0;$i<$length;$i++){
+        $char = mb_substr($t,$i,1);
+        if($char>='a' && $char<='z' || $char>='A' && $char<='Z' || in_array($char,$znakiPL)  ){
+            $wynik++;
+        }
+    }
+    return $wynik;
 }
