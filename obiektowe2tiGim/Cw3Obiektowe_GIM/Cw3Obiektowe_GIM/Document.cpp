@@ -2,12 +2,12 @@
 #include <iostream>
 Document::Document()
 {
-	cout << "Konstruktor domyslny" << endl;
+	cout << "Konstruktor domyslny document" << endl;
 }
 Document::Document(string name, int size)
 	:name(name),size(size)
 {
-	cout << "Konstruktor domyslny" << endl;
+	cout << "Konstruktor z argumentami document" << endl;
 }
 void Document::Info() {
 	cout << "=========== DOKUMENT =============\n";

@@ -5,5 +5,8 @@ using namespace std;
 
 class DocText: public Document {
 
+public:
+	DocText(string name, int size);
+	DocText();
 	
 };
