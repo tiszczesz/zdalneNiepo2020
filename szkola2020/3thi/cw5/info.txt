@@ -5,3 +5,4 @@ Roman|Banan|3|Fizyka
 Grażyna|Sprężyna|3|Geografia
 Tobiasz|Bobiasz|2|Język angielski
 ttttt____44555|rrrrr|5|Chemia
+Roman|Gruda|6|Biologia

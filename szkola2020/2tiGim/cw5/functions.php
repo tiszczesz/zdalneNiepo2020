@@ -53,3 +53,10 @@ function getRandomText():string
     $k = array_rand($texts);
     return $texts[$k];
 }
+function mb_str_split2(string $text):array{
+    $znaki = [];
+    for($i=0;$i<mb_strlen($text);$i++){
+        $znaki[]= mb_substr($text,$i,1);
+    }
+    return $znaki;
+}

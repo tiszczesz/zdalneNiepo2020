@@ -7,6 +7,7 @@ Document::Document(string name, int size):name(name),size(size) {
 	cout << "Konstruktor z argumentami" << endl;
 	//this->name = name;
 	//this->size = size;
+	
 }
 void Document::Info() {
 	cout << "========Informacja o dokumencie:=======" << endl;

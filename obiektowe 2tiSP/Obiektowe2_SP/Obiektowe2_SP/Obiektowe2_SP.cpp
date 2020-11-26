@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Document.h"
+#include "DocText.h"
 
 int main()
 {
@@ -9,10 +10,11 @@ int main()
 	d1.Info();
 	d2.SetSize(20000);
 	d2.Info();
-	//(*pd1).Info();
+	(*pd1).Info();
 	pd1->Info();
 	delete pd1;
 	pd1 = nullptr;
+	DocText dt;
     return 0;
 }
 

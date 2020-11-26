@@ -19,7 +19,7 @@
         echo "<br>";
         echo InsertIntoText("Bardzo Fajny długi tekst do sprawdzenia łódka",'_')."<br>";
         echo Reverse("Bardzo Fajny długi tekst do sprawdzenia łódka")."<br>";
-        echo implode("",array_reverse(mb_str_split("Bardzo Fajny długi tekst do sprawdzenia łódka")));
+        echo implode("",array_reverse(mb_str_split2("Bardzo Fajny długi tekst do sprawdzenia łódka")));
         echo "<div>Ilość liter w tekście <b>{$tekst}</b> wynosi: ".countAllAlpha($tekst)."</div>";
         echo "<div>Ilość liter w tekście <b>{$tekst2}</b> wynosi: ".countAllAlpha($tekst2)."</div>";
         echo "<div>Ilość samogłosek w tekście <b>{$tekst2}</b> wynosi: ".countAllVowels($tekst2)."</div>";
@@ -39,9 +39,17 @@
     </div>
     <div>
         <?php
-            var_dump($_POST);
+           // var_dump(mb_str_split2("łódka podwodna"));
+         //   var_dump(true===TRUE);
             if(isset($_POST['wynik'])){
-                echo "todo";
+                $wynik = trim($_POST['wynik']);
+                $text = $_POST['text'];
+                $index = mb_strpos($text,$wynik);
+                if($index===false){
+                    echo "<div style='color:red;'>\"{$wynik}\" nie znaleziono w tekście:  \"{$text}\"</div>";
+                }else{
+                    echo "<div style='color:green;'>\"{$wynik}\" został znaleziny  w tekście:  \"{$text}\" na miejscu: {$index}</div>" ;   
+                }
             }
         ?>
     </div>
