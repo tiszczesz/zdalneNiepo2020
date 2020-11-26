@@ -14,8 +14,11 @@ int main()
     return 0;
 }
 void Ex2() {
-	DocText dt;
-	dt.Info();
+	vector<string> linie{ "Ala ma kota","Nowe zdanie","trzecia lini tekstu","jeszcze cos ciekawego" };
+	DocText dt1;
+	DocText dt2("pierwszy dokument tekstowy", 1000, linie);
+	dt1.Info();
+	dt2.Info();
 }
 void Ex1() {
 	Document d1;
