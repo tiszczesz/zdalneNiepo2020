@@ -4,7 +4,7 @@
 using namespace std;
 class Document
 {
-private:
+protected:
 	string name;
 	int size{ 0 };
 
