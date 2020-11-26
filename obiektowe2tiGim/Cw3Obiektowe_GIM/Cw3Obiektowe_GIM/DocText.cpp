@@ -15,5 +15,12 @@ void DocText::Info() {
 	for (auto line : lines) {
 		cout <<"\t\t" <<line << endl;
 	}
+
+	cout << "  ----------- statystyki dokumentu tekstoego----\n";
+	//ilosc lini teksu
+	//ilosc znakow
+	//ilosc liter
+	//ilosc samoglosek
+	//ilosc wyrazow
 }
 
