@@ -17,6 +17,10 @@ void DocText::Info() {
 		cout << line << endl;
 	}
 	cout << " ====== koniec zawartosci pliku tekstowego ============\n";
+	cout << " Statystyki dokumentu tekstowego:" << endl;
+	cout << "Ilosc lini: " << getLines() << endl;
+	cout << "Ilosc znakow: " << 2 /*todo*/ << endl;
+	cout << "Ilosc liter: " << 2  /*todo*/ << endl;
 }
 
 

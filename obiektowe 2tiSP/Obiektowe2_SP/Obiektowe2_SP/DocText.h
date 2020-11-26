@@ -6,6 +6,9 @@ private:
 	vector<string> content;
 
 	//w klasie pochdnej nie mamy bezposredniego dostepu do pol prywatnych w klasi bazowej
+	int getLines() {
+		return content.size();
+	}
 public:
 	DocText(string name, int size,vector<string> content);
 	DocText();
