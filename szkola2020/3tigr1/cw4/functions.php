@@ -39,13 +39,31 @@ function countAlpha(string $text):int{
 function countVowels(string $text):int{
     $result = 0;
     $vowels = str_split("aeiouy");
-    var_dump($vowels);
+   // var_dump($vowels);
     for($i=0;$i<mb_strlen($text);$i++){
         $char = mb_substr($text,$i,1);
-        var_dump(strtolower($char));
+      //  var_dump(strtolower($char));
         if(in_array(strtolower($char),$vowels)){
             $result++;
         }
     }
     return $result;
+}
+function getRandomText():string{
+    $teksty = [
+        "a co po czyjej wielkości, jak nie ma w głowie mądrości.",
+        "ani kura za darmo nie gdacze.",
+        "dopóty dzban wodę nosi, dopóki mu się ucho nie urwie",
+        "gdy przyjdzie święta Agnieszka, przebije lód ogonem pliszka",
+        "do siostry w rok szósty, do brata we trzy lata",
+        "gdy się diabeł zestarzeje, chce zostać mnichem",
+        "chleb stracił, a bułki nie znalazł",
+        "wszędzie dobrze, ale w domu najlepiej"
+    ];
+    return $teksty[array_rand($teksty)];
+}
+function Search(string $t, string $s):string{
+    $k = mb_strpos($t,$s);
+    return $k===false ? "<p>Nie znaleziono w tekście \"{$t}\" frazy: \"{$s}\"</p>"
+       :"<p>Znaleziono w tekście <b>\"{$t}\"</b> frazę: <b>\"{$s}\"</b> na miejscu <b>{$k}</b></p>";
 }
