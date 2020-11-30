@@ -13,5 +13,12 @@ namespace ConsoleApp1
             Console.WriteLine($"Wywolanie konstruktora {GetType()} konstruktor klasy pochdnej");
 
         }
+
+        public Bicycle(string name, double maxSpeed, double mass, bool isPrzerzutka)
+            :base(name,maxSpeed,mass) 
+        {
+            Console.WriteLine($"Wywolanie konstruktora z argumentami {GetType()} konstruktor klasy pochdnej");
+            this.isPrzerzutka = isPrzerzutka;
+        }
     }
 }

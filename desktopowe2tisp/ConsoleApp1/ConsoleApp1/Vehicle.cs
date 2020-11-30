@@ -30,6 +30,7 @@ namespace ConsoleApp1
         }
 
         public Vehicle(string name,double maxSpeed, double mass) {
+            Console.WriteLine($"Wywolanie konstruktora z argumentami {GetType()} konstruktor klasy bazowej");
             Name = name;
             this.maxSpeed = maxSpeed;
             this.mass = mass;

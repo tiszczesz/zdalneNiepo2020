@@ -1,0 +1,19 @@
+﻿@page
+@model WebPageWithModel.Pages.SiteWithModelModel
+@{
+}
+<div class="badge-pill m-3">
+    Pierwsza informacja: <i>"@ViewData["info"]"</i> dalszy tekst na stronie
+</div>
+<div class="badge-danger p-3">
+    Sekretna informacja: <i>"@ViewData["sacret"]</i> dalszy tekst na stronie
+</div>
+<hr />
+<p>
+    Informacja z modelu: @Model.Info
+    <form method="post">
+        <label asp-for="Info">Info: </label>
+        <input asp-for="Info" />
+        <input type="submit" value="Zapisz" />
+    </form>
+</p>
