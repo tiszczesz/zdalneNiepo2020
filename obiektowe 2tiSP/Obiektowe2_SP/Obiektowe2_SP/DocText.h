@@ -9,6 +9,8 @@ private:
 	int getLines() {
 		return content.size();
 	}
+	int getAllChar();
+	int getOnlyAlpha();
 public:
 	DocText(string name, int size,vector<string> content);
 	DocText();

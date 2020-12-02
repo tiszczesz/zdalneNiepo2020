@@ -11,7 +11,7 @@ namespace Cw2ListyGim
     {
         static void Main(string[] args) {
           // Ex1();
-          Ex2();
+          // Ex2();
             Console.ReadKey();
         }
 

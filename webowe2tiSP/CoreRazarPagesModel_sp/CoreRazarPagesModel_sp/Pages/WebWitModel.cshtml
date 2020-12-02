@@ -1,0 +1,20 @@
+﻿@page
+@model CoreRazarPagesModel_sp.Pages.WebWitModelModel
+@{
+}
+<h1 class="alert-info p-2 m-2">Strona z modelem</h1>
+<p class="alert-dark">Informacja z modelu: @ViewData["info1"]</p>
+<div>
+    <form method="post">
+        <div>
+            <label asp-for="MyModel"></label>
+            <input asp-for="MyModel" />
+            <input type="submit" value="Zapisz" />
+        </div>
+    </form>
+</div>
+@if (Model.IsPost) {
+    <div class="badge alert-dark">
+        <p>Dane z foormularza: @Model.MyModel</p>
+    </div>
+}
