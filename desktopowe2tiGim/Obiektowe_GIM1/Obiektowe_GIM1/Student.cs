@@ -20,8 +20,8 @@ namespace Obiektowe_GIM1
         }
 
         public Student(string firstName,string lastName,DateTime birth,List<int> marks)
-        :base(firstName,lastName,birth)
-        {
+        :base(firstName,lastName,birth) {
+            //FirstName = firstName;
             Marks = marks;
         }
     }
