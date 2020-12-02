@@ -1,5 +1,6 @@
 #include "DocText.h"
 #include <iostream>
+#include <iomanip>
 
 DocText::DocText(string name, int size, vector<string> lines):Document(name,size) {
 	cout << "Konstruktor z argumentami DocText" << endl;
@@ -17,10 +18,20 @@ void DocText::Info() {
 	}
 
 	cout << "  ----------- statystyki dokumentu tekstoego----\n";
-	//ilosc lini teksu
-	//ilosc znakow
-	//ilosc liter
+	cout << setw(35) << "ilosc lini tekstu: " << setw(6) << getCountLines() << endl;
+	cout << setw(35) << "ilosc znakow w tekscie: " << setw(6) << getCountChar() << endl;
+	cout << setw(35) << "ilosc liter w tekscie: " << setw(6) << getAlpha() << endl;
 	//ilosc samoglosek
 	//ilosc wyrazow
 }
+int DocText::getAlpha() {
+	int result{ 0 };
+	for (string line : lines) {
+		for(int i=0;i<line.size();i++) {
+			if (isalpha(line[i])) result++;
+		}
+	}
+	return result;
+}
+
 
