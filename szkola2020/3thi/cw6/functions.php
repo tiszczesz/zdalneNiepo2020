@@ -14,3 +14,12 @@ function InsertChar(string $text, string $c): string
 
     return $wynik;
 }
+function getRandomText(){
+    $texts = [
+        "Broda mędrcem nie czyni ","Co z oczu, to z serca ","Darowanemu koniowi w zęby się nie zagląda ",
+        "nie powinno się krytykować czegoś, co otrzymuje się w prezencie ","Fortuna kołem się toczy",
+        " Kradzione nie tuczy","Kuć żelazo, póki gorące "
+    ];
+    $id = array_rand($texts);
+    return $texts[$id];
+}

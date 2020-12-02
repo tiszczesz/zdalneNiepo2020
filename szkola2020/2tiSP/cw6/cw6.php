@@ -14,7 +14,8 @@
     
         echo insertChar($text2,'*')."<br>";   //yyy
         //todo odwrocenie tekstu, liczenie liter w tekscie
-        echo strrev("żółty");
+        echo strrev("żółty")."<br>";
+        echo reverse("żółty")."<br>";  
     ?>
 </body>
 </html>

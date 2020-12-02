@@ -99,6 +99,7 @@ function getFunkcjeByIDPracownika(int $id):array{
   $sql =  "SELECT funkcjaid FROM prac_funkcja WHERE pracownikid={$id}";
    // echo $sql;
   $result = $conn->query($sql);
+  var_dump($result);
   $wycieczkiId = [];
   while($row = $result->fetch_row()){
     $wycieczkiId[]=$row[0];
