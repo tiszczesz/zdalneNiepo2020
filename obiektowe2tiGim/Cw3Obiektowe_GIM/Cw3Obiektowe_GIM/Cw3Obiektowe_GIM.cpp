@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Document.h"
 #include "DocText.h"
+
 void Ex1();
 void Ex2();
 int main()
@@ -14,11 +15,12 @@ int main()
     return 0;
 }
 void Ex2() {
-	vector<string> linie{ "Ala ma kota","Nowe zdanie","trzecia lini tekstu","jeszcze cos ciekawego" };
+	vector<string> linie{ "Ala ma kota","Nowe zdanie w tekscie","trzecia lini tekstu z internetu","jeszcze cos ciekawego" };
 	DocText dt1;
 	DocText dt2("pierwszy dokument tekstowy", 1000, linie);
 	dt1.Info();
 	dt2.Info();
+	
 }
 void Ex1() {
 	Document d1;

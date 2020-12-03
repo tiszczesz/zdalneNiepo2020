@@ -1,6 +1,7 @@
 #include "DocText.h"
 #include <iostream>
 #include <iomanip>
+#include "Tools.h"
 
 DocText::DocText(string name, int size, vector<string> lines):Document(name,size) {
 	cout << "Konstruktor z argumentami DocText" << endl;
@@ -21,7 +22,8 @@ void DocText::Info() {
 	cout << setw(35) << "ilosc lini tekstu: " << setw(6) << getCountLines() << endl;
 	cout << setw(35) << "ilosc znakow w tekscie: " << setw(6) << getCountChar() << endl;
 	cout << setw(35) << "ilosc liter w tekscie: " << setw(6) << getAlpha() << endl;
-	//ilosc samoglosek
+	cout << setw(35) << "ilosc samoglosek w tekscie: " << setw(6) << getVowels() << endl;
+	cout << setw(35) << "ilosc wyrazow w tekscie: " << setw(6) << getWords() << endl;
 	//ilosc wyrazow
 }
 int DocText::getAlpha() {
@@ -33,5 +35,25 @@ int DocText::getAlpha() {
 	}
 	return result;
 }
+int DocText::getVowels() {
+	char vowels[]{ 'a','e','i','o','u','y' };
+	int result{ 0 };
+	for(string line : lines) {
+		for(char znak : line) {
+			if (Tools::InArray(vowels, 6, znak)) result++;
+		}
+	}
+	return result;
+}
+int DocText::getWords() {
+	int result{ 0 };
+	for (string line : lines) {
+		vector<string> words = Tools::Explode(line, ' ');
+		result += words.size();
+	}
+	return result;
+}
+
+
 
 

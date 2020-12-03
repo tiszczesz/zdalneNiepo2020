@@ -58,7 +58,12 @@ int DocText::getVowels() {
 	return result;
 }
 int DocText::getWords() {
-	return 0;
+	int result{ 0 };
+	for (auto line : content) {
+		vector<string> words = Tools::explode(line, ' ');
+		result += words.size();
+	}
+	return result;
 }
 
 

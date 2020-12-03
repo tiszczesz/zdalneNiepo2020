@@ -24,7 +24,7 @@ void Ex1() {
 	pd1 = nullptr;
 }
 void Ex2() {
-	vector<string> zdania{ "Ala ma kota","Rybka w akwarium","Inny ciekawy tekst123" };
+	vector<string> zdania{ "Ala ma kota malego","Rybka w akwarium","Inny ciekawy tekst123" };
 	DocText dt;//wywoluje konstr klasy bazowej a potem klasy pochodnej
 	DocText dt2("Dokument tekstowy1", 2000, zdania);
 	dt.Info();//poniwaz brak Info w Doctext to wywolywane info z document

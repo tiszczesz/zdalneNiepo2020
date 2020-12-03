@@ -19,6 +19,8 @@ private:
 		return result;
 	}
 	int getAlpha();
+	int getVowels();
+	int getWords();
 
 public:
 	DocText(string name, int size,vector<string> lines);
