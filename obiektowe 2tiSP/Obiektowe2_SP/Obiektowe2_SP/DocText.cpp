@@ -1,6 +1,7 @@
 #include "DocText.h"
 #include <iostream>
 #include <cctype>
+#include "Tools.h"
 
 DocText::DocText(string name, int size, vector<string> content)
 :Document(name,size)
@@ -44,7 +45,16 @@ int DocText::getOnlyAlpha() {
 	return result;
 }
 int DocText::getVowels() {
-	
+	const char vowels[] = { 'a','e','i','o','u','y' };
+	int result{ 0 };
+	for (auto line : content) {
+		for(int i=0;i<line.size();i++) {
+			if(Tools::isExist(vowels,6,line[i])) {
+				result++;
+			}
+		}
+	}
+	return result;
 }
 
 

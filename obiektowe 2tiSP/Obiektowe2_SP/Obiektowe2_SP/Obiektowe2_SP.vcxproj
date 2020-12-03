@@ -142,10 +142,12 @@
     <ClCompile Include="DocText.cpp" />
     <ClCompile Include="Document.cpp" />
     <ClCompile Include="Obiektowe2_SP.cpp" />
+    <ClCompile Include="Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DocText.h" />
     <ClInclude Include="Document.h" />
+    <ClInclude Include="Tools.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

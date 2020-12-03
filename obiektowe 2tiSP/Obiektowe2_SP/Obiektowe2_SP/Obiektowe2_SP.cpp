@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Document.h"
 #include "DocText.h"
+#include "Tools.h"
+
 void Ex1();
 void Ex2();
 int main()
@@ -27,5 +29,8 @@ void Ex2() {
 	DocText dt2("Dokument tekstowy1", 2000, zdania);
 	dt.Info();//poniwaz brak Info w Doctext to wywolywane info z document
 	dt2.Info();
+	cout << "------------------------------------------------\n\n";
+	vector<string> wyrazy = Tools::explode("Ala ma kota", ' ');
+	
 }
 
