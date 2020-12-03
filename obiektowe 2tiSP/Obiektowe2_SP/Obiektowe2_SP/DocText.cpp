@@ -24,7 +24,7 @@ void DocText::Info() {
 	cout << " Statystyki dokumentu tekstowego:" << endl;
 	cout << "Ilosc lini: " << getLines() << endl;
 	cout << "Ilosc znakow: " << getAllChar() << endl;
-	cout << "Ilosc liter: " << 2  /*todo*/ << endl;
+	cout << "Ilosc liter: " << getOnlyAlpha() << endl;
 }
 int DocText::getAllChar() {
 	int result{ 0 };
@@ -34,7 +34,13 @@ int DocText::getAllChar() {
 	return result;
 }
 int DocText::getOnlyAlpha() {
-	//isalpha()
+	int result{ 0 };
+	for (string line : content) {
+		for(int i=0;i<line.size();i++) {
+			if (isalpha(line[i])) result++;
+		}
+	}
+	return result;
 }
 
 
