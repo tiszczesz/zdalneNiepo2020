@@ -11,6 +11,7 @@ private:
 	}
 	int getAllChar();
 	int getOnlyAlpha();
+	int getVowels();
 public:
 	DocText(string name, int size,vector<string> content);
 	DocText();

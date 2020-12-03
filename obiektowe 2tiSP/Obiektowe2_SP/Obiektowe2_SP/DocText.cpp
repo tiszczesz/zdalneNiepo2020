@@ -25,6 +25,7 @@ void DocText::Info() {
 	cout << "Ilosc lini: " << getLines() << endl;
 	cout << "Ilosc znakow: " << getAllChar() << endl;
 	cout << "Ilosc liter: " << getOnlyAlpha() << endl;
+	cout << "Ilosc samoglosek: " << getVowels() << endl;
 }
 int DocText::getAllChar() {
 	int result{ 0 };
@@ -41,6 +42,9 @@ int DocText::getOnlyAlpha() {
 		}
 	}
 	return result;
+}
+int DocText::getVowels() {
+	
 }
 
 
