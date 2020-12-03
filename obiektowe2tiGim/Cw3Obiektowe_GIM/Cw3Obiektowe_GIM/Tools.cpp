@@ -18,3 +18,19 @@ std::vector<std::string> Tools::Explode(std::string const& s, char delim)
 
     return result;
 }
+std::vector<std::string> Tools::Explode2(std::string const& s, char delim)
+{
+    std::vector<std::string> result;
+    std::string word = "";
+    for(auto znak : s) {
+	    if(znak==delim) {
+            result.push_back(word);
+            word = "";
+	    }else {
+            word = word + znak;
+	    }
+    }
+    result.push_back(word);
+    return result;
+}
+

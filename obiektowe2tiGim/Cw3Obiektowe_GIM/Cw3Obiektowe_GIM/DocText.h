@@ -20,7 +20,8 @@ private:
 	}
 	int getAlpha();
 	int getVowels();
-	int getWords();
+	int getWords(int minLength = 0);
+	int getConsonant();
 
 public:
 	DocText(string name, int size,vector<string> lines);

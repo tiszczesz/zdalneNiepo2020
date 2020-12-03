@@ -23,7 +23,8 @@ void DocText::Info() {
 	cout << setw(35) << "ilosc znakow w tekscie: " << setw(6) << getCountChar() << endl;
 	cout << setw(35) << "ilosc liter w tekscie: " << setw(6) << getAlpha() << endl;
 	cout << setw(35) << "ilosc samoglosek w tekscie: " << setw(6) << getVowels() << endl;
-	cout << setw(35) << "ilosc wyrazow w tekscie: " << setw(6) << getWords() << endl;
+	cout << setw(35) << "ilosc wyrazow w tekscie: " << setw(6) << getWords(1) << endl;
+	cout << setw(35) << "ilosc spolglosek w tekscie: " << setw(6) << getConsonant() << endl;
 	//ilosc wyrazow
 }
 int DocText::getAlpha() {
@@ -45,14 +46,20 @@ int DocText::getVowels() {
 	}
 	return result;
 }
-int DocText::getWords() {
+int DocText::getWords(int minLength) {
 	int result{ 0 };
-	for (string line : lines) {
+	for (string line : lines) {		
 		vector<string> words = Tools::Explode(line, ' ');
-		result += words.size();
+		for(string w : words) {
+			if(w.size()>minLength) result++;
+		}		
 	}
 	return result;
 }
+int DocText::getConsonant() {
+	return 0;//todo
+}
+
 
 
 

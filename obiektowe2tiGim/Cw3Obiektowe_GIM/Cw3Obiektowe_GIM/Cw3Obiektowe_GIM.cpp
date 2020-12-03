@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Document.h"
 #include "DocText.h"
+#include "Tools.h"
 
 void Ex1();
 void Ex2();
@@ -20,7 +21,7 @@ void Ex2() {
 	DocText dt2("pierwszy dokument tekstowy", 1000, linie);
 	dt1.Info();
 	dt2.Info();
-	
+	vector<string> w = Tools::Explode2("Ala ma kota", ' ');
 }
 void Ex1() {
 	Document d1;
