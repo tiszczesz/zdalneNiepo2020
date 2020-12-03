@@ -27,6 +27,7 @@ void DocText::Info() {
 	cout << "Ilosc znakow: " << getAllChar() << endl;
 	cout << "Ilosc liter: " << getOnlyAlpha() << endl;
 	cout << "Ilosc samoglosek: " << getVowels() << endl;
+	cout << "Ilosc wyrazow: " << getWords() << endl;
 }
 int DocText::getAllChar() {
 	int result{ 0 };
@@ -56,6 +57,10 @@ int DocText::getVowels() {
 	}
 	return result;
 }
+int DocText::getWords() {
+	return 0;
+}
+
 
 
 
