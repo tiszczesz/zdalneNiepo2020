@@ -20,5 +20,10 @@ namespace ConsoleApp1
             Console.WriteLine($"Wywolanie konstruktora z argumentami {GetType()} konstruktor klasy pochdnej");
             this.isPrzerzutka = isPrzerzutka;
         }
+
+        public string ShowInfo() {
+            string info = isPrzerzutka ? " Rower z przerzutka" : "Rower bez przerzutki";
+            return $"\nInformacja o rowerze: {info} " + Environment.NewLine + base.ShowInfo();
+        }
     }
 }

@@ -23,9 +23,12 @@ namespace ConsoleApp1 {
         public static void Ex2() {
             Bicycle b1 = new Bicycle();
             Bicycle b2 = new Bicycle("Rowerek", 24, 4, true);
+            Car c1 = new Car();
+            Car c2 = new Car("Renault",230,1500,6);
             Console.WriteLine(b1.ShowInfo());
             Console.WriteLine(b2.ShowInfo());
-            //  Car c1 = new Car();
+            Console.WriteLine(c1.ShowInfo());
+            Console.WriteLine(c2.ShowInfo());
         }
     }
 }
