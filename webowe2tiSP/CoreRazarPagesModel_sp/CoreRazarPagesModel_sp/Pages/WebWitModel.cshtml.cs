@@ -9,6 +9,7 @@ namespace CoreRazarPagesModel_sp.Pages
 {
     public class WebWitModelModel : PageModel
     {
+        [BindProperty]
         public string MyModel { get; set; }
         public bool IsPost { get; set; }
         public void OnGet() {
@@ -17,9 +18,10 @@ namespace CoreRazarPagesModel_sp.Pages
             MyModel = "Info z modelu";
         }
 
-        public void OnPost(string info) {
+        public void OnPost() {
             IsPost = true;
-            MyModel = info;
+            string fromModel = MyModel;
+
         }
     }
 }

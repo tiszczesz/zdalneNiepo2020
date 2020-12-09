@@ -19,6 +19,7 @@
         <form  method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
         <div class="form-group w-75">
         <label for="date">Podaj datę urodzenia: </label>
+
             <input class="form-control m-3" type="date" name="date" id="date" value="<?=$value;?>">
             <select class="form-control m-3" name="wyb" id="wyb">
                 <option value="lata">lata</option>
@@ -38,8 +39,29 @@
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $aDate = new DateTime("now");
             $bDate = new DateTime($_POST['date']);
-            var_dump($aDate);
-            var_dump($bDate);
+            // var_dump($aDate);
+            // var_dump($bDate);
+            $delta = $aDate->diff($bDate);
+            $delta2 = $bDate->diff($aDate);
+            // var_dump($delta);
+            // var_dump($delta2);
+            // echo "<p>Dzisiaj - urodzenia: {$delta->days}</p>";
+            // echo "<p>urodzenia - dzisiaj: {$delta->days}</p>";
+            $wyb = trim($_POST['wyb']);
+            if($wyb==='lata'){
+                echo "<p class='badge  p-3'>Ilość lat pomiędzy: ".
+                   " {$aDate->format('d-m-Y')} a  {$bDate->format('d-m-Y')} to <b>{$delta->y}</b>  </p>";
+            }else if($wyb==='miesiące'){
+                    $miesiace = $delta->y * 12 + $delta->m;
+                    echo "<p class='badge  p-3'>Ilość miesięcy pomiędzy: ".
+                    " {$aDate->format('d-m-Y')} a  {$bDate->format('d-m-Y')} to <b>{$miesiace}</b>  </p>";
+            }else if($wyb==='dni'){
+
+            }else if($wyb==='sekundy'){
+
+            }else{
+                echo "<p style='color:red;'>Błędny wybór!!!</p>";
+            }
         } 
 
         ?>

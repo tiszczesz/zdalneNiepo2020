@@ -1,0 +1,13 @@
+﻿@page
+@model WebPageWithModel.Pages.Page2Model
+@{
+}
+<div>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="MyPerson.FirstName"></label>
+            <input type="text" asp-for="MyPerson.FirstName" />
+            <input type="submit" value="zapisz" />
+        </div>
+    </form>
+</div>

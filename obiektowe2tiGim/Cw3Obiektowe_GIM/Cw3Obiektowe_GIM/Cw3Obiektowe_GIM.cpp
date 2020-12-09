@@ -4,6 +4,7 @@
 #include "Document.h"
 #include "DocText.h"
 #include "Tools.h"
+#include <cstdlib>
 
 void Ex1();
 void Ex2();
@@ -12,7 +13,7 @@ int main()
 	//Ex1();
 	Ex2();
 	
-	
+	system("PAUSE");
     return 0;
 }
 void Ex2() {
