@@ -22,6 +22,7 @@ namespace Obiektowe_GIM1
             Student s1 = new Student();
             Student s2 = new Student("Tomasz","Bomasz",new DateTime(2001,3,22),
                      new List<int>(){3,5,7,8,9} );
+            Student s3 = new Student("Roman","Woloch",new DateTime(1980,3,12),null );
             Console.WriteLine(s1.Info());
             Console.WriteLine(s2.Info());
         }
