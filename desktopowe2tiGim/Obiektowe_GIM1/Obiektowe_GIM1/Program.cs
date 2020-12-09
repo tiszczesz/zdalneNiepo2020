@@ -25,6 +25,14 @@ namespace Obiektowe_GIM1
             Student s3 = new Student("Roman","Woloch",new DateTime(1980,3,12),null );
             Console.WriteLine(s1.Info());
             Console.WriteLine(s2.Info());
+            Console.WriteLine("=================================================\n");
+            string tekst = "aa, sss, ddd, ";
+            if (tekst.EndsWith(",")) {
+                tekst = tekst.Remove(tekst.Length - 1);
+            }else if (tekst.EndsWith(", ")) {
+                tekst = tekst.Remove(tekst.Length - 2);
+            }
+            Console.WriteLine(tekst);
         }
     }
 }
