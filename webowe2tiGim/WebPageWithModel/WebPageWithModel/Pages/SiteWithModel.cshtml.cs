@@ -8,18 +8,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace WebPageWithModel.Pages
 {
     public class SiteWithModelModel : PageModel {
-        public string Info { get; set; } = "Wstêpna informacja z modelu";
+        [BindProperty]
+        public string Info { get; set; } = "WstÄ™pna informacja z modelu";
         public bool IsPost { get; set; } = false;
         public void OnGet() {
-            string info = "Wa¿na informacja na stronê";
+            string info = "WaÅ¼na informacja na stronÄ™";
             int sacretNumber = 456;
             ViewData["info"] = info;
             ViewData["sacret"] = sacretNumber;
             
         }
 
-        public void OnPost(string info) {
-            Info = info;
+        public void OnPost() {
+           // Info = info;
             IsPost = true;
         }
 

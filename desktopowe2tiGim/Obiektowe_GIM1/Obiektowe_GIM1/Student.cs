@@ -11,7 +11,7 @@ namespace Obiektowe_GIM1
         public List<int> Marks { get; set; }
 
         public double? GetAVGMarks() {
-            return Marks?.Average();
+            return Marks != null && Marks.Count > 0 ? Marks.Average() : (double?) null;
         }
 
         public Student()
@@ -23,6 +23,21 @@ namespace Obiektowe_GIM1
         :base(firstName,lastName,birth) {
             //FirstName = firstName;
             Marks = marks;
+        }
+
+        private string getMarks() {
+            StringBuilder sb = new StringBuilder();
+            if(Marks==null || Marks?.Count==0) return "brak ocen";
+            sb.Append("Lista ocen: ");
+            foreach (var mark in Marks) {
+                sb.Append(mark).Append(" ");
+            }
+            var s = string.Format("{0:0.00}", GetAVGMarks());
+            sb.Append(" Srednia ocen: ").Append(s);
+            return sb.ToString();
+        }
+        public string Info() {
+            return base.Info() + Environment.NewLine + getMarks();
         }
     }
 }

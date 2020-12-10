@@ -37,7 +37,8 @@ namespace ConsoleApp1
         }
 
         public string ShowInfo() {
-            return $" Informacje o pojezdzie: {Name} masa: {Mass} kg maksymalna predkosc: {MaxSpeed} km/h";
+            return $" Informacje o pojezdzie: {Name} masa: {Mass} kg maksymalna predkosc: {MaxSpeed} km/h"
+                   +"\n========================================================\n";
         }
 
         public static Vehicle FillOneVehicle() {

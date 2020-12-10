@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreRazarPagesModel_sp", "CoreRazarPagesModel_sp\CoreRazarPagesModel_sp.csproj", "{CA279EEE-57D6-4CD7-9DC5-8EA1D7C90976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreRazarPagesModel_sp", "CoreRazarPagesModel_sp\CoreRazarPagesModel_sp.csproj", "{CA279EEE-57D6-4CD7-9DC5-8EA1D7C90976}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

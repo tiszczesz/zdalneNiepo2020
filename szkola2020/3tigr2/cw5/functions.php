@@ -45,3 +45,16 @@ function countAlpha(string $t):int{
     }
     return $wynik;
 }
+function getRandom():string{
+    $teksty = [
+        "obrego syna nigdy Bóg nie zapomina",
+        "czerwiec po deszczowym maju często dżdżysty w naszym kraju",
+        "gdy pająk w lipcu przychodzi, to za sobą deszcz przywodzi, gdy swą pajęczynę snuje, bliską burzę czuje",
+        "dobra i wdowa, gdy młoda i zdrowa",
+        "z braku laku dobry kit",
+        "w Warszawie, w Krakowie i we Lwowie, kto bez grosza, głodu się dowie",
+        "znać kota po pazurach"
+    ];
+    $id = array_rand($teksty);
+    return $teksty[$id];
+}

@@ -11,9 +11,15 @@
 <hr />
 <p>
     Informacja z modelu: @Model.Info
-    <form method="post">
-        <label asp-for="Info">Info: </label>
-        <input asp-for="Info" />
-        <input type="submit" value="Zapisz" />
-    </form>
+<form method="post">
+    <label asp-for="Info">Info: </label>
+    <input asp-for="Info" />
+    <input type="submit" value="Zapisz" />
+</form>
 </p>
+@if (Model.IsPost)
+{
+    <div class="badge badge-info p-3 m-2 w-50">
+        @Model.Info - to z modelu
+    </div>
+}

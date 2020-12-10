@@ -16,6 +16,7 @@
         //todo odwrocenie tekstu, liczenie liter w tekscie
         echo strrev("żółty")."<br>";
         echo reverse("żółty")."<br>";  
+        
     ?>
 </body>
 </html>
