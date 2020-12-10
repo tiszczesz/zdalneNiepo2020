@@ -43,8 +43,8 @@
             // var_dump($bDate);
             $delta = $aDate->diff($bDate);
             $delta2 = $bDate->diff($aDate);
-            // var_dump($delta);
-            // var_dump($delta2);
+             var_dump($delta);
+           //  var_dump($delta2);
             // echo "<p>Dzisiaj - urodzenia: {$delta->days}</p>";
             // echo "<p>urodzenia - dzisiaj: {$delta->days}</p>";
             $wyb = trim($_POST['wyb']);
@@ -56,9 +56,14 @@
                     echo "<p class='badge  p-3'>Ilość miesięcy pomiędzy: ".
                     " {$aDate->format('d-m-Y')} a  {$bDate->format('d-m-Y')} to <b>{$miesiace}</b>  </p>";
             }else if($wyb==='dni'){
-
+                echo "<p class='badge  p-3'>Ilość dni pomiędzy: ".
+                " {$aDate->format('d-m-Y')} a  {$bDate->format('d-m-Y')} to <b>{$delta->days}</b>  </p>";
             }else if($wyb==='sekundy'){
-
+                $sekundy = $delta->days*24*3600 + $delta->h*3600+$delta->i*60+$delta->s;
+                echo "<p class='badge  p-3'>Ilość dni pomiędzy: ".
+                " {$aDate->format('d-m-Y')} a  {$bDate->format('d-m-Y')} to <b>{$sekundy}</b>  </p>";
+                echo "<p class='badge  p-3'>Ilość dni pomiędzy: ".
+                " {$aDate->format('d-m-Y')} a  {$bDate->format('d-m-Y')} to <b>".($aDate->getTimestamp()-strtotime($_POST['date']))."</b>  </p>";
             }else{
                 echo "<p style='color:red;'>Błędny wybór!!!</p>";
             }
