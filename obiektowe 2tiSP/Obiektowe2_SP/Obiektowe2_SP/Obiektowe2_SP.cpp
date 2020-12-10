@@ -2,13 +2,16 @@
 #include "Document.h"
 #include "DocText.h"
 #include "Tools.h"
+#include "DocImage.h"
 
 void Ex1();
 void Ex2();
+void Ex3();
 int main()
 {
 //	Ex1();
 	Ex2();
+	Ex3();
     return 0;
 }
 void Ex1() {
@@ -32,5 +35,16 @@ void Ex2() {
 	cout << "------------------------------------------------\n\n";
 	vector<string> wyrazy = Tools::explode("Ala ma kota", ' ');
 	
+}
+void Ex3() {
+	DocImage di1;	
+	DocImage di2("Fajny obrazek", 3000, {450,600}, ImageType::png);
+	DocImage* di3 = new DocImage("Dynamiczny obrazek", 4500, { 300,400 }, ImageType::tiff);
+	cout << "\n\n=========================== Uzywamy klasy DoImage ================\n";
+	di1.Info();
+	di2.Info();
+	di3->Info(); // (*di3).Info();
+	delete di3;
+	di3 = nullptr;
 }
 
