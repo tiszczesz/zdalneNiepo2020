@@ -47,4 +47,4 @@ void Ex3() {
 	delete di3;
 	di3 = nullptr;
 }
-
+//todo DocSound pola: dlugosc(czas trwania w sek) typ kodowania mp3 ogg flac ....
