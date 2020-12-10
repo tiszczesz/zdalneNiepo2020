@@ -51,8 +51,11 @@ void Ext3() {
 	rozmiar.height = 300;
 	rozmiar.width = 400;
 	DocImage* di2 = new DocImage("nowy obrazek", 2000, rozmiar, TypeOfImage::png);
+	DocImage di3("Fajny obrazek", 3500, { 450,500 }, TypeOfImage::tiff);
 	di1.Info();
 	di2->Info();
+	di3.Info();
 	delete di2;
 	di2 = nullptr;
 }
+//todo napisanie klasy DocSound dziedziczy z Document  ma length(czas trwania) typ kodowania(mp3, ogg, flac, acc)
