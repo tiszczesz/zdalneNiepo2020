@@ -1,20 +1,20 @@
 <?php
 //typy danych
 //int float string mixed bool array obiekty
-$i=1;   $i=23.6 ; $i=false;
+$i=1;   $i=23.6 ; $i=false;     class T{private int $i=9;}
 var_dump($zmienna); // sprawdzenie zawartosci i typu zmiennej
 //tablica   
-$t = [23,67,"aaaa",[4,6,7],false];
-$tassoc = ["jeden"=>34,"grupa"=>"ala ma kota"]; // klucz=>wartosc
-$d = date("d-m-Y");
+$t = [23,67,"aaaa",[4,6,7],false]; $t[60] = "ttt";
+$tassoc = ["jeden"=>34,"grupa"=>"ala ma kota" ,"tab"=>[3,6,7,8]]; // klucz=>wartosc
+$d = date("d-m-Y",8999);
 //obiekty
 class punkt{
     public $x;
     public  $y; 
-public function __construct(){/* tresc*/}
+public function __construct(){/* tresc*/} 
 }
 //petle i instrukcje warunkowe tak samo wszedzie
-foreach($zbior as $element){/*....*/}
+foreach($zbior as $element){/*....*/}; foreach($zbior as $k=>$element){/*....*/}
 //np 
 do{   echo "gggg";}while($i<10);
 //operacje na plikach
@@ -30,18 +30,11 @@ $result = $conn->query("Jakas komenda sql"); //zapytanie do bazy i efekt do zmie
 while($row=$result->fetch_row()){/* cos robimy za danymi z $row*/} //zawsze zwraca TABLICE nawet count() avg();
                                                                     // chćby tab jednoelementową
 
-$result = $conn->query("SELECT sum(cena) FROM towary");                                                                    
+$result = $conn->query("SELECT sum(cena) FROM towary");       // --> ["kowalski"]                                                             
 $suma = $result->fetch_row()[0];
 $conn->close();  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //operatory
 //+ - * / =  += -= *=   $a /= $b -> $a = $a/$b;
-// != == > < >= <=   // potrojne sprawdzaja tez TYP  '1'===1 (false) '2'==2 (true)   tez w js
+// != == > < >= <=   // potrojne sprawdzaja tez TYP  '1'===1 (false) '2'==2 (true)   tez w js intval("0")
 
 
-
-
-
-
-
-
-?>
