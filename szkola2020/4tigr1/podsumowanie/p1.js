@@ -19,4 +19,8 @@ window.onload = function(){
     document.getElementsByName();
     document.getElementsByClassName();
     //....
+    let elem1 = document.querySelector("#btn1").onclick = function(event){//onload, onkeypress,onkeyup,
+        event.target.style.color = "red";
+       // this.style.display...a.
+    }
  };
