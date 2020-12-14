@@ -1,4 +1,5 @@
 ﻿@page
+@using WebPageWithModel.Models
 @model WebPageWithModel.Pages.Page2Model
 @{
 }
@@ -6,8 +7,28 @@
     <form method="post">
         <div class="form-group">
             <label asp-for="MyPerson.FirstName"></label>
-            <input type="text" asp-for="MyPerson.FirstName" />
-            <input type="submit" value="zapisz" />
+            <input class="form-control" type="text" asp-for="MyPerson.FirstName" />
+        </div>
+        <div class="form-group">
+            <label asp-for="MyPerson.LastName"></label>
+            <input class="form-control" type="text" asp-for="MyPerson.LastName" />
+        </div>
+        <div class="form-group">
+            <label asp-for="MyPerson.Age"></label>
+            <input  class="form-control" asp-for="MyPerson.Age" />
+        </div>
+        <div class="form-group">
+            <label asp-for="MyPerson.MyEduction"></label>
+           <select asp-for="MyPerson.MyEduction" asp-items="Html.GetEnumSelectList<Eduction>()"></select>
+        </div>
+        <div class="form-group">
+           <input type="submit" class="btn btn-dark"/>
         </div>
     </form>
 </div>
+@if ((bool)ViewData["IsPost"]) {
+    <div class="alert-info border-dark p-3">
+        <p>Informacje o kliencie: @Model.MyPerson.FirstName @Model.MyPerson.LastName 
+            wiek: @Model.MyPerson.Age wykształcenie: @Model.MyPerson.MyEduction</p>
+    </div>
+}

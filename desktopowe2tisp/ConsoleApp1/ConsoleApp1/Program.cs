@@ -10,6 +10,7 @@ namespace ConsoleApp1 {
           //  Ex1();
             Console.WriteLine("==============================================");
             Ex2();
+            Ex3();
             Console.ReadKey();
         }
 
@@ -29,6 +30,10 @@ namespace ConsoleApp1 {
             Console.WriteLine(b2.ShowInfo());
             Console.WriteLine(c1.ShowInfo());
             Console.WriteLine(c2.ShowInfo());
+        }
+
+        public static void Ex3() {
+            //todo klasa Van dzidziczaca z klasy vehicle ---> majaca property ladownosc double i nadpisujaca metode Info z klasy bazowej vehicle
         }
     }
 }

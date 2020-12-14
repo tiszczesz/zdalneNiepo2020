@@ -16,7 +16,8 @@ namespace WebPageWithModel.Pages
         
         public void OnGet() {
             ViewData["IsPost"] = false;
-            MyPerson = new Person() {FirstName = "Janusz", LastName = "Nowak", Age = 33};
+            MyPerson = new Person() {FirstName = "Janusz", LastName = "Nowak",
+                Age = 33,MyEduction = Eduction.Œrednie};
         }
 
         public void OnPost() {
