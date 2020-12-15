@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1607440537 source:d:\zdalne\zdalnecppgdow\test4tigr1\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+
