@@ -1,7 +1,7 @@
 #pragma once
 #include "Document.h"
 
-enum class TypeOfCoding { mp3,ogg,flac,acc };
+enum class TypeOfCoding { mp3,ogg,flac,acc,m4a };
 class DocSound :    public Document
 {
 private:
@@ -9,6 +9,8 @@ private:
 	TypeOfCoding type;
 	//.....................
 public:
-	//.....................
+	DocSound();
+	DocSound(string name, int size, int length, TypeOfCoding type);
+	void Info();
 };
 

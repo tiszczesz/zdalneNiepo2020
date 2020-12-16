@@ -27,4 +27,5 @@ public:
 	DocText(string name, int size,vector<string> lines);
 	DocText();
 	void Info();
+	void ContentToFile(string fileName);
 };

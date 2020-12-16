@@ -7,15 +7,19 @@
 #include "Tools.h"
 #include <cstdlib>
 
+#include "DocSound.h"
+
 void Ex1();
 void Ex2();
-void Ext3();
+void Ex3();
+void Ex4();
 int main()
 {
 	//Ex1();
-	Ex2();
+	//Ex2();
 	cout << "----------------------------------------------------\n\n";
-	Ext3();
+	//Ex3();
+	Ex4();
 	system("PAUSE");
     return 0;
 }
@@ -45,7 +49,7 @@ void Ex1() {
 		cout << "Obiekt nie istnieje" << endl;
 	}
 }
-void Ext3() {
+void Ex3() {
 	DocImage di1;
 	Pair rozmiar;
 	rozmiar.height = 300;
@@ -57,5 +61,11 @@ void Ext3() {
 	di3.Info();
 	delete di2;
 	di2 = nullptr;
+}
+void Ex4() {
+	DocSound ds1;
+	DocSound ds2("fajna muzyczka", 350000, 120, TypeOfCoding::flac);
+	ds1.Info();
+	ds2.Info();
 }
 //todo napisanie klasy DocSound dziedziczy z Document  ma length(czas trwania) typ kodowania(mp3, ogg, flac, acc)

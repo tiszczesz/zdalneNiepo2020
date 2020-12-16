@@ -59,6 +59,10 @@ int DocText::getWords(int minLength) {
 int DocText::getConsonant() {
 	return 0;//todo
 }
+void DocText::ContentToFile(string fileName) {
+	//todo poczytac o bibliotece fstream  (ifstream ofstream)
+	
+}
 
 
 

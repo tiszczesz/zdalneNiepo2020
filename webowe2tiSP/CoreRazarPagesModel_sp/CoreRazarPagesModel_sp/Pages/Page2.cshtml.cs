@@ -15,7 +15,11 @@ namespace CoreRazarPagesModel_sp.Pages
         public void OnGet() {
             ViewData["isPost"] = false;
             MyFilm = new Film() {Title = "alicja...", Director = "Adam S³odowy",
-                          Length = 180, Data = DateTime.Now};
+                          Length = 180, Data = DateTime.Now,MyTypeFilm = TypeFilm.obyczajowy};
+        }
+
+        public void OnPost() {
+            ViewData["isPost"] = true;
         }
     }
 }
