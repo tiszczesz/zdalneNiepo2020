@@ -16,6 +16,7 @@ private:
 public:
 	DocText(string name, int size,vector<string> content);
 	DocText();
-	
+	void SaveContent(string fileName);
+	void LoadContent(string fileName);
 	void Info();
 };
