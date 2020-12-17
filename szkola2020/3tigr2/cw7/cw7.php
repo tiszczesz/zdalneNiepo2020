@@ -15,7 +15,7 @@
             <form method="POST">
                 <div class="form-group">
                     <label for="date">Wybierz datę: </label>
-                    <input id="date" class="form-control" type="date" name="date">
+                    <input id="date" class="form-control" type="date" name="date" value="<?= isset($_POST['date'])? $_POST['date']:'';?>">
                 </div>
                 <div class="form-group">
                     <label for="wybor">Wybierz jednostkę</label>
@@ -24,6 +24,7 @@
                         <option value="miesiące">miesiące</option>
                         <option value="dni">dni</option>
                         <option value="sekundy">sekundy</option>
+                        <option value="godziny">godziny</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -32,7 +33,41 @@
             </form>
             </div>
             <div class="w-50 p-3 m-4">
-                <?php  echo "cos" ?>
+                <?php  
+                if(isset($_POST['date'])){
+                    $date = $_POST['date'];
+                    $wybor = $_POST['wybor'];
+                    $d1 = new DateTime($date);
+                    $d2 = new DateTime();
+                    $int = $d2->diff($d1);
+                    //var_dump($d1,$d2);
+                    switch($wybor){
+                        case "lata": 
+                            echo "<p>Ilość lat między <b>{$d2->format('d-m-Y')}</b> a <b>{$d1->format('d-m-Y')}</b> wynosi: <b>{$int->y}</b></p>";
+                            break;
+                        case "miesiące": 
+                            $miesiace = $int->y*12+$int->m;
+                            echo "<p>Ilość miesięcy między <b>{$d2->format('d-m-Y')}</b> a <b>{$d1->format('d-m-Y')}</b> wynosi: <b>{$miesiace}</b></p>";
+                            break;
+                        case "dni":    
+                            echo "<p>Ilość dni między <b>{$d2->format('d-m-Y')}</b> a <b>{$d1->format('d-m-Y')}</b> wynosi: <b>{$int->days}</b></p>";
+                            break;
+                        case "sekundy":  
+                            $sek1 = time()-strtotime($date);
+                            $sek2 = $int->days*24*3600+$int->h*3600+$int->i*60+$int->s;
+                            echo "<p>Ilość sekund między <b>{$d2->format('d-m-Y')}</b> a <b>{$d1->format('d-m-Y')}</b> wynosi: <b>{$sek1}</b></p>";
+                            echo "<p>Ilość sekund między <b>{$d2->format('d-m-Y')}</b> a <b>{$d1->format('d-m-Y')}</b> wynosi: <b>{$sek2}</b></p>";
+                            break;
+                            case "godziny":   
+                                $godziny = $int->days*24+$int->h; 
+                                echo "<p>Ilość godzin między <b>{$d2->format('d-m-Y')}</b> a <b>{$d1->format('d-m-Y')}</b> wynosi: <b>{$godziny}</b></p>";
+                                break;
+                        default : echo "Nieokreślona jednostka czasu";
+                    }
+                    echo "<p>Czas pomiędzy datami lat {$int->y} miesięcy: {$int->m} "
+                        ."dni: {$int->d} godzin: {$int->h}  minut: {$int->i} sekund: {$int->s}</p>";
+                }
+                ?>
             </div>
 
         </div>

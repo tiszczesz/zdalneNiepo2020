@@ -25,6 +25,7 @@
                     <option value="miesiące">miesiące</option>
                     <option value="dni">dni</option>
                     <option value="sekundy">sekundy</option>
+                    <option value="tygodnie">tygodnie</option>
                 </select>
 
             </div>
@@ -46,9 +47,26 @@
                         case "lata": 
                             echo "<div>Ilość lat: {$interval->y}</div>";
                            break;
-                        case "miesiące":    break;
-                        case "dni":    break;
-                        case "sekundy":    break;
+                        case "miesiące": 
+                            $miesiace = $interval->y*12+$interval->m;
+                            echo "<div>Ilość miesięcy: {$miesiace}</div>";
+                            break;
+                        case "dni":   
+                            echo "<div>Ilość dni: {$interval->days}</div>";
+                            break;
+                        case "sekundy": 
+                            $sec1 = $dt_a->getTimestamp()-strtotime($datab);
+                            $sec2 = $dt_a->getTimestamp()-$dt_b->getTimestamp();
+                            $h = $sec1/3600;
+                            echo "<div>Ilość sekundach: {$sec1}</div>";
+                            echo "<div>Ilość sekundach: {$sec2}</div>";
+                            echo "<div>Ilość godzinach: {$h}</div>";
+                            break;
+
+                            case "tygodnie":   
+                                $weeks = $interval->days/7;
+                                echo "<div>Ilość tygodni: {$weeks}</div>";
+                                break;
                         default:    break;
                     }
                 }
