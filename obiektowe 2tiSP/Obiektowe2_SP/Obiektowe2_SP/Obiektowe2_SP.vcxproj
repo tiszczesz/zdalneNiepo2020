@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DocImage.cpp" />
+    <ClCompile Include="DocSound.cpp" />
     <ClCompile Include="DocText.cpp" />
     <ClCompile Include="Document.cpp" />
     <ClCompile Include="Obiektowe2_SP.cpp" />
@@ -148,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DocImage.h" />
+    <ClInclude Include="DocSound.h" />
     <ClInclude Include="DocText.h" />
     <ClInclude Include="Document.h" />
     <ClInclude Include="Pair.h" />

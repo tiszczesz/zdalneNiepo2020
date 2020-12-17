@@ -3,15 +3,18 @@
 #include "DocText.h"
 #include "Tools.h"
 #include "DocImage.h"
+#include "DocSound.h"
 
 void Ex1();
 void Ex2();
 void Ex3();
+void Ex4();
 int main()
 {
 //	Ex1();
-	Ex2();
-	Ex3();
+//	Ex2();
+//	Ex3();
+	Ex4();
     return 0;
 }
 void Ex1() {
@@ -47,4 +50,18 @@ void Ex3() {
 	delete di3;
 	di3 = nullptr;
 }
-//todo DocSound pola: dlugosc(czas trwania w sek) typ kodowania mp3 ogg flac ....
+void Ex4() {
+	vector<DocSound*> utwory{ new DocSound(),new DocSound("ladny utwor 1",5000000,6000,TypeCoding::mp3),
+			new	DocSound("brzydki utwor",400000,3600,TypeCoding::flac),
+			new DocSound("hit",456,56700,TypeCoding::m4a) };
+	for (DocSound* u : utwory) {
+		u->Info();
+		cout << " ---------------------------------------- kolejny ---------------------------\n";
+	}
+	//czyszczenie wskaznikow do obiektow docSound
+	for(auto u : utwory) {
+		delete u;
+		u = nullptr;
+	}
+	utwory.clear();
+}
