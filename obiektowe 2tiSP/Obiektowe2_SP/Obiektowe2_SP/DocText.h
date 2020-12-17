@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Document.h"
 #include <vector>
 class DocText: public Document {
@@ -20,3 +21,4 @@ public:
 	void LoadContent(string fileName);
 	void Info();
 };
+

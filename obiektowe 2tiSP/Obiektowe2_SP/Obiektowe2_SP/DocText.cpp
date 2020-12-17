@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cctype>
 #include "Tools.h"
+#include <fstream>
 
 DocText::DocText(string name, int size, vector<string> content)
 :Document(name,size)
@@ -65,6 +66,28 @@ int DocText::getWords() {
 	}
 	return result;
 }
+void DocText::SaveContent(string fileName) {
+	ofstream outStream;
+	outStream.open(fileName);
+	if (!outStream.is_open()) return;
+	for (auto elem : content) {
+		outStream << elem << endl;
+	}
+	outStream.close();
+}
+void DocText::LoadContent(string fileName) {
+	ifstream inStream;
+	inStream.open(fileName);
+	if(!inStream.is_open()) return;
+	string line;
+	cin.ignore(2000, '\n');
+	content.clear();
+	while (getline(inStream,line)) {
+		content.push_back(line);
+	}
+	inStream.close();
+}
+
 
 
 

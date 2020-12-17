@@ -9,12 +9,14 @@ void Ex1();
 void Ex2();
 void Ex3();
 void Ex4();
+void Ex5();
 int main()
 {
 //	Ex1();
 //	Ex2();
 //	Ex3();
-	Ex4();
+//	Ex4();
+	Ex5();
     return 0;
 }
 void Ex1() {
@@ -64,4 +66,14 @@ void Ex4() {
 		u = nullptr;
 	}
 	utwory.clear();
+}
+void Ex5() {
+	vector<string> zdania{ "Ala ma kota malego w pliku","Rybka w pliku","Inny ciekawy tekst123" };
+	DocText dt("plik1.txt", 3400, zdania);
+	dt.Info();
+	dt.SaveContent("plik1.txt");
+	DocText dt2;
+	dt2.Info();
+	dt2.LoadContent("plik1.txt");
+	dt2.Info();
 }
