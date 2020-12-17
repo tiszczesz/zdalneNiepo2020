@@ -25,5 +25,9 @@ void DocSound::Info() {
 	cout << " Czas trwania : " << length << "(sekundy)\n";
 	cout << "Typ kodowania: " << typ << endl;
 }
+DocSound::~DocSound() {
+	cout << "Obiekt docsound ulega zniszczeniu!!!!!!!" << endl;
+}
+
 
 

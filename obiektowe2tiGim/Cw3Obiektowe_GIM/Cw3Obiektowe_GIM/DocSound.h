@@ -12,5 +12,6 @@ public:
 	DocSound();
 	DocSound(string name, int size, int length, TypeOfCoding type);
 	void Info();
+	~DocSound(); //destruktor
 };
 

@@ -13,13 +13,15 @@ void Ex1();
 void Ex2();
 void Ex3();
 void Ex4();
+void Ex5();
 int main()
 {
 	//Ex1();
 	//Ex2();
 	cout << "----------------------------------------------------\n\n";
 	//Ex3();
-	Ex4();
+	//Ex4();
+	Ex5();
 	system("PAUSE");
     return 0;
 }
@@ -65,7 +67,27 @@ void Ex3() {
 void Ex4() {
 	DocSound ds1;
 	DocSound ds2("fajna muzyczka", 350000, 120, TypeOfCoding::flac);
-	ds1.Info();
-	ds2.Info();
+	//ds1.Info();
+	//ds2.Info();
+	cout << " --------------------------------------  ---------------------------\n\n\n";
+	vector<DocSound*> utwory{ new DocSound(),new DocSound("kolenda",444,5600,TypeOfCoding::m4a) };
+	for (auto u : utwory) {
+		u->Info();
+	}
+	cout << "Niszczymy zbior utworow" << endl;
+	for (auto u : utwory) {
+		delete u;
+		u = nullptr;
+	}
+	
+	utwory.clear();
 }
+void Ex5() {
+	vector<string> linie{ "Ala ma kota w pliku!!!!!","Nowe zdanie w tekscie","trzecia lini tekstu z internetu","jeszcze cos ciekawego" };
+	DocText dt("tekstowy", 345, linie);
+	dt.Info();
+	dt.ContentToFile("tekstowy1.txt");
+	cout << "zapisano do pliku!!!!!" << endl;
+}
+	
 //todo napisanie klasy DocSound dziedziczy z Document  ma length(czas trwania) typ kodowania(mp3, ogg, flac, acc)
