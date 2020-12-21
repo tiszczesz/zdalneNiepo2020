@@ -15,7 +15,8 @@ namespace Prezenty2020_SP
             var result = File.ReadAllLines(fileName);
             foreach (string row in result) {
                 var data = row.Split('|');
-                list.Add(new Gift(){Name = data[0], Child = data[1], Price = Convert.ToDecimal(data[2],CultureInfo.InvariantCulture)});
+                list.Add(new Gift(){Name = data[0], Child = data[1], 
+                    Price = Convert.ToDecimal(data[2],CultureInfo.InvariantCulture)});
             }
             return list;
         }
