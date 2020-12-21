@@ -13,9 +13,12 @@ namespace WebPageWithModel.Pages
     {
         [BindProperty]
         public Person MyPerson { get; set; }
-        
+
+        [BindProperty]
+        public string Hello { get; set; }
         public void OnGet() {
             ViewData["IsPost"] = false;
+            Hello = "To jest prosty model typu string";
             MyPerson = new Person() {FirstName = "Janusz", LastName = "Nowak",
                 Age = 33,MyEduction = Eduction.Œrednie};
         }

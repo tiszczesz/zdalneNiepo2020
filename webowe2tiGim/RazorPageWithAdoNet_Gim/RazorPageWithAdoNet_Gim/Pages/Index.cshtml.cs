@@ -5,16 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.IO;
 
-namespace WebPageWithModel.Pages
+namespace RazorPageWithAdoNet_Gim.Pages
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-            
-        [BindProperty] 
-        public string Koleda { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -23,11 +19,7 @@ namespace WebPageWithModel.Pages
 
         public void OnGet()
         {
-            Random rnd = new Random();
-            int losowa = rnd.Next(1, 4);
-            string path = Directory.GetCurrentDirectory();
 
-            Koleda = System.IO.File.ReadAllText(path + @"\koledy\" + losowa + ".txt");
         }
     }
 }
