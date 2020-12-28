@@ -1,0 +1,18 @@
+﻿@page
+@model CoreRazarPagesModel_sp.Pages.Page3Model
+@{
+}
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>Tytuł</th><th>Reżyser</th><th>Gatunek</th>
+        </tr>
+        @foreach (var f in Model.Films) {
+            <tr>
+                <td>@f.Title</td>
+                <td>@f.Director</td>
+                <td>@f.MyTypeFilm</td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1607419249 source:d:\zdalne\zdalnecppgdow\tabdynamiczne\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

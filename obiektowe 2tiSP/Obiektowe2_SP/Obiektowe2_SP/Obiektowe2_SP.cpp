@@ -3,15 +3,20 @@
 #include "DocText.h"
 #include "Tools.h"
 #include "DocImage.h"
+#include "DocSound.h"
 
 void Ex1();
 void Ex2();
 void Ex3();
+void Ex4();
+void Ex5();
 int main()
 {
 //	Ex1();
-	Ex2();
-	Ex3();
+//	Ex2();
+//	Ex3();
+//	Ex4();
+	Ex5();
     return 0;
 }
 void Ex1() {
@@ -47,4 +52,28 @@ void Ex3() {
 	delete di3;
 	di3 = nullptr;
 }
-//todo DocSound pola: dlugosc(czas trwania w sek) typ kodowania mp3 ogg flac ....
+void Ex4() {
+	vector<DocSound*> utwory{ new DocSound(),new DocSound("ladny utwor 1",5000000,6000,TypeCoding::mp3),
+			new	DocSound("brzydki utwor",400000,3600,TypeCoding::flac),
+			new DocSound("hit",456,56700,TypeCoding::m4a) };
+	for (DocSound* u : utwory) {
+		u->Info();
+		cout << " ---------------------------------------- kolejny ---------------------------\n";
+	}
+	//czyszczenie wskaznikow do obiektow docSound
+	for(auto u : utwory) {
+		delete u;
+		u = nullptr;
+	}
+	utwory.clear();
+}
+void Ex5() {
+	vector<string> zdania{ "Ala ma kota malego w pliku","Rybka w pliku","Inny ciekawy tekst123" };
+	DocText dt("plik1.txt", 3400, zdania);
+	dt.Info();
+	dt.SaveContent("plik1.txt");
+	DocText dt2;
+	dt2.Info();
+	dt2.LoadContent("plik1.txt");
+	dt2.Info();
+}

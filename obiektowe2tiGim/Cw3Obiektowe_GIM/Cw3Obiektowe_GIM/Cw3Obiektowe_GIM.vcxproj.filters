@@ -33,6 +33,9 @@
     <ClCompile Include="DocImage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DocSound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Document.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DocImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocSound.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -12,11 +12,15 @@ window.onload = function(){
     let tekst = "ala ma kota"
     for(let i=0;i<tekst.length;i++){/* .....*/}
     let data = new Date(); //obiekt data czas ma swoje metody np toTime() ...
-    let tab = [3,5,6,7];
+    let tab = [3,5,6,7]; let ob = {"ffff":445}
     document.querySelector("#id");  //pierwsze wystapienie elementu o id
-    document.querySelectorAll("p"); //tablica wszystkich p
+    let ps = document.querySelectorAll("p"); //tablica wszystkich p  [] ps.length
     document.getElementById();
     document.getElementsByName();
     document.getElementsByClassName();
     //....
+    let elem1 = document.querySelector("#btn1").onclick = function(event){//onload, onkeypress,onkeyup,
+        event.target.style.color = "red";
+       // this.style.display...a.
+    }
  };

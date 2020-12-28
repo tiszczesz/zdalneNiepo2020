@@ -1,6 +1,7 @@
 #include "DocText.h"
 #include <iostream>
 #include <iomanip>
+#include <fstream>
 #include "Tools.h"
 
 DocText::DocText(string name, int size, vector<string> lines):Document(name,size) {
@@ -58,6 +59,15 @@ int DocText::getWords(int minLength) {
 }
 int DocText::getConsonant() {
 	return 0;//todo
+}
+void DocText::ContentToFile(string fileName) {
+	ofstream of;
+	of.open(fileName);
+	if(!of.is_open()) return;
+	for (auto line : lines) {
+		of << line << endl;
+	}
+	of.close();
 }
 
 
