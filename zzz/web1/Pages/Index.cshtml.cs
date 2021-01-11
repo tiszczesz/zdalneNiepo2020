@@ -11,6 +11,7 @@ namespace web1.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        public string Info { get; set; } = "Ala ma kota";
 
         public IndexModel(ILogger<IndexModel> logger)
         {
