@@ -20,5 +20,9 @@ namespace Prezenty2020_SP
             }
             return list;
         }
+
+        public void AddNewGift(Gift gift) {
+
+        }
     }
 }
