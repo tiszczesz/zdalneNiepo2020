@@ -36,27 +36,31 @@
             $wyb  = filter_input(INPUT_POST, "wyb");
             $now = new DateTime();
             $birth = new DateTime($date);
+            $int = $now->diff($birth);
             // var_dump($now);
             // var_dump($birth);
             switch ($wyb) {
                 case "lata":
-                    $int = $now->diff($birth);
+                    
                     echo "<p>Różnica dat w latach: {$int->y}</p>";
                     break;
                 case "miesiące":
-                    $int = $now->diff($birth);
                     $miesiace = $int->y * 12 + $int->m;
                     echo "<p>Różnica dat w miesiącach: {$miesiace}</p>";
                     break;
                 case "dni":
-                    $int = $now->diff($birth);
                     // var_dump($int);
                     echo "<p>Różnica dat w dniach: {$int->days}</p>";
                     break;
                 case "sekundy":
-
+                    $sec1 = $int->days*24*3600 + $int->h*3600 + $int->i*60 + $int->s;
+                    $sec2 = time()-strtotime($date);
+                    echo "<p>Różnica dat w sekundach: {$sec1}</p>";
+                    echo "<p>Różnica dat w sekundach: {$sec2}</p>";
                     break;
             }
+            echo "<p>Ilość lat: {$int->y} ilość miesięcy: {$int->m} ilość dni: {$int->d} "
+                    ."ilość godzin: {$int->h} ilość minut: {$int->i} ilość sekund: {$int->s}</p>";
         }
         ?>
     </div>
