@@ -26,7 +26,7 @@ function datesToFile(string $fileName,int $d=-20, int $u=60,int $rows=30):void{
 
 function datesToTable(string $fileName):string{
     $html = "<table><tr><th>Lp</th><th>data początkowa</th><th>data końcowa</th>"
-            ."<th>lata</th><th>miesiące</th><th>dni</th></tr>";
+            ."<th>lata</th><th>miesiące</th><th>dni</th><th>minuty</th></tr>";
     
     $d1 = file($fileName,FILE_IGNORE_NEW_LINES);
     $d2 = [];
@@ -41,7 +41,7 @@ function datesToTable(string $fileName):string{
         $int = $elem[0]->diff($elem[1]);
         $m = $int->y*12+$int->m;
         $html .= "<tr><td>{$lp}</td><td>{$elem[0]->format('d-m-Y')}</td><td>{$elem[1]->format('d-m-Y')}</td>"
-            ."<td>{$int->y}</td><td>{$m}</td><td>{$int->days}</td></tr>";
+            ."<td>{$int->y}</td><td>{$m}</td><td>{$int->days}</td><td></td></tr>";
     }
 
     return $html."</table>";
