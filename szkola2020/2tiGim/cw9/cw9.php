@@ -49,7 +49,22 @@
             $this->setLastName($lastName);
             $this->setAge($age);
         }
-    } //w c++ musi byc srednik;
+    }
+    function getOlder(array $peple):Person{
+        //zwraca osobę najstarszą
+        return new Person();//todo
+    }
+    function diffAge(Person $p1, Person $p2):int{
+        return 0;
+    }
+    $people = [
+        new Person("Adam","Nowak",45),
+        new Person("Marian","Hajduk",22),
+        new Person("Tomasz","Fryk",48),
+        new Person("Teresa","Kowalska",12),
+        new Person("Anna","Urych",6)
+    ];
+    //w c++ musi byc srednik;
     //uzywanie klasy Person do tworzenia obiektow
     $p1 = new Person();
     var_dump($p1);

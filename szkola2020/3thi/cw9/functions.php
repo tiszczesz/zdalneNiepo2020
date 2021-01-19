@@ -39,8 +39,9 @@ function datesToTable(string $fileName):string{
     foreach($d2 as $elem){
         $lp++;
         $int = $elem[0]->diff($elem[1]);
+        $m = $int->y*12+$int->m;
         $html .= "<tr><td>{$lp}</td><td>{$elem[0]->format('d-m-Y')}</td><td>{$elem[1]->format('d-m-Y')}</td>"
-            ."<td>{$int->y}</td><td>{}</td><td>{}</td></tr>";
+            ."<td>{$int->y}</td><td>{$m}</td><td>{$int->days}</td></tr>";
     }
 
     return $html."</table>";
