@@ -80,7 +80,7 @@ void DocText::LoadContent(string fileName) {
 	inStream.open(fileName);
 	if(!inStream.is_open()) return;
 	string line;
-	cin.ignore(2000, '\n');
+	//cin.ignore(2000, '\n');
 	content.clear();
 	while (getline(inStream,line)) {
 		content.push_back(line);

@@ -68,7 +68,8 @@ void Ex4() {
 	utwory.clear();
 }
 void Ex5() {
-	vector<string> zdania{ "Ala ma kota malego w pliku","Rybka w pliku","Inny ciekawy tekst123" };
+	vector<string> zdania{ "Ala ma kota malego w pliku","Rybka w pliku","Inny ciekawy tekst123"
+		,"No niestety juz po feriach","po zmianach"};
 	DocText dt("plik1.txt", 3400, zdania);
 	dt.Info();
 	dt.SaveContent("plik1.txt");

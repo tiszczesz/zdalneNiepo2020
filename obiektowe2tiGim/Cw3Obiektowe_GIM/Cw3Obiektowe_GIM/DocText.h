@@ -28,4 +28,5 @@ public:
 	DocText();
 	void Info();
 	void ContentToFile(string fileName);
+	void LoadToContent(string fileName);
 };

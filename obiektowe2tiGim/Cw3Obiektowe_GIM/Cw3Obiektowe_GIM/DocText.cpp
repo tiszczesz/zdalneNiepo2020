@@ -61,14 +61,25 @@ int DocText::getConsonant() {
 	return 0;//todo
 }
 void DocText::ContentToFile(string fileName) {
-	ofstream of;
-	of.open(fileName);
-	if(!of.is_open()) return;
+	ofstream ofStream;
+	ofStream.open(fileName);
+	if(!ofStream.is_open()) return;
 	for (auto line : lines) {
-		of << line << endl;
+		ofStream << line << endl;
 	}
-	of.close();
+	ofStream.close();
 }
+void DocText::LoadToContent(string fileName) {
+	ifstream ifStream;
+	ifStream.open(fileName);
+	string line;
+	lines.clear();
+	while (getline(ifStream,line)) {
+		lines.push_back(line);
+	}
+	ifStream.close();
+}
+
 
 
 

@@ -22,7 +22,7 @@ int main()
 	//Ex3();
 	//Ex4();
 	Ex5();
-	system("PAUSE");
+	//system("PAUSE");
     return 0;
 }
 void Ex2() {
@@ -88,6 +88,13 @@ void Ex5() {
 	dt.Info();
 	dt.ContentToFile("tekstowy1.txt");
 	cout << "zapisano do pliku!!!!!" << endl;
+	cout << "Tworzymy nowy obiekt docText" << endl;
+	vector<string> cont2;
+	DocText dt2("nowy", 400, cont2);
+	dt2.Info();
+	cout << "pobieramy dane z pliku....." << endl;
+	dt2.LoadToContent("tekstowy1.txt");
+	dt2.Info();
 }
 	
 //todo napisanie klasy DocSound dziedziczy z Document  ma length(czas trwania) typ kodowania(mp3, ogg, flac, acc)
