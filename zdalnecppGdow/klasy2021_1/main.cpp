@@ -63,8 +63,8 @@ struct Point{   //domyslnie wszystko publiczne
     double Distance(){
         return sqrt(x*x+y*y);
     }
-    double Distance(Point p){
-        //todo
+    double Distance(Point& p){
+        return sqrt((x-p.x)*(x-p.x)+(y-p.y)*(y-p.y));
     }
 };
 
@@ -78,7 +78,12 @@ int main()
     //p2.Info();
     Point pkt1;
     Point pkt2(3,4);
-    cout << pkt1.Info()<<" odl od (0,0) " <<pkt1.Distance()<<endl;
-    cout << pkt2.Info()<<" odl od (0,0) " <<pkt2.Distance()<<endl;
+    cout << pkt1.Info()<<"pkt1 odl od (0,0) " <<pkt1.Distance()<<endl;
+    cout << pkt2.Info()<<"pkt2 odl od (0,0) " <<pkt2.Distance()<<endl;
+    Point pkt3(0,0);
+    Point pkt4(6,6);
+    cout <<"sprawdzenie: "<< pkt2.Distance(pkt3) << endl;
+    cout <<"sprawdzenie: "<< "odl: "<<pkt4.Info()<<" a "<<pkt2.Info()<<"wynosi: "
+       <<pkt4.Distance(pkt2) << endl;
     return 0;
 }
