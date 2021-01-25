@@ -33,6 +33,11 @@ namespace Prezenty2020_SP
             }
 
             var result = cg.GetByFirstCharOfChild("a");
+            Console.WriteLine("==================================\n\n");
+            foreach (var elem in result)
+            {
+                Console.WriteLine(elem.Info());
+            }
         }
     }
 }
