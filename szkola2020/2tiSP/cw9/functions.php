@@ -32,8 +32,9 @@ function datesToTable(string $fileName): string
         $dif = $dk->diff($dp);
         $weeks = round($dif->days/7,0);
         $mins = $dif->days*24*60+$dif->i;
+        $godziny = $dif->days*24;
         $html .= "<tr><td>{$lp}</td><td>{$dp->format("d-m-Y")}</td><td>{$dk->format("d-m-Y")}</td>"
-            ."<td>{$dif->y}</td><td>{$weeks}</td><td></td><td>$mins</td></tr>";
+            ."<td>{$dif->y}</td><td>{$weeks}</td><td>{$godziny}</td><td>$mins</td></tr>";
     }
    // var_dump($dates);
     return $html . "</table>";
