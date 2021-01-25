@@ -1,10 +1,18 @@
 ﻿@page
+@using RazorPageWithAdoNet_Gim.Models
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+   
+    
+    <div>
+        <ul>
+            @foreach (Film film in Model.Films) {
+                <li>@film.Title autor: @film.Author w cenie: @film.Price zł</li>
+            }
+        </ul>
+    </div>
 </div>
