@@ -17,7 +17,7 @@ namespace RazorPageWithAdoNet_Gim.Pages
         public List<Film> Films { get; set; }
 
         private string sqlConnectionString =
-            @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Filmy2020_Gim_cw1;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            @"Data Source=(localdb)\MSSQLLocalDB;Database=Filmy2020_Gim_cw1;Integrated Security=True;";
         private readonly ILogger<IndexModel> _logger;
         private SqlConnection connection;
         public IndexModel(ILogger<IndexModel> logger)

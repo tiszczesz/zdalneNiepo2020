@@ -21,24 +21,24 @@
         {
             $this->firstName = $firstName;
         }
-        public function getFirstName(): string
+        public function getFirstName() :string
         {
             return $this->firstName;
         }
-        public function getLastName()
+        public function getLastName() :string
         {
             return $this->lastName;
         }
-        public function setLastName($lastName)
+        public function setLastName(string $lastName):void
         {
             $this->lastName = $lastName;
         }
-        public function getAge()
+        public function getAge():int
         {
             return $this->age;
         }
 
-        public function setAge($age)
+        public function setAge(int $age):void
         {
             $this->age = $age > 0 ? $age : -$age;
         }
@@ -49,13 +49,25 @@
             $this->setLastName($lastName);
             $this->setAge($age);
         }
+        public function __toString():string
+        {
+            return "<span>{$this->getFirstName()} {$this->lastName} wiek: {$this->getAge()}</span>";
+        }
     }
-    function getOlder(array $peple):Person{
-        //zwraca osobę najstarszą
-        return new Person();//todo
+    function getOlder(array $people):Person {
+        $max = -PHP_INT_MAX;
+        $result = null;
+        foreach($people as  $p){
+            if($p->getAge()>$max){
+                $result = $p;
+                $max = $p->getAge();
+            }
+           
+        }
+        return $result;       
     }
     function diffAge(Person $p1, Person $p2):int{
-        return 0;
+        return abs($p1->getAge()-$p2->getAge());
     }
     $people = [
         new Person("Adam","Nowak",45),
@@ -73,6 +85,26 @@
     echo "<p>Imię: {$p1->getFirstName()}</p>";
     $p1->setAge(-34);
     var_dump($p1);
+    $older = getOlder($people);
+    echo "<ul>\n";
+    foreach($people as $p){
+        echo "<li>{$p}</li>";
+    }
+    echo "</ul>\n";
+    if($older!=null){
+        echo "<div>Najstarsza osoba to: {$older}</div>";
+    }else{
+        echo "<div>Najstarsza osoba ERROR</div>";
+    }
+    $people[] = new Person("Roman","Boman",67);
+    $older = getOlder($people);
+    if($older!=null){
+        echo "<div>Najstarsza osoba to: {$older}</div>";
+    }else{
+        echo "<div>Najstarsza osoba ERROR</div>";
+    }
+    echo "<h3>Różnica wieku dla: {$people[0]} a {$people[count($people)-1]} to "
+          .diffAge($people[0],$people[count($people)-1])."</h3>";
     ?>
 </body>
 
