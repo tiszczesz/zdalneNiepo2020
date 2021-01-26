@@ -66,8 +66,24 @@ struct Point{   //domyslnie wszystko publiczne
     double Distance(Point& p){
         return sqrt((x-p.x)*(x-p.x)+(y-p.y)*(y-p.y));
     }
-};
 
+};
+Point Dodaj(const Point& p1,const Point& p2){
+    Point wynik;
+    wynik.x = p1.x+p2.x;
+    wynik.y = p1.y+p2.y;
+    return wynik;
+}
+ostream & operator<<(ostream& os, const Point& p){
+    os << "(" << p.x <<","<<p.y<<")";
+    return os;
+}
+Point operator+(const Point& p1, const Point& p2){
+    Point wynik;
+    wynik.x = p1.x+p2.x;
+    wynik.y = p1.y+p2.y;
+    return wynik;
+}
 int main()
 {
     //Product p1("Bulki z pieca",0.99,"pieczywo");
@@ -78,12 +94,16 @@ int main()
     //p2.Info();
     Point pkt1;
     Point pkt2(3,4);
-    cout << pkt1.Info()<<"pkt1 odl od (0,0) " <<pkt1.Distance()<<endl;
-    cout << pkt2.Info()<<"pkt2 odl od (0,0) " <<pkt2.Distance()<<endl;
+    cout << pkt1 <<" pkt1 odl od (0,0) " <<pkt1.Distance()<<endl;
+    cout << pkt2<<" pkt2 odl od (0,0) " <<pkt2.Distance()<<endl;
     Point pkt3(0,0);
     Point pkt4(6,6);
     cout <<"sprawdzenie: "<< pkt2.Distance(pkt3) << endl;
-    cout <<"sprawdzenie: "<< "odl: "<<pkt4.Info()<<" a "<<pkt2.Info()<<"wynosi: "
+    cout <<"sprawdzenie: "<< " odl: "<<pkt4<<" a "<<pkt2<<" wynosi: "
        <<pkt4.Distance(pkt2) << endl;
+    cout << pkt1 << endl;
+    Point pkt5(9,-4);
+    cout << pkt5 << " + " << pkt2 << " = "<< (pkt5+pkt2)<<endl;
+    cout << pkt5 << " + " << pkt2 << " = "<< Dodaj(pkt5,pkt2)<<endl;
     return 0;
 }

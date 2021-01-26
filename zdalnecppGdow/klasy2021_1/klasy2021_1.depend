@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1611300563 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy2021_1\main.cpp
+1611309002 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy2021_1\main.cpp
 	<iostream>
 	<string>
+	<cmath>
 
