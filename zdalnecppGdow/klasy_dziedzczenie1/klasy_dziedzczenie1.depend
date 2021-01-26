@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1611651521 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\src\person.cpp
+	"Person.h"
+
+1611651521 d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\include\person.h
+	<string>
+	<iostream>
+
+1611651715 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\src\worker.cpp
+	"Worker.h"
+
+1611652856 d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\include\worker.h
+	"Person.h"
+
+1611652186 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\main.cpp
+	<iostream>
+	"Person.h"
+	"Worker.h"
+

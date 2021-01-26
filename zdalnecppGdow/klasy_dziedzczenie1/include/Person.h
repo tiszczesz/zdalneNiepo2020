@@ -1,7 +1,7 @@
 #ifndef PERSON_H
 #define PERSON_H
 #include <string>
-#include <iostram>
+#include <iostream>
 using namespace std;
 class Person
 {
@@ -11,10 +11,14 @@ class Person
         virtual ~Person();
         void Info();
         friend ostream& operator<<(ostream& os, const Person& p);
+        void SetAge(int age){
+            this->age = age<0 ? -age : age;
+        }
     protected:
         string firstName;
         string lastName;
         int age;
+
 
 
 };

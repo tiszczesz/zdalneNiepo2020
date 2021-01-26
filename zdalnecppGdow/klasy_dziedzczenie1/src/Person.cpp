@@ -9,7 +9,7 @@ Person::Person()
 Person::Person(string firstName,string lastName,int age){
     this->firstName = firstName;
     this->lastName = lastName;
-    this->age = age;
+    SetAge(age);
 }
 void Person::Info(){
     cout << " --------------- Informacja o osobie --------------------\n";
