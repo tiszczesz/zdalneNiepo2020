@@ -6,7 +6,8 @@ namespace FileOperationsGIM_1 {
     public class Program {
         static void Main(string[] args) {
            // Ex1();
-           Ex2();
+           //Ex2();
+           Ex3();
             Console.ReadKey();
         }
 
@@ -18,6 +19,7 @@ namespace FileOperationsGIM_1 {
             Console.WriteLine(path);
             File.WriteAllLines(path+@"\linie.txt",lines);
             File.WriteAllText(path + @"\teksty.txt",tekst);
+           
             Console.WriteLine(File.ReadAllText(path + @"\linie.txt"));
         }
 
@@ -42,6 +44,11 @@ namespace FileOperationsGIM_1 {
                 Console.WriteLine(line);
             }
             sr2.Close();
+        }
+
+        public static void Ex3() {
+            string wynik = File.ReadAllText("linie.txt");
+            string[] linie = File.ReadAllLines("linie.txt");
         }
     }
 }
