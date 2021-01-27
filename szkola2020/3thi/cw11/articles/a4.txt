@@ -1,0 +1,1 @@
+I work on a site that pulls content primarily from one db but uses a db on a foreign server to verify licensing.  One might expect the following to work: 

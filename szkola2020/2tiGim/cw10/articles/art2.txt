@@ -1,0 +1,7 @@
+Informatycy i programiści należą obecnie do najbardziej poszukiwanych specjalistów. Stąd tytuł, 
+który uzyskuje się po szkole średniej, nie stanowi jedynie świadectwa ukończenia pewnego etapu edukacji. 
+Technik programista to zawód o wymiernej wartości rynkowej. 
+Absolwenci tego kierunku kształcenia nie mają większych problemów ze znalezieniem intratnego i rozwojowego zajęcia, 
+a pracodawcy chętnie inwestują w ich szkolenia, by mogli zdobywać coraz wyższe kwalifikacje. Wśród bazowych umiejętności, 
+które powinien posiadać specjalista w tej dziedzinie, są podstawy programowania:
+ projektowanie kodu, testowanie go, dokumentowanie swojej pracy oraz analizowanie pracy innych programistów.

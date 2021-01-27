@@ -1,0 +1,3 @@
+This is an extra unplanned release, but we're not planning to adjust the GA date, however, 
+this may change during the course of the RC cycle. The updated release schedule can, as always, be 
+found on the PHP Wiki page about the PHP 8.0. 

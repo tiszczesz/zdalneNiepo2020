@@ -53,7 +53,7 @@
         {
             return "<span>{$this->getFirstName()} {$this->lastName} wiek: {$this->getAge()}</span>";
         }
-    }
+    }//w c++ musi byc srednik;
     function getOlder(array $people):Person {
         $max = -PHP_INT_MAX;
         $result = null;
@@ -76,7 +76,7 @@
         new Person("Teresa","Kowalska",12),
         new Person("Anna","Urych",6)
     ];
-    //w c++ musi byc srednik;
+    
     //uzywanie klasy Person do tworzenia obiektow
     $p1 = new Person();
     var_dump($p1);
