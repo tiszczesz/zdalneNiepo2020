@@ -1,5 +1,5 @@
 #include "Point.h"
-
+#include "cmath"
 Point::Point():  x(0),y(0) {/*cia³o konstrukt PUSTE */ }
 Point::Point(double x, double y) {
 	this->x = x;
@@ -18,4 +18,8 @@ Point operator+(const Point& p1, const Point p2) {
 	result.y = p1.y + p2.y;
 	return result;
 }
+double Point::Distance() {
+	return sqrt(x * x + y * y);
+}
+
 
