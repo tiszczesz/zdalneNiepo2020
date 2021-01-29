@@ -2,18 +2,34 @@
 1611651521 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\src\person.cpp
 	"Person.h"
 
-1611651521 d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\include\person.h
+1611906036 d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\include\person.h
 	<string>
 	<iostream>
 
-1611651715 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\src\worker.cpp
+1611652875 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\src\worker.cpp
 	"Worker.h"
 
 1611652856 d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\include\worker.h
 	"Person.h"
 
-1611652186 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\main.cpp
+1611906720 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\main.cpp
 	<iostream>
 	"Person.h"
 	"Worker.h"
+	"Student.h"
+	"Teacher.h"
+	<vector>
+
+1611905048 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\src\student.cpp
+	"Student.h"
+
+1611905048 d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\include\student.h
+	<Person.h>
+
+1611906828 source:d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\src\teacher.cpp
+	"Teacher.h"
+
+1611906684 d:\zdalne\zdalneniepo2020\zdalnecppgdow\klasy_dziedzczenie1\include\teacher.h
+	<Person.h>
+	<vector>
 

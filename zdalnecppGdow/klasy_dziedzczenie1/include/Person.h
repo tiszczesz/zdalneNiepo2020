@@ -9,7 +9,7 @@ class Person
         Person();
         Person(string firstName,string lastName,int age);
         virtual ~Person();
-        void Info();
+        virtual void Info();
         friend ostream& operator<<(ostream& os, const Person& p);
         void SetAge(int age){
             this->age = age<0 ? -age : age;
