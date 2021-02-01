@@ -31,4 +31,8 @@ class Article{
     {
       $this->style = $style;
     }
+    public function setDate(string $date):void
+    {
+      $this->date = $date;
+    }
 }

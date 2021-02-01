@@ -15,10 +15,14 @@ namespace RazorPageWithAdoNet_Gim.Pages
         [BindProperty]
         public Film MyFilm { get; set; }
 
-        //public IConfiguration _configuration { get; set; } = new Co
+        public FilmPageModel(IConfiguration configuration) {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; set; }
         private string connString = @"Data Source=(localdb)\MSSQLLocalDB;Database=Filmy2020_Gim_cw1;Integrated Security=True;";
-        public void OnGet()
-        {
+        public void OnGet() {
+            string conn = Configuration["ConnectionStrings:DefaultConnection"];
         }
 
         public void OnPost() {
