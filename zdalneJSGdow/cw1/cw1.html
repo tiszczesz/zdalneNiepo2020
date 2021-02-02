@@ -11,9 +11,19 @@
         // setTimeout(function(){
         //     document.write("<h3>Hello from JS!!!</h3>")
         // },4000);
-        const a = 12;
-        const b = 3;
-        document.write("<p>"+a+ " + "+ b + " = "+ (a+b)+"</p>");
+        const a = parseFloat(prompt("Podaj a"));         
+        const b = parseFloat(prompt("Podaj b"));
+        console.log(typeof a);
+        console.log(typeof b);
+        if(isNaN(a) || isNaN(b)){
+            document.write("<p style='color:red;'>Błędne dane!!!!");
+        }else{
+            document.write("<p>"+a+ " + "+ b + " = "+ (a+b)+"</p>");
+            document.write("<p>"+a+ " - "+ b + " = "+ (a-b).toFixed(2)+"</p>");
+            document.write("<p>"+a+ " * "+ b + " = "+ (a*b).toFixed(2)+"</p>");
+            document.write("<p>"+a+ " / "+ b + " = "+ (a/b).toFixed(2)+"</p>");
+        }
+        
    </script>
 </body>
 </html>
