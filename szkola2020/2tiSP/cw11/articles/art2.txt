@@ -1,0 +1,1 @@
+Another change to the syntax that was introduced with PHP 7.3 is that the closing identifier can be followed by other code on the same line. So as of PHP 7.3 the following is valid:-

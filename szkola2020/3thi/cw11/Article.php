@@ -24,12 +24,26 @@ class Article{
     }
     public function __toString():string
     {
-        $html = "<div class='article'>\n";
-        $html .= "<h3>{$this->title}</h3>";
-        $html .= "<div style='{$this->style}'>{$this->content}</div>";
-        if(trim($this->date)!=''){
-            $html .= "<div class='article-date'>{$this->date}</div>";
-        }
-        return $html."</div>\n";
+        return "***";
+    }
+    public function getTitle():string
+    {
+        return $this->title;
+    }
+    public function getContent():string
+    {
+        return $this->content;
+    }
+    public function getDate():string
+    {
+        return $this->date;
+    }
+    public function getTag():string
+    {
+        return mb_strtoupper($this->tag);
+    }
+    public function getStyle():string
+    {
+        return $this->style;
     }
 }

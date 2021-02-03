@@ -19,13 +19,7 @@ class Article{
     }
     public function __toString():string
     {
-       $html = "<div style='{$this->style}'>\n";
-        $html .= "<h3>{$this->title}</h3>\n";
-        $html .= "<p>{$this->content}</p>\n";
-        if($this->date!=""){
-            $html .= "<div class='article-footer'>Utworzono: {$this->date}</div>";
-        }
-       return $html."</div>\n";
+      return "";
     }
     public function setStyle(string $style):void
     {
@@ -34,5 +28,25 @@ class Article{
     public function setDate(string $date):void
     {
       $this->date = $date;
+    }
+    public function getContent():string
+    {
+       return $this->content;
+    }
+    public function getTitle():string
+    {
+       return $this->title;
+    }
+    public function getDate():string
+    {
+       return $this->date;
+    }
+    public function getStyle():string
+    {
+       return $this->style;
+    }
+    public function getTag():string
+    {
+       return mb_strtoupper($this->tag);
     }
 }

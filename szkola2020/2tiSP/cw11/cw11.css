@@ -1,0 +1,16 @@
+.article-content{
+    margin: 20px;
+    width: 80%;
+}
+.article-date{
+    text-align: right;
+    margin-right: 50px;
+    color: grey;
+    font-size: 0.8em;
+}
+.article-title{
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+}

@@ -1,0 +1,5 @@
+The placement of the closing identifier is important. 
+Prior to PHP 7.3 it had to always be placed on a new line followed by a 
+semi-colon and with no white-space in front of it. So all the examples above would be valid. 
+However, as of PHP 7.3
+ these rules have been relaxed a little.

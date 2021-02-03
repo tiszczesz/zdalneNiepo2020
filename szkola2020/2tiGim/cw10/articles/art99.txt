@@ -1,0 +1,2 @@
+For even more powerful string handling and manipulating functions take a look at the Perl compatible regular expression functions. 
+For working with multibyte character encodings, take a look at the Multibyte String functions. 

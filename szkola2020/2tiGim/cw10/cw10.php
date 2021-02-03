@@ -11,14 +11,15 @@
      <?php
         require_once "Article.php";
         require_once "RepoArticles.php";
-        $a1 = new Article("","Artykuł pierwszy");
-        $a2 = new Article("","Artykuł drugi");
-        $dir = "articles/";
-        $a1->getContentFromFile($dir."art1.txt");
-        $a2->getContentFromFile($dir."art2.txt");
-        $a2->setStyle("border:solid 1px red;background-color:#23a112;padding: 10px");
-        echo $a1;
-        echo $a2;
+        require_once "ArtToHtml.php";
+        // $a1 = new Article("","Artykuł pierwszy");
+        // $a2 = new Article("","Artykuł drugi");
+        // $dir = "articles/";
+        // $a1->getContentFromFile($dir."art1.txt");
+        // $a2->getContentFromFile($dir."art2.txt");
+        // $a2->setStyle("border:solid 1px red;background-color:#23a112;padding: 10px");
+        // echo ArtToHtml::artToDiv($a1);
+        // echo ArtToHtml::artToDiv($a2);
         var_dump(RepoArticles::getAll());
     ?>
     </div>
