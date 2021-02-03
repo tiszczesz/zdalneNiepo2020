@@ -12,5 +12,8 @@ public:
 	std::string Info();
 	friend std::ostream& operator<<(std::ostream& os,const Point& p);//funkcja globalna zaprzyjazniona
 	friend Point operator+(const Point& p1, const Point& p2);
+	friend Point operator-(const Point& p1, const Point& p2);
+	double Distance();
+	double Distance(const Point& p);
 };
 
