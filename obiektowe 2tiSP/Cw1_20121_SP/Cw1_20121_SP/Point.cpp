@@ -21,5 +21,15 @@ Point operator+(const Point& p1, const Point p2) {
 double Point::Distance() {
 	return sqrt(x * x + y * y);
 }
+double Point::Distance(const Point& p) {
+	return sqrt((p.x - x) * (p.x - x) + (p.y - y) * (p.y - y));
+}
+
+Point operator-(const Point& p1, const Point p2) {
+	Point result;
+	result.x = p1.x - p2.x;
+	result.y = p1.y - p2.y;
+	return result;
+}
 
 
