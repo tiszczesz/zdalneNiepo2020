@@ -28,5 +28,6 @@ public:
 	double Distance(const Circle & c) {
 		return center.Distance(c.center);
 	}
+	void Info();
 };
 
