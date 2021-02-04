@@ -29,5 +29,8 @@ public:
 		return center.Distance(c.center);
 	}
 	void Info();
+	bool IsCenterIn(const Circle& c) {
+		return Distance(c) < radius;
+	}
 };
 
