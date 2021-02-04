@@ -7,3 +7,6 @@ h1{
     padding: 10px;
 }
 .article-date{text-align: right;margin-right: 40px;color: grey;}
+.article-tag{
+    padding: 6px;border: 1px black solid;background-color: rgb(233, 233, 119);
+}

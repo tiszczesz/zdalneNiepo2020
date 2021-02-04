@@ -1,35 +1,18 @@
 <?php
-class Article{
+class Post{
     private string $title;
     private string $content;
     private string $date;
-    private string $tag = "news";
+    private string $tag;
     private string $style;
-    public function __construct(string $title,string $content="",
-                        string $date="",string $tag="news",string $style="")
+
+    public function __construct(string $title,string $content="",string $date="",string $tag="news",string $style="")
     {
         $this->title = $title;
         $this->content = $content;
         $this->setDate($date);
-        $this->tag = $tag;
+        $this->setTag($tag);
         $this->style = $style;
-    }
-    public function setDate(string $date):void
-    {
-        $this->date = $date!="" ? $date : date("d-m-Y");
-    }
-
-    public function setTag(string $tag):void
-    {
-       $this->tag = $tag;
-    }
-    public function getContentFromFile(string $filename)
-    {
-        $this->content = file_get_contents($filename);
-    }
-    public function __toString():string
-    {
-        return "***";
     }
     public function getTitle():string
     {
@@ -51,8 +34,20 @@ class Article{
     {
         return $this->style;
     }
+    public function setDate(string $date):void
+    {
+        $this->date = trim($date)==='' ? date("d-m-Y H:i:s") : $date;
+    }
+    public function setTag(string $tag):void
+    {
+        $this->tag = $tag;
+    }
+    public function contentFromFile(string $fileName):void
+    {
+        $this->content = file_get_contents($fileName);
+    }
     public function setStyle(string $style):void
     {
-        $this->style=$style;
+        $this->style = $style;
     }
 }

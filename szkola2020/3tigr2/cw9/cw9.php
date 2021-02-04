@@ -43,10 +43,12 @@
     }
 
     $b1 = new Book(); //utworzenie obiektu typu Book
+    $b2  = new Book("fajny tytuł","Roman Boman",39.99);
     $b1->setTitle("ABC gotowania");
     $b1->setPrice(45.90);
     $b1->setAuthor("Roman Polak");
     echo $b1;
+    echo $b2;
     ?>
 </body>
 </html>

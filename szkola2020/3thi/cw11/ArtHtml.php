@@ -8,6 +8,9 @@ class ArtHtml{
         if(trim($a->getDate())!=''){
             $html .= "<div class='article-date'>{$a->getDate()}</div>";
         }
-        return $html."</div>\n";
+        $tag = trim($a->getTag())!="" 
+                            ? "<span class='article-tag'>{$a->getTag()}</span>":
+                             "";
+        return $html."{$tag}</div>\n";
     }
 }

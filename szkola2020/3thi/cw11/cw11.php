@@ -12,17 +12,12 @@
     <?php
     require_once "Article.php";
     require_once "ArtHtml.php";
-    const DIR = "articles";
-    $arts = [
-        new Article("Pierwszy",""),
-        new Article("Drugi","","","","border: solid 1px green; padding:8px;"),
-        new Article("Trzeci",""),
-        new Article("Czwarty","")
-    ];
-    $arts[0]->getContentFromFile(DIR."/a1.txt");
-    $arts[1]->getContentFromFile(DIR."/a2.txt");
-    $arts[2]->getContentFromFile(DIR."/a3.txt");
-    $arts[3]->getContentFromFile(DIR."/a4.txt");
+    require_once "ArtRepo.php";
+    
+    $arts = ArtRepo::getAll();
+    $arts[count($arts)-1]->setTag("Wycieczka");
+    $arts[count($arts)-1]->setStyle("background-color:yellow;");
+   //var_dump($arts);
     foreach($arts as $a){
         echo ArtHtml::ArticleToDiv($a);
     }

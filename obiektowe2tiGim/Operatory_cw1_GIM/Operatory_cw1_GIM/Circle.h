@@ -23,10 +23,10 @@ public:
 		return 2 * M_PI * radius;
 	}
 	double Distance() {
-		
+		return center.Distance();
 	}
 	double Distance(const Circle & c) {
-		
+		return center.Distance(c.center);
 	}
 };
 

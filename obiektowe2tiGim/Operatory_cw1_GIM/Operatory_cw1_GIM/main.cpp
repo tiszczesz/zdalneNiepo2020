@@ -27,4 +27,6 @@ void cw2() {
 	Circle c2(10, p2);
 	cout << c1 << endl;
 	cout << c2 << endl;
+	cout << c1 << " ma pole powierzchni: "<< c1.Area() << " obwod: "<< c1.Circuit() << endl;
+	cout << c2 << " ma pole powierzchni: " << c2.Area() << " obwod: "<< c2.Circuit() << endl;
 }
