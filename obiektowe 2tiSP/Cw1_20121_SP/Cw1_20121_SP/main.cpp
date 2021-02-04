@@ -27,9 +27,17 @@ void ex1() {
 void ex2() {
 	Circle c1;
 	Point p3(3, 4);
+	Point* p4 = new Point(5, 5);
 	cout << c1 << endl;
 	Circle c2(10, p3);
+	Circle* c3 = new Circle(20, p3);
 	cout << c2 << endl;
+	cout << (*c3) << endl;
+	
 	c1.Info();
 	c2.Info();
+	c3->Info();
+	(*c3).Info();
+	delete c3;
+	c3 = nullptr;
 }
