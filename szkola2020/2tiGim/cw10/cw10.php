@@ -20,8 +20,16 @@
         // $a2->setStyle("border:solid 1px red;background-color:#23a112;padding: 10px");
         // echo ArtToHtml::artToDiv($a1);
         // echo ArtToHtml::artToDiv($a2);
-        var_dump(RepoArticles::getAll());
+       // var_dump(RepoArticles::getAll());
+       $articles = RepoArticles::getAll();
+       $articles[count($articles)-1]->setStyle("border:solid 1px black;padding:10px;");
+       foreach($articles as $a){
+           echo ArtToHtml::artToDiv($a);
+       }
     ?>
+    </div>
+    <div>
+        <a href="addNew.html">Dodaj nowy artykuł</a>
     </div>
    
 </body>

@@ -1,6 +1,7 @@
 .article-footer{
     font-style: italic;
     color: grey;
+    text-align: right;
 }
 .aricle-list{
     margin: 20px 30px;
@@ -8,7 +9,13 @@
 .article-tag{
     padding: 4px;background-color: lightslategrey;color:brown;font-size: 0.8em;
     border: solid black 1px;
+    /* width: 100px; */
 }
 .article{
     margin: 20px;
+}
+.article-other{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
