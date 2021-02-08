@@ -20,7 +20,7 @@ namespace WinForms_cw1_5Net
         private void ButtonClick(object sender, EventArgs e)
         {
             DateTime dtk = DateTime.Now;
-            label1.Text = "Kliknięto przycisk: " +Math.Round((dtk-dtp).TotalSeconds,0);
+            label1.Text = "Kliknięto przycisk: " +Math.Round((dtk-dtp).TotalSeconds,3);
             dtp = dtk;
         }
     }
