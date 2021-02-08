@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,8 +20,9 @@ namespace RazorPageWithAdoNet_Gim.Models
         
         [Display(Name = "Czas trwania filmu")]
         public int Length { get; set; }
-        
-        [Display(Name = "Cena filmu")]
-        public decimal? Price { get; set; }
+
+        [Display(Name = "Cena filmu")] 
+        public decimal Price { get; set; }
+
     }
 }
