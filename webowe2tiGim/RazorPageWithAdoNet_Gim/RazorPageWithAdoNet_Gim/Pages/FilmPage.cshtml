@@ -4,10 +4,26 @@
 }
 
 <div class="container">
-    <form >
+    <h1 >Dodaj nowy film</h1>
+    <form method="post">
         <div class="form-group">
             <label asp-for="MyFilm.Title"></label>
-            <input asp-for="MyFilm.Title"/>
+            <input class="form-control" asp-for="MyFilm.Title" />
+        </div>
+        <div class="form-group">
+            <label asp-for="MyFilm.Author"></label>
+            <input class="form-control" asp-for="MyFilm.Author" />
+        </div>
+        <div class="form-group">
+            <label asp-for="MyFilm.Length"></label>
+            <input class="form-control" asp-for="MyFilm.Length" />
+        </div>
+        <div class="form-group">
+            <label asp-for="MyFilm.Price"></label>
+            <input class="form-control" asp-for="MyFilm.Price" />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-sm btn-primary" value="Zapisz Film" />
         </div>
     </form>
 </div>

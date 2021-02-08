@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -15,18 +17,32 @@ namespace RazorPageWithAdoNet_Gim.Pages
         [BindProperty]
         public Film MyFilm { get; set; }
 
+        private IConfiguration configuration;
+        private string connString;
+        private SqlConnection connection;
+
         public FilmPageModel(IConfiguration configuration) {
-            Configuration = configuration;
+            this.configuration = configuration;
+            connString = configuration["ConnectionStrings:DefaultConnection"];
         }
 
-        public IConfiguration Configuration { get; set; }
-        private string connString = @"Data Source=(localdb)\MSSQLLocalDB;Database=Filmy2020_Gim_cw1;Integrated Security=True;";
+        
+        
         public void OnGet() {
-            string conn = Configuration["ConnectionStrings:DefaultConnection"];
+            
         }
 
         public void OnPost() {
-
+            connection = new SqlConnection(connString);
+            string sql =
+                $"INSERT INTO Filmy(Title,Author,Length,Price) VALUES('{MyFilm.Title}','{MyFilm.Author}',{MyFilm.Length},'{MyFilm.Price}')";
+            using (SqlCommand command = new SqlCommand(sql,connection)) {
+                command.CommandType = CommandType.Text;
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            
         }
 
     }
