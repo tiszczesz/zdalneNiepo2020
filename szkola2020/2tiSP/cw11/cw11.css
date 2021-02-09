@@ -14,3 +14,22 @@
     font-weight: bold;
     margin: 10px;
 }
+.article-other{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.article-tag{
+    border: solid black 1px; padding: 3px; background-color: rgb(202, 202, 108);
+}
+.article{margin: 20px 30px;}
+.line{margin: 20px;}
+.line label{
+    display: inline-block;
+    text-align: right;
+    padding-right: 5px;
+    width: 150px;
+}
+.line textarea{
+    vertical-align: top;
+}

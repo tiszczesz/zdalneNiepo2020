@@ -16,4 +16,8 @@ class ArtRepo{
         }
         return $arts;
     }
-}
+    public static function saveArticle(Article & $a):void
+    {
+        
+    }
+ }

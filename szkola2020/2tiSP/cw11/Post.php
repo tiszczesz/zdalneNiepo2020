@@ -41,10 +41,18 @@ class Post{
     }
     public function getTag():string
     {
-        return $this->tag;
+        return mb_strtoupper($this->tag);
     }
     public function getStyle():string
     {
         return $this->style;
+    }
+    public function setStyle(string $style):void
+    {
+        $this->style = $style;
+    }
+    public function setTag(string $tag):void
+    {
+        $this->tag = $tag;
     }
 }

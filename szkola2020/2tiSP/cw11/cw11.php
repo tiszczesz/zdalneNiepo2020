@@ -7,21 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+    <div class="conteiner">
+         <?php
     require_once "PostToHtml.php";
     require_once "PostRepo.php";
-    $posts = [
-        new Post("Pieszy post","The placement of the closing identifier is important. Prior to PHP 7.3 it had to always be placed on a new line followed by a semi-colon and with no white-space in front of it. So all the examples above would be valid. However, as of PHP 7.3 these rules have been relaxed a little."),
-        new Post("Drugi post","The placement of the closing identifier is important. Prior to PHP 7.3 it had to always be placed on a new line followed by a semi-colon and with no white-space in front of it. So all the examples above would be valid. However, as of PHP 7.3 these rules have been relaxed a little."),
-        new Post("Trzeci post","The placement of the closing identifier is important. Prior to PHP 7.3 it had to always be placed on a new line followed by a semi-colon and with no white-space in front of it. So all the examples above would be valid. However, as of PHP 7.3 these rules have been relaxed a little."),
-        new Post("Inny post","The placement of the closing identifier is important. Prior to PHP 7.3 it had to always be placed on a new line followed by .",""
-                ,"news","border: solid red 1px"),
-    ];
+    $posts = PostRepo::getAllPosts();
+    $posts[2]->setStyle("border: solid 1px green;background-color:lightgreen;");
+    $posts[0]->setTag("Uwaga!");
    // var_dump($posts);
     foreach($posts as $p){
        echo PostToHtml::postToDiv($p);
     }
-    var_dump(PostRepo::getAllPosts());
+    
     ?>
+    </div>
+   <div class='link'>
+       <a href="addNew.html">Dodaj nowy post</a>
+   </div>
 </body>
 </html>

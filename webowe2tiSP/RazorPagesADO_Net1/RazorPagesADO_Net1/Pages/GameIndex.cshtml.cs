@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,19 @@ namespace RazorPagesADO_Net1.Pages
         public GameIndexModel(IConfiguration configuration) {
             this.configuration = configuration;
             connString = configuration["ConnectionStrings:DefaultConnection"];
+        }
+
+        public void OnPost() {
+            if (ModelState.IsValid) {
+                using (SqlConnection connection = new SqlConnection(connString)) {
+                    string sql =
+                        $"INSERT INTO Games(Title,Category,Price,Description ) VALUES('{MyGame.Title}','{MyGame.Category}',{MyGame.Price},'{MyGame.Description}')";
+                    using (SqlCommand command = new SqlCommand(sql,connection)) {
+                        
+                    }
+                }
+            }
+            
         }
     }
 }

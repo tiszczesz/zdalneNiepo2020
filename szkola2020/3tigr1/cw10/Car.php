@@ -17,7 +17,7 @@ class Car{
     }
    public function __destruct()
    {
-       echo "<h3>Usuwanie obiektu</h3>";
+       //echo "<h3>Usuwanie obiektu</h3>";
    }
          
     public function getMarka():string

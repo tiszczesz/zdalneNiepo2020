@@ -23,6 +23,8 @@
     }
     ?>
     </div>
-   
+   <div>
+       <a href="addNew.html">Dodaj nowy artykuł</a>
+   </div>
 </body>
 </html>
