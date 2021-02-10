@@ -23,7 +23,7 @@ void Circle::Info() {
 		<< Area() << std::endl;
 }
 double Circle::Distance(const Circle& c) {
-	//todo zaimplementowac obliczanie odleglosci miedzy srodkami okregow
+	return center.Distance(c.center);
 }
 
 

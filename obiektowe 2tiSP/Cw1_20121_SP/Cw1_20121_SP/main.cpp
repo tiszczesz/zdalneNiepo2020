@@ -33,11 +33,12 @@ void ex2() {
 	Circle* c3 = new Circle(20, p3);
 	cout << c2 << endl;
 	cout << (*c3) << endl;
-	
-	c1.Info();
-	c2.Info();
-	c3->Info();
-	(*c3).Info();
+	cout << "Odleglosc miedzy okregami: " << c2 << endl << " oraz "
+		<< endl << c1 << endl << " wynosi: " << c2.Distance(c1) << endl;
+	//c1.Info();
+	//c2.Info();
+	//c3->Info();
+	//(*c3).Info();
 	delete c3;
 	c3 = nullptr;
 }
