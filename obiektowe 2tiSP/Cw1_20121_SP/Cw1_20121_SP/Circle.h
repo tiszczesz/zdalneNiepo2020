@@ -12,5 +12,6 @@ public:
 	double Area();
 	double Circuit();
 	void Info();
+	double Distance(const Circle& c);
 };
 
