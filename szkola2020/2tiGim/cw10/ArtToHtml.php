@@ -14,6 +14,11 @@ class ArtToHtml{
             $html .= "<div class='article-footer'>Utworzono: {$a->getDate()}</div>";
         }
        
-       return $html."</div>\n</div>\n";
+       return $html."<div><a class='article-btn' href='edit.php?title={$a->getTitle()}'>Edytuj</a>".
+       "<a class='article-btn' href='delete.php?title={$a->getTitle()}'>Usuń</a></div></div>\n</div>\n";
+    }
+    public static function articleToForm(Article& $a=null)
+    {
+        //todo
     }
 }

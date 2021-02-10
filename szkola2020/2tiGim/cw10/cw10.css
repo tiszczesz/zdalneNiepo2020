@@ -36,3 +36,11 @@ div.line label{
     padding: 5px;
     width: 155px;
 }
+.article-btn{
+    text-decoration: none;
+    color: rgb(99, 32, 32);background-color: lightcoral;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 4px;
+    
+}

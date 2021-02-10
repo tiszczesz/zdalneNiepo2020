@@ -8,7 +8,9 @@ if(filter_has_var(INPUT_POST,'title')){
     if($title!=='' && $content!==''){
         $article = new Article($content,$title);
         RepoArticles::saveArticle($article);
-
+        header("Location: cw10.php");
+    }else{
+        header("Location: addNew.html");
     }
     //var_dump($title);
 }else{

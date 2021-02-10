@@ -29,7 +29,7 @@
     ?>
     </div>
     <div>
-        <a href="addNew.html">Dodaj nowy artykuł</a>
+        <a href="addNewForm.php">Dodaj nowy artykuł</a>
     </div>
    
 </body>
