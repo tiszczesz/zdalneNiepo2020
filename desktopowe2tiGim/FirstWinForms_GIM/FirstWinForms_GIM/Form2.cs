@@ -16,5 +16,24 @@ namespace FirstWinForms_GIM
         {
             InitializeComponent();
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnShow_Click(object sender, EventArgs e) {
+
+            string imie = tbImie.Text.Trim();
+            string nazwisko = tbNazwisko.Text.Trim();
+            if (!String.IsNullOrEmpty(imie)  && !String.IsNullOrEmpty(nazwisko)) {
+                lbWynik.ForeColor = Color.Green;
+                lbWynik.Text = $"Witaj {imie} {nazwisko}" + Environment.NewLine + "Dzisiaj mamy .....";
+            }
+            else {
+                lbWynik.ForeColor = Color.Red;
+                lbWynik.Text = "Proszę się przedstawić!!!";
+            }
+        }
     }
 }
