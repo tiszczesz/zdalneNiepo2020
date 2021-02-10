@@ -1,4 +1,5 @@
 <?php
+require_once "Article.php";
 class RepoArticles{
     public static function getAll(string $dir="articles"):array {
         $result = scandir($dir);
@@ -12,5 +13,13 @@ class RepoArticles{
             }
         }
         return $articles;
+    }
+    public static function saveArticle(Article & $a):void
+    {
+        $dir = "articles";
+        if(file_exists($dir.'/'.$a->getTitle())) return;
+        $plik = fopen($dir.'/'.$a->getTitle(),'w');
+        fwrite($plik,$a->getContent());
+        fclose($plik);
     }
 }

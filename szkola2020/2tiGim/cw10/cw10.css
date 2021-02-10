@@ -19,3 +19,20 @@
     flex-direction: row;
     justify-content: space-between;
 }
+div.line{
+    margin: 20px;
+}
+div.line label{
+    display: inline-block;
+    text-align: right;
+    padding-right: 5px;
+    width: 200px;
+}
+.label-textarea{
+    vertical-align: top;
+}
+.line input[type=submit]{
+    margin-left: 210px;
+    padding: 5px;
+    width: 155px;
+}
