@@ -29,8 +29,12 @@ public:
 		return center.Distance(c.center);
 	}
 	void Info();
-	bool IsCenterIn(const Circle& c) {
+	bool IsCenterInside(const Circle& c) {
 		return Distance(c) < radius;
+	}
+	bool IsWholeInside(const Circle& c) {
+		return Distance(c) + c.radius <= radius;
+		//czy kolo c jest ca³e wewn¹trz tego ko³a
 	}
 };
 

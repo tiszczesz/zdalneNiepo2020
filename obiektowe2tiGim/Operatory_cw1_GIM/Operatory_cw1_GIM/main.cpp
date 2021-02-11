@@ -25,7 +25,7 @@ void cw2() {
 	Circle c1;
 	Point p2(4, 8);
 	Point p3(10, 12);
-	Circle c2(4, p2);
+	Circle c2(14, p2);
 	Circle* c3 = new Circle(2, p3);
 	cout << c1 << endl;
 	cout << c2 << endl;
@@ -35,17 +35,22 @@ void cw2() {
 //	c3->Info();
 //	(*c3).Info();
 
-	if((*c3).IsCenterIn(c2)) {
+	if((*c3).IsCenterInside(c2)) {
 		cout << "Srodek " << c2 << " wewnatrz " << (*c3) << endl;
 	}else {
 		cout << "Srodek " << c2 << " nie wewnatrz " << (*c3) << endl;
 	}
 
-	if (c2.IsCenterIn((*c3))) {
+	if (c2.IsCenterInside((*c3))) {
 		cout << "Srodek " << (*c3) << " wewnatrz " << c2 << endl;
 	}
 	else {
 		cout << "Srodek " << (*c3) << " nie wewnatrz " << c2 << endl;
+	}
+	if(c2.IsWholeInside(c1)) {
+		cout << c1 << endl << " Zawiera sie wewnatrz" << endl << c2 << endl;
+	}else {
+		cout << c1 << endl << " Niezawiera sie wewnatrz" << endl << c2 << endl;
 	}
 	//todo dynamiczny obiekt Kolo i uzycie << oraz metody Info()
 	delete c3;
