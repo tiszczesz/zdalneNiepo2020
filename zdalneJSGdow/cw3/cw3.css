@@ -1,0 +1,8 @@
+p{
+    cursor: pointer;
+    border: solid 1px white;
+}
+
+p:hover{
+    border: solid 1px black;
+}
