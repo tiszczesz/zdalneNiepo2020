@@ -18,6 +18,9 @@ class ArtRepo{
     }
     public static function saveArticle(Article & $a):void
     {
-        
+        $dir = "articles";
+        $f = fopen($dir."/".$a->getTitle(),'w');
+        fwrite($f,$a->getContent());
+        fclose($f);
     }
  }

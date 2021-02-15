@@ -9,8 +9,12 @@ class PostToHtml{
             <div class='article-content'>{$p->getContent()}</div>
             <div class='article-other'>
                 {$tag} 
-                <div class='article-date'>{$p->getDate()}</div>
                 
+                <div >
+                <a class='article-btn-link' href='delete.php?title={$p->getTitle()}'>Usuń</a> 
+                <a class='article-btn-link' href='edit.php?title={$p->getTitle()}'>Edytuj</a>
+                </div>
+                <div class='article-date'>{$p->getDate()}</div>
             </div>
            
         </div>

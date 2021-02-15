@@ -17,8 +17,32 @@ class ArtToHtml{
        return $html."<div><a class='article-btn' href='edit.php?title={$a->getTitle()}'>Edytuj</a>".
        "<a class='article-btn' href='delete.php?title={$a->getTitle()}'>Usuń</a></div></div>\n</div>\n";
     }
-    public static function articleToForm(Article& $a=null)
+    public static function articleToForm(Article& $a=null):string
     {
-        //todo
+        if($a==null){
+            $btn = "Zapisz";
+            $title = "";
+            $content = "";
+            $action = "addNew.php";
+        }else{
+            $btn = "Zmień";
+            $title = $a->getTitle();
+            $content = $a->getContent();
+            $action = "editArticle.php";
+        }
+
+        return<<<TEXT
+        <form action="{$action}" method="post">
+        <div class="line"><label for="title"> Podaj tytuł:  </label> 
+            <input type="text" id="title" name="title" value="{$title}">
+        </div>
+        <div class="line">
+            <label class="label-textarea" for="content">Treść artykułu: </label>
+            <textarea name="content" id="content" cols="30" rows="10">{$content}</textarea>
+        </div>
+        <div class="line"><input type="submit" value="{$btn}"></div>
+    </form>
+
+TEXT;   
     }
 }

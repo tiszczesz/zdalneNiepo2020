@@ -1,7 +1,8 @@
 <?php
 require_once "Post.php";
+require_once "configuration.php";
 class PostRepo{
-    public static function getAllPosts(string $dir="articles"):array {
+    public static function getAllPosts(string $dir=DIR):array {
         $all = scandir($dir);
         $posts = [];
         foreach($all as $item){
@@ -13,5 +14,21 @@ class PostRepo{
             }
         }
         return $posts;
+    }
+    public static function savePost(Post& $p):void
+    {
+        $f = fopen("articles/".$p->getTitle(),'w');
+        fwrite($f,$p->getContent());
+        fclose($f);
+    }
+    public static function deletePostByTitle(string $title):void
+    {
+        $dir = DIR;
+        $fileName = $dir.'/'.$title;
+        var_dump($fileName);
+        if(file_exists($fileName)){
+            echo "W ifie";
+            unlink($dir.'/'.$title);
+        }
     }
 }

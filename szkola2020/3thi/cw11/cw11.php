@@ -15,8 +15,8 @@
     require_once "ArtRepo.php";
     
     $arts = ArtRepo::getAll();
-    $arts[count($arts)-1]->setTag("Wycieczka");
-    $arts[count($arts)-1]->setStyle("background-color:yellow;");
+    //$arts[count($arts)-1]->setTag("Wycieczka");
+    //$arts[count($arts)-1]->setStyle("background-color:yellow;");
    //var_dump($arts);
     foreach($arts as $a){
         echo ArtHtml::ArticleToDiv($a);
@@ -24,7 +24,7 @@
     ?>
     </div>
    <div>
-       <a href="addNew.html">Dodaj nowy artykuł</a>
+       <a href="addNewForm.php">Dodaj nowy artykuł</a>
    </div>
 </body>
 </html>

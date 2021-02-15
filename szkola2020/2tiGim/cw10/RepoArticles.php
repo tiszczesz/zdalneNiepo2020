@@ -22,4 +22,14 @@ class RepoArticles{
         fwrite($plik,$a->getContent());
         fclose($plik);
     }
+    public static function getByTitle(string $title):Article{
+        $dir = "articles";
+        if(file_exists($dir.'/'.$title)){
+            $a = new Article($title);
+            $a->setDate(date("d-m-Y H:i:s",filemtime($dir.'/'.$title)));
+            return $a;
+        }else{
+            return null;
+        }
+    }
 }

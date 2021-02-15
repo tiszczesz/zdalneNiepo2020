@@ -33,3 +33,11 @@
 .line textarea{
     vertical-align: top;
 }
+.article-btn-link{
+    display: inline-block;
+    text-decoration: none;
+    color: darkolivegreen;
+    border: solid 1px darkolivegreen;
+    padding: 5px;
+    margin-left: 5px;
+}
