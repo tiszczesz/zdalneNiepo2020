@@ -6,8 +6,12 @@
 
 <div class="container">
     @foreach (var game in Model.Games) {
-        <div class="p-3 bg-info m-2">
+        <div class="p-3 bg-info m-2 flex-row">
             <p>@game.Title kategoria: @game.Category w cenie: @game.Price zł</p>
+            <p>
+                <a class="btn btn-dark btn-lg" asp-page="Delete" asp-route-id="@game.Id">Usuń</a>
+                <a class="btn btn-dark btn-lg" asp-page="Edit" asp-route-id="@game.Id">Edytuj</a>
+            </p>
         </div>
     }
 </div>
