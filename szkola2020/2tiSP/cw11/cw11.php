@@ -22,7 +22,7 @@
     ?>
     </div>
    <div class='link'>
-       <a href="addNew.html">Dodaj nowy post</a>
+       <a href="addNewForm.php">Dodaj nowy post</a>
    </div>
 </body>
 </html>

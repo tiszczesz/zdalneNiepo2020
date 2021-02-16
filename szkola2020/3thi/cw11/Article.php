@@ -25,7 +25,20 @@ class Article{
     }
     public function getContentFromFile(string $filename)
     {
-        $this->content = file_get_contents($filename);
+        $lines = file($filename,FILE_IGNORE_NEW_LINES);
+        $content = "";
+        $tool = "";
+        foreach($lines as $line){
+            $dane = explode("|",$line);
+            if($dane[0]==TOOL){
+                $this->setTag($dane[1]);
+                $this->setStyle($dane[2]);
+            }else{
+                $content .= $line.PHP_EOL;
+            }            
+        }
+
+        $this->content = $content;
     }
     public function __toString():string
     {

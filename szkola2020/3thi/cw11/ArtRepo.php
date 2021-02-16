@@ -1,8 +1,9 @@
 <?php
 require_once "Article.php";
+require_once "configuration.php";
 
 class ArtRepo{
-    public static function getAll(string $dir="articles"):array
+    public static function getAll(string $dir=DIR):array
     {
         $data = scandir($dir);
         $arts = [];
@@ -18,8 +19,9 @@ class ArtRepo{
     }
     public static function saveArticle(Article & $a):void
     {
-        $dir = "articles";
+        $dir = DIR;
         $f = fopen($dir."/".$a->getTitle(),'w');
+        fwrite($f,TOOL.'|'.$a->getTag().'|'.$a->getStyle().PHP_EOL);
         fwrite($f,$a->getContent());
         fclose($f);
     }

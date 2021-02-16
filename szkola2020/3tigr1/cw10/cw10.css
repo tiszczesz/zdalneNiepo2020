@@ -19,4 +19,13 @@ div.menu-item a{
     display: flex;
     flex-direction: column;
 }
+.line{
+    margin: 20px;
+}
+label{
+    display: inline-block;
+    text-align: right;
+    padding-right: 4px;
+    width: 150px;
+}
    

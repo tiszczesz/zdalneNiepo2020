@@ -22,10 +22,11 @@
             <a href="list.php">Wyświetl wszystkie samochody</a>
         </div>
         <div class='menu-item'>
-            <a href="add.html">Dodaj nowy samochód</a>
+            <a href="addForm.php">Dodaj nowy samochód</a>
         </div>
 
     </div>
+   
 
 </body>
 
