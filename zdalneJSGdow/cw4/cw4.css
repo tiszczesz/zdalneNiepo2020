@@ -10,3 +10,13 @@ td,th{
     border: solid 1px black;
     padding: 5px;
 }
+table.tab-mnozenia{
+    border-collapse: collapse;
+    width: auto;
+}
+.error{
+    color: red;
+}
+.right{
+    text-align: right;
+}

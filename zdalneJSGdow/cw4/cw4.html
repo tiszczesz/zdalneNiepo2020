@@ -10,8 +10,17 @@
 </head>
 
 <body>
-    <div><input id="gener" type="button" value="Generuj tabelkę"></div>
-    <div id="wynik"></div>
+    <h1>Generowanie html'a na stronie innerHTML</h1>
+    <div>
+        <input id="gener" type="button" value="Generuj tabelkę">
+        <input id="gener2" type="button" value="Tabliczka mnożenia">
+        <label for="cols">Ilość kolumn: </label>
+        <input type="number" name="cols" id="cols" min="2" max="40" required value="10">
+        <label for="rows">Ilość wierszy: </label>
+        <input type="number" name="rows" id="rows" min="2" max="40" required value="10">
+    </div>
+
+    <div id="wynik" style="margin-top: 20px;"></div>
     <script src="cw4.js"></script>
 </body>
 
