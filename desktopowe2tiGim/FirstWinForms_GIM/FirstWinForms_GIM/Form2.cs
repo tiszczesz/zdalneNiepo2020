@@ -19,7 +19,7 @@ namespace FirstWinForms_GIM
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         private void btnShow_Click(object sender, EventArgs e) {
