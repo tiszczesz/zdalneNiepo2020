@@ -1,0 +1,1 @@
+﻿Select Id,Title,Category,Price,Description From Games WHERE Id=12
