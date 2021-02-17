@@ -23,7 +23,7 @@ namespace FirstWinForms_GIM
         }
 
         private void btnEx2_Click(object sender, EventArgs e) {
-            new Form2().ShowDialog();
+            new Form2(this).ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
