@@ -13,6 +13,8 @@ public:
 	double Circuit();
 	void Info();
 	double Distance(const Circle& c);
-	bool IsCenterInOther(const Circle& c);//todo
+	bool IsCenterInOther(const Circle& c);
+	bool IsOtherCenterInside(const Circle& c);
+	//todo srednica kola
 };
 

@@ -25,6 +25,14 @@ void Circle::Info() {
 double Circle::Distance(const Circle& c) {
 	return center.Distance(c.center);
 }
+bool Circle::IsCenterInOther(const Circle& c) {
+	return Distance(c) <= c.radius; //czy nasze kolo ma srodek wewnatrz kola c
+}
+bool Circle::IsOtherCenterInside(const Circle& c) {
+	return Distance(c) <= radius; //czy kolo c ma srodek wewnatrz naszego
+}
+
+
 
 
 
