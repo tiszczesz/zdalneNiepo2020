@@ -25,8 +25,11 @@ class HtmlCar
     }
     public static function carToForm(Car & $c=null):string
     {
+        if($c==null){
+            $action = "addNewCar.php";
+        }
         return <<<TEXT
-        <form action="" method="post">
+        <form action="{$action}" method="post">
         <div class="line">
             <label for="marka">Marka: </label>
             <input type="text" name="marka" id="marka" required>

@@ -1,7 +1,8 @@
 <?php
 require_once "Article.php";
+require_once "configuration.php";
 class RepoArticles{
-    public static function getAll(string $dir="articles"):array {
+    public static function getAll(string $dir=DIR):array {
         $result = scandir($dir);
         $articles = [];
         foreach($result as $art){
@@ -16,14 +17,14 @@ class RepoArticles{
     }
     public static function saveArticle(Article & $a):void
     {
-        $dir = "articles";
+        $dir = DIR;
         if(file_exists($dir.'/'.$a->getTitle())) return;
         $plik = fopen($dir.'/'.$a->getTitle(),'w');
         fwrite($plik,$a->getContent());
         fclose($plik);
     }
     public static function getByTitle(string $title):Article{
-        $dir = "articles";
+        $dir = DIR;
         if(file_exists($dir.'/'.$title)){
             $a = new Article($title);
             $a->setDate(date("d-m-Y H:i:s",filemtime($dir.'/'.$title)));
@@ -31,5 +32,9 @@ class RepoArticles{
         }else{
             return null;
         }
+    }
+    public static function deleteArticle(string $fileName):bool
+    {
+        return unlink(DIR.'/'.$fileName);
     }
 }
