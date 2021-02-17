@@ -18,7 +18,7 @@ namespace FirstWinForms_GIM
         }
 
         private void btnEx1_Click(object sender, EventArgs e) {
-            Form1 f1 = new Form1();
+            Form1 f1 = new Form1(this);
             f1.ShowDialog();
         }
 
@@ -29,6 +29,10 @@ namespace FirstWinForms_GIM
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        public TextBox GeTextBox() {
+            return tbInfo;
         }
     }
 }

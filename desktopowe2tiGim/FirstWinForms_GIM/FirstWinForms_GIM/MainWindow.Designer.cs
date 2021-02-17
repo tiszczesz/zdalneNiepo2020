@@ -34,7 +34,7 @@ namespace FirstWinForms_GIM
             this.btnEx3 = new System.Windows.Forms.Button();
             this.btnEx2 = new System.Windows.Forms.Button();
             this.btnEx1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbInfo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,21 +91,21 @@ namespace FirstWinForms_GIM
             this.btnEx1.UseVisualStyleBackColor = true;
             this.btnEx1.Click += new System.EventHandler(this.btnEx1_Click);
             // 
-            // textBox1
+            // tbInfo
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(250, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(568, 751);
-            this.textBox1.TabIndex = 1;
+            this.tbInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbInfo.Location = new System.Drawing.Point(250, 0);
+            this.tbInfo.Multiline = true;
+            this.tbInfo.Name = "tbInfo";
+            this.tbInfo.Size = new System.Drawing.Size(568, 751);
+            this.tbInfo.TabIndex = 1;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 751);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbInfo);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "MainWindow";
@@ -123,6 +123,8 @@ namespace FirstWinForms_GIM
         private System.Windows.Forms.Button btnEx2;
         private System.Windows.Forms.Button btnEx1;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbInfo;
+
+        
     }
 }

@@ -127,7 +127,7 @@ namespace FirstWinForms_GIM
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form2";
-            this.Text = "Okienko drugie";
+            this.Text = "Ćwiczenie 2";
             this.ResumeLayout(false);
             this.PerformLayout();
 

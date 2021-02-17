@@ -12,10 +12,12 @@ namespace FirstWinForms_GIM
 {
     public partial class Form1 : Form {
         private DateTime dt;
-        public Form1()
-        {
+        private MainWindow window;
+        public Form1(MainWindow window) {
+            this.window = window;
             InitializeComponent();
             dt = DateTime.Now;
+            this.window.GeTextBox().Text += "Otwarcie okienka: "+this.Text+" " + DateTime.Now.ToLongTimeString() + Environment.NewLine;
         }
 
         private void Click_Btn1(object sender, EventArgs e) {
@@ -23,5 +25,11 @@ namespace FirstWinForms_GIM
             label1.Text = (dt2-dt).TotalSeconds.ToString();
             dt = dt2;
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            window.GeTextBox().Text += "Zamknięcie okienka: "+this.Text+" " + DateTime.Now.ToLongTimeString() + Environment.NewLine;
+        }
     }
+    
 }
