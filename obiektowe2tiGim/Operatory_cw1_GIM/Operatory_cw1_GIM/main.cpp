@@ -26,6 +26,7 @@ void cw2() {
 	Point p2(4, 8);
 	Point p3(10, 12);
 	Circle c2(14, p2);
+	Circle c4 = c2;
 	Circle* c3 = new Circle(2, p3);
 	cout << c1 << endl;
 	cout << c2 << endl;
@@ -52,7 +53,23 @@ void cw2() {
 	}else {
 		cout << c1 << endl << " Niezawiera sie wewnatrz" << endl << c2 << endl;
 	}
+	if (c2.IsThisCircleInside(c1)) {
+		cout << c2 << endl << " Zawiera sie wewnatrz" << endl << c1 << endl;
+	}
+	else {
+		cout << c2 << endl << " Niezawiera sie wewnatrz" << endl << c1 << endl;
+	}
 	//todo dynamiczny obiekt Kolo i uzycie << oraz metody Info()
+
+	cout << "========================================================\n\n";
+	cout << c2 << endl;
+	cout << c4 << endl;
+	cout << "     zmieniam promien c4 " << endl;
+	cout << c2.IsWholeInside(c4) << endl;
+	cout << c2.IsThisCircleInside(c4) << endl;
+	c4.SetRadius(5);
+	cout << c2 << endl;
+	cout << c4 << endl;
 	delete c3;
 	c3 = nullptr;
 }
