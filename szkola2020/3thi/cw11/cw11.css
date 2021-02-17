@@ -27,3 +27,13 @@ h1{
 .lab1{
     vertical-align: top;
 }
+.article-link{
+    display: inline-block;
+    margin: 0px 5px;
+    border: solid 1px black;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    background-color: chocolate;
+    width: 50px;
+}

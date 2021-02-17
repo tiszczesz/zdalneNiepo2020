@@ -25,4 +25,8 @@ class ArtRepo{
         fwrite($f,$a->getContent());
         fclose($f);
     }
+    public static function deleteArticle(string $title):bool
+    {
+        return unlink(DIR.'/'.$title);
+    }
  }

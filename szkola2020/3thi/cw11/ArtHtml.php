@@ -10,11 +10,13 @@ class ArtHtml
         $tag = trim($a->getTag()) != ""
             ? "<div class='article-tag'>{$a->getTag()}</div>\n" :
             "";
+            $html .= "{$tag}<div><a class='article-link' href='delete.php?title={$a->getTitle()}'>Usuń</a>"
+            ."<a class='article-link' href='edit.php?title={$a->getTitle()}'>Edytuj</a></div>\n";
         if (trim($a->getDate()) != '') {
-            $html .= "{$tag}<div class='article-date'>{$a->getDate()}</div>\n";
+            $html .= "<div class='article-date'>{$a->getDate()}</div>\n";
         }
 
-        return $html . "</div>\n</div>\n";
+        return $html . "</>\n</div></div>\n";
     }
     public static function ArticleToForm(Article& $a=null):string
     {
