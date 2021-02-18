@@ -15,6 +15,8 @@ public:
 	double Distance(const Circle& c);
 	bool IsCenterInOther(const Circle& c);
 	bool IsOtherCenterInside(const Circle& c);
+	bool IsThisInOther(const Circle& c);
+	bool IsOtherInThis(const Circle& c);
 	//todo srednica kola
 };
 
