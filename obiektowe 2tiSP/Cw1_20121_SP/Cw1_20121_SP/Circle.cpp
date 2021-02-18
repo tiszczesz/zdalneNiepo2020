@@ -31,6 +31,16 @@ bool Circle::IsCenterInOther(const Circle& c) {
 bool Circle::IsOtherCenterInside(const Circle& c) {
 	return Distance(c) <= radius; //czy kolo c ma srodek wewnatrz naszego
 }
+//todo czy nasze kolo w calosci jest w kole c  -->sprawdzic w main.cpp
+bool Circle::IsThisInOther(const Circle& c) { 
+	return Distance(c) + radius <= c.radius;
+}
+//todo czy inne kolo w calosci jest w naszym -->sprawdzic w main.cpp
+bool Circle::IsOtherInThis(const Circle& c) {
+	return Distance(c) + c.radius <= radius;
+}
+
+
 
 
 
