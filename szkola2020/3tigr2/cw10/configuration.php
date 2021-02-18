@@ -1,0 +1,2 @@
+<?php
+const DIR = "posts";

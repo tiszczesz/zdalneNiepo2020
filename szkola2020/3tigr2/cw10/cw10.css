@@ -8,3 +8,23 @@
 .post-date{text-align: right; margin-right: 20px; color: grey;}
 .post-tag{padding: 6px;display: inline-block; background-color: lightsalmon;
     border: solid 1px black;}
+.btn-link{
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px;
+    border: solid 1px black;
+    color: black;
+    border-radius: 5px;
+    min-width: 140px;
+    text-align: center;
+    background-color: lightgrey;
+}
+.line{
+    margin: 20px;    
+}
+label{
+        display:inline-block;
+        text-align: right;
+        width: 150px;
+        padding-right: 5px;
+}
