@@ -11,18 +11,19 @@
     <div>
         <div class="line">
             <label for="a">a = </label>
-            <input type="number" name="a" id="a">
+            <input type="number" name="a" id="a" required step="0.01">
         </div>
         <div class="line">
             <label for="b">b = </label>
-            <input type="number" name="b" id="b">
+            <input type="number" name="b" id="b" required step="0.01">
         </div>
         <div class="line">
-            <input type="button" value="Dodaj">
-            <input type="button" value="Odejmij">
-            <input type="button" value="Pomnóż">
-            <input type="button" value="Podziel">
+            <input type="button" value="Dodaj" id="dodaj">
+            <input type="button" value="Odejmij" id="odejmij">
+            <input type="button" value="Pomnóż" id="pomnoz">
+            <input type="button" value="Podziel" id="podziel">
         </div>
+        <div id="wynik"></div>
     </div>
     <script src="cw5.js"></script>
 </body>

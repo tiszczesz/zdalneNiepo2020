@@ -12,3 +12,6 @@ input[type=button]{
     width: 100px;
     padding: 10px;
 }
+.error{
+    color:red;
+}
