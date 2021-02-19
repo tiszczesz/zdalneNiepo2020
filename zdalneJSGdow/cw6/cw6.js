@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded",function(){
     console.log(t1);
     //todo utworzyć liste rozwijalna (select) z kolorami z tablicy i umiescic w div second
     const colors = ["white","red","green","blue","yellow","pink"];
+  //  document.querySelector("#second").innerHTML = arrayToSelect1(colors);
+   document.querySelector("#second").innerHTML = arrayToSelect2(colors);
 
 });
 function arrayToList(tab){
@@ -22,4 +24,18 @@ function arrayToList(tab){
         html += "<li>"+item+"</li>";
     }
     return html + "</ol>";
+}
+function arrayToSelect1(data){
+    let html = "Pierwsza metoda: <select>";
+    data.forEach(function(elem){
+        html += `<option value='${elem}'>${elem}</option>`;
+    });
+    return html+ "</select>";
+}
+function arrayToSelect2(data){
+    let html = "Druga metoda: <select>";
+    for(let item of data){
+        html += `<option value='${item}'>${item}</option>`;
+    }
+    return html+ "</select>";
 }
