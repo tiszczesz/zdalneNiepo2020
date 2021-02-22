@@ -34,7 +34,7 @@ function arrayToSelect1(data){
 }
 function arrayToSelect2(data){
     let html = "Druga metoda: <select>";
-    for(let item of data){
+    for(let item of data){  //for(let i=0;i<data.length;i++){   .... ${data[i]}}
         html += `<option value='${item}'>${item}</option>`;
     }
     return html+ "</select>";
