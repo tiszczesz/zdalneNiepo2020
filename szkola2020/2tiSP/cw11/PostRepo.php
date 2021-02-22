@@ -17,7 +17,7 @@ class PostRepo{
     }
     public static function savePost(Post& $p):void
     {
-        $f = fopen("articles/".$p->getTitle(),'w');
+        $f = fopen(DIR.'/'.$p->getTitle(),'w');
         fwrite($f,$p->getContent());
         fclose($f);
     }
@@ -30,5 +30,12 @@ class PostRepo{
             echo "W ifie";
             unlink($dir.'/'.$title);
         }
+    }
+    public static function getPostByTitle(string $fileName):Post
+    {
+       $f = fopen(DIR.'/'.$fileName,'r');
+       $post = new Post($fileName);
+       $post->setContentFromFile(DIR.'/'.$fileName);
+       return $post;
     }
 }

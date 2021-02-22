@@ -1,2 +1,2 @@
 <?php
-const DIR = "articles";
+const DIR = "posts";

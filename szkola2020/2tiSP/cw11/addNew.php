@@ -5,9 +5,9 @@ if(filter_has_var(INPUT_POST,'title')){ //if(isset($_POST['title')]){.....})
     $content = trim(filter_input(INPUT_POST,'content',FILTER_SANITIZE_STRING));
     var_dump($title);
     var_dump($content);
-    $p = new Post($title,$content);
+    $p = new Post($title,$content);// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     PostRepo::savePost($p);
-    header("Location: cw11.phpl");
+    header("Location: cw11.php");
 }else{
    header("Location: addNew.html");
 }

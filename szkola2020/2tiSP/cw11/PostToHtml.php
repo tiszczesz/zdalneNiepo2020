@@ -12,7 +12,7 @@ class PostToHtml{
                 
                 <div >
                 <a class='article-btn-link' href='delete.php?title={$p->getTitle()}'>Usuń</a> 
-                <a class='article-btn-link' href='edit.php?title={$p->getTitle()}'>Edytuj</a>
+                <a class='article-btn-link' href='editPostForm.php?title={$p->getTitle()}'>Edytuj</a>
                 </div>
                 <div class='article-date'>{$p->getDate()}</div>
             </div>
@@ -29,17 +29,19 @@ TEXT;
             $content = "";
             $action = "addNew.php";
             $btn = "Zapisz post";
+            $readOnly = "";
         }else{
             $title = $p->getTitle();
             $content = $p->getContent();
-            $action = "editPost.php";
+            $action = "edit.php";
             $btn = "Zmień post";
+            $readOnly = "readonly";
         }
         return<<<TEXT
         <form action="{$action}" method="post">
         <div class="line">
             <label for="title">Tytuł posta: </label>
-            <input type="text" name="title" id="title" value='{$title}'>
+            <input type="text" name="title" id="title" value='{$title}' {$readOnly}>
         </div>
         <div class="line">
             <label for="content">Podaj zawartość posta: </label>
