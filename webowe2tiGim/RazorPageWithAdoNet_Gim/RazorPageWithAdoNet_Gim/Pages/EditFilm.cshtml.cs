@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,7 @@ namespace RazorPageWithAdoNet_Gim.Pages
    
     public class EditFilmModel : PageModel
     {
+        [BindProperty]
         public Film MyFilm { get; set; }
         private IConfiguration configuration;
         private string connString;
@@ -41,6 +43,28 @@ namespace RazorPageWithAdoNet_Gim.Pages
                 }
             }
             return Page();
+        }
+
+        public IActionResult OnPost(int id) {
+            if (ModelState.IsValid) {
+                ViewData["info"] = "OK";
+                using (SqlConnection connection = new SqlConnection(connString)) {
+                    string sql = $"UPDATE Filmy SET Title='{MyFilm.Title}', Author='{MyFilm.Author}',"
+                                 + $" Length='{MyFilm.Length}',"
+                    +$" Price='{MyFilm.Price.ToString(new CultureInfo("en-US"))}' WHERE Id={id}";
+                    using (SqlCommand command = new SqlCommand(sql,connection)) {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                
+            }
+            else {
+                ViewData["info"] = "B³¹d!!!";
+            }
+
+            return RedirectToPage("Index");
         }
     }
 }
