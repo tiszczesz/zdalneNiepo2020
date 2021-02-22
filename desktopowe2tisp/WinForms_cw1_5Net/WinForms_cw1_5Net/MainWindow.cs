@@ -30,7 +30,7 @@ namespace WinForms_cw1_5Net
         }
 
         private void btnEx2_Click(object sender, EventArgs e) {
-            new Form1().ShowDialog();
+            new Form1(this).ShowDialog();
         }
     }
 }
