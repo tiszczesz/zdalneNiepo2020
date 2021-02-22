@@ -37,4 +37,9 @@ class RepoArticles{
     {
         return unlink(DIR.'/'.$fileName);
     }
+    public static function getAricleByTitle(string $titlr):Article
+    {
+        //generowanie artykułu z pliku...
+        return null;
+    }
 }

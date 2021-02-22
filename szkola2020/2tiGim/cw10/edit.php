@@ -8,8 +8,12 @@
 </head>
 <body>
     <?php
+    require_once "RepoArticles.php";
     if(filter_has_var(INPUT_GET,'title')){
         $title = filter_input(INPUT_GET,'title');
+        //todo dokonczyc edytowanie
+        $article = RepoArticles::getArticleByTitle($title);
+        //
         
     }
     ?>

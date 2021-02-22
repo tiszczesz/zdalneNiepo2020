@@ -4,6 +4,7 @@ if(filter_has_var(INPUT_GET,'title')){ //isset($_GET['title'])
     $title = filter_input(INPUT_GET,'title',FILTER_SANITIZE_STRING);
     RepoArticles::deleteArticle($title);
     //echo "usuwanie pliku: ".$title;
-}else{
-    header("Location: cw10.php");
+
 }
+    
+header("Location: cw10.php");
