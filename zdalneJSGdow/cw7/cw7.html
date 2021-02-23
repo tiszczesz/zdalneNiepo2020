@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,48 @@
     <link rel="stylesheet" href="cw7.css">
     <title>Ćwiczenie 7</title>
 </head>
+
 <body>
     <h1>Ćwiczenie 7</h1>
-    <div class="line">
-        <label for="opis">Opis dokumentu: </label>
-        <textarea name="opis" id="opis" cols="30" rows="10"></textarea>
+    <div class="container">
+        <div>
+            <div class="line">
+                <label for="opis">Opis dokumentu: </label>
+                <textarea name="opis" id="opis" cols="30" rows="10"></textarea>
+            </div>
+            <div class="line">
+                <label for="opis">Opis dokumentu: </label>
+                <input type="text" name="nazwa" id="nazwa">
+            </div>
+        </div>
+        <div>
+            <div class="line">
+                <input type="radio" name="rr" id="rr1" checked> Pierwszy radio<br>
+
+                <input type="radio" name="rr" id="rr2"> Drugi radio
+            </div>
+            <div class="line">
+                <input type="checkbox" name="check" id="check1" > Pierwszy checkbox<br>
+                <input type="checkbox" name="check" id="check2"> Drugi checkbox
+            </div>
+            <div class="line">
+                <label for="red">zmiana koloru czerwonego: </label>
+                <input type="range" name="red" id="red" min="0" max="255" value="255">
+            </div>
+            <div class="line">
+                <label for="green">zmiana koloru zielonego: </label>
+                <input type="range" name="green" id="green" min="0" max="255" value="255">
+            </div>
+            <div class="line">
+                <label for="blue">zmiana koloru niebieskiego: </label>
+                <input type="range" name="blue" id="blue" min="0" max="255" value="255">
+            </div>
+
+        </div>
     </div>
+    
+    <div id="wynik">Ala ma kota</div>
     <script src="cw7.js" type="text/javascript"></script>
 </body>
+
 </html>

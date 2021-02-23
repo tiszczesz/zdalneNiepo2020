@@ -3,3 +3,18 @@ h1{
     color: blue;
     border-bottom: solid blue 1px;
 }
+.container{
+    display: flex;
+    flex-direction: row;
+}
+div{
+    margin-left: 30px;
+}
+div.line {
+    margin-bottom: 30px;
+}
+#wynik{
+    padding: 20px;
+    border: solid 1px black;
+    background-color: white;
+}
