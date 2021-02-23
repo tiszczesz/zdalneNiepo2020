@@ -29,4 +29,22 @@ class ArtRepo{
     {
         return unlink(DIR.'/'.$title);
     }
+    public static function getArticleByTitle(string $fileName):Article
+    {
+        $lines = file($fileName,FILE_IGNORE_NEW_LINES);
+        $content = "";
+        $a = new Article($fileName);
+        foreach($lines as $line){
+            $dane = explode("|",$line);
+            if($dane[0]==TOOL){
+                $a->setTag($dane[1]);
+                $a->setStyle($dane[2]);
+            }else{
+                $content .= $line.PHP_EOL;
+            }      
+        }
+        $a->setContent($content);        
+        return $a; //todo dalej test
+        
+    }
  }

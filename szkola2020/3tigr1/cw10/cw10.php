@@ -24,7 +24,9 @@
         <div class='menu-item'>
             <a href="addForm.php">Dodaj nowy samochód</a>
         </div>
-
+        <div class='menu-item'>
+            <a href="admin.php">Administracja samochodami</a>
+        </div>
     </div>
    
 

@@ -15,5 +15,6 @@
     //var_dump($dane);
     echo HtmlCar::allToList($dane,true);
     ?>
+     <div><a href="cw10.php">Powrót</a></div>
 </body>
 </html>

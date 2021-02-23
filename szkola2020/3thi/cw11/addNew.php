@@ -10,7 +10,7 @@ if(isset($_POST['title'])){
        
         $a = new Article($title,$content,"",$tag,$style);
         ArtRepo::saveArticle($a);
-       // header("Location: cw11.php");
+        header("Location: cw11.php");
     }else{
         header("Location: addNew.html");
     }

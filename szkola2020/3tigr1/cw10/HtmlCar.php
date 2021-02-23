@@ -21,7 +21,14 @@ class HtmlCar
     }
     public static function allToTable(array $dane):string 
     {
-        return "";
+        $html = "<table class='car-list'>\n";
+        $html .= "<tr><th>Marka</th><th>Ilość miejsc</th><th>Rok produkcji</th><th>Cena (PLN)</th><th></th></tr>\n";
+        foreach($dane as $car){
+            $html .= "<tr><td>{$car->getMarka()}</td><td>{$car->getMiejsca()}</td><td>{$car->getRokProdukcji()}</td>"
+            ."<td>{$car->getCena()}</td><td><a href='delete.php?marka={$car->getMarka()}' class='link-button'>Usuń</a>"
+            ."<a href='editForm.php?marka={$car->getMarka()}' class='link-button'>Edytuj</a></td></tr>\n";
+        }
+        return $html."</table>\n";
     }
     public static function carToForm(Car & $c=null):string
     {

@@ -18,7 +18,7 @@
     //$arts[count($arts)-1]->setTag("Wycieczka");
     //$arts[count($arts)-1]->setStyle("background-color:yellow;");
    //var_dump($arts);
-   var_dump(explode('|',"|||"));
+  // var_dump(explode('|',"|||"));
     foreach($arts as $a){
         echo ArtHtml::ArticleToDiv($a);
     }
