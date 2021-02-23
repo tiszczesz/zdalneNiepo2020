@@ -2,4 +2,28 @@
 @model RazorPagesADO_Net1.Pages.EditModel
 @{
 }
+
+
+<div class="container"></div>
 <h1>edycja danych o id: @ViewData["info"]</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="MyGame.Title"></label>
+        <input class="form-control" asp-for="MyGame.Title" />
+    </div>
+    <div class="form-group">
+        <label asp-for="MyGame.Category"></label>
+        <input class="form-control" asp-for="MyGame.Category" />
+    </div>
+    <div class="form-group">
+        <label asp-for="MyGame.Price"></label>
+        <input class="form-control" asp-for="MyGame.Price" />
+    </div>
+    <div class="form-group">
+        <label asp-for="MyGame.Description"></label>
+        <input class="form-control" asp-for="MyGame.Description" />
+    </div>
+    <div class="alert alert-info text-center">
+        <input class="btn btn-primary w-75" type="submit" value="Zapisz" />
+    </div>
+</form>

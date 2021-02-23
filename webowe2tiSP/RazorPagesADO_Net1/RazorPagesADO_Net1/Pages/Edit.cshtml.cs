@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -41,7 +42,7 @@ namespace RazorPagesADO_Net1.Pages
                                 Price = dr.GetDecimal(3),
                                 Description = dr.GetString(4)
                             };
-
+                            
                         }
                         else {
                             return RedirectToPage("Index");
@@ -49,8 +50,26 @@ namespace RazorPagesADO_Net1.Pages
                     }
                 }
             }
-
             return Page();
+        }
+
+        public IActionResult OnPost(int id) {
+            if (ModelState.IsValid) {
+                using (SqlConnection connection = new SqlConnection(connString)) {
+                    string sql = $"UPDATE Games SET Title='{MyGame.Title}',Category='{MyGame.Category}',"
+                                 + $"Price='{MyGame.Price.ToString(new CultureInfo("en-US"))}',"
+                                 + $"Description='{MyGame.Description}'";
+                    using (SqlCommand command = new SqlCommand(sql,connection)) {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                return RedirectToPage("Index");
+            }
+            else {
+                return Page();
+            }
         }
     }
 }
