@@ -31,7 +31,7 @@ class ArtRepo{
     }
     public static function getArticleByTitle(string $fileName):Article
     {
-        $lines = file($fileName,FILE_IGNORE_NEW_LINES);
+        $lines = file(DIR.'/'.$fileName,FILE_IGNORE_NEW_LINES);
         $content = "";
         $a = new Article($fileName);
         foreach($lines as $line){
@@ -39,11 +39,13 @@ class ArtRepo{
             if($dane[0]==TOOL){
                 $a->setTag($dane[1]);
                 $a->setStyle($dane[2]);
+                $a->setDate(date("d-m-Y H:i:s",filemtime(DIR.'/'.$fileName)));
             }else{
                 $content .= $line.PHP_EOL;
             }      
         }
-        $a->setContent($content);        
+        $a->setContent($content);   
+        var_dump($a);     
         return $a; //todo dalej test
         
     }
