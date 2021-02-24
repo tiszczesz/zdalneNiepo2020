@@ -18,12 +18,12 @@ namespace FirstWinForms_GIM
         }
 
         private void btnEx1_Click(object sender, EventArgs e) {
-            Form1 f1 = new Form1(this);
+            Ex1Form f1 = new Ex1Form(this);
             f1.ShowDialog();
         }
 
         private void btnEx2_Click(object sender, EventArgs e) {
-            new Form2(this).ShowDialog();
+            new Ex2Form(this).ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

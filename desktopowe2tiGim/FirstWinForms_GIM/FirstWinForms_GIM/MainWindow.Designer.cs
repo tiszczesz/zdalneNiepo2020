@@ -97,6 +97,7 @@ namespace FirstWinForms_GIM
             this.tbInfo.Location = new System.Drawing.Point(250, 0);
             this.tbInfo.Multiline = true;
             this.tbInfo.Name = "tbInfo";
+            this.tbInfo.ReadOnly = true;
             this.tbInfo.Size = new System.Drawing.Size(568, 751);
             this.tbInfo.TabIndex = 1;
             // 

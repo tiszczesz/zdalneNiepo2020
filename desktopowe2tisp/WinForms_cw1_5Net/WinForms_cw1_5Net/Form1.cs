@@ -25,7 +25,9 @@ namespace WinForms_cw1_5Net
         private void BtnWynik_Click(object sender, EventArgs e) {
             //todo walidacja pustego imienia i nazwiska -->szkoda że nie chcesz się przedstawić
             lbWynik.Text = "Witamy w krainie WindowForms:" + Environment.NewLine;
-            if (!ValidateText(txtBoxImie) || !ValidateText(txtBoxNazwisko)) {
+            bool valImie = ValidateText(txtBoxImie);
+            bool valNazwisko = ValidateText(txtBoxNazwisko);
+            if (valImie && valNazwisko) {
                 lbWynik.ForeColor = Color.Red;
                 lbWynik.Text += "Szkoda że nie chcesz się przedstawić";
             }

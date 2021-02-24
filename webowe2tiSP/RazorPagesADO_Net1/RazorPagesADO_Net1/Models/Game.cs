@@ -18,6 +18,7 @@ namespace RazorPagesADO_Net1.Models
         public string Category { get; set; }
         
         [Display(Name = "Cena")]
+        [Range(0,1000)]
         public decimal Price { get; set; }
         
         [Display(Name = "Opis gry")]

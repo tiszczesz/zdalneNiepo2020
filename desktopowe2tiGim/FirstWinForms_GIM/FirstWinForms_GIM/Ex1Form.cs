@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace FirstWinForms_GIM
 {
-    public partial class Form1 : Form {
+    public partial class Ex1Form : Form {
         private DateTime dt;
         private MainWindow window;
-        public Form1(MainWindow window) {
+        public Ex1Form(MainWindow window) {
             this.window = window;
             InitializeComponent();
             dt = DateTime.Now;

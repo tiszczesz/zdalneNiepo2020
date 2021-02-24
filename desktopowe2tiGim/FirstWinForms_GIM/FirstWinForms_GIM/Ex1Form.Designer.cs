@@ -1,7 +1,7 @@
 ﻿
 namespace FirstWinForms_GIM
 {
-    partial class Form1
+    partial class Ex1Form
     {
         /// <summary>
         ///  Required designer variable.
@@ -78,7 +78,7 @@ namespace FirstWinForms_GIM
             this.radioButton1.Text = "radioButton1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Ex1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +88,7 @@ namespace FirstWinForms_GIM
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "Ex1Form";
             this.Text = "Ćwiczenie 1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.ResumeLayout(false);
