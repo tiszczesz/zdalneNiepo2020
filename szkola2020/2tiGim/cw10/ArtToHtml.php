@@ -24,17 +24,19 @@ class ArtToHtml{
             $title = "";
             $content = "";
             $action = "addNew.php";
+            $readonly = "";
         }else{
             $btn = "Zmień";
             $title = $a->getTitle();
             $content = $a->getContent();
             $action = "editArticle.php";
+            $readonly = "readonly";
         }
 
         return<<<TEXT
         <form action="{$action}" method="post">
         <div class="line"><label for="title"> Podaj tytuł:  </label> 
-            <input type="text" id="title" name="title" value="{$title}">
+            <input type="text" id="title" name="title" value="{$title}" {$readonly}>
         </div>
         <div class="line">
             <label class="label-textarea" for="content">Treść artykułu: </label>

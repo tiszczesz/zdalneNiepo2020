@@ -7,9 +7,7 @@ class RepoArticles{
         $articles = [];
         foreach($result as $art){
             if($art!=='.' && $art!=='..'){
-                $a = new Article("",$art);
-                $a->getContentFromFile($dir.'/'.$art);
-                $a->setDate(date("d-m-Y H:i:s",filemtime($dir.'/'.$art)));
+                $a = self::getArticleByTitle($art); //wywolanie metody statycznej w metodzie tez statycznej             
                 $articles[] = $a;
             }
         }
@@ -18,8 +16,10 @@ class RepoArticles{
     public static function saveArticle(Article & $a):void
     {
         $dir = DIR;
-        if(file_exists($dir.'/'.$a->getTitle())) return;
+       // var_dump("rrrrrrrrr");
+       // if(file_exists($dir.'/'.$a->getTitle())) return;
         $plik = fopen($dir.'/'.$a->getTitle(),'w');
+        
         fwrite($plik,$a->getContent());
         fclose($plik);
     }
@@ -37,9 +37,12 @@ class RepoArticles{
     {
         return unlink(DIR.'/'.$fileName);
     }
-    public static function getAricleByTitle(string $titlr):Article
+    public static function getArticleByTitle(string $title):Article
     {
-        //generowanie artykułu z pliku...
-        return null;
+        $a = new Article("",$title);
+        $a->getContentFromFile(DIR.'/'.$title);
+        $a->setDate(date("d-m-Y H:i:s",filemtime(DIR.'/'.$title)));               
+        return $a;
     }
+    
 }
