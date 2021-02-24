@@ -58,7 +58,7 @@ namespace RazorPagesADO_Net1.Pages
                 using (SqlConnection connection = new SqlConnection(connString)) {
                     string sql = $"UPDATE Games SET Title='{MyGame.Title}',Category='{MyGame.Category}',"
                                  + $"Price='{MyGame.Price.ToString(new CultureInfo("en-US"))}',"
-                                 + $"Description='{MyGame.Description}'";
+                                 + $"Description='{MyGame.Description}' WHERE Id={id}";
                     using (SqlCommand command = new SqlCommand(sql,connection)) {
                         connection.Open();
                         command.ExecuteNonQuery();

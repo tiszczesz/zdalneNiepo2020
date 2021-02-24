@@ -33,7 +33,9 @@ namespace RazorPagesADO_Net1.Pages
             if (ModelState.IsValid) {
                 using (SqlConnection connection = new SqlConnection(connString)) {
                     string sql =
-                        $"INSERT INTO Games(Title,Category,Price,Description ) VALUES('{MyGame.Title}','{MyGame.Category}',{MyGame.Price.ToString(new CultureInfo("en_US"))},'{MyGame.Description}')";
+                        $"INSERT INTO Games(Title,Category,Price,Description ) VALUES('{MyGame.Title}'"
+                        +$",'{MyGame.Category}',{MyGame.Price.ToString(new CultureInfo("en_US"))},"
+                        +$"'{MyGame.Description}')";
                     using (SqlCommand command = new SqlCommand(sql,connection)) {
                         command.CommandType = CommandType.Text;
                         connection.Open();
