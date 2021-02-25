@@ -7,23 +7,15 @@ class Box
 {
 private:
 	int size;
-void Fill() {
-	srand(time(0));
-	for (int i = 0; i < size; i++) {
-		data[i] = rand() % 100;
-	}
-}
+	void Fill(); 
 public:
 	int* data;
-	Box() {
-		size = 10;
-		data = new int[size];
-		Fill();
-	}
-	~Box() {
-		cout << "niszczenie pudelka...." << endl;
-		delete[] data;
-		data = nullptr;
-	}
+	Box();
+	Box(int size);
+	Box(const Box& b);
+	~Box();
+	friend ostream& operator<<(ostream& os, const Box& b); //globalny operator zaprzyjazniony
+	Box& operator=(const Box& b);//skladowa klasy
+	int GetSize();
 };
 
