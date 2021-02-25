@@ -50,4 +50,8 @@ class Post{
     {
         $this->style = $style;
     }
+    public function setContent(string $content):void
+    {
+        $this->content = $content;
+    }
 }

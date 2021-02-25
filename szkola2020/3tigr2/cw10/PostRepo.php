@@ -17,4 +17,19 @@ class PostRepo{
         }
         return $posts;  
     }
+    public static function savePost(Post $p):void
+    {
+       $f = fopen(DIR.'/'.$p->getTitle(),'w');
+       fwrite($f,$p->getContent());
+       fclose($f);
+    }
+    public static function deletePostByTitle(string $fileName):bool
+    {
+       return unlink(DIR.'/'.$fileName);
+    }
+    public static function getPostByTitle(string $fileName):Post
+    {
+        //todo 
+    }
+
 }

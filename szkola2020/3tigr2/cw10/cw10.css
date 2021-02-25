@@ -11,13 +11,14 @@
 .btn-link{
     display: inline-block;
     text-decoration: none;
-    padding: 7px;
+    padding: 5px;
     border: solid 1px black;
     color: black;
     border-radius: 5px;
-    min-width: 140px;
+    min-width: 120px;
     text-align: center;
     background-color: lightgrey;
+    margin-left: 10px;
 }
 .line{
     margin: 20px;    
@@ -27,4 +28,12 @@ label{
         text-align: right;
         width: 150px;
         padding-right: 5px;
+}
+.post-link{
+
+}
+.post-other{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
