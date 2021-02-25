@@ -31,6 +31,24 @@ Box::~Box() {
 	delete[] data;
 	data = nullptr;
 }
+Box::Box(const Box& b) {
+	size = b.size;
+	//data = b.data; tak by bylo bez naszej ingerencji
+	data = new int[size];
+	for(int i=0;i<size;i++) {
+		data[i] = b.data[i];
+	}
+}
+Box& Box::operator=(const Box& b) {
+	size = b.size;
+	data = new int[size];
+	for (int i = 0; i < size; i++) {
+		data[i] = b.data[i];
+	}
+	return *this;
+}
+
+
 
 
 
