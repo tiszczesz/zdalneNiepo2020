@@ -18,3 +18,9 @@ div.line {
     border: solid 1px black;
     background-color: white;
 }
+label{
+    display: inline-block;
+    text-align: right;
+    width: 150px;
+    padding-right: 5px;
+}

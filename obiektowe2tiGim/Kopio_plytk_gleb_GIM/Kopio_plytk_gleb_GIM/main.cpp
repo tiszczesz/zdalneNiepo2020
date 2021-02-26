@@ -22,4 +22,5 @@ int main() {
 	cout << b2;
 	cout << b3;
 	return 0;
+	//todo napisac notatnik z nazwisakmi zapisanymi w tablicy dynamicznej  string* nazwiska = new string[size]
 }
