@@ -20,7 +20,7 @@ namespace WinForms_cw1_5Net
         private void btnEx1_Click(object sender, EventArgs e) {
             //txtBoxMain.Text += $"Kliknięto przycisk: {DateTime.Now.ToLongTimeString()}"
             //                        +Environment.NewLine;
-            var f2 = new Form2(this);
+            var f2 = new Ex1Form(this);
             f2.WindowState = FormWindowState.Maximized;
             f2.ShowDialog();
         }
@@ -30,7 +30,12 @@ namespace WinForms_cw1_5Net
         }
 
         private void btnEx2_Click(object sender, EventArgs e) {
-            new Form1(this).ShowDialog();
+            new Ex2Form(this).ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

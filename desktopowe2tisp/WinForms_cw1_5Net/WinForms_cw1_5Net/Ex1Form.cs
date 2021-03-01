@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WinForms_cw1_5Net
 {
-    public partial class Form2 : Form {
+    public partial class Ex1Form : Form {
         private DateTime dtp = DateTime.Now;
         private MainWindow form;
-        public Form2(MainWindow form=null)
+        public Ex1Form(MainWindow form=null)
         {
             InitializeComponent();
             this.form = form;
