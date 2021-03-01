@@ -56,14 +56,14 @@ namespace RazorPageWithAdoNet_Gim.Pages
             if (ModelState.IsValid) {
                 ViewData["info"] = "OK";
                 using (SqlConnection connection = new SqlConnection(connString)) {
-                    string sql = "UPDATE Filmy SET Title=@Title, Author=@Author,"
+                    string sql = "UPDATE Filmy SET Title=@Title, Author=@Author ,"
                                  + " Length=@Length,"
                     +" Price=@Price WHERE Id=@FilmId";
                     using (SqlCommand command = new SqlCommand(sql,connection)) {
                         SqlParameter parameter1 = new SqlParameter {
                             ParameterName = "@Title",
                             Value = MyFilm.Title,
-                            SqlDbType = SqlDbType.VarChar,
+                            SqlDbType = SqlDbType.NVarChar,
                             Size = 50
                         };
                         command.Parameters.Add(parameter1);
@@ -71,7 +71,7 @@ namespace RazorPageWithAdoNet_Gim.Pages
                         {
                             ParameterName = "@Author",
                             Value = MyFilm.Author,
-                            SqlDbType = SqlDbType.VarChar,
+                            SqlDbType = SqlDbType.NVarChar,
                             Size = 50
                         };
                         command.Parameters.Add(parameter2);

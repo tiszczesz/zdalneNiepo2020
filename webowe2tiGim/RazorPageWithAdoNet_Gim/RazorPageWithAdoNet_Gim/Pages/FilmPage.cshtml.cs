@@ -36,7 +36,7 @@ namespace RazorPageWithAdoNet_Gim.Pages {
 
                 string sql =
                     $"INSERT INTO Filmy(Title,Author,Length,Price) "
-                    + $"VALUES('{MyFilm.Title}','{MyFilm.Author}',{MyFilm.Length},{MyFilm.Price.ToString(new CultureInfo("en-US"))})";
+                    + $"VALUES(N'{MyFilm.Title}',N'{MyFilm.Author}',{MyFilm.Length},{MyFilm.Price.ToString(new CultureInfo("en-US"))})";
 
                 using (SqlCommand command = new SqlCommand(sql, connection)) {
                     command.CommandType = CommandType.Text;
