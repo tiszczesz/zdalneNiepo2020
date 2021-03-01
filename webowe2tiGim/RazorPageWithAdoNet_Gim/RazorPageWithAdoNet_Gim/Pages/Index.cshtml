@@ -10,9 +10,10 @@
     
     <div>
         <table class="table table-bordered">
-            <tr><th>Tytuł filmu</th><th>Autor</th><th>Cena</th><th></th><th></th></tr>
+            <tr><th>Tytuł filmu</th><th>Autor</th><th>Cena</th><th>Czas trwania</th><th></th><th></th></tr>
             @foreach (Film film in Model.Films) {
                 <tr ><td>@film.Title</td> <td>@film.Author</td><td>@film.Price zł</td>
+                    <td>@film.Length min.</td>
                     <td><a class="btn btn-info" asp-page="/DeleteFilm" asp-route-id="@film.Id">Usuń</a></td>
 
                     <td><a class="btn btn-info" asp-page="/EditFilm" asp-route-id="@film.Id">Edytuj</a></td></tr>

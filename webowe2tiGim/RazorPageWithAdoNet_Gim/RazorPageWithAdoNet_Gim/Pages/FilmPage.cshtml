@@ -5,6 +5,10 @@
 
 <div class="container">
     <h1 >Dodaj nowy film</h1>
+    @if (ViewData["Info"] != null) {
+        <div class="badge badge-info p-3 m-2 w-100">@ViewData["Info"]</div>
+    }
+    
     <form method="post">
         <div class="form-group">
             <label asp-for="MyFilm.Title"></label>
