@@ -18,13 +18,27 @@
         }
         public function __toString():string
         {
-            return "Dokument o nazwie: {$this->name} i rozmiarze: {$this->size}";
+            return "Dokument o nazwie: {$this->name} i rozmiarze: {$this->size} ";
         }
     }
     class DocText extends Document{
-
-    }
-    $d = new DocText();
+        private array $lines = [];
+        public function __construct(array $lines=[],string $name="noname",int $size=0 )
+        {
+            parent::__construct($name,$size);
+            $this->lines = $lines;
+        }
+        public  function __toString():string
+        {
+            $result = parent::__toString()."<br>";
+            $result .= "Zawartość dokumentu: <br>";
+            foreach($this->lines as $line){
+                $result .= $line."<br>\n";
+            }
+            return $result;
+        }
+    }//todo napisac klase DocImage(width,height) dziedziczaca z Document
+    $d = new DocText(["wewewe","rrrrr fffff ff","try ryryr yr yryr"]);
     var_dump($d);
     echo $d;
     ?>
