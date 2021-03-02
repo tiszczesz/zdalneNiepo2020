@@ -22,6 +22,7 @@
     foreach($arts as $a){
         echo ArtHtml::ArticleToDiv($a);
     }
+    var_dump($arts[0]->toJSON());
     ?>
     </div>
    <div>

@@ -34,12 +34,16 @@ class HtmlCar
     {
         if($c==null){
             $action = "addNewCar.php";
+            $marka = "";
+        }else{
+            $action = "edit.php";
+            $marka = $c->getMarka();
         }
         return <<<TEXT
         <form action="{$action}" method="post">
         <div class="line">
             <label for="marka">Marka: </label>
-            <input type="text" name="marka" id="marka" required>
+            <input type="text" name="marka" id="marka" value={$marka} required>
         </div>
         <div class="line">
             <label for="miejsca">Ilość miejsc: </label>
