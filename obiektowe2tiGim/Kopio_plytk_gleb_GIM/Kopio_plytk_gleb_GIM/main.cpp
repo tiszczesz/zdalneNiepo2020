@@ -1,9 +1,17 @@
 #include <iostream>
 #include <cstdlib>
 #include "Box.h"
+#include "Contacts.h"
 using namespace std;
-
+void Ex1();
+void Ex2();
 int main() {
+	//Ex1();
+	Ex2();
+	return 0;
+	//todo napisac notatnik z nazwisakmi zapisanymi w tablicy dynamicznej  string* nazwiska = new string[size]
+}
+void Ex1() {
 	cout << "Podaj rozmiar pudelka: ";
 	int size;
 	cin >> size;
@@ -21,6 +29,16 @@ int main() {
 	cout << b1;
 	cout << b2;
 	cout << b3;
-	return 0;
-	//todo napisac notatnik z nazwisakmi zapisanymi w tablicy dynamicznej  string* nazwiska = new string[size]
+}
+void Ex2() {
+	Contacts c1;
+	c1.contacts = { "Jan","Adam","Monika" };
+
+	Contacts c2 = c1;
+	cout << c1;
+	cout << c2;
+	c1.contacts[0] = "Dominika";
+	cout << "======= Po zmianie ================\n";
+	cout << c1;
+	cout << c2;
 }

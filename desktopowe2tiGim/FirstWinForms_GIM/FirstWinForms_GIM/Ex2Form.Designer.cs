@@ -41,7 +41,7 @@ namespace FirstWinForms_GIM
             this.radioBFemale = new System.Windows.Forms.RadioButton();
             this.radioBMale = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdioBOther = new System.Windows.Forms.RadioButton();
+            this.radioBOther = new System.Windows.Forms.RadioButton();
             this.comboBEduction = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbAgree = new System.Windows.Forms.CheckBox();
@@ -63,7 +63,7 @@ namespace FirstWinForms_GIM
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(683, 11);
+            this.btnExit.Location = new System.Drawing.Point(676, 10);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(116, 41);
             this.btnExit.TabIndex = 1;
@@ -126,9 +126,9 @@ namespace FirstWinForms_GIM
             // 
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 606);
+            this.panel1.Location = new System.Drawing.Point(0, 593);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(819, 66);
+            this.panel1.Size = new System.Drawing.Size(808, 74);
             this.panel1.TabIndex = 8;
             // 
             // radioBFemale
@@ -153,7 +153,7 @@ namespace FirstWinForms_GIM
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rdioBOther);
+            this.groupBox1.Controls.Add(this.radioBOther);
             this.groupBox1.Controls.Add(this.radioBMale);
             this.groupBox1.Controls.Add(this.radioBFemale);
             this.groupBox1.Location = new System.Drawing.Point(12, 210);
@@ -163,17 +163,17 @@ namespace FirstWinForms_GIM
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Wybierz płeć";
             // 
-            // rdioBOther
+            // radioBOther
             // 
-            this.rdioBOther.AutoSize = true;
-            this.rdioBOther.Checked = true;
-            this.rdioBOther.Location = new System.Drawing.Point(118, 96);
-            this.rdioBOther.Name = "rdioBOther";
-            this.rdioBOther.Size = new System.Drawing.Size(58, 24);
-            this.rdioBOther.TabIndex = 11;
-            this.rdioBOther.TabStop = true;
-            this.rdioBOther.Text = "Inna";
-            this.rdioBOther.UseVisualStyleBackColor = true;
+            this.radioBOther.AutoSize = true;
+            this.radioBOther.Checked = true;
+            this.radioBOther.Location = new System.Drawing.Point(118, 96);
+            this.radioBOther.Name = "radioBOther";
+            this.radioBOther.Size = new System.Drawing.Size(58, 24);
+            this.radioBOther.TabIndex = 11;
+            this.radioBOther.TabStop = true;
+            this.radioBOther.Text = "Inna";
+            this.radioBOther.UseVisualStyleBackColor = true;
             // 
             // comboBEduction
             // 
@@ -188,6 +188,7 @@ namespace FirstWinForms_GIM
             this.comboBEduction.Name = "comboBEduction";
             this.comboBEduction.Size = new System.Drawing.Size(209, 28);
             this.comboBEduction.TabIndex = 12;
+            this.comboBEduction.SelectedIndexChanged += new System.EventHandler(this.comboBEduction_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -212,7 +213,7 @@ namespace FirstWinForms_GIM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 672);
+            this.ClientSize = new System.Drawing.Size(808, 667);
             this.Controls.Add(this.cbAgree);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBEduction);
@@ -253,7 +254,7 @@ namespace FirstWinForms_GIM
         private System.Windows.Forms.RadioButton radioBFemale;
         private System.Windows.Forms.RadioButton radioBMale;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdioBOther;
+        private System.Windows.Forms.RadioButton radioBOther;
         private System.Windows.Forms.ComboBox comboBEduction;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox cbAgree;
