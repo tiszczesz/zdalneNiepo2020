@@ -14,7 +14,7 @@
     if(isset($_GET['title'])){
         $title = trim($_GET['title']);
         $post = PostRepo::getPostByTitle($title);
-        echo PostToHtml::PostToForm();
+        echo PostToHtml::PostToForm($post);
     }
 
 ?>

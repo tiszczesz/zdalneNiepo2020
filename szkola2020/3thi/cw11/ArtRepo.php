@@ -45,7 +45,7 @@ class ArtRepo{
             }      
         }
         $a->setContent($content);   
-        var_dump($a);     
+       // var_dump($a);     
         return $a; //todo dalej test
         
     }

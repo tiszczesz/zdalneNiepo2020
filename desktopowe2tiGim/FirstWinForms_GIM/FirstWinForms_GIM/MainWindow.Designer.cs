@@ -48,13 +48,13 @@ namespace FirstWinForms_GIM
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 751);
+            this.panel1.Size = new System.Drawing.Size(391, 1055);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExit.Location = new System.Drawing.Point(12, 685);
+            this.btnExit.Location = new System.Drawing.Point(12, 989);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(220, 54);
             this.btnExit.TabIndex = 3;
@@ -70,6 +70,7 @@ namespace FirstWinForms_GIM
             this.btnEx3.TabIndex = 2;
             this.btnEx3.Text = "Ćwiczenie 3";
             this.btnEx3.UseVisualStyleBackColor = true;
+            this.btnEx3.Click += new System.EventHandler(this.btnEx3_Click);
             // 
             // btnEx2
             // 
@@ -94,18 +95,18 @@ namespace FirstWinForms_GIM
             // tbInfo
             // 
             this.tbInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbInfo.Location = new System.Drawing.Point(250, 0);
+            this.tbInfo.Location = new System.Drawing.Point(391, 0);
             this.tbInfo.Multiline = true;
             this.tbInfo.Name = "tbInfo";
             this.tbInfo.ReadOnly = true;
-            this.tbInfo.Size = new System.Drawing.Size(568, 751);
+            this.tbInfo.Size = new System.Drawing.Size(1533, 1055);
             this.tbInfo.TabIndex = 1;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 751);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.tbInfo);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(500, 500);

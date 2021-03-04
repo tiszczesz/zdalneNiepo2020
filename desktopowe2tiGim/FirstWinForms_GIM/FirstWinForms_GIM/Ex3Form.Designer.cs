@@ -1,7 +1,7 @@
 ﻿
-namespace WinForms_cw1_5Net
+namespace FirstWinForms_GIM
 {
-    partial class Form2
+    partial class Ex3Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,42 +29,49 @@ namespace WinForms_cw1_5Net
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(59, 104);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(212, 336);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(290, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(316, 29);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Dodaj nowego znajomego";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(196, 74);
+            this.label1.Location = new System.Drawing.Point(72, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Okienko drugie";
+            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Lista Imion:";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(196, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(299, 76);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Fajny przycisk";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.ButtonClick);
-            // 
-            // Form2
+            // Ex3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1185, 662);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
-            this.Text = "Form2";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Close_Form1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listView1);
+            this.Name = "Ex3Form";
+            this.Text = "Ćwiczenie 3";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ex3Form_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,7 +79,8 @@ namespace WinForms_cw1_5Net
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }

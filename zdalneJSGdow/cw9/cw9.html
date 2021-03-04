@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw9.css">
+    <title>Ćwiczenie 9 - szyfr Cezara</title>
+</head>
+
+<body>
+    <h1>Ćwiczenie 9 - szyfr Cezara</h1>
+    <div class="container">
+        <div>
+            <textarea name="inputText" id="inputText" cols="30" rows="10"></textarea>
+            <div class="btns-layout">
+                <input type="number" name="key" id="key" placeholder="Podaj klucz" min="0" max="26">               
+                <input type="button" id="switchOff" value="Wyłącz kliknięcie">
+                <input type="button" id="cezar" value="Kodowanie Cezara" >
+                <div><input type="checkbox" name="agree" id="agree" checked> Aktywuj przycisk</div>
+            </div>
+
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="cw9.js"></script>
+</body>
+
+</html>

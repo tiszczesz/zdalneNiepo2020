@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+    border-bottom: solid 1px grey;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    
+}
+.btns-layout{
+    display: flex;
+    flex-direction: column;
+}
+input[type=button]{
+    padding: 5px;
+    margin: 5px;
+}

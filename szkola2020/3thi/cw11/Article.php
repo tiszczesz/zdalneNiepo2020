@@ -1,10 +1,10 @@
 <?php
 class Article{
-    private string $title;
-    private string $content;
-    private string $date;
-    private string $tag = "news";
-    private string $style;
+    public string $title;
+    public string $content;
+    public string $date;
+    public string $tag = "news";
+    public string $style;
     public function __construct(string $title,string $content="",
                         string $date="",string $tag="news",string $style="")
     {
@@ -70,5 +70,9 @@ class Article{
     }
     public function setContent(string $content):void {
         $this->content = $content;
+    }
+    public function toJSON():string
+    {
+        return json_encode($this);
     }
 }

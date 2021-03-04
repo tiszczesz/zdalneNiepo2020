@@ -32,10 +32,11 @@ namespace RazorPagesADO_Net1.Pages
         public void OnPost() {
             if (ModelState.IsValid) {
                 using (SqlConnection connection = new SqlConnection(connString)) {
+                    //todo zamiana na u¿ycie paramertrów zamiast na ³osia
                     string sql =
-                        $"INSERT INTO Games(Title,Category,Price,Description ) VALUES('{MyGame.Title}'"
-                        +$",'{MyGame.Category}',{MyGame.Price.ToString(new CultureInfo("en_US"))},"
-                        +$"'{MyGame.Description}')";
+                        $"INSERT INTO Games(Title,Category,Price,Description ) VALUES(N'{MyGame.Title}'"
+                        +$",N'{MyGame.Category}',{MyGame.Price.ToString(new CultureInfo("en_US"))},"
+                        +$"N'{MyGame.Description}')";
                     using (SqlCommand command = new SqlCommand(sql,connection)) {
                         command.CommandType = CommandType.Text;
                         connection.Open();

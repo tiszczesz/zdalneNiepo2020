@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for(let i=0; i<text.length;i++){
             result+= text[text.length-1-i];
         }
-        return result;
+        return result.toUpperCase();
     }
 });
 //todo Wykonac cwiczenie z textarea tak aby w tej kontrolce(textarea) dowolny tekst zamienial sie na tekst pisany

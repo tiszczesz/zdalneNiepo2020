@@ -34,5 +34,10 @@ namespace FirstWinForms_GIM
         public TextBox GeTextBox() {
             return tbInfo;
         }
+
+        private void btnEx3_Click(object sender, EventArgs e)
+        {
+            new Ex3Form(this).Show();
+        }
     }
 }

@@ -1,12 +1,13 @@
 <?php
 require_once "Car.php";
+require_once "configuration.php";
 class FileRepo{
-    public static function saveRow(Car $car,string $fileName):void {
+    public static function saveRow(Car $car,string $fileName=FILENAME):void {
         $f = fopen($fileName,"a");
         fwrite($f,$car);
         fclose($f);
     }
-    public static function getAll(string $fileName="dane.txt"): array 
+    public static function getAll(string $fileName=FILENAME): array 
     {
         $lines = file($fileName,FILE_IGNORE_NEW_LINES);
         $cars = [];
@@ -16,18 +17,29 @@ class FileRepo{
         }
         return $cars;
     }
-    public static function saveCar(Car $c, string $fileName="dane.txt"):void
+    public static function saveCar(Car $c, string $fileName=FILENAME):void
     {
        $f = fopen($fileName,'a');
        fwrite($f,$c->getMarka().'|'.$c->getMiejsca().'|'.$c->getRokProdukcji().'|'.$c->getCena().PHP_EOL);
        fclose($f);
     }
-    public static function saveAll(array $dane,string $fileName = "dane.txt"):void
+    public static function saveAll(array $dane,string $fileName = FILENAME):void
     {
         $f = fopen($fileName,'w');
         foreach($dane as $car){
             fwrite($f,$car->getMarka().'|'.$car->getMiejsca().'|'.$car->getRokProdukcji().'|'.$car->getCena().PHP_EOL);
         }
         fclose($f);
+    }
+    public static function getByMarka(string $marka, string $fileName=FILENAME):?Car
+    {
+        $dane = self::getAll($fileName);
+        //var_dump($dane);
+        foreach($dane as $c){
+            if($c->getMarka()===$marka){
+                return $c;
+            }
+        }
+        return null;
     }
 }
