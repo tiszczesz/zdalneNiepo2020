@@ -5,6 +5,7 @@
 using namespace std;
 void Ex1();
 void Ex2();
+void Ex3();
 int main() {
 	//Ex1();
 	Ex2();
@@ -35,10 +36,18 @@ void Ex2() {
 	c1.contacts = { "Jan","Adam","Monika" };
 
 	Contacts c2 = c1;
+	Contacts c3;
+	c3 = c1;
 	cout << c1;
 	cout << c2;
+	cout << c3;
 	c1.contacts[0] = "Dominika";
+	c3.contacts.push_back("Najnowszy kontakt");
 	cout << "======= Po zmianie ================\n";
 	cout << c1;
 	cout << c2;
+	cout << c3;
+}
+void Ex3() {
+	
 }

@@ -11,6 +11,9 @@ public:
 	Contacts() {
 		
 	}
+	Contacts(vector<string>& contacts) {
+		this->contacts = contacts;
+	}
 	friend ostream& operator<<(ostream& os, const Contacts& contacts);
 };
 
