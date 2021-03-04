@@ -1,8 +1,10 @@
 #include <iostream>
 #include <cstdlib>
 #include "Box.h"
+#include "Kontakty.h"
+#include "KontaktyDynamiczne.h"
 using namespace std;
-int main() {
+void Ex1() {
 	cout << "Podaj rozmiar Boxa: ";
 	int size;
 	cin >> size;
@@ -13,12 +15,38 @@ int main() {
 	b3 = b1;
 	cout << b2;
 	cout << b3;
-	b1.data[0]=9999;
+	b1.data[0] = 9999;
 	b2.data[3] = 1111;
 	b3.data[b3.GetSize() - 1] = 777777;
 	cout << b1;
 	cout << b2;
 	cout << b3;
+}
+void Ex2() {
+	vector<string> lista  { "Monika","Tomasz","Lucjan","Edmund" };
+	
+	Kontakty k1(lista);
+	Kontakty k2=k1;
+	Kontakty k3;
+	k3 = k1;
+	cout << k1;
+	cout << k2;
+	cout << k3;
+	k1.contacts[0] = "Urszula";
+	k2.contacts.push_back("Nowy");
+	cout << "======= PO zmianach ======\n";
+	cout << k1;
+	cout << k2;
+	cout << k3;
+}
+void Ex3() {
+	KontaktyDynamiczne kd1;
+	cout << kd1;
+}
+int main() {
+	//Ex1();
+	//Ex2();
+	Ex3();
 	return 0;
 	//todo napisac klase posiadajaca dynamiczna tablice stringów (imina)
 	//todo zdefiniowac operator = oraz konstrutor kopiujacy aby
