@@ -44,6 +44,8 @@
     $d2 = new Driver("A,B,C","Adam","Kierowca",34);
     var_dump($d2);
     echo $d2;
+
+    //todo nowa klasa dziedziczaca z Worker   Secretary (ma pole(a) umiejetnosci biurowe)
     ?>
 </body>
 </html>

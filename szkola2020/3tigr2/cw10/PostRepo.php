@@ -9,9 +9,7 @@ class PostRepo{
         $posts = [];    
         foreach($dane as $item){
             if($item!='.' && $item!='..'){
-                $p = new Post($item);
-                $p->contentFromFile($dir.'/'.$item);
-                $p->setDate(date("d-m-Y H:i:s",filemtime($dir.'/'.$item)));
+                $p = self::getPostByTitle($item);
                 $posts[] = $p;
             }
         }
@@ -27,9 +25,12 @@ class PostRepo{
     {
        return unlink(DIR.'/'.$fileName);
     }
-    public static function getPostByTitle(string $fileName):Post
+    public static function getPostByTitle(string $item):Post
     {
-        //todo 
+        $p = new Post($item);
+        $p->contentFromFile(DIR.'/'.$item);
+        $p->setDate(date("d-m-Y H:i:s",filemtime(DIR.'/'.$item)));
+        return $p;
     }
 
 }

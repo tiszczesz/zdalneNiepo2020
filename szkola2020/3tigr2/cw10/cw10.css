@@ -4,7 +4,7 @@
 .post-title{
     text-align: center;font-weight: bold;
 }
-.post-content{font-style: italic;}
+.post-content{font-style: italic;margin: 20px;}
 .post-date{text-align: right; margin-right: 20px; color: grey;}
 .post-tag{padding: 6px;display: inline-block; background-color: lightsalmon;
     border: solid 1px black;}
