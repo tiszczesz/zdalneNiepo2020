@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    border-bottom: solid 1px grey;
+}
+.container{
+    display: flex;
+    flex-direction: row;    
+}
+label{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    padding-right: 2px;
+}
+input[type=number]{
+    width: 120px;
+    padding: 3px;
+}
+.btns-layout{
+    display: flex;
+    flex-direction: row;
+}
+input[type=button]{
+    padding: 5px;
+    margin: 5px;
+    margin-left: 150px;
+    width: 120px;
+}
+table{
+    border-collapse: collapse;
+    margin-left: 50px;
+}
+td{
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    border: solid grey 1px;
+    text-align: center;
+}
+.line{
+    margin: 20px;
+}

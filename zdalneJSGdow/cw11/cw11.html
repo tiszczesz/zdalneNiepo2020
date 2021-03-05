@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw11.css">
+    <title>Ćwiczenie 11 Kółko i krzyżyk</title>
+</head>
+<body>
+    <h1>Ćwiczenie 11 Kółko i krzyżyk</h1>
+    <div class="container">
+        <div>
+            <div class="line">
+                <label for="rows">Ilość wierszy: </label>
+                <input type="number" name="rows" id="rows" min="5" max="50" value="20">
+            </div>
+            <div class="line">
+                <label for="cols">Ilość kolumn: </label>
+                <input type="number" name="cols" id="cols" min="5" max="50" value="20">
+            </div>
+            <div class="line">
+                <input type="button" value="Generuj tabelkę" id="btnGeneruj">
+            </div>
+        </div>
+        <div id="table"></div>
+    </div>
+    <script src="cw11.js"></script>
+</body>
+</html>

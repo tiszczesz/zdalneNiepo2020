@@ -30,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         return false;
     });
+    area3.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        return false;
+    });
     area3.addEventListener("mousedown", function (e) {
         switch (e.buttons) {
             case 1:
@@ -39,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.target.innerHTML = "PRAWY PRZYCISK MYSZY!!!";
                 break;
             default: 
-                e.target.innerHTML = "INNY PRZYCISK MYSZY!!!";
+                e.target.innerHTML = "PRAWY PRZYCISK MYSZY!!!";
         }
     });
 
