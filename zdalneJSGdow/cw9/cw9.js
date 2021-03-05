@@ -1,17 +1,22 @@
 document.addEventListener("DOMContentLoaded",function(){
     document.querySelector("#cezar").addEventListener("click",Cezar);
+    document.querySelector("#cezar").addEventListener("click",myAlert);
+
     document.querySelector("#agree").addEventListener("click",function(){
         document.querySelector("#cezar").disabled = !this.checked;
     });
     document.querySelector("#switchOff").addEventListener("click",function(e){
         const btnCezar = document.querySelector("#cezar");
-        btnCezar.removeEventListener("click",Cezar);
+        btnCezar.removeEventListener("click",myAlert);
         btnCezar.value += " Wyłączone";
         e.target.disabled = true;
 
     });
 });
 const COUNT_LETTER = 26;
+function myAlert(e){
+    alert(e.target.value);
+}
 function Cezar(){
     //alert("Będzie kodowanie Cezara!!!");
     const key = parseInt(document.querySelector("#key").value);

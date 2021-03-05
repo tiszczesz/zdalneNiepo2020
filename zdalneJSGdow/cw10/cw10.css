@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+    border-bottom: solid 1px grey;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    
+}
+.btns-layout{
+    display: flex;
+    flex-direction: column;
+}
+input[type=button]{
+    padding: 5px;
+    margin: 5px;
+}
+.area{
+    width: 60%;
+    height: 60px;
+    background-color: brown;
+    border: solid 1px black;
+}
+.area2{
+    width: 60%;
+    height: 60px;
+    background-color: rgb(95, 69, 69);
+    border: solid 1px black;
+}
+div{margin: 20px;}
+.area input[type=button]{
+    padding: 10px;
+    width: 50%;
+    margin: 0;
+}
+.area3{
+    padding: 6px;
+    width: 60%;
+    height: 60px;
+    background-color: rgb(51, 46, 46);
+    border: solid 1px black;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
