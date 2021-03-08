@@ -12,4 +12,7 @@ class Item{
     {
         return json_encode($this);
     }
+    public function fromJSON(string $json):Item {
+        
+    }
 }

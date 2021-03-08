@@ -10,15 +10,11 @@
 <body>
     <h1>Ćwiczenie 12 - biblioteka</h1>
     <?php
-    require_once "Item.php";
-    $i1 = new Item();
-    $i2 = new Item();
-    $i3 = new Item();
-    var_dump($i1);
-    var_dump($i2);
-    var_dump($i3);
-    $json = $i1->toJSON();
-    var_dump(json_decode($json));
+      require_once "FileRepo.php";
+      $repo = new FileRepo();
+      $dane = $repo->getFromFile();
+      var_dump($dane);
+     
     ?>
 </body>
 </html>
