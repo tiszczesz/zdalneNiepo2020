@@ -34,12 +34,14 @@ namespace WinForms_cw1_5Net
             this.btnEx2 = new System.Windows.Forms.Button();
             this.btnEx1 = new System.Windows.Forms.Button();
             this.txtBoxMain = new System.Windows.Forms.TextBox();
+            this.btnEx3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.btnEx3);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnEx2);
             this.panel1.Controls.Add(this.btnEx1);
@@ -94,6 +96,17 @@ namespace WinForms_cw1_5Net
             this.txtBoxMain.Size = new System.Drawing.Size(650, 579);
             this.txtBoxMain.TabIndex = 1;
             // 
+            // btnEx3
+            // 
+            this.btnEx3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnEx3.Location = new System.Drawing.Point(12, 118);
+            this.btnEx3.Name = "btnEx3";
+            this.btnEx3.Size = new System.Drawing.Size(123, 47);
+            this.btnEx3.TabIndex = 3;
+            this.btnEx3.Text = "Ćwiczenie 3";
+            this.btnEx3.UseVisualStyleBackColor = false;
+            this.btnEx3.Click += new System.EventHandler(this.btnEx3_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -117,5 +130,6 @@ namespace WinForms_cw1_5Net
         private System.Windows.Forms.TextBox txtBoxMain;
         private System.Windows.Forms.Button btnEx2;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnEx3;
     }
 }

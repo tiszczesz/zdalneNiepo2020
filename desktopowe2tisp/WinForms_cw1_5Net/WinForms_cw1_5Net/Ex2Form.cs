@@ -30,16 +30,37 @@ namespace WinForms_cw1_5Net
             lbWynik.Text = "Witamy w krainie WindowForms:" + Environment.NewLine;
             bool valImie = ValidateText(txtBoxImie);
             bool valNazwisko = ValidateText(txtBoxNazwisko);
-            if (valImie && valNazwisko) {
+            bool valClass = ValidateClass(cbClass);
+            
+            if (valImie && valNazwisko && valClass) {
                 lbWynik.ForeColor = Color.Black;
-                lbWynik.Text += txtBoxImie.Text + " " + txtBoxNazwisko.Text;
+                string info = "";
+                switch (getPlec()) {
+                    case "Kobieta":
+                        info = " jesteś zapisana do klasy: ";break;
+                    case "Mężczyzna": info = " jestes zapisany do klasy: ";
+                        break;
+                    default: info = " zapisano cię do klasy: ";
+                        break;
+                }
+
+                lbWynik.Text += $@"{txtBoxImie.Text} {txtBoxNazwisko.Text} {info} {cbClass.SelectedItem.ToString()}";
+                   
             }
             else {
                 lbWynik.ForeColor = Color.Red;
-                lbWynik.Text += "Szkoda że nie chcesz się przedstawić";
+                lbWynik.Text += "Szkoda że nie chcesz się przedstawić i/lub nie podać pełnych danych";
             }
         }
 
+        private string getPlec() {
+            if (rBtnFemale.Checked) return "Kobieta";
+            if (rBtnMale.Checked) return "Mężczyzna";
+            return "Inna";
+        }
+        private bool ValidateClass(ComboBox cb) {
+            return cb.SelectedItem != null;
+        }
         private bool ValidateText(TextBox tb) {
             if (String.IsNullOrWhiteSpace(tb.Text)) {
                 tb.BackColor = Color.Red;

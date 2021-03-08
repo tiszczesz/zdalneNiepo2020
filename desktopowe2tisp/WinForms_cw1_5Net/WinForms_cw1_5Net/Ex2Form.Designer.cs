@@ -37,7 +37,7 @@ namespace WinForms_cw1_5Net
             this.lbWynik = new System.Windows.Forms.Label();
             this.btnWynik = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbClass = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -123,20 +123,20 @@ namespace WinForms_cw1_5Net
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // comboBox1
+            // cbClass
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbClass.FormattingEnabled = true;
+            this.cbClass.Items.AddRange(new object[] {
             "1A",
             "1B",
             "1C",
             "1TI",
             "1TP"});
-            this.comboBox1.Location = new System.Drawing.Point(124, 177);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 28);
-            this.comboBox1.TabIndex = 8;
+            this.cbClass.Location = new System.Drawing.Point(124, 177);
+            this.cbClass.Name = "cbClass";
+            this.cbClass.Size = new System.Drawing.Size(219, 28);
+            this.cbClass.TabIndex = 8;
             // 
             // label4
             // 
@@ -229,7 +229,7 @@ namespace WinForms_cw1_5Net
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbClass);
             this.Controls.Add(this.btnWynik);
             this.Controls.Add(this.lbWynik);
             this.Controls.Add(this.label3);
@@ -262,7 +262,7 @@ namespace WinForms_cw1_5Net
         private System.Windows.Forms.Label lbWynik;
         private System.Windows.Forms.Button btnWynik;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbClass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;

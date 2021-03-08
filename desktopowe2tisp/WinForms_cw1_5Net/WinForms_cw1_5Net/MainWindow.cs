@@ -37,5 +37,9 @@ namespace WinForms_cw1_5Net
         {
             Application.Exit();
         }
+
+        private void btnEx3_Click(object sender, EventArgs e) {
+            new Ex3Form(this).ShowDialog();
+        }
     }
 }
