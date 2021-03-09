@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw12.css">
+    <title>Ćwiczenie 12 - data i czas cz.1</title>
+</head>
+<body>
+    <h1>Ćwiczenie 12 - data i czas cz.</h1>
+    <div class="container">
+        <form>
+            <div class="line">
+                <label for="data">Podaj datę urodzenia: </label>
+                <input type="date" name="data" id="data">
+            </div>
+            <div class="line">
+                <label for="choice">Wybierz przedział czasowy: </label>
+                <select name="choice" id="choice">
+                    <option value="lata">lata</option>
+                    <option value="dni">dni</option>
+                    <option value="tygodnie">tygodnie</option>                   
+                    <option value="godziny">godziny</option>                   
+                </select>
+            </div>
+            <div class="line">
+                <input type="button" value="Oblicz" id="run">
+            </div>            
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="cw12.js"></script>
+</body>
+</html>

@@ -23,6 +23,18 @@ document.addEventListener("DOMContentLoaded",function(){
                 return false;
             });
         }
+       
+    });
+    document.querySelector("#rectangle").addEventListener("contextmenu",function(e){
+        e.preventDefault();
+        return false;
+    });
+    document.querySelector("#rectangle").addEventListener("mousedown",function(e){
+        switch(e.buttons){
+            case 1:   e.target.style.backgroundColor = "red";    break;
+            case 2:    e.target.style.backgroundColor = "yellow";    break;
+            default: console.log("Nie przechwycony przycisk: "+e.buttons);
+        }
     });
 });
 function generTab(rows,cols){

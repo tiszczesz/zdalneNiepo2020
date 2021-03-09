@@ -1,0 +1,19 @@
+input[type=button]{
+    padding: 5px;
+    margin: 5px;
+    margin-left: 150px;
+    width: 120px;
+}
+h1{
+    text-align: center;
+    border-bottom: solid 1px grey;
+}
+label{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    padding-right: 2px;
+}
+.line{
+    margin: 20px;
+}

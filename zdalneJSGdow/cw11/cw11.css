@@ -40,3 +40,8 @@ td{
 .line{
     margin: 20px;
 }
+#rectangle{
+    width: 200px;
+    height: 100px;
+    border: solid 1px black;
+}
