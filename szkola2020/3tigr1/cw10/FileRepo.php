@@ -42,4 +42,18 @@ class FileRepo{
         }
         return null;
     }
+    public static function updateCar(Car & $c,string $oldMarka):bool
+    {
+        $cars = self::getAll(FILENAME);
+        //var_dump($cars);
+        foreach($cars as &$item){
+           
+            if($oldMarka===$item->getMarka()){               
+                $item = $c;
+                break;
+            }
+        }
+        self::saveAll($cars,FILENAME);
+        return true;
+    }
 }

@@ -35,27 +35,34 @@ class HtmlCar
         if($c==null){
             $action = "addNewCar.php";
             $marka = "";
+            $miejsca = "";
+            $rokProdukcji = "";
+            $cena = "";
         }else{
             $action = "edit.php";
             $marka = $c->getMarka();
+            $miejsca = $c->getMiejsca();
+            $rokProdukcji = $c->getRokProdukcji();
+            $cena = $c->getCena();
         }
         return <<<TEXT
         <form action="{$action}" method="post">
         <div class="line">
             <label for="marka">Marka: </label>
-            <input type="text" name="marka" id="marka" value={$marka} required>
+            <input type="hidden" value="{$marka}" name="oldMarka">
+            <input type="text" name="marka" id="marka" value="{$marka}" required>
         </div>
         <div class="line">
             <label for="miejsca">Ilość miejsc: </label>
-            <input type="number" name="miejsca" id="miejsca" min="2" required>
+            <input type="number" name="miejsca" id="miejsca" min="2" value="{$miejsca}" required>
         </div>
         <div class="line">
             <label for="rokProdukcji">Rok produkcji: </label>
-            <input type="number" name="rokProdukcji" id="rokProdukcji" min="1880" required>
+            <input type="number" name="rokProdukcji" id="rokProdukcji" min="1880" required value="{$rokProdukcji}">
         </div>
         <div class="line">
             <label for="cena">Cena: </label>
-            <input type="number" name="cena" id="cena" min="0" step="0.01">
+            <input type="number" name="cena" id="cena" min="0" step="0.01" value="{$cena}">
         </div>
         <div class="line">
             <input type="submit" value="Zapisz">
