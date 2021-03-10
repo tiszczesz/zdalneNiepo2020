@@ -40,3 +40,8 @@ SELECT a.id as aid ,a.nameA,kluczB,b.id as bid, nameB,kluczA
       From a inner join b on kluczA=a.id;
 
 --todo left i right join
+SELECT a.id as aid ,a.nameA,kluczB,b.id as bid, nameB,kluczA   
+      From a left join b on kluczA=a.id;
+
+SELECT a.id as aid ,a.nameA,kluczB,b.id as bid, nameB,kluczA   
+      From a right join b on kluczA=a.id;

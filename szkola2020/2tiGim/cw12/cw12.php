@@ -12,7 +12,7 @@
     <?php
       require_once "FileRepo.php";
       $repo = new FileRepo();
-      $dane = $repo->getFromFile();
+      $dane = $repo->getItems();
       var_dump($dane);
      
     ?>
