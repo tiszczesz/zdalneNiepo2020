@@ -5,7 +5,7 @@ ostream& operator<<(ostream& os, const KontaktyDynamiczne& kontakty) {
 	if (kontakty.size == 0) os << "brak kontaktow" << endl;
 	else {
 		for (auto i = 0; i < kontakty.size;i++) {
-			os << kontakty.contacts[i] << endl;
+			os << "\t\t"<< kontakty.contacts[i] << endl;
 		}
 	}
 	return os;

@@ -41,7 +41,13 @@ void Ex2() {
 }
 void Ex3() {
 	KontaktyDynamiczne kd1;
+	KontaktyDynamiczne kd2 = kd1;
 	cout << kd1;
+	cout << kd2;
+	cout << "Zmieniamy kontakt w kd1 \n";
+	kd1.contacts[0] = "Zmieniony kontakt";
+	cout << kd1;
+	cout << kd2;
 }
 int main() {
 	//Ex1();
