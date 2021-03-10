@@ -44,5 +44,10 @@ namespace FirstWinForms_GIM
         {
             Contacts.List.Clear();
         }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

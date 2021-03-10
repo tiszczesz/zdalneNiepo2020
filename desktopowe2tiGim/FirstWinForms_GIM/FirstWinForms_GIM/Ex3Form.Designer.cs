@@ -92,6 +92,7 @@ namespace FirstWinForms_GIM
             this.btnInsert.TabIndex = 6;
             this.btnInsert.Text = "Wstaw kolejnego znajomego";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnDelete
             // 
