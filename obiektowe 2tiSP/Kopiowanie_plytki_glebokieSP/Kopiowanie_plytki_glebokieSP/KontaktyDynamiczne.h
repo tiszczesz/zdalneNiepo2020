@@ -19,6 +19,14 @@ public:
 		contacts[3] = "Roman";
 		contacts[4] = "Lucjan";
 	}
+	KontaktyDynamiczne(const KontaktyDynamiczne& kontakty) {
+		size = kontakty.size;
+		//contacts = kontakty.contacts;
+		contacts = new string[size];
+		for (int i=0;i<size;i++) {
+			contacts[i] = kontakty.contacts[i];
+		}
+	}
 	~KontaktyDynamiczne();
 	friend ostream& operator<<(ostream& os, const KontaktyDynamiczne& kontakty);
 };
