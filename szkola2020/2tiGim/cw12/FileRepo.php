@@ -1,5 +1,6 @@
 <?php
 require_once "Item.php";
+require_once "Book.php";
 require_once "configuration.php";
 class FileRepo{
     private array $items = [];
@@ -8,7 +9,7 @@ class FileRepo{
     public function __construct(array& $items=[])
     {
         if(file_exists($this->pathToFile)){
-            $this->items = $this->getFromFile();
+            $this->getFromFile();
         }else{
             $this->items = $items;
         }
@@ -28,14 +29,14 @@ class FileRepo{
         return [new Item("Element1",1),new Item("Element 2",2) , new Item("Nowy Element",3)
         ,new Item()];
     }
-    public function getFromFile():array{
+    protected function getFromFile():void{
         $lines = file($this->pathToFile,FILE_IGNORE_NEW_LINES);
         //var_dump($lines);
-        Item::fromJSON($lines[0]);
+       
         foreach($lines as $line){
-            $temp = It
+           $this->items[] =  Item::fromJSON($line);
         }
-        return [];
+       
     }
     public function getItems()
     {

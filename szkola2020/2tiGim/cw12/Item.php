@@ -15,7 +15,7 @@ class Item{
     }
     public static function fromJSON(string $json): ?Item {
         $data = json_decode($json);
-        
-        return new Item();
+       // var_dump($data);
+        return new Item($data->name,$data->itemId);
     }
 }

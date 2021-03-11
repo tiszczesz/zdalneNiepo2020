@@ -19,6 +19,14 @@ public:
 		this->size = size;
 		this->contacts = contacts;
 	}
+	DynamicContacts(const DynamicContacts& dc) {
+		size = dc.size;
+		//contacts = dc.contacts;
+		contacts = new string[size];
+		for(int i=0;i<size;i++) {
+			contacts[i] = dc.contacts[i];
+		}
+	}
 	friend ostream& operator<<(ostream& os, const DynamicContacts& contacts);
 	~DynamicContacts() {
 		cout << "Niszczenie dynamicznej listy kontaktow \n";

@@ -12,9 +12,10 @@
     <?php
       require_once "FileRepo.php";
       $repo = new FileRepo();
-      $dane = $repo->getItems();
-      var_dump($dane);
-     
+     // $dane = $repo->getItems();
+     // var_dump($dane);
+     $b1 = new Book();
+     echo $b1->toJSON();
     ?>
 </body>
 </html>
