@@ -10,6 +10,19 @@ ostream& operator<<(ostream& os, const KontaktyDynamiczne& kontakty) {
 	}
 	return os;
 }
+KontaktyDynamiczne& KontaktyDynamiczne::operator=(const KontaktyDynamiczne& k) {
+	if(this == &k) {
+		return *this;
+	}
+	size = k.size;
+	delete[] contacts;
+	contacts = nullptr;
+	contacts = new string[size];
+	for(int i=0;i<size;i++) {
+		contacts[i] = k.contacts[i];
+	}
+	return *this;
+}
 KontaktyDynamiczne::~KontaktyDynamiczne() {
 	cout << "Niszczenie kontaktow.....\n";
 	delete[] contacts;

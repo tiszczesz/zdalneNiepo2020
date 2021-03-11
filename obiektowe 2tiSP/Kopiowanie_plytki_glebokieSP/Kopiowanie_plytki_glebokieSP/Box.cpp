@@ -1,6 +1,7 @@
 #include "Box.h"
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>
 
 Box::Box() {
 	size = 10;
@@ -40,11 +41,18 @@ Box::Box(const Box& b) {
 	}
 }
 Box& Box::operator=(const Box& b) {
-	size = b.size;
-	data = new int[size];
-	for (int i = 0; i < size; i++) {
-		data[i] = b.data[i];
+	if(this == &b) {
+		return *this;
 	}
+	size = b.size;
+	delete[] data;
+	data = nullptr;
+	data = new int[size];
+
+	std::copy(b.data, b.data + b.size, data);
+	/*for (int i = 0; i < size; i++) {
+		data[i] = b.data[i];
+	}*/
 	return *this;
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 class KontaktyDynamiczne
 {
@@ -22,11 +23,14 @@ public:
 	KontaktyDynamiczne(const KontaktyDynamiczne& kontakty) {
 		size = kontakty.size;
 		//contacts = kontakty.contacts;
+		delete[] contacts;
 		contacts = new string[size];
-		for (int i=0;i<size;i++) {
+		copy(kontakty.contacts, kontakty.contacts + kontakty.size, contacts);
+		/*for (int i=0;i<size;i++) {
 			contacts[i] = kontakty.contacts[i];
-		}
+		}*/
 	}
+	KontaktyDynamiczne& operator=(const KontaktyDynamiczne& k);
 	~KontaktyDynamiczne();
 	friend ostream& operator<<(ostream& os, const KontaktyDynamiczne& kontakty);
 };

@@ -41,14 +41,18 @@ void Ex2() {
 }
 void Ex3() {
 	KontaktyDynamiczne kd1;
-	KontaktyDynamiczne kd2 = kd1; //todo naprawic konstruktor kopiujacy
+	KontaktyDynamiczne kd2 = kd1; //todo naprawic konstruktor kopiujacy - zrobione
+	KontaktyDynamiczne kd3;
+	kd3 = kd1;    //todo naprawic operator podstawienia !!!!
 	cout << kd1;
 	cout << kd2;
+	cout << kd3;
 	cout << "Zmieniamy kontakt w kd1 \n";
 	kd1.contacts[0] = "Zmieniony kontakt";
+	kd3.contacts[kd3.size - 1] = "Inna testowa";
 	cout << kd1;
 	cout << kd2;
-	
+	cout << kd3;
 }
 int main() {
 	//Ex1();
