@@ -33,5 +33,6 @@ public:
 		delete[] contacts;
 		contacts = nullptr;
 	}
+	DynamicContacts& operator=(const DynamicContacts& dc);
 };
 

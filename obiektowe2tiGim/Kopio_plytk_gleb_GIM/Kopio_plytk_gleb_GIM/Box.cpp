@@ -42,6 +42,8 @@ Box& Box::operator=(const Box& b) {
 	if(this != &b) {
 		size = b.size;
 		//data = b.data; tylko kopiwanie adresu
+		delete[] data;
+		data = nullptr;
 		data = new int[size];
 		for (int i = 0; i < size; i++) {
 			data[i] = b.data[i];

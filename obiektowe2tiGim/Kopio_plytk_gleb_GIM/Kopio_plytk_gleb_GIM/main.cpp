@@ -20,7 +20,7 @@ void Ex1() {
 	cin >> size;
 	Box b1(size);
 	Box b2 = b1; // Box b2(b1);
-	Box b3;
+	Box b3;   
 	b3 = b1;
 	cout << b1;
 	cout << b2;
