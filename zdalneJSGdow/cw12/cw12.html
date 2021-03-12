@@ -10,10 +10,10 @@
 <body>
     <h1>Ćwiczenie 12 - data i czas cz.</h1>
     <div class="container">
-        <form>
+        <form id="form1">
             <div class="line">
                 <label for="data">Podaj datę urodzenia: </label>
-                <input type="date" name="data" id="data">
+                <input type="date" name="data" id="data" required>
             </div>
             <div class="line">
                 <label for="choice">Wybierz przedział czasowy: </label>
@@ -25,7 +25,7 @@
                 </select>
             </div>
             <div class="line">
-                <input type="button" value="Oblicz" id="run">
+                <input type="submit" value="Oblicz" id="run">
             </div>            
         </form>
         <div id="result"></div>
