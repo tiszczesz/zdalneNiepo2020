@@ -16,14 +16,23 @@
         <div>
             <div class="line">
                 <label for="a">a = </label>
-                <input type="number" name="a" id="a">
+                <input type="number" name="a" id="a" min="1" value="20" required> <span class="error"></span>
             </div>
             <div class="line">
                 <label for="b">b = </label>
-                <input type="number" name="b" id="b">
+                <input type="number" name="b" id="b" min="1" value="15" required> <span class="error"></span>
             </div>
             <div class="line">
-                <label for=""></label>
+                <fieldset>
+                    <legend>Wybierz metodę</legend>
+                     <label for="choiceIter">Metoda iteracyjna: </label>
+                <input type="radio" name="choice" id="choiceIter" value="iter" checked><br>
+                <label for="choiceIter">Metoda rekurencyjna: </label>
+                <input type="radio" name="choice" id="choiceRek" value="rek"><br>
+                </fieldset>
+               
+            </div>
+            <div class="line">               
                 <input type="button" id="run" value="Oblicz">
             </div>
         </div>

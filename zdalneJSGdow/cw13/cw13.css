@@ -10,7 +10,7 @@ h1{
 }
 label{
     display: inline-block;
-    width: 150px;
+    width: 180px;
     text-align: right;
     padding-right: 2px;
 }
@@ -20,7 +20,18 @@ label{
 .container{
     display: flex;
     flex-direction: row;
+    /* justify-content: space-around; */
 }
 #wynik{
-    margin: 30px;
+    margin-top: 30px;
+}
+fieldset{
+    margin: 0;
+    padding-left: 0;
+}
+.error{
+    color:red;
+}
+.container>div{
+    width: 50%;
 }
