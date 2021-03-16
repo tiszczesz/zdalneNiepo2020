@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (choice === 'iter') {
                 NWDIter(a, b);
             } else {
-                NWDRek(a, b);
+                let info = `NWDRek(${a},${b})`;
+                document.querySelector("#wynik").innerHTML = "Obliczamy rekurencyjnie: "+info+" = "+NWDRek(a, b);
             }
         } else {
             return;
@@ -33,7 +34,8 @@ function NWDIter(a, b) {
     document.querySelector("#wynik").innerHTML = "Obliczamy iteracyjnie " + info + " = " + a;
 }
 function NWDRek(a, b) {
-    document.querySelector("#wynik").innerHTML = "Obliczamy rekurencyjnie";
+    if(b!=0) return NWDRek(b,a%b);
+    return a;    
 }
 function ValidateNumber(elem) {
     const value = parseInt(elem.value);
