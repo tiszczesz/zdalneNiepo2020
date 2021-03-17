@@ -8,7 +8,14 @@
         <tr>
             <th>Tytuł posta</th>
             <th>Zawartość</th>
-            <th>Data utworzenia</th>
+            <th>Date utworzenia</th>
         </tr>
+        @foreach (var item in Model.Posts) {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Content</td>
+                <td>@item.Date.Date.ToLongDateString()</td>
+            </tr>
+        }
     </table>
 </div>

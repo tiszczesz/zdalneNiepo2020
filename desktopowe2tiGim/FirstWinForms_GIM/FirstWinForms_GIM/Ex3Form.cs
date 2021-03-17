@@ -45,9 +45,19 @@ namespace FirstWinForms_GIM
             Contacts.List.Clear();
         }
 
-        private void btnInsert_Click(object sender, EventArgs e)
-        {
-           
+        private void btnInsert_Click(object sender, EventArgs e) {
+            //MessageBox.Show(lBoxImiona.SelectedIndex.ToString());
+            if (lBoxImiona.SelectedIndex == -1) {
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(txtBoxNewContact.Text))
+            {
+                MessageBox.Show("Brak wpisanego kontaktu", "Uwaga!!");
+                return;
+            }
+            int index = lBoxImiona.SelectedIndex;
+            Contacts.List.Insert(index,txtBoxNewContact.Text);
+
         }
     }
 }

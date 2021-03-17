@@ -12,7 +12,7 @@ namespace AdoNet_Posts.Models {
         [Display(Name = "Zawartość")]
         public string Content { get; set; }
         
-        [Display(Name = "Data utworzenia")]
-        public DateTime Data { get; set; }
+        [Display(Name = "Date utworzenia")]
+        public DateTime Date { get; set; }
     }
 }
