@@ -36,6 +36,8 @@ namespace FirstWinForms_GIM
             this.btnClearAll = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.lViewDane = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // btnAddNew
@@ -66,6 +68,7 @@ namespace FirstWinForms_GIM
             this.lBoxImiona.Name = "lBoxImiona";
             this.lBoxImiona.Size = new System.Drawing.Size(248, 544);
             this.lBoxImiona.TabIndex = 3;
+            this.lBoxImiona.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lBoxImiona_MouseDoubleClick);
             // 
             // txtBoxNewContact
             // 
@@ -104,11 +107,32 @@ namespace FirstWinForms_GIM
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(290, 326);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(316, 29);
+            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.Text = "Zmień zawartość";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // lViewDane
+            // 
+            this.lViewDane.HideSelection = false;
+            this.lViewDane.Location = new System.Drawing.Point(659, 79);
+            this.lViewDane.Name = "lViewDane";
+            this.lViewDane.Size = new System.Drawing.Size(521, 571);
+            this.lViewDane.TabIndex = 9;
+            this.lViewDane.UseCompatibleStateImageBehavior = false;
+            // 
             // Ex3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1185, 662);
+            this.Controls.Add(this.lViewDane);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnClearAll);
@@ -132,5 +156,7 @@ namespace FirstWinForms_GIM
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.ListView lViewDane;
     }
 }

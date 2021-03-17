@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FirstWinForms_GIM.Models.Ex3Models;
+using Microsoft.VisualBasic;
 
 namespace FirstWinForms_GIM
 {
@@ -63,7 +64,29 @@ namespace FirstWinForms_GIM
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (lBoxImiona.SelectedIndex == -1)
+            {
+                return;
+            }
+            int index = lBoxImiona.SelectedIndex;
+            Contacts.List.RemoveAt(index);
+           
+        }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if(lBoxImiona.SelectedIndex==-1) return;
+            int index = lBoxImiona.SelectedIndex;
+            string wynik = Interaction.InputBox("Zmień wartość","Update",Contacts.List[index]);
+            if (!String.IsNullOrWhiteSpace(wynik)) {
+                Contacts.List[index] = wynik;
+            }
+            
+        }
+
+        private void lBoxImiona_MouseDoubleClick(object sender, MouseEventArgs e) {
+            if (lBoxImiona.SelectedIndex == -1) return;
+            btnUpdate_Click(sender,e);
         }
     }
 }
