@@ -10,7 +10,7 @@
     <h1>Ćwiczenie 11 - dziedziczenie</h1>
     <?php
      interface IEating{
-      //   function excrete();
+      //   function excrete(); !!!!!!!
         function eat(string $dish);
         //todo dopisac drugą funkcję zwiazaną z wydalaniem produktów ubocznych....
     }

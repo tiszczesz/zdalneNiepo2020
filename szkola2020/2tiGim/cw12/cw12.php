@@ -10,12 +10,19 @@
 <body>
     <h1>Ćwiczenie 12 - biblioteka</h1>
     <?php
-      require_once "FileRepo.php";
-      $repo = new FileRepo();
+      require_once "FileRepoItem.php";
+      require_once "FileRepoBook.php";
+      $repoItem = new FileRepoItem();
+      $repoBook = new FileRepoBook();
      // $dane = $repo->getItems();
      // var_dump($dane);
      $b1 = new Book();
+     $b2 = new Book("","Wasyl Potocki",450,34.99,"AbC c++");
      echo $b1->toJSON();
+     $date = $b2->toJSON();
+     
+     $repoBook->saveBook($b1);
+     $repoBook->saveBook($b2);
     ?>
 </body>
 </html>

@@ -11,6 +11,13 @@ class Book extends Item{
     {
         parent::__construct($name,$id);
         $this->ISBN = $ISBN!="" ? $ISBN : "BIB00".$this->itemId;
-        //todo .....
+        $this->price = $price;
+        $this->author = $author;
+        $this->pages = $pages;
+    }
+    public static function fromJSON(string $json): ?Book {
+        $data = json_decode($json);
+        //var_dump($data);
+        return new Book($data->ISBN,$data->author,$data->pages,$data->price,$data->name,$data->itemId);
     }
 }
