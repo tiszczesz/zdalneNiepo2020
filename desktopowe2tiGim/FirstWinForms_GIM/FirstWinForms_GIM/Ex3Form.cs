@@ -57,6 +57,12 @@ namespace FirstWinForms_GIM
             }
             int index = lBoxImiona.SelectedIndex;
             Contacts.List.Insert(index,txtBoxNewContact.Text);
+            txtBoxNewContact.Text = "";
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
 
         }
     }
