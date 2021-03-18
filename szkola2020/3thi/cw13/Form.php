@@ -1,9 +1,9 @@
 <?php
 class Form{
-    private array $fields;
-    private string $action;
-    private string $method;
-    private string $btnValue;
+    protected array $fields;
+    protected string $action;
+    protected string $method;
+    protected string $btnValue;
     public function __construct(array& $fields = [],string $action="submit.php", string $method="POST",
               string $btnValue="Zapisz")
     {

@@ -1,2 +1,4 @@
 {"ISBN":"BIB001","author":"noname","pages":100,"price":12.99,"itemId":1,"name":"noname"}
 {"ISBN":"BIB002","author":"Wasyl Potocki","pages":450,"price":34.99,"itemId":2,"name":"AbC c++"}
+{"ISBN":"BIB001","author":"noname","pages":100,"price":12.99,"itemId":1,"name":"noname"}
+{"ISBN":"BIB002","author":"Wasyl Potocki","pages":450,"price":34.99,"itemId":2,"name":"AbC c++"}

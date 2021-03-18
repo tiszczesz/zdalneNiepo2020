@@ -15,6 +15,7 @@ namespace FirstWinForms_GIM
     public partial class Ex3Form : Form {
         private MainWindow window;
         public ContactsList Contacts { get; set; } = new ContactsList();
+        public BindingList<Films> filmy = FilmsList.GetFilms();
 
         public Ex3Form(MainWindow window) {
             InitializeComponent();
@@ -22,6 +23,8 @@ namespace FirstWinForms_GIM
             window.GeTextBox().Text += "Utworzono okienko: " + this.Text + Environment.NewLine;
 
             lBoxImiona.DataSource = Contacts.List;
+           
+
         }
 
         private void Ex3Form_FormClosed(object sender, FormClosedEventArgs e) {

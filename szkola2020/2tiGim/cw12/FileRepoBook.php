@@ -14,13 +14,9 @@ class FileRepoBook{
         }
         
     }
-    public function saveBook(Book & $book):bool
+    public function addBook(Book & $book):void
     {
-        $f = fopen($this->pathToFile,'a');
-        if(!$f) return false;
-        fwrite($f,$book->toJSON().PHP_EOL);
-        fclose($f);
-        return true;
+      $this->books[] = $book;
     }
     protected function getFromFile():void{
         $lines = file($this->pathToFile,FILE_IGNORE_NEW_LINES);
@@ -30,6 +26,18 @@ class FileRepoBook{
            $this->books[] =  Book::fromJSON($line);
         }
        
+    }
+    public function saveAllToFile( ):void {
+        $f = fopen($this->pathToFile,'w');
+        if(!$f) return ;
+        foreach($this->books as $b){
+            fwrite($f,$b->toJSON().PHP_EOL);
+        }
+        fclose($f);
+    }
+    public function getAllBooks():array
+    {
+       return $this->books;
     }
 
 }
