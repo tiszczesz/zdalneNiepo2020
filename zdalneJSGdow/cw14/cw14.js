@@ -35,3 +35,5 @@ document.addEventListener("DOMContentLoaded", function () {
 // },2000);
 //todo dla ambitnych dwa przyciski start i stop zegara!!!!   settimeOut
 //https://www.w3schools.com/jsref/met_win_setinterval.asp
+
+//podobnie wykonać aplikację ze stoperem (start,stop) czas w sekundach

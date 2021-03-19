@@ -1,0 +1,59 @@
+#rectangle1{
+    width: 200px;
+    height: 120px;
+    border: solid black 1px;
+}
+ #rectangle2{
+    width: 200px;
+    /* height: 120px; */
+    border: solid black 1px;
+ }
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#rectangle2{
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2em;
+}
+.zegarek{
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+input[type=button]{
+    width: 120px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey;
+    border: solid 1px blue;
+}
+.card{
+    border: solid 1px black;
+    height: 500px;
+    width: 300px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+#year{
+    margin-top: 30px;
+    font-size: 3em;
+}
+#date{
+    font-size: 12em;
+    margin-top: 30px;
+}
+#day{
+    margin-top: 20px;
+    font-size: 3em;
+}#month{
+    color: blue;
+    font-size: 2em;
+    margin-top: 20px;
+}
