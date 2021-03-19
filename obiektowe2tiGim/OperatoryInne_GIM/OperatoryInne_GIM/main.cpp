@@ -1,11 +1,13 @@
-#include <iostream>
+
 #include <cstdio>
 #include <string>
 
 using namespace std;
 void Ex1();
+void Ex2();
 int main() {
-    Ex1();
+   // Ex1();
+    Ex2();
 	return 0;
 }
 void Ex1() {
@@ -13,8 +15,8 @@ void Ex1() {
 
     const char* s = "Hello";
     string napis = "Ala ma kota";
-    int liczba = 123;
-    float liczba2 = 34.8989;
+    int liczba{ 1233343433434343434 };
+    float liczba2{ 34.8989f };
     double liczbaDouble = 456.895;
     bool c = false;
     printf("Moja zmienna s = %s\n", s);   //cout << a
@@ -29,6 +31,7 @@ void Ex1() {
     int age;
     scanf_s("%d", &age);
 	
+	
     printf("Podales wiek %i", age);
 
 	printf(" -------------------------------------------------------\n\n");
@@ -42,6 +45,13 @@ void Ex1() {
     char nazwisko[50];
     scanf_s("%s", &nazwisko,50);
 
-    printf("Witaj %s  %s twoj wiek: %i", imie, nazwisko, age);
+    printf_s("Witaj %s  %s twoj wiek: %i", imie, nazwisko, age);
+	
+}
+void Ex2() {
+	//todo algorytm NWD(16,24) --> 8
+	//dowolna metoda iteracyjna lub rekurencyjna
+	//bez iostream tylko cstdio
+	//dla  ambitnych z wyborem metody rekuren lub iterac
 	
 }
