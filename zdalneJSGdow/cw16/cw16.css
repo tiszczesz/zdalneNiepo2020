@@ -1,0 +1,16 @@
+.scene{
+    position: relative;
+    width: 100%;
+    border: solid black 1px;
+    height: 50px;
+}
+.sprite{
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: green;
+    height: 40px;
+    width: 40px;
+    left:40px;
+    top:5px;
+}
