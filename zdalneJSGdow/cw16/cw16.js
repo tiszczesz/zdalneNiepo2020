@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded",function(){
             },50);
             isRun = true; 
         }
-        //todo  zdobyć 10 zdjęć z netu np gór i ustawić im identyczne rozmiary (nazwy 1.jpg,2.jpg,,,10.jpg)
+        //todo  zdobyć 10 zdjęć z netu np gór i ustawić im identyczne rozmiary 200x300 (nazwy 1.jpg,2.jpg,,,10.jpg)
         //utworzyc tablicę z 10 przysłowiami
         //todo baner gdzie co 5s zmienia sie obrazek gór a co 10s przysłowie będące obok obrazka
     });
