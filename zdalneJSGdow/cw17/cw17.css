@@ -1,26 +1,46 @@
-input[type=submit]{
+input[type=submit] {
     padding: 5px;
     margin: 5px;
     margin-left: 150px;
     width: 120px;
 }
-h1{
+
+h1 {
     text-align: center;
     border-bottom: solid 1px grey;
+    margin-bottom: 20px;
 }
-label{
+
+label {
     display: inline-block;
     width: 150px;
     text-align: right;
     padding-right: 2px;
 }
-.line{
+
+.line {
     margin: 20px;
 }
-#obrazek{
+
+#obrazek {
     float: left;
-    width: 300px;
-    height: 200px;
+    width: 30%;
+
     border: solid 1px grey;
     border-radius: 5px;
+    margin: 20px;
+}
+
+#przyslowie {
+    width: 60%;
+    margin: 20px;
+    font-size: 4em;
+    float: right;
+    font-style: italic;
+}
+
+.baner {
+    background-color: rgb(153, 192, 192);
+    border: solid lightslategray 1px;
+    height: 350px;
 }
