@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {  
   setContent();
+  setInterval(setContent,3000);
 });
 function setContent(){
     const przyslowia = [
