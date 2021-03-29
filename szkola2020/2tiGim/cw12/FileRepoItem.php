@@ -24,6 +24,18 @@ class FileRepoItem{
         return true;
     }
 
+    public function saveAllToFile():bool{
+        $f = fopen(DIR.'/'.ITEM_FILE,'w');
+        if(!$f) return false;
+        foreach($this->items as $item){
+            fwrite($f,$item->toJSON().PHP_EOL);
+        }
+        fclose($f);
+        return true;
+    }
+    public function deleteItem(Item & $item){
+       // unset($this->items)  todo
+    }
     public function getFakeItems():array
     {
         return [new Item("Element1",1),new Item("Element 2",2) , new Item("Nowy Element",3)
