@@ -30,9 +30,12 @@ namespace WinForms_cw1_5Net
         private void InitializeComponent()
         {
             this.txtBoxItem = new System.Windows.Forms.TextBox();
-            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnAddNew = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.lBoxItems = new System.Windows.Forms.ListBox();
+            this.listBoxContacts = new System.Windows.Forms.ListBox();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnDeleteContact = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBoxItem
@@ -42,46 +45,76 @@ namespace WinForms_cw1_5Net
             this.txtBoxItem.Size = new System.Drawing.Size(172, 27);
             this.txtBoxItem.TabIndex = 1;
             // 
-            // btnInsert
+            // btnAddNew
             // 
-            this.btnInsert.Location = new System.Drawing.Point(481, 11);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(307, 29);
-            this.btnInsert.TabIndex = 2;
-            this.btnInsert.Text = "Wstaw do listy";
-            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnAddNew.Location = new System.Drawing.Point(481, 11);
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(307, 29);
+            this.btnAddNew.TabIndex = 2;
+            this.btnAddNew.Text = "Dodaj na koniec listy";
+            this.btnAddNew.UseVisualStyleBackColor = true;
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(481, 58);
+            this.btnClear.Location = new System.Drawing.Point(481, 275);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(307, 29);
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Wyczyść listę";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // lBoxItems
+            // listBoxContacts
             // 
-            this.lBoxItems.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lBoxItems.FormattingEnabled = true;
-            this.lBoxItems.ItemHeight = 20;
-            this.lBoxItems.Items.AddRange(new object[] {
-            "Tomasz",
-            "Roman",
-            "Monika"});
-            this.lBoxItems.Location = new System.Drawing.Point(0, 0);
-            this.lBoxItems.Name = "lBoxItems";
-            this.lBoxItems.Size = new System.Drawing.Size(254, 450);
-            this.lBoxItems.TabIndex = 4;
+            this.listBoxContacts.Dock = System.Windows.Forms.DockStyle.Left;
+            this.listBoxContacts.FormattingEnabled = true;
+            this.listBoxContacts.ItemHeight = 20;
+            this.listBoxContacts.Location = new System.Drawing.Point(0, 0);
+            this.listBoxContacts.Name = "listBoxContacts";
+            this.listBoxContacts.Size = new System.Drawing.Size(254, 450);
+            this.listBoxContacts.TabIndex = 4;
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Location = new System.Drawing.Point(481, 77);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(307, 29);
+            this.btnInsert.TabIndex = 5;
+            this.btnInsert.Text = "Wstaw kontakt";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnDeleteContact
+            // 
+            this.btnDeleteContact.Location = new System.Drawing.Point(481, 143);
+            this.btnDeleteContact.Name = "btnDeleteContact";
+            this.btnDeleteContact.Size = new System.Drawing.Size(307, 29);
+            this.btnDeleteContact.TabIndex = 6;
+            this.btnDeleteContact.Text = "Usuń kontakt";
+            this.btnDeleteContact.UseVisualStyleBackColor = true;
+            this.btnDeleteContact.Click += new System.EventHandler(this.btnDeleteContact_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(481, 209);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(307, 29);
+            this.btnEdit.TabIndex = 7;
+            this.btnEdit.Text = "Edytuj kontakt";
+            this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // Ex3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lBoxItems);
-            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDeleteContact);
             this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.listBoxContacts);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.txtBoxItem);
             this.Name = "Ex3Form";
             this.Text = "Ćwiczenie 3";
@@ -94,8 +127,11 @@ namespace WinForms_cw1_5Net
 
         #endregion
         private System.Windows.Forms.TextBox txtBoxItem;
-        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.ListBox lBoxItems;
+        private System.Windows.Forms.ListBox listBoxContacts;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnDeleteContact;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
