@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ćwiczenie 19 - Arrays</title>
+</head>
+
+<body>
+    <h1>Ćwiczenie 19 - Arrays</h1>
+
+    <script>
+        const t1 = [3, 6, 8, "ala", true, [4, 8, 9]];
+        const t2 = new Array(4,7,8,9,"gggg",new Array("ww",4.6),66);
+        document.write(t1 + "<br>");
+        document.write(t2 + "<br>");
+        console.log(t1);
+        console.log(t2);
+        t2[t2.length-1] = "ostatni";
+        document.write(t2 + "<br>");
+        console.log(t2);
+        t2.push("nowy ostatni!");
+        document.write(t2 + "<br>");
+        console.log(t2);
+        let zTablicy = t2.pop();
+        document.write(t2 +" po za tablicą: "+zTablicy+ "<br>");
+        console.log(t2);
+        t2.unshift("na początek");
+        document.write(t2 + "<br>");
+        console.log(t2);
+
+        t2.shift();
+        document.write(t2 + "<br>");
+        console.log(t2);
+    </script>
+</body>
+
+</html>
