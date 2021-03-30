@@ -8,7 +8,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     let time = 0
-    setInterval(function(){
+   const id =  setInterval(function(){
         document.querySelector("#timer").innerHTML = "Czas: " +(++time)+" s";
     },1000);
   const widthScene = document.querySelector('#scene').offsetWidth;
@@ -22,5 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   treasure.style.left = left + 'px';
   treasure.addEventListener("click",function(e){
       e.target.style.opacity = 1;
+      clearInterval(id);
+      document.querySelector("#wynik").innerHTML = "Znaleziono w czasie: "+time+" s.";
   });
 });
