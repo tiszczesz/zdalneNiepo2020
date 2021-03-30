@@ -1,0 +1,30 @@
+h1 {
+    color: grey;
+    text-align: center;
+}
+h2{text-align: center;}
+#scene {
+    width: 800px;
+    height: 400px;
+    border: 1px solid black;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+#treasure {
+    position: relative;
+    border-radius: 50%;
+    background-color: brown;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+}
+#naglowek{
+    display: flex; flex-direction: row;
+    justify-content: space-around;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
