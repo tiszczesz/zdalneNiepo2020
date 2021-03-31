@@ -37,7 +37,11 @@ namespace FirstWinForms_GIM
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.lViewDane = new System.Windows.Forms.ListView();
+            this.listViewDemo = new System.Windows.Forms.ListView();
+            this.colTitle = new System.Windows.Forms.ColumnHeader();
+            this.colAuthor = new System.Windows.Forms.ColumnHeader();
+            this.colPrice = new System.Windows.Forms.ColumnHeader();
+            this.colId = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // btnAddNew
@@ -117,21 +121,47 @@ namespace FirstWinForms_GIM
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // lViewDane
+            // listViewDemo
             // 
-            this.lViewDane.HideSelection = false;
-            this.lViewDane.Location = new System.Drawing.Point(659, 79);
-            this.lViewDane.Name = "lViewDane";
-            this.lViewDane.Size = new System.Drawing.Size(521, 571);
-            this.lViewDane.TabIndex = 9;
-            this.lViewDane.UseCompatibleStateImageBehavior = false;
+            this.listViewDemo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colId,
+            this.colTitle,
+            this.colAuthor,
+            this.colPrice});
+            this.listViewDemo.GridLines = true;
+            this.listViewDemo.HideSelection = false;
+            this.listViewDemo.Location = new System.Drawing.Point(659, 79);
+            this.listViewDemo.Name = "listViewDemo";
+            this.listViewDemo.Size = new System.Drawing.Size(521, 571);
+            this.listViewDemo.TabIndex = 9;
+            this.listViewDemo.UseCompatibleStateImageBehavior = false;
+            this.listViewDemo.View = System.Windows.Forms.View.Details;
+            // 
+            // colTitle
+            // 
+            this.colTitle.Text = "Tytuł";
+            this.colTitle.Width = 150;
+            // 
+            // colAuthor
+            // 
+            this.colAuthor.Text = "Autor";
+            this.colAuthor.Width = 150;
+            // 
+            // colPrice
+            // 
+            this.colPrice.Text = "Cena";
+            this.colPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // colId
+            // 
+            this.colId.Text = "Lp";
             // 
             // Ex3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1185, 662);
-            this.Controls.Add(this.lViewDane);
+            this.Controls.Add(this.listViewDemo);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnInsert);
@@ -143,6 +173,7 @@ namespace FirstWinForms_GIM
             this.Name = "Ex3Form";
             this.Text = "Ćwiczenie 3";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ex3Form_FormClosed);
+            this.Load += new System.EventHandler(this.Ex3Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,6 +188,10 @@ namespace FirstWinForms_GIM
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.ListView lViewDane;
+        private System.Windows.Forms.ListView listViewDemo;
+        private System.Windows.Forms.ColumnHeader colTitle;
+        private System.Windows.Forms.ColumnHeader colAuthor;
+        private System.Windows.Forms.ColumnHeader colPrice;
+        private System.Windows.Forms.ColumnHeader colId;
     }
 }

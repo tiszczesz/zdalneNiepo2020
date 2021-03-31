@@ -9,11 +9,11 @@ namespace FirstWinForms_GIM.Models.Ex3Models
 {
     class FilmsList
     {
-        public static BindingList<Films> GetFilms() {
-            var result = new BindingList<Films>();
+        public static List<Films> GetFilms() {
+            var result = new List<Films>();
             result.Add(new Films(){Title = "ABC",Author = "Roman Polański",Price = 34.89M});
-            result.Add(new Films(){Title = "ddd",Author = "Roman Polański",Price = 34.89M});
-            result.Add(new Films(){Title = "eee",Author = "Roman Polański",Price = 34.89M});
+            result.Add(new Films(){Title = "ddd",Author = "Taduusz Polański",Price = 55.89M});
+            result.Add(new Films(){Title = "eee",Author = "Adam Polański",Price = 22.66M});
             return result;
         }
     }

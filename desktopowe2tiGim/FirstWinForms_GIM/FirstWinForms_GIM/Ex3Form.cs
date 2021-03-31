@@ -15,7 +15,7 @@ namespace FirstWinForms_GIM
     public partial class Ex3Form : Form {
         private MainWindow window;
         public ContactsList Contacts { get; set; } = new ContactsList();
-        public BindingList<Films> filmy = FilmsList.GetFilms();
+        public List<Films> filmy = FilmsList.GetFilms();
 
         public Ex3Form(MainWindow window) {
             InitializeComponent();
@@ -90,6 +90,18 @@ namespace FirstWinForms_GIM
         private void lBoxImiona_MouseDoubleClick(object sender, MouseEventArgs e) {
             if (lBoxImiona.SelectedIndex == -1) return;
             btnUpdate_Click(sender,e);
+        }
+
+        private void Ex3Form_Load(object sender, EventArgs e) {
+            FillListViewDemo();
+        }
+
+        private void FillListViewDemo() {
+            ListViewItem i1 = new ListViewItem("1");
+            i1.SubItems.Add(filmy[0].Title);
+            i1.SubItems.Add(filmy[0].Author);
+            i1.SubItems.Add(filmy[0].Price.ToString());
+            listViewDemo.Items.Add(i1);
         }
     }
 }
