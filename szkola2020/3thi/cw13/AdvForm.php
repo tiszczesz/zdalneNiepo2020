@@ -19,26 +19,33 @@ class AField{
     }
     public function __toString():string
     {
-       $html = "<div class='line'><label for='{$this->id}'>{$this->title}</label>";
+       $html = "<div class='line'><label for='{$this->id}'>{$this->label}</label>\n";
        switch($this->type){
             case "select":
-                $html .= "<select name='{$this->name}' id='{$this->id}'>";
+                $html .= "<select name='{$this->name}' id='{$this->id}'>\n";
                 foreach($this->values as $v){
-                        $html .= "<option value='$v'>{$v}</option>";
+                        $html .= "\t<option value='$v'>{$v}</option>\n";
                 }
-                $html .= "</select>";
+                $html .= "</select>\n";
                 break;
-            case "chackbox":
-
+            case "checkbox":
+                $html .= "<br>";
+                foreach($this->values as $v){
+                    $html .= "\t<input type='checkbox' value='$v'>{$v}<br>\n";
+                }
 
                 break;
        }
-       return $html;
+       return $html."</div>\n";
     }
 }
 class AdvForm extends Form{
     private array $Afield;
-
+    public function __construct(array $Afield = [])
+    {
+        parent::__construct();
+        $this->Afield = $Afield;
+    }
  // todo ctor
     public function generateForm()
     {

@@ -13,10 +13,11 @@
 
     $repo = new FileRepoItem();
 
-    $items = $repo->getItems();
+    $items = &$repo->getItems();
     var_dump($items);
-    unset($items[count($items)-1]);
+    $repo->deleteItem($items[0]);
     echo "<p>Po usunieciu</p>";
+    
     var_dump($items);
 ?>
 </body>

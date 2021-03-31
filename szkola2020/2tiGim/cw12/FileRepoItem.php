@@ -33,9 +33,15 @@ class FileRepoItem{
         fclose($f);
         return true;
     }
-    public function deleteItem(Item & $item){
-       // unset($this->items)  todo
+    public function deleteItem(Item & $item):void{
+        foreach($this->items as $k=>$v){
+            if($item->itemId==$v->itemId){                
+                unset($this->items[$k]);
+            }
+        }
+        var_dump($this->items);
     }
+   
     public function getFakeItems():array
     {
         return [new Item("Element1",1),new Item("Element 2",2) , new Item("Nowy Element",3)
@@ -50,8 +56,8 @@ class FileRepoItem{
         }
        
     }
-    public function getItems()
+    public function &getItems():array
     {
-        return $this->items;
+        return$this->items;
     }
 }
