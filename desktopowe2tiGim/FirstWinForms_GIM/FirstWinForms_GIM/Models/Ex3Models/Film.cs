@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstWinForms_GIM.Models.Ex3Models
 {
-    public class Films
+    public class Film
     {
         public string Title { get; set; }
         public string Author { get; set; }

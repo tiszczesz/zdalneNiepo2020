@@ -42,11 +42,18 @@ namespace FirstWinForms_GIM
             this.colTitle = new System.Windows.Forms.ColumnHeader();
             this.colAuthor = new System.Windows.Forms.ColumnHeader();
             this.colPrice = new System.Windows.Forms.ColumnHeader();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnClearAllFilms = new System.Windows.Forms.Button();
+            this.btnAddNewFilm = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Location = new System.Drawing.Point(290, 106);
+            this.btnAddNew.Location = new System.Drawing.Point(13, 12);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(316, 29);
             this.btnAddNew.TabIndex = 1;
@@ -66,6 +73,7 @@ namespace FirstWinForms_GIM
             // 
             // lBoxImiona
             // 
+            this.lBoxImiona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lBoxImiona.FormattingEnabled = true;
             this.lBoxImiona.ItemHeight = 20;
             this.lBoxImiona.Location = new System.Drawing.Point(21, 106);
@@ -83,7 +91,7 @@ namespace FirstWinForms_GIM
             // 
             // btnClearAll
             // 
-            this.btnClearAll.Location = new System.Drawing.Point(290, 160);
+            this.btnClearAll.Location = new System.Drawing.Point(13, 66);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(316, 29);
             this.btnClearAll.TabIndex = 5;
@@ -93,7 +101,7 @@ namespace FirstWinForms_GIM
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(290, 214);
+            this.btnInsert.Location = new System.Drawing.Point(13, 120);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(316, 29);
             this.btnInsert.TabIndex = 6;
@@ -103,7 +111,7 @@ namespace FirstWinForms_GIM
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(290, 268);
+            this.btnDelete.Location = new System.Drawing.Point(13, 174);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(316, 29);
             this.btnDelete.TabIndex = 7;
@@ -113,7 +121,7 @@ namespace FirstWinForms_GIM
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(290, 326);
+            this.btnUpdate.Location = new System.Drawing.Point(13, 232);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(316, 29);
             this.btnUpdate.TabIndex = 8;
@@ -123,6 +131,7 @@ namespace FirstWinForms_GIM
             // 
             // listViewDemo
             // 
+            this.listViewDemo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.listViewDemo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colId,
             this.colTitle,
@@ -157,24 +166,76 @@ namespace FirstWinForms_GIM
             this.colPrice.Text = "Cena";
             this.colPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnAddNew);
+            this.panel1.Controls.Add(this.btnClearAll);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnInsert);
+            this.panel1.Location = new System.Drawing.Point(290, 79);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(343, 279);
+            this.panel1.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btnClearAllFilms);
+            this.panel2.Controls.Add(this.btnAddNewFilm);
+            this.panel2.Location = new System.Drawing.Point(290, 374);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(342, 276);
+            this.panel2.TabIndex = 11;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(14, 112);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(316, 29);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Dodaj nowego znajomego";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnClearAllFilms
+            // 
+            this.btnClearAllFilms.Location = new System.Drawing.Point(14, 64);
+            this.btnClearAllFilms.Name = "btnClearAllFilms";
+            this.btnClearAllFilms.Size = new System.Drawing.Size(316, 29);
+            this.btnClearAllFilms.TabIndex = 3;
+            this.btnClearAllFilms.Text = "Wyczyść listę filmów";
+            this.btnClearAllFilms.UseVisualStyleBackColor = true;
+            this.btnClearAllFilms.Click += new System.EventHandler(this.btnClearAllFilms_Click);
+            // 
+            // btnAddNewFilm
+            // 
+            this.btnAddNewFilm.Location = new System.Drawing.Point(14, 17);
+            this.btnAddNewFilm.Name = "btnAddNewFilm";
+            this.btnAddNewFilm.Size = new System.Drawing.Size(316, 29);
+            this.btnAddNewFilm.TabIndex = 2;
+            this.btnAddNewFilm.Text = "Dodaj nowego znajomego";
+            this.btnAddNewFilm.UseVisualStyleBackColor = true;
+            // 
             // Ex3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1185, 662);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.listViewDemo);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.txtBoxNewContact);
             this.Controls.Add(this.lBoxImiona);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAddNew);
             this.Name = "Ex3Form";
             this.Text = "Ćwiczenie 3";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Ex3Form_FormClosed);
             this.Load += new System.EventHandler(this.Ex3Form_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +255,10 @@ namespace FirstWinForms_GIM
         private System.Windows.Forms.ColumnHeader colAuthor;
         private System.Windows.Forms.ColumnHeader colPrice;
         private System.Windows.Forms.ColumnHeader colId;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnClearAllFilms;
+        private System.Windows.Forms.Button btnAddNewFilm;
     }
 }

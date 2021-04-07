@@ -14,7 +14,7 @@ namespace FirstWinForms_GIM {
     public partial class Ex3Form : Form {
         private MainWindow window;
         public ContactsList Contacts { get; set; } = new ContactsList();
-        public List<Films> filmy = FilmsList.GetFilms();
+        public List<Film> Filmy = FilmsList.GetFilms();
 
         public Ex3Form(MainWindow window) {
             InitializeComponent();
@@ -22,6 +22,7 @@ namespace FirstWinForms_GIM {
             window.GeTextBox().Text += "Utworzono okienko: " + this.Text + Environment.NewLine;
 
             lBoxImiona.DataSource = Contacts.List;
+            
         }
 
         private void Ex3Form_FormClosed(object sender, FormClosedEventArgs e) {
@@ -89,16 +90,24 @@ namespace FirstWinForms_GIM {
 
         private void FillListViewDemo() {
             int lp = 0;
-            foreach (var f in filmy)
+            foreach (var f in Filmy)
             {
                 lp++;
-                ListViewItem i1 = new ListViewItem(lp.ToString());
-                i1.SubItems.Add(f.Title);
+                ListViewItem i1 = new ListViewItem(lp.ToString()); // <tr>
+                //tworzenie nowego wiersza z elementow filmu (ram)
+                i1.SubItems.Add(f.Title);  // <td>
                 i1.SubItems.Add(f.Author);
                 i1.SubItems.Add(f.Price.ToString());
+                //dodawanie wiersza do kontrolki ListView(listViewDemo)
                 listViewDemo.Items.Add(i1);
             }
 
+        }
+
+        private void btnClearAllFilms_Click(object sender, EventArgs e)
+        {
+            listViewDemo.Items.Clear();
+            Filmy.Clear();
         }
     }
 }
