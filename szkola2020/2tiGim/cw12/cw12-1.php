@@ -15,10 +15,12 @@
 
     $items = &$repo->getItems();
     var_dump($items);
-    $repo->deleteItem($items[0]);
-    echo "<p>Po usunieciu</p>";
-    
-    var_dump($items);
+   // $repo->deleteItem($items[0]);
+   // $repo->saveAllToFile();
+   // echo "<p>Po usunieciu</p>";
+    $newItem = new Item("rrr item");
+    $repo->saveItem($newItem);
+    var_dump($repo->getItems());
 ?>
 </body>
 </html>

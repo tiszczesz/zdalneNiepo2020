@@ -50,6 +50,7 @@ void Ex1() {
 }
 void Ex2() {
 	//todo algorytm NWD(16,24) --> 8
+	// todo inny algorytm np silnia 
 	//dowolna metoda iteracyjna lub rekurencyjna
 	//bez iostream tylko cstdio
 	//dla  ambitnych z wyborem metody rekuren lub iterac

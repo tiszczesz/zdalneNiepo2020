@@ -39,7 +39,7 @@ class FileRepoItem{
                 unset($this->items[$k]);
             }
         }
-        var_dump($this->items);
+       // var_dump($this->items);
     }
    
     public function getFakeItems():array
@@ -58,6 +58,6 @@ class FileRepoItem{
     }
     public function &getItems():array
     {
-        return$this->items;
+        return $this->items;
     }
 }

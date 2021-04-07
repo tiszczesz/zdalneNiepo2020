@@ -1,4 +1,6 @@
-{"itemId":1,"name":"Element1"}
-{"itemId":2,"name":"Element 2"}
 {"itemId":3,"name":"Nowy Element"}
 {"itemId":4,"name":"noname"}
+{"itemId":1,"name":"n\u00f3wka item"}
+{"itemId":1,"name":"rrr item"}
+{"itemId":1,"name":"rrr item"}
+{"itemId":1,"name":"rrr item"}
