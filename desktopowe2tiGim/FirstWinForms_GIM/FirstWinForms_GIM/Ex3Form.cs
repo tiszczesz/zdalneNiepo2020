@@ -10,8 +10,7 @@ using System.Windows.Forms;
 using FirstWinForms_GIM.Models.Ex3Models;
 using Microsoft.VisualBasic;
 
-namespace FirstWinForms_GIM
-{
+namespace FirstWinForms_GIM {
     public partial class Ex3Form : Form {
         private MainWindow window;
         public ContactsList Contacts { get; set; } = new ContactsList();
@@ -23,29 +22,25 @@ namespace FirstWinForms_GIM
             window.GeTextBox().Text += "Utworzono okienko: " + this.Text + Environment.NewLine;
 
             lBoxImiona.DataSource = Contacts.List;
-           
-
         }
 
         private void Ex3Form_FormClosed(object sender, FormClosedEventArgs e) {
-            window.GeTextBox().Text += "Zamknięto okienko: " + this.Text+Environment.NewLine;
+            window.GeTextBox().Text += "Zamknięto okienko: " + this.Text + Environment.NewLine;
         }
 
-        private void AddNew_Click(object sender, EventArgs e)
-        {
+        private void AddNew_Click(object sender, EventArgs e) {
             if (String.IsNullOrWhiteSpace(txtBoxNewContact.Text)) {
                 MessageBox.Show("Brak wpisanego kontaktu", "Uwaga!!");
                 return;
             }
 
-           // lBoxImiona.Items.Add(txtBoxNewContact.Text);
-           Contacts.List.Add(txtBoxNewContact.Text);
-           lBoxImiona.DataSource = Contacts.List;
+            // lBoxImiona.Items.Add(txtBoxNewContact.Text);
+            Contacts.List.Add(txtBoxNewContact.Text);
+            lBoxImiona.DataSource = Contacts.List;
             txtBoxNewContact.Text = "";
         }
 
-        private void ClearAll_Click(object sender, EventArgs e)
-        {
+        private void ClearAll_Click(object sender, EventArgs e) {
             Contacts.List.Clear();
         }
 
@@ -54,42 +49,38 @@ namespace FirstWinForms_GIM
             if (lBoxImiona.SelectedIndex == -1) {
                 return;
             }
-            if (String.IsNullOrWhiteSpace(txtBoxNewContact.Text))
-            {
+
+            if (String.IsNullOrWhiteSpace(txtBoxNewContact.Text)) {
                 MessageBox.Show("Brak wpisanego kontaktu", "Uwaga!!");
                 return;
             }
-            int index = lBoxImiona.SelectedIndex;
-            Contacts.List.Insert(index,txtBoxNewContact.Text);
-            txtBoxNewContact.Text = "";
 
+            int index = lBoxImiona.SelectedIndex;
+            Contacts.List.Insert(index, txtBoxNewContact.Text);
+            txtBoxNewContact.Text = "";
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (lBoxImiona.SelectedIndex == -1)
-            {
+        private void btnDelete_Click(object sender, EventArgs e) {
+            if (lBoxImiona.SelectedIndex == -1) {
                 return;
             }
+
             int index = lBoxImiona.SelectedIndex;
             Contacts.List.RemoveAt(index);
-           
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if(lBoxImiona.SelectedIndex==-1) return;
+        private void btnUpdate_Click(object sender, EventArgs e) {
+            if (lBoxImiona.SelectedIndex == -1) return;
             int index = lBoxImiona.SelectedIndex;
-            string wynik = Interaction.InputBox("Zmień wartość","Update",Contacts.List[index]);
+            string wynik = Interaction.InputBox("Zmień wartość", "Update", Contacts.List[index]);
             if (!String.IsNullOrWhiteSpace(wynik)) {
                 Contacts.List[index] = wynik;
             }
-            
         }
 
         private void lBoxImiona_MouseDoubleClick(object sender, MouseEventArgs e) {
             if (lBoxImiona.SelectedIndex == -1) return;
-            btnUpdate_Click(sender,e);
+            btnUpdate_Click(sender, e);
         }
 
         private void Ex3Form_Load(object sender, EventArgs e) {
@@ -97,11 +88,17 @@ namespace FirstWinForms_GIM
         }
 
         private void FillListViewDemo() {
-            ListViewItem i1 = new ListViewItem("1");
-            i1.SubItems.Add(filmy[0].Title);
-            i1.SubItems.Add(filmy[0].Author);
-            i1.SubItems.Add(filmy[0].Price.ToString());
-            listViewDemo.Items.Add(i1);
+            int lp = 0;
+            foreach (var f in filmy)
+            {
+                lp++;
+                ListViewItem i1 = new ListViewItem(lp.ToString());
+                i1.SubItems.Add(f.Title);
+                i1.SubItems.Add(f.Author);
+                i1.SubItems.Add(f.Price.ToString());
+                listViewDemo.Items.Add(i1);
+            }
+
         }
     }
 }

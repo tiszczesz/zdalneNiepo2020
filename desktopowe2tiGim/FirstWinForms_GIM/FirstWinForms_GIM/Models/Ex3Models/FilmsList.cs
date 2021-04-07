@@ -14,6 +14,8 @@ namespace FirstWinForms_GIM.Models.Ex3Models
             result.Add(new Films(){Title = "ABC",Author = "Roman Polański",Price = 34.89M});
             result.Add(new Films(){Title = "ddd",Author = "Taduusz Polański",Price = 55.89M});
             result.Add(new Films(){Title = "eee",Author = "Adam Polański",Price = 22.66M});
+            result.Add(new Films(){Title = "Ryby",Author = "Adam Polański",Price = 22.66M});
+            result.Add(new Films(){Title = "Psy2",Author = "Anna Wanna",Price = 19.99M});
             return result;
         }
     }

@@ -38,10 +38,10 @@ namespace FirstWinForms_GIM
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.listViewDemo = new System.Windows.Forms.ListView();
+            this.colId = new System.Windows.Forms.ColumnHeader();
             this.colTitle = new System.Windows.Forms.ColumnHeader();
             this.colAuthor = new System.Windows.Forms.ColumnHeader();
             this.colPrice = new System.Windows.Forms.ColumnHeader();
-            this.colId = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // btnAddNew
@@ -128,6 +128,7 @@ namespace FirstWinForms_GIM
             this.colTitle,
             this.colAuthor,
             this.colPrice});
+            this.listViewDemo.FullRowSelect = true;
             this.listViewDemo.GridLines = true;
             this.listViewDemo.HideSelection = false;
             this.listViewDemo.Location = new System.Drawing.Point(659, 79);
@@ -136,6 +137,10 @@ namespace FirstWinForms_GIM
             this.listViewDemo.TabIndex = 9;
             this.listViewDemo.UseCompatibleStateImageBehavior = false;
             this.listViewDemo.View = System.Windows.Forms.View.Details;
+            // 
+            // colId
+            // 
+            this.colId.Text = "Lp";
             // 
             // colTitle
             // 
@@ -151,10 +156,6 @@ namespace FirstWinForms_GIM
             // 
             this.colPrice.Text = "Cena";
             this.colPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // colId
-            // 
-            this.colId.Text = "Lp";
             // 
             // Ex3Form
             // 
