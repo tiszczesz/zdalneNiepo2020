@@ -15,7 +15,7 @@ void Ex1() {
 
     const char* s = "Hello";
     string napis = "Ala ma kota";
-    int liczba{ 1233343433434343434 };
+    int liczba{ 12333434 };
     float liczba2{ 34.8989f };
     double liczbaDouble = 456.895;
     bool c = false;
@@ -48,11 +48,35 @@ void Ex1() {
     printf_s("Witaj %s  %s twoj wiek: %i", imie, nazwisko, age);
 	
 }
+
+int NWDRek(int a, int b) {
+    if (b == 0) return a;
+    return NWDRek(b, a % b);
+}
+
+int NWDIter(int a, int b) {
+    int temp;
+	while(b!=0) {
+        temp = a;
+        a = b;
+        b = temp % b;
+	}
+    return a;
+}
+
 void Ex2() {
 	//todo algorytm NWD(16,24) --> 8
 	// todo inny algorytm np silnia 
 	//dowolna metoda iteracyjna lub rekurencyjna
 	//bez iostream tylko cstdio
 	//dla  ambitnych z wyborem metody rekuren lub iterac
+    printf("podaj a: ");
+    int a;
+    scanf_s("%d", &a);
+    printf("podaj b: ");
+    int b;
+    scanf_s("%d", &b);
+    printf("NWDRek(%d,%d) = %d\n", a, b, NWDRek(a, b));
+    printf("NWDIter(%d,%d) = %d\n", a, b, NWDIter(a, b));
 	
 }
