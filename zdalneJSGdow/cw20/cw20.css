@@ -1,0 +1,14 @@
+table{
+    width: 80%;
+    border-collapse: collapse;
+}
+td,th{
+    border: solid 1px black;
+    padding: 5px;
+}
+th{
+    background-color: lightgray;
+}
+td.age{
+    text-align: right;
+}
