@@ -33,7 +33,20 @@
 
         t2.shift();
         document.write(t2 + "<br>");
-        console.log(t2);
+        t2.forEach(function(v,i){
+            console.log("wartość: "+v+" index: "+i);
+        });
+       // console.log(t2);
+       const t3 = [2,5,7,9,3,12,7,66,45];//todo kwadraty wartosi elementow tablicy
+       t3.forEach(function(v,i){
+            console.log(v+": "+ (v*v));
+       });
+       for(let elem of t3){
+           console.log("liczba: "+elem);
+       }
+       for(let i=0;i<t3.length;i++){
+           console.log("liczbaRR: "+t3[i]);
+       }
     </script>
 </body>
 
