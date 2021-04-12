@@ -2,3 +2,12 @@ h1{
     font-size: 4em;
     text-align: center;
 }
+
+.main {
+    color: green;
+    text-align: center;
+}
+
+.rr {
+    background-color: blue;
+}

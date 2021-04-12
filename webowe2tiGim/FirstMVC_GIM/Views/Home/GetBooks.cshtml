@@ -1,0 +1,6 @@
+﻿@model List<FirstMVC_GIM.Models.Book>
+
+<h2>Lista książek</h2>
+@foreach (var b in Model) {
+    <p>@b.Title @b.Author @b.Price zł</p>
+}
