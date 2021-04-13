@@ -17,5 +17,14 @@ document.addEventListener("DOMContentLoaded",function(){
             v.parentNode.style.color = "orange";
         }
     })
-      //todo wiersze w ktorych sa osoby o nazwisku zaczynajacym sie na M maja miec bold czcionke
+    const trs = document.querySelectorAll("tr");
+    for(let elem of trs){
+        elem.addEventListener("dblclick",function(e){
+            console.log(e.target.parentNode.parentNode.children);
+           e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+        });
+    }
+      //todo zbior paragrafów w divie i klikniecie podwójne usuwa klikniety paragraf
+
+
 });
