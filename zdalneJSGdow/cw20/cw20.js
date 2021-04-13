@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
   newElem.innerHTML = "To jest zupełnie nowy element";
   newElem.addEventListener("contextmenu",function(e){e.preventDefault()});
 
+  console.log(document.querySelector('#container').children);
+
   let lista = document.createElement("ol");
   for(let i=0;i<10;i++){
       let elemListy = document.createElement("li");
