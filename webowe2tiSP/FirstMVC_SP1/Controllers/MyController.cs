@@ -11,7 +11,7 @@ namespace FirstMVC_SP1.Controllers
     {
         public IActionResult Index()
         {
-            return Content("Witaj z kontrolera My i akcji Index");
+            return View();
         }
 
         public IActionResult MyAction(int? id) {

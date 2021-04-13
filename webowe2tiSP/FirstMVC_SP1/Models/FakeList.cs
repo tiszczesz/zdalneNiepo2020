@@ -9,9 +9,9 @@ namespace FirstMVC_SP1.Models
     {
         public static List<Person> List() {
             return new List<Person>() {
-                new Person{FirstName = "Antoni",LastName = "Trocki",Email = "ff@gmail.com"},
-                new Person{FirstName = "Monika",LastName = "Trocka",Email = "ff@gmail.com"},
-                new Person{FirstName = "Tomasz",LastName = "Bomasz",Email = "ff@gmail.com"},
+                new Person{Id=1,FirstName = "Antoni",LastName = "Trocki",Email = "ff@gmail.com"},
+                new Person{ Id=2,FirstName = "Monika",LastName = "Trocka",Email = "ff@gmail.com"},
+                new Person{ Id=3,FirstName = "Tomasz",LastName = "Bomasz",Email = "ff@gmail.com"},
             };
         }
     }

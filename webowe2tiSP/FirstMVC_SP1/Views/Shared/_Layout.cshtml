@@ -8,7 +8,16 @@
 </head>
 <body>
     <h1>Aplikacja MVC asp.core</h1>
-
+<div class="menu">
+    <ul>
+        <li>
+            <a asp-controller="My" asp-action="MyAction">Strona My akcja MyAction</a>
+        </li>
+        <li>
+            <a asp-controller="Home" asp-action="Action2">Strona Home akcja Action2</a>
+        </li>
+    </ul>
+</div>
     <div>
         @RenderBody()
     </div>
