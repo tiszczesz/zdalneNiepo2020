@@ -15,6 +15,8 @@ namespace FirstWinForms_GIM {
         private MainWindow window;
         public ContactsList Contacts { get; set; } = new ContactsList();
         public List<Film> Filmy = FilmsList.GetFilms();
+        public ActionAdd Action { get; set; }
+        
 
         public Ex3Form(MainWindow window) {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace FirstWinForms_GIM {
 
             lBoxImiona.DataSource = Contacts.List;
             
+
         }
 
         private void Ex3Form_FormClosed(object sender, FormClosedEventArgs e) {
@@ -89,6 +92,7 @@ namespace FirstWinForms_GIM {
         }
 
         private void FillListViewDemo() {
+            listViewDemo.Items.Clear();
             int lp = 0;
             foreach (var f in Filmy)
             {
@@ -104,10 +108,28 @@ namespace FirstWinForms_GIM {
 
         }
 
+        public void AddNewFilm(Film film) {
+           
+            Filmy.Add(film);
+            FillListViewDemo();
+        }
+
         private void btnClearAllFilms_Click(object sender, EventArgs e)
         {
             listViewDemo.Items.Clear();
             Filmy.Clear();
+        }
+
+        private void btnAddNewFilm_Click(object sender, EventArgs e) {
+            Action = ActionAdd.addNewFilm;
+            NewFilmDetails details = new NewFilmDetails(this);
+            details.ShowDialog();
+        }
+
+        private void insertFimButton_Click(object sender, EventArgs e) {
+            Action = ActionAdd.insertNewFilm;
+            NewFilmDetails details = new NewFilmDetails(this);
+            details.ShowDialog();
         }
     }
 }

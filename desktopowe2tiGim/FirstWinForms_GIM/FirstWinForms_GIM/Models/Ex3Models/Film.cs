@@ -12,4 +12,10 @@ namespace FirstWinForms_GIM.Models.Ex3Models
         public string Author { get; set; }
         public decimal Price { get; set; }
     }
+
+    public enum ActionAdd {
+        addNewFilm,
+        insertNewFilm,
+        updateFilm
+    }
 }

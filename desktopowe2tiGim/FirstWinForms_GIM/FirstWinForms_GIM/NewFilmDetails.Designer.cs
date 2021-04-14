@@ -95,6 +95,7 @@ namespace FirstWinForms_GIM
             this.addButton.TabIndex = 6;
             this.addButton.Text = "Zapisz";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // canellButton
             // 
@@ -104,6 +105,7 @@ namespace FirstWinForms_GIM
             this.canellButton.TabIndex = 7;
             this.canellButton.Text = "Anuluj";
             this.canellButton.UseVisualStyleBackColor = true;
+            this.canellButton.Click += new System.EventHandler(this.canellButton_Click);
             // 
             // NewFilmDetails
             // 

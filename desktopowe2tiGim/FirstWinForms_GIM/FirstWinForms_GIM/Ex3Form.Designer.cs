@@ -44,7 +44,7 @@ namespace FirstWinForms_GIM
             this.colPrice = new System.Windows.Forms.ColumnHeader();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.insertFimButton = new System.Windows.Forms.Button();
             this.btnClearAllFilms = new System.Windows.Forms.Button();
             this.btnAddNewFilm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -183,7 +183,7 @@ namespace FirstWinForms_GIM
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.insertFimButton);
             this.panel2.Controls.Add(this.btnClearAllFilms);
             this.panel2.Controls.Add(this.btnAddNewFilm);
             this.panel2.Location = new System.Drawing.Point(290, 374);
@@ -191,14 +191,15 @@ namespace FirstWinForms_GIM
             this.panel2.Size = new System.Drawing.Size(342, 276);
             this.panel2.TabIndex = 11;
             // 
-            // button3
+            // insertFimButton
             // 
-            this.button3.Location = new System.Drawing.Point(14, 112);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(316, 29);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Dodaj nowego znajomego";
-            this.button3.UseVisualStyleBackColor = true;
+            this.insertFimButton.Location = new System.Drawing.Point(14, 112);
+            this.insertFimButton.Name = "insertFimButton";
+            this.insertFimButton.Size = new System.Drawing.Size(316, 29);
+            this.insertFimButton.TabIndex = 4;
+            this.insertFimButton.Text = "Wstaw nowy film";
+            this.insertFimButton.UseVisualStyleBackColor = true;
+            this.insertFimButton.Click += new System.EventHandler(this.insertFimButton_Click);
             // 
             // btnClearAllFilms
             // 
@@ -216,8 +217,9 @@ namespace FirstWinForms_GIM
             this.btnAddNewFilm.Name = "btnAddNewFilm";
             this.btnAddNewFilm.Size = new System.Drawing.Size(316, 29);
             this.btnAddNewFilm.TabIndex = 2;
-            this.btnAddNewFilm.Text = "Dodaj nowego znajomego";
+            this.btnAddNewFilm.Text = "Dodaj nowy film";
             this.btnAddNewFilm.UseVisualStyleBackColor = true;
+            this.btnAddNewFilm.Click += new System.EventHandler(this.btnAddNewFilm_Click);
             // 
             // Ex3Form
             // 
@@ -257,7 +259,7 @@ namespace FirstWinForms_GIM
         private System.Windows.Forms.ColumnHeader colId;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button insertFimButton;
         private System.Windows.Forms.Button btnClearAllFilms;
         private System.Windows.Forms.Button btnAddNewFilm;
     }
