@@ -11,3 +11,10 @@ h1{
 .rr {
     background-color: blue;
 }
+.menu ul {
+    list-style: none;
+}
+    .menu ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }

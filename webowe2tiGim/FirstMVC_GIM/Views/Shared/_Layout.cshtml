@@ -8,7 +8,23 @@
 </head>
 <body>
 <h1 class="main">Główna strona aplikacji MVC</h1>
-<h2 class="rr">Dddddddd</h2>
+<div class="menu">
+    <ul>
+        <li>
+            <a asp-controller="Home" asp-action="Index">Home -> Index</a>
+        </li>
+        <li>
+            <a asp-controller="Home" asp-action="GetBooks">Home -> GetBooks</a>
+        </li>
+        <li>
+            <a asp-controller="My" asp-action="Index">My -> Index</a>
+        </li>
+        <li>
+            <a asp-controller="My" asp-action="MyAction">My -> MyAction</a>
+        </li>
+@*todo controller Time i metoda getTime ktora pozwala wyswietlic aktuana date i czas*@
+    </ul>
+</div>
 <div>
     @RenderBody()
 </div>
