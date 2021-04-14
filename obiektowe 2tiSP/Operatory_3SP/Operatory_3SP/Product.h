@@ -18,5 +18,14 @@ public:
 	bool operator<(const Product& p1) {
 		return price < p1.price;
 	}
+	bool operator>(const Product& p1) {
+		return price > p1.price;
+	}
+	bool operator==(const Product& p1) {
+		return name.size() == p1.name.size();  //Te same towary maja ta sama dlugosc nazwy
+	}
+	bool operator!=(const Product& p1) {
+		return !((*this) == p1);
+	}
 };
 

@@ -20,3 +20,5 @@ int main() {
 	//todo dla ambitnych napisac funkcje zwracajaca vetor produktow o ustalonej cenie  GetByPrice(4.88) moze byc pusty
 	return 0;
 }
+
+//todo zdefiniowac operatory logiczne > < != == dla klasy Circle (wczesniejsze cwiczenia)
