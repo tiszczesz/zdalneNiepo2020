@@ -10,8 +10,8 @@ private:
 
 public:
 	Person() {
-		firstName = "noname";
-		lastName = "noname";
+		firstName = "Noname";
+		lastName = "Noname";
 		age = 20;
 	}
 	Person(std::string firstName,std::string lastName, int age = 20) {
@@ -20,5 +20,9 @@ public:
 		this->age = age;
 	}
 	friend std::ostream& operator<<(std::ostream& os, const Person& p);
+
+	bool operator<(const Person& p) {
+		return lastName < p.lastName;
+	}
 };
 

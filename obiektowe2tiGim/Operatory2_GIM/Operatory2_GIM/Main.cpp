@@ -12,5 +12,10 @@ int main() {
 	for (auto person : persons) {
 		cout << person << endl;
 	}
+	if(persons[0]<persons[1]) {
+		cout << persons[0] << endl;
+	}else {
+		cout << persons[1] << endl;
+	}
 	return 0;
 }
