@@ -33,29 +33,49 @@ namespace FirstWinForms_GIM {
                 case ActionAdd.updateFilm:
                     UpdateFilm();
                     break;
-               
             }
-           
         }
 
         private void AddNewFilm() {
             if (String.IsNullOrWhiteSpace(titleTexBox.Text) ||
-               String.IsNullOrWhiteSpace(authorTextBox.Text) ||
-               String.IsNullOrWhiteSpace(priceTextBox.Text))
+                String.IsNullOrWhiteSpace(authorTextBox.Text) ||
+                String.IsNullOrWhiteSpace(priceTextBox.Text)) {
+                Close();
+            }
+
+            try {
+                Film newFilm = new Film() {
+                    Title = titleTexBox.Text.Trim(),
+                    Author = authorTextBox.Text.Trim(),
+                    Price = Convert.ToDecimal(priceTextBox.Text)
+                };
+                parent.AddNewFilm(newFilm);
+            }
+            catch (Exception exception) {
+                MessageBox.Show("Error chyba cena: " + exception.Message);
+            }
+            finally {
+                Close();
+            }
+        }
+
+        private void InsertFilm() {
+            if (String.IsNullOrWhiteSpace(titleTexBox.Text) ||
+                String.IsNullOrWhiteSpace(authorTextBox.Text) ||
+                String.IsNullOrWhiteSpace(priceTextBox.Text))
             {
                 Close();
             }
 
             try
             {
-
                 Film newFilm = new Film()
                 {
                     Title = titleTexBox.Text.Trim(),
                     Author = authorTextBox.Text.Trim(),
                     Price = Convert.ToDecimal(priceTextBox.Text)
                 };
-                parent.AddNewFilm(newFilm);
+                parent.InsertNewFilm(newFilm);
             }
             catch (Exception exception)
             {
@@ -67,13 +87,8 @@ namespace FirstWinForms_GIM {
             }
         }
 
-        private void InsertFilm() {
-            //todo
-        }
-
         private void UpdateFilm() {
             //todo
         }
-
     }
 }

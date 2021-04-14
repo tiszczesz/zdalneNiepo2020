@@ -113,6 +113,12 @@ namespace FirstWinForms_GIM {
             Filmy.Add(film);
             FillListViewDemo();
         }
+        public void InsertNewFilm(Film film)
+        {
+
+            Filmy.Add(film);
+            FillListViewDemo();
+        }
 
         private void btnClearAllFilms_Click(object sender, EventArgs e)
         {
