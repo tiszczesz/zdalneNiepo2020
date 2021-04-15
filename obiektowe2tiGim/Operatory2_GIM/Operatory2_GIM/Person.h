@@ -24,5 +24,8 @@ public:
 	bool operator<(const Person& p) {
 		return lastName < p.lastName;
 	}
+	bool operator>(const Person& p) {
+		return lastName > p.lastName;
+	}
 };
 
