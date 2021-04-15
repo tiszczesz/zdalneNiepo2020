@@ -17,6 +17,10 @@ public:
 	bool IsOtherCenterInside(const Circle& c);
 	bool IsThisInOther(const Circle& c);
 	bool IsOtherInThis(const Circle& c);
+
+	bool operator<(const Circle& c) {
+		return radius < c.radius;
+	}
 	//todo srednica kola
 };
 
