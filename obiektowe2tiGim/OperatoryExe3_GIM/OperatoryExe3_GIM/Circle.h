@@ -43,7 +43,9 @@ public:
 	void SetRadius(double radius ) {
 		this->radius = radius;
 	}
-
+	bool operator>(const Circle& c) {
+		return radius > c.radius;
+	}
 	//todo Czy maja wsplna czesc
 	//todo czy maja 1 punkt wspolny
 	//todo czy maja 2 punkty wspolne
