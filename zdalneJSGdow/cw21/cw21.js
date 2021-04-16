@@ -10,4 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
       element.className = 'mark';
     }
   });
+
+  document.querySelector("#change2").addEventListener('click',function(){
+    if(element.previousElementSibling != null){
+        element.className = "";
+        element = element.previousElementSibling;
+        element.className = "mark";
+    }
+  });
 });
