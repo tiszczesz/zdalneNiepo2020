@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const lastnames = document.querySelectorAll('.lastname');
   // console.log(lastnames);
   lastnames.forEach(function (v) {
-    console.log(v);
+   // console.log(v);
     if (v.innerHTML.trim().length < 5) {
       v.parentNode.style.color = 'orange';
     }
@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   //todo zbior paragrafów w divie i klikniecie podwójne usuwa klikniety paragraf
   const pars = document.querySelectorAll('#container p');
-  console.log(pars);
+  //console.log(pars);
   let newElem = document.createElement("p");
   newElem.innerHTML = "To jest zupełnie nowy element";
   newElem.addEventListener("contextmenu",function(e){e.preventDefault()});
 
-  console.log(document.querySelector('#container').children);
+ // console.log(document.querySelector('#container').children);
 
   let lista = document.createElement("ol");
   for(let i=0;i<10;i++){
@@ -45,12 +45,24 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('#container').removeChild(e.target);
     });
     elem.addEventListener("mousedown",function(e){
-        console.log(e);
+        //console.log(e);
         if(e.buttons===2){
             e.target.replaceWith(newElem);
+           // document.querySelector("#container").replaceChild(newElem,e.target);
         }
     });
     elem.addEventListener("contextmenu",function(e){e.preventDefault();});
-
+   
   });
+  
+  console.log(pars[0]);
+  console.log(pars[0].parentElement);
+  console.log(pars[0].parentNode);
+  console.log(pars[0].nextElementSibling);
+  console.log(pars[0].nextSibling);
+  console.log(pars[0].nextElementSibling.nextElementSibling);
+  console.log(pars[3].previousElementSibling);
+  console.log(document.querySelector("#container"));
+  console.log(document.querySelector("#container").children);
+  console.log("ilosc dzieci dla diva: "+document.querySelector("#container").children.length);
 });
