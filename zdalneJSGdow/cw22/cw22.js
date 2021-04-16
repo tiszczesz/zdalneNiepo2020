@@ -24,8 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   html += '</ol><hr><div>Całkowity koszt książek: '+sum.toFixed(2)+' zł</div>';
   document.querySelector('#result2').innerHTML = html;
+
+  //dodawanie nowej włąściwości do obiektu book1
   book1.wydawnictwo = "NOWA ERA";
   console.log(book1);
+
+  //usuwanie właściwości z obiektu
   delete book1.price;
   console.log(book1);
 });
