@@ -54,3 +54,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   document.querySelector('#r2').innerHTML = html;
 });
+
+//todo wykonać cwiczenie 22 z tabelką z książkami wykorzystując konstruktor zamiast tworzyć obiekty literalnie
