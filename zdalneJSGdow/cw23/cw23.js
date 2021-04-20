@@ -39,18 +39,18 @@ document.addEventListener('DOMContentLoaded', function () {
     this.edition = edition;
     this.show = function () {
       return `Tytuł: ${this.title} autor: ${this.author} cena: ${this.price} zł wydawnictwo: ${this.edition}`;
-    };
-
-    const books = [
-      new Book('ABC javascript', 'Mateusz Małecki', 34.67, 'ERA'),
-      new Book('Góry polskie', 'Marian Małecki', 44.67, 'ERA'),
-      new Book('Książka kucharsska', 'Mateusz Małecki', 34.67, 'ERA'),
-      new Book('Inna książka', 'Mateusz Małecki', 34.67, 'ERA'),
-    ];
-    let html = '';
-    for (let b of books) {
-      html += '| ' + b.show();
-    }
-    document.querySelector('#r2').innerHTML = html;
+    };    
   }
+
+  const books = [
+    new Book('ABC javascript', 'Mateusz Małecki', 34.67, 'ERA'),
+    new Book('Góry polskie', 'Marian Małecki', 44.67, 'ERA'),
+    new Book('Książka kucharsska', 'Mateusz Małecki', 34.67, 'ERA'),
+    new Book('Inna książka', 'Mateusz Małecki', 34.67, 'ERA'),
+  ];
+  let html = '';
+  for (let b of books) {
+    html += '| ' + b.show()+"<br>";
+  }
+  document.querySelector('#r2').innerHTML = html;
 });
