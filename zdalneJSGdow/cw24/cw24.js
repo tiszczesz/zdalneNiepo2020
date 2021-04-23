@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };    
   }
 
-
+  console.log(new Book("rrr","fff",45,"HHH"));
   const books = [
      new Book('ABC js','Jan Nowak',34.89,"ERA")  ,   //new Book(.......)
      new Book('Matemetyka','Anna Tryk', 22.89,"ERA") ,
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     html += `<tr><td>${b.title}</td><td> ${b.author}</td><td class="right">${b.price} </td> <td>${b.edition}</td></tr>`;
     sum += b.price;
   }
-  html += '<tr><td colspan="4">Całkowity koszt książek: '+sum.toFixed(2)+' zł</td></tr></table>';
+  html += '<tr><td class="right" colspan="4">Całkowity koszt książek: '+sum.toFixed(2)+' zł</td></tr></table>';
   document.querySelector('#result2').innerHTML = html;
 
 
