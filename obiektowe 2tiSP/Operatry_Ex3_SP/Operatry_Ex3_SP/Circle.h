@@ -21,6 +21,14 @@ public:
 	bool operator<(const Circle& c) {
 		return radius < c.radius;
 	}
+	bool operator>(const Circle& c) {
+		return radius > c.radius;
+	}
+	//w Point juz zdefiniowalem operator ==
+	//
 	//todo srednica kola
+	bool operator==(const Circle& c) {
+		return radius = c.radius && center == c.center;
+	}
 };
 

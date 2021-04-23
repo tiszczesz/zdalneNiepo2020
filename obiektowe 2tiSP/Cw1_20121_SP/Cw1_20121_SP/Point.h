@@ -15,5 +15,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Point& p);
 	friend Point operator+(const Point& p1, const Point p2);
 	friend Point operator-(const Point& p1, const Point p2);
+	//bool operator==(const Point& p) const;
+	friend bool operator==(const Point& p1, const Point& p2);
 };//!!!!!!!!
 

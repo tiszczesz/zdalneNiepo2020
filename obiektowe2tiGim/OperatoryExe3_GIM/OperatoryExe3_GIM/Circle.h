@@ -46,6 +46,12 @@ public:
 	bool operator>(const Circle& c) {
 		return radius > c.radius;
 	}
+	bool operator<(const Circle& c) {
+		return radius < c.radius;
+	}
+	bool operator==(const Circle& c) {
+		return radius == c.radius && center==c.center;
+	}
 	//todo Czy maja wsplna czesc
 	//todo czy maja 1 punkt wspolny
 	//todo czy maja 2 punkty wspolne
