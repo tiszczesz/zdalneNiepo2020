@@ -43,7 +43,7 @@ namespace WinForms_cw1_5Net
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.BooksLitView = new System.Windows.Forms.ListView();
+            this.BooksListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
@@ -87,7 +87,7 @@ namespace WinForms_cw1_5Net
             this.listBoxContacts.ItemHeight = 20;
             this.listBoxContacts.Location = new System.Drawing.Point(0, 0);
             this.listBoxContacts.Name = "listBoxContacts";
-            this.listBoxContacts.Size = new System.Drawing.Size(254, 450);
+            this.listBoxContacts.Size = new System.Drawing.Size(254, 549);
             this.listBoxContacts.TabIndex = 4;
             this.listBoxContacts.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxContacts_MouseDoubleClick);
             // 
@@ -195,22 +195,22 @@ namespace WinForms_cw1_5Net
             this.button5.Text = "Wstaw kontakt";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // BooksLitView
+            // BooksListView
             // 
-            this.BooksLitView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BooksLitView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.BooksListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BooksListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.BooksLitView.GridLines = true;
-            this.BooksLitView.HideSelection = false;
-            this.BooksLitView.Location = new System.Drawing.Point(800, 0);
-            this.BooksLitView.Name = "BooksLitView";
-            this.BooksLitView.Size = new System.Drawing.Size(479, 450);
-            this.BooksLitView.TabIndex = 10;
-            this.BooksLitView.UseCompatibleStateImageBehavior = false;
-            this.BooksLitView.View = System.Windows.Forms.View.Details;
+            this.BooksListView.GridLines = true;
+            this.BooksListView.HideSelection = false;
+            this.BooksListView.Location = new System.Drawing.Point(800, 0);
+            this.BooksListView.Name = "BooksListView";
+            this.BooksListView.Size = new System.Drawing.Size(479, 462);
+            this.BooksListView.TabIndex = 10;
+            this.BooksListView.UseCompatibleStateImageBehavior = false;
+            this.BooksListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -236,8 +236,8 @@ namespace WinForms_cw1_5Net
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1287, 450);
-            this.Controls.Add(this.BooksLitView);
+            this.ClientSize = new System.Drawing.Size(1424, 549);
+            this.Controls.Add(this.BooksListView);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBoxContacts);
@@ -267,7 +267,7 @@ namespace WinForms_cw1_5Net
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListView BooksLitView;
+        private System.Windows.Forms.ListView BooksListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

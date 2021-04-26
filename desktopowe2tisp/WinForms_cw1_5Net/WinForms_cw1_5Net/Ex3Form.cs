@@ -32,8 +32,22 @@ namespace WinForms_cw1_5Net
                 window.GeTextBox().Text += "Załadowano okienko: " + Text + " w czasie: "
                                             + DateTime.Now.ToLongTimeString() + Environment.NewLine;
             }
+
+            fillListViewBooks();
         }
 
+        private void fillListViewBooks() {
+            BooksListView.Items.Clear();
+            int lp = 0;
+
+            lp++;
+            ListViewItem item = new ListViewItem(lp.ToString());
+            item.SubItems.Add(books[0].Title);
+            item.SubItems.Add(books[0].Author);
+            item.SubItems.Add(books[0].Price.ToString());
+            BooksListView.Items.Add(item);
+
+        }
         private void Ex3Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (window != null)
