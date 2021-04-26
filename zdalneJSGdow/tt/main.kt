@@ -11,6 +11,7 @@ class Car(val type:String, val model:Int,val price:Double,val milesDrive:Int, va
 }
 fun main(){
     val car = Car("BMW", 2015, 10000.000, 100, "pszczesz")
-    println(car)
+    val car2 = Car("BMWzzzz", 2015, 10000.000, 100, "pszczesz")
+    println(car2)
 
 }
