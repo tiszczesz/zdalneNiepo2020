@@ -42,7 +42,7 @@ namespace WinForms_cw1_5Net
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.insertBookButton = new System.Windows.Forms.Button();
             this.BooksListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -144,7 +144,7 @@ namespace WinForms_cw1_5Net
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.insertBookButton);
             this.panel2.Location = new System.Drawing.Point(541, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(253, 462);
@@ -186,14 +186,15 @@ namespace WinForms_cw1_5Net
             this.button4.Text = "Wyczyść listę";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // insertBookButton
             // 
-            this.button5.Location = new System.Drawing.Point(28, 128);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(194, 29);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Wstaw kontakt";
-            this.button5.UseVisualStyleBackColor = true;
+            this.insertBookButton.Location = new System.Drawing.Point(28, 128);
+            this.insertBookButton.Name = "insertBookButton";
+            this.insertBookButton.Size = new System.Drawing.Size(194, 29);
+            this.insertBookButton.TabIndex = 5;
+            this.insertBookButton.Text = "Wstaw książkę";
+            this.insertBookButton.UseVisualStyleBackColor = true;
+            this.insertBookButton.Click += new System.EventHandler(this.insertBookButton_Click);
             // 
             // BooksListView
             // 
@@ -266,7 +267,7 @@ namespace WinForms_cw1_5Net
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button insertBookButton;
         private System.Windows.Forms.ListView BooksListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;

@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 
-namespace WinForms_cw1_5Net
-{
+namespace WinForms_cw1_5Net {
     public partial class Ex3Form : Form {
         private MainWindow window;
-        private BindingList<string>  contactsList;
+        private BindingList<string> contactsList;
         private List<Book> books;
+
         public Ex3Form(MainWindow window) {
             this.window = window;
             InitializeComponent();
@@ -25,12 +25,10 @@ namespace WinForms_cw1_5Net
             books = bookRepo.Books;
         }
 
-        private void Ex3Form_Load(object sender, EventArgs e)
-        {
-            if (window != null)
-            {
+        private void Ex3Form_Load(object sender, EventArgs e) {
+            if (window != null) {
                 window.GeTextBox().Text += "Załadowano okienko: " + Text + " w czasie: "
-                                            + DateTime.Now.ToLongTimeString() + Environment.NewLine;
+                                           + DateTime.Now.ToLongTimeString() + Environment.NewLine;
             }
 
             fillListViewBooks();
@@ -40,34 +38,34 @@ namespace WinForms_cw1_5Net
             BooksListView.Items.Clear();
             int lp = 0;
 
-            lp++;
-            ListViewItem item = new ListViewItem(lp.ToString());
-            item.SubItems.Add(books[0].Title);
-            item.SubItems.Add(books[0].Author);
-            item.SubItems.Add(books[0].Price.ToString());
-            BooksListView.Items.Add(item);
-
-        }
-        private void Ex3Form_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (window != null)
-            {
-                window.GeTextBox().Text += "Zamknięto okienko: " + Text + "w czasie: "
-                                            + DateTime.Now.ToLongTimeString() + Environment.NewLine;
+            foreach (var b in books) {
+                lp++;
+                ListViewItem item = new ListViewItem(lp.ToString());
+                item.SubItems.Add(b.Title);
+                item.SubItems.Add(b.Author);
+                item.SubItems.Add(b.Price.ToString());
+                BooksListView.Items.Add(item);
             }
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
+        private void Ex3Form_FormClosed(object sender, FormClosedEventArgs e) {
+            if (window != null) {
+                window.GeTextBox().Text += "Zamknięto okienko: " + Text + "w czasie: "
+                                           + DateTime.Now.ToLongTimeString() + Environment.NewLine;
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e) {
             contactsList.Clear();
         }
 
         private void btnAddNew_Click(object sender, EventArgs e) {
             string contact = txtBoxItem.Text.Trim();
             if (String.IsNullOrEmpty(contact)) {
-                MessageBox.Show("Musisz podać nowy kontakt!!!","UWAGA!!!!");
+                MessageBox.Show("Musisz podać nowy kontakt!!!", "UWAGA!!!!");
                 return;
             }
+
             contactsList.Add(contact);
             txtBoxItem.Text = "";
         }
@@ -77,46 +75,45 @@ namespace WinForms_cw1_5Net
             if (listBoxContacts.SelectedIndex == -1) {
                 return;
             }
+
             string contact = txtBoxItem.Text.Trim();
-            if (String.IsNullOrEmpty(contact))
-            {
+            if (String.IsNullOrEmpty(contact)) {
                 MessageBox.Show("Musisz podać nowy kontakt!!!", "UWAGA!!!!");
                 return;
             }
-            contactsList.Insert(listBoxContacts.SelectedIndex,contact);
+
+            contactsList.Insert(listBoxContacts.SelectedIndex, contact);
             txtBoxItem.Text = "";
         }
 
-        private void btnDeleteContact_Click(object sender, EventArgs e)
-        {
-            if (listBoxContacts.SelectedIndex == -1)
-            {
+        private void btnDeleteContact_Click(object sender, EventArgs e) {
+            if (listBoxContacts.SelectedIndex == -1) {
                 return;
             }
 
             contactsList.Remove((string) listBoxContacts.SelectedItem);
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
+        private void btnEdit_Click(object sender, EventArgs e) {
             //pojawia sie okienki z mozliwoscia zmiany elementu wybranego
-            if (listBoxContacts.SelectedIndex == -1)
-            {
+            if (listBoxContacts.SelectedIndex == -1) {
                 return;
             }
 
             int index = listBoxContacts.SelectedIndex;
             string result = Interaction
                 .InputBox("Zmiana zawartości:", "Update", contactsList[index]);
-            if(String.IsNullOrWhiteSpace(result)) return;
+            if (String.IsNullOrWhiteSpace(result)) return;
             contactsList[index] = result;
-
         }
 
-        private void listBoxContacts_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if(listBoxContacts.SelectedIndex==-1) return;
-            btnEdit_Click(sender,e);
+        private void listBoxContacts_MouseDoubleClick(object sender, MouseEventArgs e) {
+            if (listBoxContacts.SelectedIndex == -1) return;
+            btnEdit_Click(sender, e);
+        }
+
+        private void insertBookButton_Click(object sender, EventArgs e) {
+            new BookDetails(this).ShowDialog();
         }
     }
 }
