@@ -9,6 +9,8 @@ namespace FirstMVC_SP1.Controllers
         }
 
         public IActionResult Action2(int? id) {
+            ViewBag.controller = ControllerContext.ActionDescriptor.ControllerName;
+            ViewBag.action = ControllerContext.ActionDescriptor.ActionName;
             return View(id);
         }
     }

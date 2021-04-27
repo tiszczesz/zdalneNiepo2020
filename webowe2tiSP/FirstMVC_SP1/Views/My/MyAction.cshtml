@@ -1,7 +1,11 @@
 ﻿@model List<FirstMVC_SP1.Models.Person>
 
 
-<h3>Widok z metody MyAction</h3>
+<h3>Widok  z kontrolera: @ViewContext.RouteData.Values["controller"].ToString()  
+    z metody  @ViewContext.RouteData.Values["action"].ToString()</h3>
+
+
+ 
 @foreach (var p in Model) {
     <p>@p.FirstName @p.LastName email: @p.Email</p>
 }
