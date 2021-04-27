@@ -40,7 +40,9 @@ document.addEventListener("DOMContentLoaded",function(){
         new Book('ABC javascript', 'Mateusz Małecki', 34.67, 'ERA'),
         new Book('Góry polskie', 'Marian Małecki', 44.67, 'Tryk'),
         new Book('Książka kucharska', 'Mateusz Małecki', 34.67, 'Helion'),
-        new Book('Inna książka', 'Mateusz Małecki', 34.67, 'ERA'),
+        new Book('rrr książka', 'Mateusz Małecki', 34.67, 'ERA'),
+        new Book('hhh książka', 'Mateusz Małecki', 34.67, 'ERA'),
+        new Book('uuu książka', 'Mateusz Małecki', 34.67, 'ERA'),
       ];
 
 
