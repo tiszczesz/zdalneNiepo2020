@@ -26,3 +26,6 @@ input[type=button]{
 .menu, .result{
     width: 300px;
 }
+#choice{
+    visibility: hidden;
+}

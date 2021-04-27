@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded",function(){
-    document.querySelector("#start").addEventListener("click",function(e){
+    document.querySelector("#start").addEventListener("click",function(){
+        document.querySelector("#choice").style.visibility = "hidden";
         //alert("buum");
         document.querySelector(".table").innerHTML = generTab(rows,cols);
+
         let g1 = new Game(rounds);//start losowania
         let tds = document.querySelectorAll("table.lotto td");
         console.log(tds);
-        tds.forEach(function(e,i){
+        tds.forEach(function(e){
             e.addEventListener("click",function(event){
                 console.log(event.target.innerHTML);
                 if(event.target.style.backgroundColor==="red"){
@@ -18,10 +20,15 @@ document.addEventListener("DOMContentLoaded",function(){
                     }
                     
                 }
+                let btnChoice = document.querySelector("#choice");
+                btnChoice.style.visibility = g1.countTrue(g1.choiceNumbers)<rounds ?
+                      "hidden" :  "visible";                        
                 console.log(g1.getAllTrue(g1.choiceNumbers));
             });
         });
-        
+        document.querySelector("#choice").addEventListener("click",function(){
+            document.querySelector(".result").innerHTML = "To trza zrobić aby wysietlał ilość trafień!!!! TODO";
+        });
        // console.log(g1);
         g1.setRndNumbers();
         //console.log(g1.countTrue(g1.rndNumbers));
@@ -68,9 +75,18 @@ class Game{
         return result;
     }
     getAllTrue(data){
-        let result = [];
+        const result = [];
         for(let i=1;i<data.length;i++){
             if(data[i]===true){
+                result.push(i);
+            }
+        }
+        return result;
+    }
+    checkRandom(){
+        const result = [];
+        for(let i=1;i<this.rndNumbers.length;i++){
+            if(this.rndNumbers[i] && this.choiceNumbers[i]){
                 result.push(i);
             }
         }
