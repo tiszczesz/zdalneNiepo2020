@@ -36,8 +36,18 @@
     while ($row = $r2->fetch_row()) {
         var_dump($row);
     }
+    $sql2 = "SELECT count(*) as ilosc FROM persons";
+    $r3 = $conn->query($sql2);
+    //var_dump($r3->fetch_assoc());
+    echo "<div>{$r3->fetch_assoc()['ilosc']}</div>";
     $conn->close();
     ?>
+    <div>
+        <a href="addNew.php">Dodaj nowy rekord</a>
+    </div>
+    <div>
+        <a href="delete.php">Usuwanie rekordów</a>
+    </div>
 </body>
 
 </html>
