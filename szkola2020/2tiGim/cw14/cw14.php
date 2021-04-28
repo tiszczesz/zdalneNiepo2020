@@ -12,6 +12,7 @@
 
 <body>
 <!-- todo aplikacja CR(U)D -->
+<div class="container">
     <h1>Ćwiczenie 14 mysqli - c.d.</h1>
     <?php
     require_once "functions.php";
@@ -24,6 +25,8 @@
     <div>
         <a class="btn btn-secondary p-3" href="addNew.html">Dodaj nowy rekord</a>
     </div>
+</div>
+    
  
 </body>
 

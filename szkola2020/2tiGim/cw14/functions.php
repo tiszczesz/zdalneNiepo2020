@@ -36,7 +36,19 @@ function daneToTable(array $dane): string {
     $lp = 0;
     foreach($dane as $row){
         $lp++;
-        $html .= "<tr><td>{$lp}</td><td>{$row[1]}</td><td>{$row[2]}</td><td>{$row[3]}</td><td></td></tr>";
+        $html .= "<tr><td>{$lp}</td><td>{$row[1]}</td><td>{$row[2]}</td><td>{$row[3]}</td>"
+                ."<td><a class='btn btn-info m-1' href='edit.php?id={$row[0]}'>Edytuj</a>" 
+                ."<a class='btn btn-danger m-1' href='delete.php?id={$row[0]}'>Usuń</a></td></tr>";
     }
     return $html."</table>";
+}
+
+function insertNew(array $dane):bool {
+    $conn = getConnection();
+    $sqlInsert = "INSERT INTO contacts(firstName,lastName,email) values('{$dane[0]}','{$dane[1]}','{$dane[2]}')";
+   // echo $sqlInsert;
+    $result = $conn->query($sqlInsert);
+
+    $conn->close();
+    return $result;
 }

@@ -10,9 +10,29 @@
 </head>
 <body>
     <h1>Dodawanie nowego rekordu</h1>
-    <div>
-        <form method="post" action="addNew.php">
-            <div class="control-group"></div>
+    <div class="container">
+        <form class="form" method="post" action="addNew.php">
+            <div class="form-group mt-3">
+              <label for="imie">Imię: </label>
+              <input type="text" name="imie" id="imie" class="form-control" placeholder="" aria-describedby="helpId">
+              
+            </div>
+            <div class="form-group mt-3">
+              <label for="nazwisko">Nazwisko</label>
+              <input type="text" name="nazwisko" id="nazwisko" class="form-control" placeholder="" aria-describedby="helpId">
+              
+            </div>
+            <div class="form-group mt-3">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" class="form-control" placeholder="" aria-describedby="helpId">
+              
+            </div>
+            <div class="form-group mt-3">
+              
+              <input type="submit" class="btn btn-dark" value="Zapisz" >
+              
+            </div>
+            
         </form>
     </div>
 </body>
