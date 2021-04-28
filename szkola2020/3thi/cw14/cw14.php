@@ -23,7 +23,7 @@
     $r = $conn->query("SET NAMES utf8");
 
     // var_dump($r);
-    $r2 = $conn->query("SELECT * FROM persons WHERE firstName like '%a'");
+    $r2 = $conn->query("SELECT * FROM persons");
     // var_dump($r2);
 
     // $row = $r2->fetch_all();
@@ -47,6 +47,9 @@
     </div>
     <div>
         <a href="delete.php">Usuwanie rekordów</a>
+    </div>
+    <div>
+        <a href="edit.php">Edytowanie rekordów</a>
     </div>
 </body>
 

@@ -19,7 +19,7 @@
      
          $r = $conn->query("SET NAMES utf8");
      
-        $sqlInsert = "INSERT INTO personss(firstName,lastName,phone) VALUES ('TEST','TEST','XXXXXXXXX')";
+        $sqlInsert = "INSERT INTO persons(firstName,lastName,phone) VALUES ('TEST','TEST','XXXXXXXXX')";
         $r2 = $conn->query($sqlInsert);
          if($r2==true){
              echo "<div>Zapisano do bazy</div>";
