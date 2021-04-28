@@ -112,6 +112,7 @@ namespace FirstWinForms_GIM {
         public void InsertNewFilm(Film film) {
             if (listViewDemo.SelectedIndices != null && listViewDemo.SelectedIndices.Count > 0) {
                 Filmy.Insert(listViewDemo.SelectedIndices[0], film);
+                
                 FillListViewDemo();
             }
             
@@ -141,11 +142,17 @@ namespace FirstWinForms_GIM {
 
         private void editFilmButton_Click(object sender, EventArgs e) {
             if (listViewDemo.SelectedIndices != null && listViewDemo.SelectedIndices.Count > 0) {
-                //todo
+                Action = ActionAdd.updateFilm;
+                NewFilmDetails details = new NewFilmDetails(this);
+                details.ShowDialog();
             }
             else {
                 MessageBox.Show("Nie wybrano elementu listy!!");
             }
+        }
+
+        public ListView GetListView() {
+            return listViewDemo;
         }
     }
 }

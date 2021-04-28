@@ -125,6 +125,7 @@ namespace FirstWinForms_GIM
             this.MinimizeBox = false;
             this.Name = "NewFilmDetails";
             this.Text = "Dodaj nowy film";
+            this.Load += new System.EventHandler(this.NewFilmDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
