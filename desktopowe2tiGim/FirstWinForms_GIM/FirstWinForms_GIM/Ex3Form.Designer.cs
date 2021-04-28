@@ -47,6 +47,7 @@ namespace FirstWinForms_GIM
             this.insertFimButton = new System.Windows.Forms.Button();
             this.btnClearAllFilms = new System.Windows.Forms.Button();
             this.btnAddNewFilm = new System.Windows.Forms.Button();
+            this.editFilmButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -141,6 +142,7 @@ namespace FirstWinForms_GIM
             this.listViewDemo.GridLines = true;
             this.listViewDemo.HideSelection = false;
             this.listViewDemo.Location = new System.Drawing.Point(659, 79);
+            this.listViewDemo.MultiSelect = false;
             this.listViewDemo.Name = "listViewDemo";
             this.listViewDemo.Size = new System.Drawing.Size(521, 571);
             this.listViewDemo.TabIndex = 9;
@@ -183,6 +185,7 @@ namespace FirstWinForms_GIM
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel2.Controls.Add(this.editFilmButton);
             this.panel2.Controls.Add(this.insertFimButton);
             this.panel2.Controls.Add(this.btnClearAllFilms);
             this.panel2.Controls.Add(this.btnAddNewFilm);
@@ -220,6 +223,16 @@ namespace FirstWinForms_GIM
             this.btnAddNewFilm.Text = "Dodaj nowy film";
             this.btnAddNewFilm.UseVisualStyleBackColor = true;
             this.btnAddNewFilm.Click += new System.EventHandler(this.btnAddNewFilm_Click);
+            // 
+            // editFilmButton
+            // 
+            this.editFilmButton.Location = new System.Drawing.Point(14, 158);
+            this.editFilmButton.Name = "editFilmButton";
+            this.editFilmButton.Size = new System.Drawing.Size(316, 29);
+            this.editFilmButton.TabIndex = 5;
+            this.editFilmButton.Text = "Edytuj WYBRANY film";
+            this.editFilmButton.UseVisualStyleBackColor = true;
+            this.editFilmButton.Click += new System.EventHandler(this.editFilmButton_Click);
             // 
             // Ex3Form
             // 
@@ -262,5 +275,6 @@ namespace FirstWinForms_GIM
         private System.Windows.Forms.Button insertFimButton;
         private System.Windows.Forms.Button btnClearAllFilms;
         private System.Windows.Forms.Button btnAddNewFilm;
+        private System.Windows.Forms.Button editFilmButton;
     }
 }

@@ -29,11 +29,11 @@ namespace FirstMVC_SP1
             app.UseRouting();
 
             app.UseEndpoints(endpoints => {
-                endpoints.MapDefaultControllerRoute();  //Home   Index
-               //endpoints.MapControllerRoute(
-               //    name: "default",
-               //    pattern: "{controller=My}/{action=MyAction}/{id?}"
-               //);
+                // endpoints.MapDefaultControllerRoute();  //Home   Index
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=My}/{action=MyAction}/{id?}"
+                );
             });
         }
     }

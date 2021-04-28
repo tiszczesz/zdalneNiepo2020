@@ -16,7 +16,7 @@ namespace FirstWinForms_GIM {
         public ContactsList Contacts { get; set; } = new ContactsList();
         public List<Film> Filmy = FilmsList.GetFilms();
         public ActionAdd Action { get; set; }
-        
+
 
         public Ex3Form(MainWindow window) {
             InitializeComponent();
@@ -24,8 +24,6 @@ namespace FirstWinForms_GIM {
             window.GeTextBox().Text += "Utworzono okienko: " + this.Text + Environment.NewLine;
 
             lBoxImiona.DataSource = Contacts.List;
-            
-
         }
 
         private void Ex3Form_FormClosed(object sender, FormClosedEventArgs e) {
@@ -94,34 +92,32 @@ namespace FirstWinForms_GIM {
         private void FillListViewDemo() {
             listViewDemo.Items.Clear();
             int lp = 0;
-            foreach (var f in Filmy)
-            {
+            foreach (var f in Filmy) {
                 lp++;
                 ListViewItem i1 = new ListViewItem(lp.ToString()); // <tr>
                 //tworzenie nowego wiersza z elementow filmu (ram)
-                i1.SubItems.Add(f.Title);  // <td>
+                i1.SubItems.Add(f.Title); // <td>
                 i1.SubItems.Add(f.Author);
                 i1.SubItems.Add(f.Price.ToString());
                 //dodawanie wiersza do kontrolki ListView(listViewDemo)
                 listViewDemo.Items.Add(i1);
             }
-
         }
 
         public void AddNewFilm(Film film) {
-           
-            Filmy.Add(film);
-            FillListViewDemo();
-        }
-        public void InsertNewFilm(Film film)
-        {
-
             Filmy.Add(film);
             FillListViewDemo();
         }
 
-        private void btnClearAllFilms_Click(object sender, EventArgs e)
-        {
+        public void InsertNewFilm(Film film) {
+            if (listViewDemo.SelectedIndices != null && listViewDemo.SelectedIndices.Count > 0) {
+                Filmy.Insert(listViewDemo.SelectedIndices[0], film);
+                FillListViewDemo();
+            }
+            
+        }
+
+        private void btnClearAllFilms_Click(object sender, EventArgs e) {
             listViewDemo.Items.Clear();
             Filmy.Clear();
         }
@@ -133,9 +129,23 @@ namespace FirstWinForms_GIM {
         }
 
         private void insertFimButton_Click(object sender, EventArgs e) {
-            Action = ActionAdd.insertNewFilm;
-            NewFilmDetails details = new NewFilmDetails(this);
-            details.ShowDialog();
+            if (listViewDemo.SelectedIndices != null && listViewDemo.SelectedIndices.Count > 0) {
+                Action = ActionAdd.insertNewFilm;
+                NewFilmDetails details = new NewFilmDetails(this);
+                details.ShowDialog();
+            }
+            else {
+                MessageBox.Show("Nie wybrano elementu listy!!");
+            }
+        }
+
+        private void editFilmButton_Click(object sender, EventArgs e) {
+            if (listViewDemo.SelectedIndices != null && listViewDemo.SelectedIndices.Count > 0) {
+                //todo
+            }
+            else {
+                MessageBox.Show("Nie wybrano elementu listy!!");
+            }
         }
     }
 }
