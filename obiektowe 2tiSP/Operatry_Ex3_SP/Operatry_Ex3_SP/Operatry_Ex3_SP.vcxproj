@@ -20,12 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Cw1_20121_SP\Cw1_20121_SP\Circle.cpp" />
-    <ClCompile Include="..\..\Cw1_20121_SP\Cw1_20121_SP\Point.cpp" />
+    <ClCompile Include="Point.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Cw1_20121_SP\Cw1_20121_SP\Circle.h" />
-    <ClInclude Include="..\..\Cw1_20121_SP\Cw1_20121_SP\Point.h" />
+    <ClInclude Include="Point.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
