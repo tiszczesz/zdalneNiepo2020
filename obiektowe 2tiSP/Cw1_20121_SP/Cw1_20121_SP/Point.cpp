@@ -31,9 +31,6 @@ Point operator-(const Point& p1, const Point p2) {
 	result.y = p1.y - p2.y;
 	return result;
 }
-bool operator==(const Point& c1,const Point& c2) {
-	return c1.x==c2.x && c1.y == c2.y;
-}
 
 //bool Point::operator==(const Point& p) const {
 //	return x == p.x && y == p.y;

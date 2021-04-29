@@ -1,3 +1,7 @@
 ﻿  cw1SP.cpp
-D:\zdalne\zdalneNiepo2020\obiektowe 2tiSP\cw1SP\cw1SP\cw1SP.cpp(34,16): warning C4018: '<': signed/unsigned mismatch
-  cw1SP.vcxproj -> D:\zdalne\zdalneNiepo2020\obiektowe 2tiSP\cw1SP\Debug\cw1SP.exe
+E:\tools\GitHub\zdalneNiepo2020\obiektowe 2tiSP\cw1SP\cw1SP\cw1SP.cpp(34,16): warning C4018: '<': signed/unsigned mismatch
+  functions.cpp
+E:\tools\GitHub\zdalneNiepo2020\obiektowe 2tiSP\cw1SP\cw1SP\functions.cpp(29,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+E:\tools\GitHub\zdalneNiepo2020\obiektowe 2tiSP\cw1SP\cw1SP\functions.cpp(45,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  cw1SP.vcxproj -> E:\tools\GitHub\zdalneNiepo2020\obiektowe 2tiSP\cw1SP\Debug\cw1SP.exe
