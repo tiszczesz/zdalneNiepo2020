@@ -17,4 +17,5 @@ h1{
     .menu ul li a {
         text-decoration: none;
         text-transform: uppercase;
+        color: black;
     }

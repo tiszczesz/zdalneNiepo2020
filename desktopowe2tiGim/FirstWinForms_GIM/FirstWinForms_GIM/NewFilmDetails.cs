@@ -31,7 +31,9 @@ namespace FirstWinForms_GIM {
                     InsertFilm();
                     break;
                 case ActionAdd.updateFilm:
+                    //todo
                     UpdateFilm();
+                    
                     break;
             }
         }
@@ -88,7 +90,19 @@ namespace FirstWinForms_GIM {
         }
 
         private void UpdateFilm() {
-            //todo
+           
+        }
+
+        private void NewFilmDetails_Load(object sender, EventArgs e)
+        {
+            if (parent.Action == ActionAdd.updateFilm) {
+                ListView filmyListView = parent.GetListView();
+                int index = filmyListView.SelectedIndices[0];
+                var dd = filmyListView.Items[index].SubItems;
+                titleTexBox.Text = filmyListView.Items[index].SubItems[1].Text;
+                authorTextBox.Text = filmyListView.Items[index].SubItems[2].Text;
+                priceTextBox.Text = filmyListView.Items[index].SubItems[3].Text;
+            }
         }
     }
 }
