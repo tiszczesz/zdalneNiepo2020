@@ -17,6 +17,7 @@ h1{text-align: center; border-bottom: 1px;margin-bottom: 30px;}
 input[type=button]{
     width: 200px;
     padding: 8px;
+    margin-bottom: 10px;
 }
 .container{
     display: flex;
@@ -28,4 +29,12 @@ input[type=button]{
 }
 #choice{
     visibility: hidden;
+}
+.result{
+    font-size: 1.2;
+    color: blue;
+    font-weight: bold;
+}
+.randoms{
+    color:lightsalmon;
 }

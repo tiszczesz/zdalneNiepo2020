@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded",function(){
         let g1 = new Game(rounds);//start losowania
         let tds = document.querySelectorAll("table.lotto td");
         console.log(tds);
+        document.querySelector(".result").innerHTML = ""; //czyszczenie wyników na stronie
+
         tds.forEach(function(e){
             e.addEventListener("click",function(event){
                 console.log(event.target.innerHTML);
@@ -26,9 +28,20 @@ document.addEventListener("DOMContentLoaded",function(){
                 console.log(g1.getAllTrue(g1.choiceNumbers));
             });
         });
+
         document.querySelector("#choice").addEventListener("click",function(){
-            document.querySelector(".result").innerHTML = "To trza zrobić aby wysietlał ilość trafień!!!! TODO";
+            document.querySelector(".result").innerHTML = g1.showRandomNumbers();
+            tds.forEach(function(v,i){
+               // console.log(v.innerHTML);
+               let numbers = g1.getAllTrue(g1.rndNumbers);
+              // alert(numbers.length);
+               if(numbers.includes(parseInt(v.innerHTML))){
+                   console.log("OK");
+                   v.className = "randoms";
+               }
+            })
         });
+
        // console.log(g1);
         g1.setRndNumbers();
         //console.log(g1.countTrue(g1.rndNumbers));
@@ -91,5 +104,18 @@ class Game{
             }
         }
         return result;
+    }
+    showRandomNumbers(){
+        let html = "";
+        let numbers = this.checkRandom();
+        if(numbers.length>0){
+             this.checkRandom().forEach(function(v){
+            html += v+" ";
+        })
+        }else{
+            html += "Nie trafiono żadnej liczby";
+        }
+       
+        return `<div class='result'>Trafione  liczby: ${html} </div>`;
     }
 }
