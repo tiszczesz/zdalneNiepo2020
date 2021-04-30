@@ -1,0 +1,38 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#left, #right{
+    background-color: rgb(197, 85, 160);
+    text-align: center;
+    width: 50%;
+    height: 180px;
+    float: left;
+}
+#baner, #stopka{
+    background-color: rgb(246, 226, 222);
+    height: 100px;
+    padding: 10px;
+    clear: both;
+}
+#lewy, #prawy{
+    float: left;
+    background-color: rgb(197, 85, 160);
+    color: white;
+    width: 50%;
+    height: 400px;
+}
+#right a{
+    padding-right: 70px;
+    padding-bottom: 120px;
+    font-size: 150%;
+    text-decoration: none;
+}
+table, td {
+    border: 2px solid blue;
+    margin: 20px;
+    padding: 10px;
+}
+h2{
+    letter-spacing: 10px;
+    font-size: 200%;
+}
