@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",function(){
             case '1' : wybranyKsztlt = 'miś'; break;
             case '2' : wybranyKsztlt = 'żabka'; break;
             case '3' : wybranyKsztlt = 'serce'; break;
-            case 'inny' : wybranyKsztlt = 'inny'; break;
+            default : wybranyKsztlt = 'inny kształt'; break;
         }
         document.querySelector("#wynik").innerHTML = "Zamówiłeś żelka: "+wybranyKsztlt;
     });
