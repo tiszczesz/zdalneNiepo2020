@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace KursWebAPI_1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class HomeController : ControllerBase
     {
+        [HttpGet]
+        public IEnumerable<Book> Get() {
+            return BooksRepo.GetBooks();
+        }
     }
 }
