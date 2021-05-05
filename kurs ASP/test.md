@@ -63,3 +63,24 @@ https://dotnet.microsoft.com/apps/aspnet
             return books;
         }
    ```
+
+   ### przerwane PipeLine
+
+   ```cs 
+   app.Run(content=>content.Response.WriteAsync("Hello from !!!!"));
+
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapRazorPages();
+    });
+```
+    
+
+    ```cs
+
+    app.Run(content=>
+                    content.Response.WriteAsync("<a href='http://onet.pl'>onet</a> <script>window.location.href=\"http://onet.pl\";</script>"));
+
+
+```
+
