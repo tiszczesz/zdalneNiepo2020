@@ -19,3 +19,47 @@ https://dotnet.microsoft.com/apps/aspnet
 `dotnet -h  dotnet --help` 
 
 `dotnet --info`
+
+## Narzędzia pracy z kodem
+1. Visual studio 2019  https://visualstudio.microsoft.com/pl/vs/
+2. Rider JetBrains https://www.jetbrains.com/rider/
+3. Visual studio code https://code.visualstudio.com/
+4. Narzędzie Azure Data Studio https://docs.microsoft.com/pl-pl/sql/azure-data-studio/what-is-azure-data-studio?view=sql-server-ver15
+   
+   ## StarUp
+
+   ```cs
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "KursWebAPI_1 v1"));
+            }
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+   ```
+
+   ### Cwiczenie 1
+   ```cs
+    public static List<Book> GetBooks() {
+            List<Book> books = new List<Book> {
+                new Book(){Id = 1,Title = "ABC c#",Author = "Jan Kowalski",Price = 34.78M},
+                new Book(){Id = 2,Title = "Mrówki",Author = "Jan Nowak",Price = 55.89M},
+                new Book(){Id = 3,Title = "ABC c#",Author = "Maria Molicka",Price = 34.78M},
+                new Book(){Id = 4,Title = "Książka kucharska",Author = "Irena Santor",Price = 45.90M},
+                new Book(){Id = 5,Title = "Kraków nocą",Author = "Mateusz Jon",Price = 34.78M},
+                new Book(){Id = 6,Title = "Góry Polskie",Author = "Adam Tryk",Price = 44.78M},
+                new Book(){Id = 7,Title = "444-44",Author = "Jan Kowalski",Price = 22.78M},
+            };
+            return books;
+        }
+   ```
