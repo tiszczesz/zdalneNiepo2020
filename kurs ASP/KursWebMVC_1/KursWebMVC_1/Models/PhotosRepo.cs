@@ -29,7 +29,7 @@ namespace KursWebMVC_1.Models {
                     ImageMimeType = "image/jpeg",
                     CreateDate = DateTime.Today
                 },
-                new() {
+                new () {
                     PhotoID = 4,
                     Title = "Ripples",
                     Description = "Interesting reflections and colors in this marine shot.",
