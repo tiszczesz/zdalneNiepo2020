@@ -14,11 +14,13 @@ Narzędzie pracy  `dotnet`
 
 https://dotnet.microsoft.com/apps/aspnet    
 
-`dotnet --version`
+```console
+dotnet --version
+dotnet -h  dotnet --help
+dotnet --info
+dotnet new --list
+```
 
-`dotnet -h  dotnet --help` 
-
-`dotnet --info`
 
 ## Narzędzia pracy z kodem
 1. Visual studio 2019  https://visualstudio.microsoft.com/pl/vs/
