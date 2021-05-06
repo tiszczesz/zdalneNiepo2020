@@ -73,14 +73,15 @@ https://dotnet.microsoft.com/apps/aspnet
     {
         endpoints.MapRazorPages();
     });
-```
+    ```
     
-
-    ```cs
-
-    app.Run(content=>
-                    content.Response.WriteAsync("<a href='http://onet.pl'>onet</a> <script>window.location.href=\"http://onet.pl\";</script>"));
+ ### Przykład użycia:
 
 
+```cs
+app.Run(content=> content.Response
+  .WriteAsync("<a href='http://onet.pl'>onet</a> <script>window.location.href=\"http://onet.pl\";</script>"));
 ```
+
+
 
