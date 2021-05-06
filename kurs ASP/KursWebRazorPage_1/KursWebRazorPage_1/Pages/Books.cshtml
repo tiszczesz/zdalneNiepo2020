@@ -1,0 +1,47 @@
+﻿@page
+@model KursWebRazorPage_1.Pages.BooksModel
+@{
+}
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Lp</th>
+            <th>Tytuł</th>
+            <th>Autor</th>
+            <th>Cena</th>
+        </tr>
+        @{ var lp = 0;
+        }
+        @foreach (var b in Model.Books)
+        {
+            lp++;
+
+            <tr>
+                <td class="text-right">@lp</td>
+                <td>@b.Title</td>
+                <td>@b.Author</td>
+                <td class="text-right">@b.Price.ToString("C2")</td>
+            </tr>
+        }
+        @if (Model.Books.Count > 0)
+        {
+            <tr class="bg-light font-weight-bold text-right">
+                <td colspan="3">Suma: </td>
+                <td>@Model.Books.Sum(b => b.Price).ToString("C2")</td>
+            </tr>
+            <tr class="bg-light font-weight-bold text-right">
+                <td  colspan="3">Średnia: </td>
+                <td>@Math.Round(Model.Books.Average(b=>b.Price),2) zł</td>
+            </tr><tr class="bg-light font-weight-bold text-right">
+                <td  colspan="3">Średnia: </td>
+                <td>@Model.Books.Average(b=>b.Price).ToString("C2")</td>
+            </tr>
+        }
+        else {
+            <tr>
+                <td colspan="4">Brak danych!!!</td>
+            </tr>
+        }
+
+    </table>
+</div>

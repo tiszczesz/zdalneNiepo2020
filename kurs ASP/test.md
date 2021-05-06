@@ -28,7 +28,23 @@ dotnet new --list
 3. Visual studio code https://code.visualstudio.com/
 4. Narzędzie Azure Data Studio https://docs.microsoft.com/pl-pl/sql/azure-data-studio/what-is-azure-data-studio?view=sql-server-ver15
    
-   ## StarUp
+   ## StartUp
+
+   ### Aplikacja Razor Pages
+
+   ```console
+    dotnet new webapp -o MyApp
+
+   ```
+
+   ### metoda klasy StartUp
+
+   ```cs
+    public void ConfigureServices(IServiceCollection services)
+            {
+                services.AddRazorPages();
+            }
+   ```
 
    ```cs
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -85,5 +101,18 @@ app.Run(content=> content.Response
   .WriteAsync("<a href='http://onet.pl'>onet</a> <script>window.location.href=\"http://onet.pl\";</script>"));
 ```
 
+## Aplikacje MVC
 
+```console
+dotnet new mvc -o MyApp
+```
+
+### Metody klasy StartUp
+
+```cs
+ public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllersWithViews();
+        }
+```
 
