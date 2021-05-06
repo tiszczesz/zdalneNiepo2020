@@ -47,6 +47,8 @@ namespace KursWebMVC_1
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+               // endpoints.MapDefaultControllerRoute();
             });
         }
     }
