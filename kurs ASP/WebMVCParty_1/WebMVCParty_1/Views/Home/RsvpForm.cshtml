@@ -13,22 +13,21 @@
 </head>
 <body>
 <div>
-    To jest RsvpForm.cshtml  View
-    Kontroler: @ViewContext?.RouteData.Values["controller"]?.ToString()
-    Akcja: @ViewContext?.RouteData.Values["action"]?.ToString()
+    Formularz zgłoszeniowy
 </div>
 <form asp-action="RsvpForm" method="post">
+    <div asp-validation-summary="All"></div>
     <div>
         <label asp-for="Name">Twoje imię: </label>
-        <input asp-for="Name" />
+        <input asp-for="Name"/>
     </div>
     <div>
         <label asp-for="Email">Twoj email: </label>
-        <input asp-for="Email" />
+        <input asp-for="Email"/>
     </div>
     <div>
         <label asp-for="Phone">Twoj telefon: </label>
-        <input asp-for="Phone" />
+        <input asp-for="Phone"/>
     </div>
     <div>
         <label>Czy przyjdziesz?: </label>
