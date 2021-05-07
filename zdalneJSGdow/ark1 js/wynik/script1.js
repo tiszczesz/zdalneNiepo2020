@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",function(){
     document.querySelector("#zamow").addEventListener("click",function(){
         let ksztalt = document.querySelector("#ksztalt").value;
-        let wybranyKsztlt = 1;
+        let wybranyKsztlt = "inny kształt";
         switch(ksztalt){
             case '1' : wybranyKsztlt = 'miś'; break;
             case '2' : wybranyKsztlt = 'żabka'; break;
