@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<GuestResponse>
 @{
+    Layout = null;
 }
+<!--todo do tabelki-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responses</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Nazwa</th><th>Email</th><th>Telefon</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var r in Model) {
+        <tr>
+            <td>@r.Name</td><td>@r.Email</td><td>@r.Phone</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+</body>
+</html>
