@@ -23,9 +23,16 @@ namespace WebMVCParty_1.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
+        [HttpGet]
+        public ViewResult RsvpForm() {
             return View();
+        }
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            //todo przechwycenie danych z formularza
+            Repository.AddResponse(guestResponse);
+            return View("Thanks",guestResponse);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

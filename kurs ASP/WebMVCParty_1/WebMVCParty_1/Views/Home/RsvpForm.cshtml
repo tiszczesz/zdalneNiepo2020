@@ -1,0 +1,45 @@
+﻿@model WebMVCParty_1.Models.GuestResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RsvpForm</title>
+</head>
+<body>
+<div>
+    To jest RsvpForm.cshtml  View
+    Kontroler: @ViewContext?.RouteData.Values["controller"]?.ToString()
+    Akcja: @ViewContext?.RouteData.Values["action"]?.ToString()
+</div>
+<form asp-action="RsvpForm" method="post">
+    <div>
+        <label asp-for="Name">Twoje imię: </label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Email">Twoj email: </label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Phone">Twoj telefon: </label>
+        <input asp-for="Phone" />
+    </div>
+    <div>
+        <label>Czy przyjdziesz?: </label>
+        <select asp-for="WillAttend">
+            <option value="">Wybierz opcję</option>
+            <option value="true">Ok będę</option>
+            <option value="false">Niestety nie</option>
+        </select>
+    </div>
+    <button type="submit">Zatwierdź</button>
+</form>
+
+</body>
+</html>
