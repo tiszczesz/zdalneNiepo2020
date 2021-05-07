@@ -8,15 +8,16 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
     <title>Party</title>
 </head>
 <body>
-<div>
-    <div>
-        Zapraszamy na WSPANIAŁE PARTY<br/>
-        (Weź coś ze sobą do żarła i...)
-    </div>
-    <a asp-action="RsvpForm">Formularz zgłoszeniowy</a>
+<div class="text-center">
+    
+    <h3 class="border border-bottom">Zapraszamy na WSPANIAŁE PARTY</h3>
+    <h4>(Weź coś ze sobą do żarła i...)</h4> 
+    
+    <a class="btn btn-primary p-2" asp-action="RsvpForm">Formularz zgłoszeniowy</a>
 </div>
 
 </body>

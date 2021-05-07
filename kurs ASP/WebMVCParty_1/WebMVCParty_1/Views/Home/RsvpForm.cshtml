@@ -9,37 +9,41 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="~/css/StyleSheet.css"/>
     <title>RsvpForm</title>
 </head>
 <body>
-<div>
-    Formularz zgłoszeniowy
+<div class="container">
+    <div class="bg-primary text-center m-2 p-2 text-white">
+        Formularz zgłoszeniowy
+    </div>
+    <form asp-action="RsvpForm" method="post" class="m-2">
+        <div asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="Name">Twoje imię: </label>
+            <input asp-for="Name" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">Twoj email: </label>
+            <input asp-for="Email" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label asp-for="Phone">Twoj telefon: </label>
+            <input asp-for="Phone" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Czy przyjdziesz?: </label>
+            <select asp-for="WillAttend" class="form-control">
+                <option value="">Wybierz opcję</option>
+                <option value="true">Ok będę</option>
+                <option value="false">Niestety nie</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary p-2">Zatwierdź</button>
+    </form>
+
 </div>
-<form asp-action="RsvpForm" method="post">
-    <div asp-validation-summary="All"></div>
-    <div>
-        <label asp-for="Name">Twoje imię: </label>
-        <input asp-for="Name"/>
-    </div>
-    <div>
-        <label asp-for="Email">Twoj email: </label>
-        <input asp-for="Email"/>
-    </div>
-    <div>
-        <label asp-for="Phone">Twoj telefon: </label>
-        <input asp-for="Phone"/>
-    </div>
-    <div>
-        <label>Czy przyjdziesz?: </label>
-        <select asp-for="WillAttend">
-            <option value="">Wybierz opcję</option>
-            <option value="true">Ok będę</option>
-            <option value="false">Niestety nie</option>
-        </select>
-    </div>
-    <button type="submit">Zatwierdź</button>
-</form>
 
 </body>
 </html>

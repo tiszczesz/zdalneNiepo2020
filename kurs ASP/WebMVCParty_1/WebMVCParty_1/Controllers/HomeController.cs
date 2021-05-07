@@ -27,9 +27,9 @@ namespace WebMVCParty_1.Controllers {
                 Repository.AddResponse(guestResponse);
                 return View("Thanks", guestResponse);
             }
-            else {
-                return View();
-            }
+            
+            return View();
+            
         }
 
         public ViewResult ListResponses() {
