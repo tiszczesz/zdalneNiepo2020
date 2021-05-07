@@ -35,6 +35,12 @@ namespace WebMVCParty_1.Controllers
             return View("Thanks",guestResponse);
         }
 
+        public ViewResult ListResponses() {
+            return View(Repository
+                .Responses.Where(r => r.WillAttend == true));
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
