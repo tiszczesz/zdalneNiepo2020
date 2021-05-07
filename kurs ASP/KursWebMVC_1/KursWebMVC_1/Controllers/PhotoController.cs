@@ -15,13 +15,20 @@ namespace KursWebMVC_1.Controllers
 
         public PhotoController(IWebHostEnvironment env) {
             this.env = env;
-            this.photos = PhotosRepo.GetPhotos();
+           // this.photos = PhotosRepo.GetPhotos();
         }
         public IActionResult Index() {
             photos = PhotosRepo.GetPhotos();
             return View(photos);
         }
 
+        public IActionResult Details(int? id) {
+            if (id == null) return NotFound();
+            photos = PhotosRepo.GetPhotos();
+            Photo photo = photos.FirstOrDefault(p => p.PhotoID == id);
+            if (photo == null) return NotFound();
+            return View(photo);
+        }
         public string GetPathImage(int PhotoId) {
             Photo requstedPhoto = photos.FirstOrDefault(p => p.PhotoID == PhotoId);
             //string webRootPath = env.WebRootPath;

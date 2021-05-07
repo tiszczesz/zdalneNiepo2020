@@ -1,0 +1,28 @@
+﻿@model KursWebMVC_1.Models.Photo
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - KursWebMVC_1</title>
+    <link rel="stylesheet" href="~/css/detailsStyle.css"/>
+</head>
+<body>
+<h1>Tu będzie obrazek o id: @Model.PhotoID</h1>
+<div>
+    <div>Tytuł obrazka: @Model.Title</div>
+    <div>
+        <img src="~/images/@Model.PhotoFileName" alt="obrazek" />
+    </div>
+    <div>
+        Opis obrazka: @Model.Description
+    </div>
+    <div>
+        Data utworzenia: @Model.CreateDate
+    </div>
+</div>
+</body>
+</html>
