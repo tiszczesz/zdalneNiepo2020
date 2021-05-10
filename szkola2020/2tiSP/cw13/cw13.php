@@ -53,5 +53,6 @@
     $conn->close();
     ?>
     <div><a href="addNew.php">Dodaj książkę domyślną</a></div>
+    <div><a href="delete.php">Usuń zbędne książki</a></div>
 </body>
 </html>
