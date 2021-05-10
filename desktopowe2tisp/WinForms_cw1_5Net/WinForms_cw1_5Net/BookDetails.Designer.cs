@@ -95,6 +95,7 @@ namespace WinForms_cw1_5Net
             this.OkButton.TabIndex = 6;
             this.OkButton.Text = "OK";
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // cancelButton
             // 
@@ -104,6 +105,7 @@ namespace WinForms_cw1_5Net
             this.cancelButton.TabIndex = 7;
             this.cancelButton.Text = "Anuluj";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // BookDetails
             // 

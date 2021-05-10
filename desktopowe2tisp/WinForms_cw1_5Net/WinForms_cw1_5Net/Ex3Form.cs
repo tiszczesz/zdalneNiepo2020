@@ -14,6 +14,7 @@ namespace WinForms_cw1_5Net {
         private MainWindow window;
         private BindingList<string> contactsList;
         private List<Book> books;
+        public BookAction Action { get; set; }
 
         public Ex3Form(MainWindow window) {
             this.window = window;
@@ -113,7 +114,37 @@ namespace WinForms_cw1_5Net {
         }
 
         private void insertBookButton_Click(object sender, EventArgs e) {
+          //  if(BooksListView.SelectedItems[0]!=-1)
             new BookDetails(this).ShowDialog();
+        }
+
+     
+
+        private void clearAllButton_Click(object sender, EventArgs e)
+        {
+            if (books != null)
+            {
+                books.Clear();
+                fillListViewBooks();
+               // BooksListView.Items.Clear();
+            }
+
+        }
+
+        private void addNewButton_Click(object sender, EventArgs e) {
+            Action = BookAction.ActionAdd;
+            new BookDetails(this).ShowDialog();
+
+        }
+
+        public void AddNewBook(Book b) {
+            books.Add(b);
+            fillListViewBooks();
+        }
+
+        public void InsedrtBook(Book b) {
+            // books.Insert();
+            fillListViewBooks();
         }
     }
 }

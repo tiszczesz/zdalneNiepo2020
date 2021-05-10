@@ -12,4 +12,10 @@ namespace WinForms_cw1_5Net
         public string Author { get; set; }
         public decimal Price { get; set; }
     }
+
+    public enum BookAction {
+        ActionAdd,
+        ActionUpdate,
+        ActionInsert
+    }
 }

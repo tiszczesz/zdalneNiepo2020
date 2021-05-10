@@ -38,10 +38,10 @@ namespace WinForms_cw1_5Net
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.addNewButton = new System.Windows.Forms.Button();
+            this.editBookButton = new System.Windows.Forms.Button();
+            this.deleteBookButton = new System.Windows.Forms.Button();
+            this.clearAllButton = new System.Windows.Forms.Button();
             this.insertBookButton = new System.Windows.Forms.Button();
             this.BooksListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
@@ -140,51 +140,53 @@ namespace WinForms_cw1_5Net
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.addNewButton);
+            this.panel2.Controls.Add(this.editBookButton);
+            this.panel2.Controls.Add(this.deleteBookButton);
+            this.panel2.Controls.Add(this.clearAllButton);
             this.panel2.Controls.Add(this.insertBookButton);
             this.panel2.Location = new System.Drawing.Point(541, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(253, 462);
             this.panel2.TabIndex = 9;
             // 
-            // button1
+            // addNewButton
             // 
-            this.button1.Location = new System.Drawing.Point(28, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Dodaj na koniec listy";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addNewButton.Location = new System.Drawing.Point(28, 62);
+            this.addNewButton.Name = "addNewButton";
+            this.addNewButton.Size = new System.Drawing.Size(194, 29);
+            this.addNewButton.TabIndex = 2;
+            this.addNewButton.Text = "Dodaj na koniec listy";
+            this.addNewButton.UseVisualStyleBackColor = true;
+            this.addNewButton.Click += new System.EventHandler(this.addNewButton_Click);
             // 
-            // button2
+            // editBookButton
             // 
-            this.button2.Location = new System.Drawing.Point(28, 260);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 29);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Edytuj kontakt";
-            this.button2.UseVisualStyleBackColor = true;
+            this.editBookButton.Location = new System.Drawing.Point(28, 260);
+            this.editBookButton.Name = "editBookButton";
+            this.editBookButton.Size = new System.Drawing.Size(194, 29);
+            this.editBookButton.TabIndex = 7;
+            this.editBookButton.Text = "Edytuj książkę";
+            this.editBookButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // deleteBookButton
             // 
-            this.button3.Location = new System.Drawing.Point(28, 194);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 29);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Usuń kontakt";
-            this.button3.UseVisualStyleBackColor = true;
+            this.deleteBookButton.Location = new System.Drawing.Point(28, 194);
+            this.deleteBookButton.Name = "deleteBookButton";
+            this.deleteBookButton.Size = new System.Drawing.Size(194, 29);
+            this.deleteBookButton.TabIndex = 6;
+            this.deleteBookButton.Text = "Usuń książkę";
+            this.deleteBookButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // clearAllButton
             // 
-            this.button4.Location = new System.Drawing.Point(28, 326);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(194, 29);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Wyczyść listę";
-            this.button4.UseVisualStyleBackColor = true;
+            this.clearAllButton.Location = new System.Drawing.Point(28, 326);
+            this.clearAllButton.Name = "clearAllButton";
+            this.clearAllButton.Size = new System.Drawing.Size(194, 29);
+            this.clearAllButton.TabIndex = 3;
+            this.clearAllButton.Text = "Wyczyść listę książek";
+            this.clearAllButton.UseVisualStyleBackColor = true;
+            this.clearAllButton.Click += new System.EventHandler(this.clearAllButton_Click);
             // 
             // insertBookButton
             // 
@@ -204,9 +206,11 @@ namespace WinForms_cw1_5Net
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.BooksListView.FullRowSelect = true;
             this.BooksListView.GridLines = true;
             this.BooksListView.HideSelection = false;
             this.BooksListView.Location = new System.Drawing.Point(800, 0);
+            this.BooksListView.MultiSelect = false;
             this.BooksListView.Name = "BooksListView";
             this.BooksListView.Size = new System.Drawing.Size(479, 462);
             this.BooksListView.TabIndex = 10;
@@ -263,10 +267,10 @@ namespace WinForms_cw1_5Net
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button addNewButton;
+        private System.Windows.Forms.Button editBookButton;
+        private System.Windows.Forms.Button deleteBookButton;
+        private System.Windows.Forms.Button clearAllButton;
         private System.Windows.Forms.Button insertBookButton;
         private System.Windows.Forms.ListView BooksListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
