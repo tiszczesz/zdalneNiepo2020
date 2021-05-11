@@ -24,8 +24,24 @@
     </div>
     <div id="prawy">
         <h3>Obliczanie na podstawie powierzchni zapotrzebowania na farbę</h3>
-        Podaj powierzchnię: 
-        <input type="text" name="pole" id="pole"><br>
+      <div class="line">
+          Podaj powierzchnię: 
+        <input type="text" name="pole" id="pole">
+      </div>  
+      <div class="line">
+           Wybierz farbę: 
+        <select id="jakosc">
+            <option value="10">Znakomita farba 1l na 10m kwad.</option>
+            <option value="8">Dobra farba 1l na 8m kwad.</option>
+            <option value="6">Słaba farba 1l na 6m kwad.</option>
+            <option value="4">Badziewna farba 1l na 4m kwad.</option>
+        </select>
+      </div>
+       <div class="line">
+            Czy chcesz malować dwukrotnie powierzchnię: 
+        <input type="checkbox" id="dwa">
+       </div>
+       
         <button id="oblicz">Policz</button>
         <p id="wynik"></p>
     </div>
@@ -34,7 +50,7 @@
         MALARZ<br>
         Stronę opracował: XXXXXXXXXX
     </div>
-    <script src="skrypt1.js"></script>
+    <script src="skrypt2.js"></script>
 </body>
 
 </html>
