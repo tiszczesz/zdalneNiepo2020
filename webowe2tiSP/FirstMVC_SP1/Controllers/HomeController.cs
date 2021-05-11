@@ -16,7 +16,10 @@ namespace FirstMVC_SP1.Controllers
         }
 
         public IActionResult Action3() {
-            return Redirect("/my/myaction");
+            ViewBag.controller = ControllerContext.ActionDescriptor.ControllerName;
+            ViewBag.action = ControllerContext.ActionDescriptor.ActionName;
+            return View("Action2");
+          //  return Redirect("/my/myaction");
         }
     }
 }
