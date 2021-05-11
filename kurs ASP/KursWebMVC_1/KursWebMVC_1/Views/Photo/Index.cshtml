@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@model IEnumerable<Photo>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - KursWebMVC_1</title>
+    <link rel="stylesheet" href="~/css/photo-sharing-styles.css"/>
+</head>
+<body>
+<h1 class="main-title">Widok z photos</h1>
+<p class="into">
+    Bllla a lal al al laalalalalala
+</p>
+<p class="into">
+    Witamy serdecznie
+</p>
+<hr/>
+@foreach (var item in Model) {
+    <a asp-controller="Photo" asp-action="Details" asp-route-id="@item.PhotoID">
+        <div class="photo-index-card">
+            <h3 class="display-picture-title">@item.Title</h3>
+            @if (item.PhotoFileName != null) {
+                <div >
+                    <img class="photo-display-img"
+                         src="~/images/@item.PhotoFileName" alt="obrazek"/>
+                </div>
+            }
+            <div>
+                <span class="display-label">
+                    @HtmlHelperDisplayNameExtensions.DisplayNameFor(Html, model => model.Description)
+                </span>
+                <br/>
+                <span class="display-field">
+                    @Html.DisplayFor(model => item.Description)
+                </span>
+            </div>
+            <div>
+                <span class="display-label">
+                    @HtmlHelperDisplayNameExtensions.DisplayNameFor(Html, model => model.CreateDate)
+                </span>
+                <br/>
+                <span class="display-field">
+                    @Html.DisplayFor(model => item.CreateDate)
+                </span>
+            </div>
+        </div>
+    </a>
+}
+
+<div class="into">
+    <a asp-area="" asp-controller="Home" asp-action="Index">Powrót na stronę główną</a>
+</div>
+</body>
+</html>

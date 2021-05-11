@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl9.css">
+    <title>Fabryka żelków</title>
+</head>
+<body>
+    <div>
+        <div id="left"><a href="index.html"><img src="" alt="logo fabryki"></a></div>
+        <div id="right"><a href="zamowienie.html">Zamówienia</a></div>
+    </div>
+    <div id="baner">
+        <h2>Zamów nasz produkt</h2>
+    </div>
+    <div id="main">
+        <div id="lewy">
+            <h1>Oferta</h1>
+            <table>
+                <tr><td>Kształty</td><td>Kolory</td></tr>
+                <tr><td>
+                    <ol>
+                        <li>miś</li>
+                        <li>żabka</li>
+                        <li>serce</li>
+                    </ol>
+                </td><td>
+                    <ol>
+                        <li>czerwony</li>
+                        <li>niebieski</li>
+                        <li>żółty</li>
+                        <li>inny</li>
+                    </ol>
+                </td></tr>
+            </table>
+        </div>
+        <div id="prawy">
+            Podaj numer kształtu: <br>
+            <input type="number" id="ksztalt"><br>
+            skomponuj swój kolor, podaj RGB: <br>
+            R:<input type="number" name="red" id="red" min="0" max="255">
+            G:<input type="number" name="green" id="green" min="0" max="255">
+            B:<input type="number" name="blue" id="blue" min="0" max="255"><br>
+            <input type="button" value="Zamów" id="zamow">
+            <p id="wynik">Wybrany kształt</p>
+            <input type="button" value="Wybrany kolor" id="kolor">
+
+        </div>
+    </div>
+    <div id="stopka">Autor strony: <i>XXXXXXXXXX</i></div>
+    <script src="script1.js"></script>
+</body>
+</html>

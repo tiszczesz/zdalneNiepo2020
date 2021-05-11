@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>malarz</title>
+</head>
+
+<body>
+    <div id="baner">
+
+        <a href="index.html">
+            <h1>Koszty farby</h1>
+        </a>
+    </div>
+    <div id="lewy">
+        <h3>Mieszamy czy wyceniamy?</h3>
+        <a href="mieszamy.html">Mieszamy</a><br />
+        <a href="cena.html">Wyceniamy</a><br>
+        <a href="cena2.html">Wyceniamy2</a>
+    </div>
+    <div id="prawy">
+        <h3>Obliczanie na podstawie powierzchni zapotrzebowania na farbę</h3>
+      <div class="line">
+          Podaj powierzchnię: 
+        <input type="text" name="pole" id="pole">
+      </div>  
+      <div class="line">
+           Wybierz farbę: 
+        <select id="jakosc">
+            <option value="10">Znakomita farba 1l na 10m kwad.</option>
+            <option value="8">Dobra farba 1l na 8m kwad.</option>
+            <option value="6">Słaba farba 1l na 6m kwad.</option>
+            <option value="4">Badziewna farba 1l na 4m kwad.</option>
+        </select>
+      </div>
+       <div class="line">
+            Czy chcesz malować dwukrotnie powierzchnię: 
+        <input type="checkbox" id="dwa">
+       </div>
+       
+        <button id="oblicz">Policz</button>
+        <p id="wynik"></p>
+    </div>
+
+    <div id="stopka">
+        MALARZ<br>
+        Stronę opracował: XXXXXXXXXX
+    </div>
+    <script src="skrypt2.js"></script>
+</body>
+
+</html>

@@ -32,4 +32,9 @@ Point operator-(const Point& p1, const Point p2) {
 	return result;
 }
 
+//bool Point::operator==(const Point& p) const {
+//	return x == p.x && y == p.y;
+//}
+
+
 

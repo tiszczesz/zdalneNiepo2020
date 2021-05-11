@@ -11,6 +11,8 @@ namespace FirstMVC_GIM.Controllers
     {
         public IActionResult Index(int? id) {
             ViewBag.hello = "Hello from ViewBag";
+            ViewBag.controller = ControllerContext.ActionDescriptor.ControllerName;
+            ViewBag.action = ControllerContext.ActionDescriptor.ActionName;
             return View();
         }
 

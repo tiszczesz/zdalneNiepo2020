@@ -1,0 +1,41 @@
+table.lotto{
+    border-collapse: collapse;
+
+}
+table.lotto td{
+    width: 25px;
+    height: 25px;
+    border: solid 1px black;
+    text-align: center;
+    cursor: pointer;
+}
+.mark{
+    background-color: red;
+}
+h1{text-align: center; border-bottom: 1px;margin-bottom: 30px;}
+
+input[type=button]{
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu, .result{
+    width: 300px;
+}
+#choice{
+    visibility: hidden;
+}
+.result{
+    font-size: 1.2;
+    color: blue;
+    font-weight: bold;
+}
+.randoms{
+    color:lightseagreen;
+    font-weight: bolder;
+}
