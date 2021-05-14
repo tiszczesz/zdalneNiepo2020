@@ -1,0 +1,34 @@
+#menu div{
+    background-color: rgb(57,180,107);
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    width: 20%;
+    height: 220px;
+    float: left;
+}
+#main{
+    height: 300px;
+    clear: both;
+}
+a{
+    color: white;
+    text-align: center;
+    font-size: 150%;
+}
+input[type=button]{
+    background-color: green;
+    border: solid 1px green;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+h1{
+    color: rgb(27, 163, 82);
+}
+#stopka{
+    background-color: rgb(57, 180, 107);
+    text-align: center;
+    color: white;
+    font-size: 150%;
+}

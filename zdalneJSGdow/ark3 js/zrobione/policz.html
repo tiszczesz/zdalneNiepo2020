@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="remont.css">
+    <title>Remonty mieszkań</title>
+</head>
+<body>
+    <div id="menu">
+        <div>
+            <img src="logotyp.png">
+        </div>
+        <div>
+            <a href="index.html">O FIRMIE</a>
+        </div>
+        <div>
+            <a href="adres.html">ADRES</a>
+        </div>
+        <div>
+            <a href="policz.html">POLICZ</a>
+        </div>
+        <div>
+            <a target="_blank" href="http://www.jakremontowac.pl/">LINKI</a>
+        </div>
+    </div>
+    <div id="main">
+        <h1>Kafelkowanie łazienki</h1>
+        <p>powierzchnia w m2 <input type="number" id="pow"></p>
+        <input type="radio" name="wyb" id="op1" value="op1"> Płytki 20 x 20 cm<br>
+        <input type="radio" name="wyb" id="op2" value="op2"> Płytki 25 x 12 cm<br>
+        <input type="button" value="PRZELICZ" id="przelicz">
+        <div id="wynik"></div>
+    </div>
+    <div id="stopka">
+        Autor strony: XXXXXXXXXXX
+    </div>
+    <script >
+        document.querySelector("#przelicz").addEventListener("click",function(){
+            let op1 = 70;
+            let op2 = 80;
+            let area = document.querySelector("#pow").value;
+            let wynik = document.querySelector("#wynik");
+            if(document.querySelector("#op1").checked){
+                wynik.innerHTML = "Koszt kafelkowania: "+(area*op1)+" zł";
+            }else if(document.querySelector("#op2").checked){
+                wynik.innerHTML = "Koszt kafelkowania: "+(area*op2)+" zł";
+            }else{
+                wynik.innerHTML = "Koszt kafelkowania: nie wybrano żadnej opcji";
+            }
+        });
+    </script>
+</body>
+</html>
