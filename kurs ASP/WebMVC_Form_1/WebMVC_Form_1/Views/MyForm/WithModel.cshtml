@@ -9,37 +9,44 @@
         <form method="post" asp-action="WithModel">
             <div class="form-group">
                 <label asp-for="Name"></label>
-                <input asp-for="Name" class="form-control"/>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DateBirth"></label>
+                <input asp-for="DateBirth" class="form-control" />
             </div>
             <div class="form-group">
                 <label asp-for="Division"></label>
                 <select asp-for="Division" class="form-control">
-                    @foreach (string d in ViewBag.divisions) {
+                    @foreach (string d in ViewBag.divisions)
+                    {
                         <option value="@d">@d</option>
                     }
                 </select>
             </div>
             <div class="form-group">
-                <label asp-for="Gender"></label><br/>
+                <label asp-for="Gender"></label><br />
 
-                @foreach (string g in ViewBag.genders) {
+                @foreach (string g in ViewBag.genders)
+                {
                     <input class="custom-radio" type="radio" asp-for="Gender" value="@g" id="Gendre@(g)">
                     @g
-                    <br/>
+                    <br />
                 }
 
             </div>
             <div class="form-group">
-                <label asp-for="InterestsList"></label><br/>
-                @for (var i = 0; i < Model.InterestsList.Count; i++) {
-                    <input type="checkbox" asp-for="@Model.InterestsList[i].IsChecked"/>
+                <label asp-for="InterestsList"></label><br />
+                @for (var i = 0; i < Model.InterestsList.Count; i++)
+                {
+                    <input type="checkbox" asp-for="@Model.InterestsList[i].IsChecked" />
                     @Model.InterestsList[i].Name
-                    <br/>
-                    <input type="hidden" asp-for="@Model.InterestsList[i].Name"/>
+                    <br />
+                    <input type="hidden" asp-for="@Model.InterestsList[i].Name" />
                 }
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary m-2" value="Wykonaj"/>
+                <input type="submit" class="btn btn-primary m-2" value="Wykonaj" />
             </div>
         </form>
     </div>
@@ -48,7 +55,7 @@
         <div class="bg-primary m-3 w-100 p-3">
             To jest post
             <div>
-                Zarejestrowano: @Model.Name do klasy: @Model.Division płeć: @Model.Gender<br/>
+                Zarejestrowano: @Model.Name do klasy: @Model.Division płeć: @Model.Gender Data urodzenia: @Model.DateBirth.Date.ToLongDateString()<br/>
                 @if (Model.InterestsList.Where(item => item.IsChecked).ToList().Count > 0) {
                     <div>Twoje zainteresowania:</div>
                     <ul>

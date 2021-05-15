@@ -21,5 +21,9 @@ namespace WebMVC_Form_1.Models
 
         [Display(Name = "Zainteresowania")] 
         public List<Item> InterestsList { get; set; }
+
+        [Display(Name = "Data Urodzenia")]
+        [DataType(DataType.Date)]
+        public DateTime DateBirth { get; set; }
     }
 }
