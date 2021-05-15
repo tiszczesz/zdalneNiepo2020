@@ -1,0 +1,48 @@
+﻿
+<div class="container">
+    <div>Nazwa kontrolera: @ViewBag.controllerName</div>
+    <div>Nazwa akcji: @ViewBag.actionName</div>
+</div>
+
+<div>
+    <form method="post">
+        <div class="form-group">
+            <label>Imię i Nazwisko: </label>
+            <input type="text" name="name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Wybierz klasę: </label>
+            <select name="division" class="form-control">
+                <option value="1A">1A</option>
+                <option value="1B">1B</option>
+                <option value="1C">1C</option>
+                <option value="1Inf">1Inf</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Kobieta: </label>
+            <input class="custom-radio" type="radio" checked="checked" name="gender" value="kobieta" /><br />
+            <label>Mężczyzna: </label>
+            <input class="custom-radio" type="radio" name="gender" value="mężczyzna" /><br />
+        </div>
+
+        <div >
+            <input type="checkbox"  value="Sport" name="zaint" /> Sport <br />
+            <input type="checkbox"  value="Muzyka" name="zaint" /> Muzyka <br />
+            <input type="checkbox"  value="Film" name="zaint" /> Film <br />
+            <input type="checkbox"  value="Taniec" name="zaint" /> Taniec <br />
+            <input type="checkbox"  value="Inne" name="zaint" /> Inne <br />
+        </div>  
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary m-2" value="Wykonaj" />
+        </div>
+    </form>
+</div>
+
+@if (ViewBag.post!=null && ViewBag.post) {
+    <div class="bg-primary m-3 w-100 p-3">To jest post</div>
+    <div>
+        Zarejestrowano: @ViewBag.name do klasy: @ViewBag.division płeć: @ViewBag.gender<br/>
+        Zainteresowania: @ViewBag.zaint
+    </div>
+}
