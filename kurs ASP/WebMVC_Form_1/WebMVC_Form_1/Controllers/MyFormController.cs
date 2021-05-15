@@ -61,7 +61,7 @@ namespace WebMVC_Form_1.Controllers
             ViewBag.divisions = divisions;
             if (ModelState.IsValid) {
                 ViewBag.post = true;
-             
+                
                 
             }
             return View(candidate);
