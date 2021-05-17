@@ -11,6 +11,7 @@
 <body>
     <div class="container">
     <h1><span class="badge bg-secondary  p-3 w-100">Zbiór książek</span></h1>
+    <a class="btn btn-info" href="addNewBook.html">Dodaj książkę</a>
     <?php
     require "functions.php";
     $books = getAllBooks();
