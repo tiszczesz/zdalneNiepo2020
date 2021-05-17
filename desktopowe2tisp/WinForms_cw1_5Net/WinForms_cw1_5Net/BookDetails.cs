@@ -12,7 +12,7 @@ namespace WinForms_cw1_5Net
 {
     public partial class BookDetails : Form {
         private Ex3Form parEx3Form;
-        public BookDetails(Ex3Form parentEx3Form)
+        public BookDetails(Ex3Form parentEx3Form,int index=-1)
         {
             InitializeComponent();
             this.parEx3Form = parentEx3Form;
@@ -30,17 +30,72 @@ namespace WinForms_cw1_5Net
                     AddNewBook();
                     break;
                 case BookAction.ActionInsert:
-
-
-
+                    InsertNewBook();
                     break;
 
                 case BookAction.ActionUpdate:
 
+                    UpdateBook();
                     break;
             }
         }
 
+        private void UpdateBook() {
+            if (String.IsNullOrWhiteSpace(titleTextBox.Text) ||
+                String.IsNullOrWhiteSpace(authorTextBox.Text) ||
+                String.IsNullOrWhiteSpace(priceTextBox.Text))
+            {
+                Close();
+                return;
+            }
+
+            try
+            {
+                Book newBook = new Book()
+                {
+                    Title = titleTextBox.Text,
+                    Author = authorTextBox.Text,
+                    Price = Convert.ToDecimal(priceTextBox.Text)
+                };
+              //  parEx3Form.UpdateBook(newBook);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error z ceną: " + ex.Message);
+            }
+            finally
+            {
+                Close();
+            }
+        }
+        private void InsertNewBook() {
+            if (String.IsNullOrWhiteSpace(titleTextBox.Text) ||
+                String.IsNullOrWhiteSpace(authorTextBox.Text) ||
+                String.IsNullOrWhiteSpace(priceTextBox.Text))
+            {
+                Close();
+                return;
+            }
+
+            try
+            {
+                Book newBook = new Book()
+                {
+                    Title = titleTextBox.Text,
+                    Author = authorTextBox.Text,
+                    Price = Convert.ToDecimal(priceTextBox.Text)
+                };
+                parEx3Form.InsedrtBook(newBook);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error z ceną: " + ex.Message);
+            }
+            finally
+            {
+                Close();
+            }
+        }
         private void AddNewBook() {
             if (String.IsNullOrWhiteSpace(titleTextBox.Text) ||
                 String.IsNullOrWhiteSpace(authorTextBox.Text) ||

@@ -168,6 +168,7 @@ namespace WinForms_cw1_5Net
             this.editBookButton.TabIndex = 7;
             this.editBookButton.Text = "Edytuj książkę";
             this.editBookButton.UseVisualStyleBackColor = true;
+            this.editBookButton.Click += new System.EventHandler(this.editBookButton_Click);
             // 
             // deleteBookButton
             // 
@@ -177,6 +178,7 @@ namespace WinForms_cw1_5Net
             this.deleteBookButton.TabIndex = 6;
             this.deleteBookButton.Text = "Usuń książkę";
             this.deleteBookButton.UseVisualStyleBackColor = true;
+            this.deleteBookButton.Click += new System.EventHandler(this.deleteBookButton_Click);
             // 
             // clearAllButton
             // 

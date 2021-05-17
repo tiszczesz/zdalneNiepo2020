@@ -115,7 +115,17 @@ namespace WinForms_cw1_5Net {
 
         private void insertBookButton_Click(object sender, EventArgs e) {
           //  if(BooksListView.SelectedItems[0]!=-1)
-            new BookDetails(this).ShowDialog();
+          if (BooksListView.SelectedItems.Count > 0 && BooksListView.SelectedItems[0].Index!=-1) {
+              int index = BooksListView.SelectedItems[0].Index;
+               Action = BookAction.ActionInsert;
+               new BookDetails(this,index).ShowDialog();
+               
+          }
+          else {
+              MessageBox.Show("Zaznacz miejsce na liście książek");
+          }
+          
+          
         }
 
      
@@ -143,8 +153,47 @@ namespace WinForms_cw1_5Net {
         }
 
         public void InsedrtBook(Book b) {
-            // books.Insert();
+             books.Insert(BooksListView.SelectedItems[0].Index,b);
+            fillListViewBooks();
+
+        }
+
+        public void DeleteBook(Book b) {
+            books.Remove(b);
             fillListViewBooks();
         }
+
+        private void deleteBookButton_Click(object sender, EventArgs e)
+        {
+            if (BooksListView.SelectedItems.Count > 0 && BooksListView.SelectedItems[0].Index != -1) {
+                var result = BooksListView.SelectedItems[0].SubItems;
+                Book b = books.FirstOrDefault(b => (b.Title == result[1].Text 
+                                                    /*&& b.Price==Convert.ToDecimal(result[3]*/
+                                                    ));
+                if(b!=null) DeleteBook(b);
+            }
+            else
+            {
+                MessageBox.Show("Zaznacz miejsce na liście książek");
+            }
+        }
+
+        private void editBookButton_Click(object sender, EventArgs e)
+        {
+            if (BooksListView.SelectedItems.Count > 0 && BooksListView.SelectedItems[0].Index != -1)
+            {
+                int index = BooksListView.SelectedItems[0].Index;
+                Action = BookAction.ActionUpdate;
+                new BookDetails(this, index).ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("Zaznacz miejsce na liście książek");
+            }
+
+
+        }
+
     }
 }
