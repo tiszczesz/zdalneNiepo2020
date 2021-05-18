@@ -1,0 +1,51 @@
+#baner{
+    background-color: #08826A;
+    height: 60px;
+    font-family: Verdana;
+    text-align: center;
+}
+#plewy{
+    background-color:  #1E9880;
+    height: 550px;
+    width: 30%;
+    float: left;
+}
+#pprawy{
+    background-color:  #9AC8BF;
+    height: 550px;
+    width: 70%;
+    text-align: center;
+    float: left;
+}
+#stopka{
+    background-color: #08826A;
+    font-family: Verdana;
+    color: white;
+    text-align: right;
+}
+a{
+    color: white;
+
+}
+img{
+    margin: 20px;
+    padding: 15px;
+    border: 2px dotted #1E9880;
+}
+table{
+    margin: 20px;
+    border: 1px solid;
+    width: 80%;
+}
+td:hover{
+   background-color: green;
+   color: white;
+}
+th{
+    background-color: #1E9880;
+    border: 1px solid;
+}
+td{
+    border: 1px solid;
+    align-items: right;
+}
