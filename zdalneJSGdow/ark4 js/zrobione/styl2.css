@@ -36,8 +36,9 @@ table{
     margin: 20px;
     border: 1px solid;
     width: 80%;
+    border-collapse: collapse;
 }
-td:hover{
+tbody tr:hover{
    background-color: green;
    color: white;
 }
