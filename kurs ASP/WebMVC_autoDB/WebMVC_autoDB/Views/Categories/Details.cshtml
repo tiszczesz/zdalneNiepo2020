@@ -1,4 +1,4 @@
-﻿@model WebMVC_autoDB.Models.Category
+﻿@model WebMVC_autoDB.ViewModel.FilmCategoryViewModel
 
 @{
     ViewData["Title"] = "Details";
@@ -11,20 +11,27 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.MyCategory.Name)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.MyCategory.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.MyCategory.Description)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.MyCategory.Description)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <ul>
+        @foreach (Film film in Model.Films) {
+            <li>Tytuł: @film.Title Czas trwania: @film.Duration kategoria: @Model.MyCategory.Name</li>
+        }
+    </ul>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MyCategory.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

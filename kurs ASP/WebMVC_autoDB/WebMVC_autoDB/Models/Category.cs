@@ -12,6 +12,7 @@ namespace WebMVC_autoDB.Models
         public int Id { get; set; }
 
         [Display(Name = "Kategoria")] 
+        [Required(ErrorMessage = "Podaj kategorię")]
         public string Name { get; set; }
 
         [Display(Name = "Opis")]

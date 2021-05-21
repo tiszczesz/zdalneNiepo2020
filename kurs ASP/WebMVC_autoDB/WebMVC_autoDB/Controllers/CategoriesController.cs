@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebMVC_autoDB.Data;
 using WebMVC_autoDB.Models;
+using WebMVC_autoDB.ViewModel;
 
 namespace WebMVC_autoDB.Controllers
 {
@@ -33,14 +34,17 @@ namespace WebMVC_autoDB.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Category
+            FilmCategoryViewModel vm = new FilmCategoryViewModel();
+            var category = await _context.Category.Include(c=>c.Films)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (category == null)
             {
                 return NotFound();
             }
 
-            return View(category);
+            vm.MyCategory = category;
+            vm.Films = category.Films;
+            return View(vm);
         }
 
         // GET: Categories/Create
