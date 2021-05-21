@@ -17,5 +17,8 @@ namespace WebMVC_autoDB.Models
         [Display(Name = "Opis")]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
+
+        [Display(Name = "Filmy")]
+        public virtual List<Film> Films { get; set; }
     }
 }
