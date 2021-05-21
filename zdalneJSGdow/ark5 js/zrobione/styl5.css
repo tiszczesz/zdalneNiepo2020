@@ -45,3 +45,16 @@ img{
    /* font-style: italic; */
 
 }
+button{
+    vertical-align: middle;
+}
+img.click{
+    margin: 10px;
+    cursor: pointer;
+}
+/* img.click:hover {
+    border: solid black 1px;
+} */
+.bordered{
+    border: solid black 2px;
+}
