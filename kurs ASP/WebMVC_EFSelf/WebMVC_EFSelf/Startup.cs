@@ -46,7 +46,7 @@ namespace WebMVC_EFSelf
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Cupcake}/{action=Index}/{id?}");
             });
         }
     }
