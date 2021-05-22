@@ -18,7 +18,7 @@ namespace WebMVC_EFSelf.Controllers
         public IActionResult Index()
         {
             //CupcakeContext dContext = _environment.
-            return View();
+            return View(_db.Cupcakes);
         }
     }
 }
