@@ -2,5 +2,9 @@
 {
     public enum CupcakeType
     {
+        Birthday,
+        Turquoise,
+        Chocolate,
+        Strawberry
     }
 }
