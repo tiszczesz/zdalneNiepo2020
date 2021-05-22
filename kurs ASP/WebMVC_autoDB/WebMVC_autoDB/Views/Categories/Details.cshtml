@@ -27,7 +27,9 @@
 <div>
     <ul>
         @foreach (Film film in Model.Films) {
-            <li>Tytuł: @film.Title Czas trwania: @film.Duration kategoria: @Model.MyCategory.Name</li>
+            <li>
+                Tytuł: @film.Title Czas trwania: @film.Duration kategoria: @Model.MyCategory.Name
+            </li>
         }
     </ul>
 </div>
