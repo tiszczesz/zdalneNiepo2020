@@ -10,7 +10,7 @@ class Student{
     public Course MyCourse{get;set;};
     public int MyCourseId{get;set;};
 }
- class{
+ class Course{
      public int Id{get;set;}
      public string Name{get;set;};
      public string Author{get;set;};
