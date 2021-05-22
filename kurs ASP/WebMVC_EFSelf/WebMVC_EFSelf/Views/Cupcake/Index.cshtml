@@ -1,4 +1,6 @@
-﻿@{
+﻿@using WebMVC_EFSelf.Models
+@model IEnumerable<WebMVC_EFSelf.Models.Cupcake>
+@{
     Layout = null;
 }
 <!DOCTYPE html >
@@ -13,6 +15,18 @@
 <div class="container">
     <div class="main-title">
         <p class="into">Witamy w Naszym Słodkim Sklepiku</p>
+    </div>
+    <div class="img-container">
+        @foreach (Cupcake item in Model) {
+            <div class="photo-index-card">
+                <h3 class="display-picture-title">
+                    "@Html.DisplayFor(modelItem=>item.CupcakeType)"
+                </h3>
+                @if (item.ImageName != null) {
+                    <img class="photo-display-img" src="images/@item.ImageName"/>
+                }
+            </div>
+        }
     </div>
 </div>
 </body>
