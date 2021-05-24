@@ -12,8 +12,9 @@ namespace WinForms_cw1_5Net
 {
     public partial class BookDetails : Form {
         private Ex3Form parEx3Form;
-        public BookDetails(Ex3Form parentEx3Form,int index=-1)
-        {
+        private Book book;
+        public BookDetails(Ex3Form parentEx3Form,Book book=null) {
+            this.book = book;
             InitializeComponent();
             this.parEx3Form = parentEx3Form;
         }
@@ -119,6 +120,11 @@ namespace WinForms_cw1_5Net
             {
                 Close();
             }
+        }
+
+        private void BookDetails_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

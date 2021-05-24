@@ -118,7 +118,7 @@ namespace WinForms_cw1_5Net {
           if (BooksListView.SelectedItems.Count > 0 && BooksListView.SelectedItems[0].Index!=-1) {
               int index = BooksListView.SelectedItems[0].Index;
                Action = BookAction.ActionInsert;
-               new BookDetails(this,index).ShowDialog();
+               new BookDetails(this).ShowDialog();
                
           }
           else {
@@ -166,10 +166,7 @@ namespace WinForms_cw1_5Net {
         private void deleteBookButton_Click(object sender, EventArgs e)
         {
             if (BooksListView.SelectedItems.Count > 0 && BooksListView.SelectedItems[0].Index != -1) {
-                var result = BooksListView.SelectedItems[0].SubItems;
-                Book b = books.FirstOrDefault(b => (b.Title == result[1].Text 
-                                                    /*&& b.Price==Convert.ToDecimal(result[3]*/
-                                                    ));
+                Book b = getBookById();
                 if(b!=null) DeleteBook(b);
             }
             else
@@ -178,13 +175,21 @@ namespace WinForms_cw1_5Net {
             }
         }
 
+        private Book getBookById() {
+            var result = BooksListView.SelectedItems[0].SubItems;
+            Book b = books.FirstOrDefault(b => (b.Title == result[1].Text
+                    /*&& b.Price==Convert.ToDecimal(result[3]*/
+                ));
+            return b;
+        }
         private void editBookButton_Click(object sender, EventArgs e)
         {
             if (BooksListView.SelectedItems.Count > 0 && BooksListView.SelectedItems[0].Index != -1)
             {
                 int index = BooksListView.SelectedItems[0].Index;
                 Action = BookAction.ActionUpdate;
-                new BookDetails(this, index).ShowDialog();
+                Book book = getBookById();
+                new BookDetails(this, book).ShowDialog();
 
             }
             else

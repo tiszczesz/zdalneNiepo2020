@@ -125,6 +125,7 @@ namespace WinForms_cw1_5Net
             this.MinimizeBox = false;
             this.Name = "BookDetails";
             this.Text = "Szczegóły książki";
+            this.Load += new System.EventHandler(this.BookDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
