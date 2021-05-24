@@ -122,9 +122,10 @@ namespace WinForms_cw1_5Net
             }
         }
 
-        private void BookDetails_Load(object sender, EventArgs e)
-        {
-            
+        private void BookDetails_Load(object sender, EventArgs e) {
+            titleTextBox.Text = book.Title;
+            authorTextBox.Text = book.Author;
+            priceTextBox.Text = book.Price.ToString();
         }
     }
 }
