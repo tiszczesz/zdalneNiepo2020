@@ -174,7 +174,7 @@ namespace WinForms_cw1_5Net {
                 MessageBox.Show("Zaznacz miejsce na liście książek");
             }
         }
-
+        //todo UpdateBook
         private Book getBookById() {
             var result = BooksListView.SelectedItems[0].SubItems;
             Book b = books.FirstOrDefault(b => (b.Title == result[1].Text

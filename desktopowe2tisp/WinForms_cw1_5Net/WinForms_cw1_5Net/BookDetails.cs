@@ -58,7 +58,7 @@ namespace WinForms_cw1_5Net
                     Author = authorTextBox.Text,
                     Price = Convert.ToDecimal(priceTextBox.Text)
                 };
-              //  parEx3Form.UpdateBook(newBook);
+                parEx3Form.UpdateBook(newBook);
             }
             catch (Exception ex)
             {
