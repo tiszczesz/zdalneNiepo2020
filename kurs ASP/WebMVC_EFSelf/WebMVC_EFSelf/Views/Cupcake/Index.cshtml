@@ -1,0 +1,33 @@
+﻿@using WebMVC_EFSelf.Models
+@model IEnumerable<WebMVC_EFSelf.Models.Cupcake>
+@{
+    Layout = null;
+}
+<!DOCTYPE html >
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="~/css/cupcakes-styles.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="main-title">
+        <p class="into">Witamy w Naszym Słodkim Sklepiku</p>
+    </div>
+    <div class="img-container">
+        @foreach (Cupcake item in Model) {
+            <div class="photo-index-card">
+                <h3 class="display-picture-title">
+                    "@Html.DisplayFor(modelItem=>item.CupcakeType)"
+                </h3>
+                @if (item.ImageName != null) {
+                    <img class="photo-display-img" src="images/@item.ImageName"/>
+                }
+            </div>
+        }
+    </div>
+</div>
+</body>
+</html>

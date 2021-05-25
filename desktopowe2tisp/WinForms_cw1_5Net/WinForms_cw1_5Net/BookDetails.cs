@@ -1,30 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinForms_cw1_5Net
-{
+namespace WinForms_cw1_5Net {
     public partial class BookDetails : Form {
-        private Ex3Form parEx3Form;
-        public BookDetails(Ex3Form parentEx3Form,int index=-1)
-        {
+        private readonly Book book;
+        private readonly Ex3Form parEx3Form;
+
+        public BookDetails(Ex3Form parentEx3Form, Book book = null) {
+            this.book = book;
             InitializeComponent();
-            this.parEx3Form = parentEx3Form;
+            parEx3Form = parentEx3Form;
         }
 
-        private void cancelButton_Click(object sender, EventArgs e)
-        {
+        private void cancelButton_Click(object sender, EventArgs e) {
             Close();
         }
 
-        private void OkButton_Click(object sender, EventArgs e)
-        {
+        private void OkButton_Click(object sender, EventArgs e) {
             switch (parEx3Form.Action) {
                 case BookAction.ActionAdd:
                     AddNewBook();
@@ -41,71 +33,63 @@ namespace WinForms_cw1_5Net
         }
 
         private void UpdateBook() {
-            if (String.IsNullOrWhiteSpace(titleTextBox.Text) ||
-                String.IsNullOrWhiteSpace(authorTextBox.Text) ||
-                String.IsNullOrWhiteSpace(priceTextBox.Text))
-            {
+            if (string.IsNullOrWhiteSpace(titleTextBox.Text) ||
+                string.IsNullOrWhiteSpace(authorTextBox.Text) ||
+                string.IsNullOrWhiteSpace(priceTextBox.Text)) {
                 Close();
                 return;
             }
 
-            try
-            {
-                Book newBook = new Book()
-                {
+            try {
+                var newBook = new Book {
                     Title = titleTextBox.Text,
                     Author = authorTextBox.Text,
                     Price = Convert.ToDecimal(priceTextBox.Text)
                 };
-              //  parEx3Form.UpdateBook(newBook);
+                parEx3Form.UpdateBook(newBook);
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show("error z ceną: " + ex.Message);
             }
-            finally
-            {
+            finally {
                 Close();
             }
         }
+
         private void InsertNewBook() {
-            if (String.IsNullOrWhiteSpace(titleTextBox.Text) ||
-                String.IsNullOrWhiteSpace(authorTextBox.Text) ||
-                String.IsNullOrWhiteSpace(priceTextBox.Text))
-            {
+            if (string.IsNullOrWhiteSpace(titleTextBox.Text) ||
+                string.IsNullOrWhiteSpace(authorTextBox.Text) ||
+                string.IsNullOrWhiteSpace(priceTextBox.Text)) {
                 Close();
                 return;
             }
 
-            try
-            {
-                Book newBook = new Book()
-                {
+            try {
+                var newBook = new Book {
                     Title = titleTextBox.Text,
                     Author = authorTextBox.Text,
                     Price = Convert.ToDecimal(priceTextBox.Text)
                 };
                 parEx3Form.InsedrtBook(newBook);
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show("error z ceną: " + ex.Message);
             }
-            finally
-            {
+            finally {
                 Close();
             }
         }
+
         private void AddNewBook() {
-            if (String.IsNullOrWhiteSpace(titleTextBox.Text) ||
-                String.IsNullOrWhiteSpace(authorTextBox.Text) ||
-                String.IsNullOrWhiteSpace(priceTextBox.Text)) {
+            if (string.IsNullOrWhiteSpace(titleTextBox.Text) ||
+                string.IsNullOrWhiteSpace(authorTextBox.Text) ||
+                string.IsNullOrWhiteSpace(priceTextBox.Text)) {
                 Close();
                 return;
             }
 
             try {
-                Book newBook = new Book() {
+                var newBook = new Book {
                     Title = titleTextBox.Text,
                     Author = authorTextBox.Text,
                     Price = Convert.ToDecimal(priceTextBox.Text)
@@ -115,10 +99,15 @@ namespace WinForms_cw1_5Net
             catch (Exception ex) {
                 MessageBox.Show("error z ceną: " + ex.Message);
             }
-            finally
-            {
+            finally {
                 Close();
             }
+        }
+
+        private void BookDetails_Load(object sender, EventArgs e) {
+            titleTextBox.Text = book?.Title;
+            authorTextBox.Text = book?.Author;
+            priceTextBox.Text = book?.Price.ToString();
         }
     }
 }
