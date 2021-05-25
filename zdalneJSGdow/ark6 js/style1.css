@@ -1,7 +1,8 @@
 .obrazek{
     margin: auto;
-    text-align: center;
+    
 }
 #ob1{
     cursor: pointer;
+    position: absolute;  
 }
