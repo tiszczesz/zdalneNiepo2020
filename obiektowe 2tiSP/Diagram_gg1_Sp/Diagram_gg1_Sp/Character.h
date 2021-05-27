@@ -15,6 +15,9 @@ public:
 	void useItem(Item& myItem);
 	void AddItem( Item* newItem);
 	void ShowEquipment();
+	vector<Item*>& GetItems() {
+		return items;
+	}
 };
 
 

@@ -13,5 +13,6 @@ public:
 	virtual void Show();
 	Item();
 	Item(string name, int id, double weight);
+	virtual ~Item();
 };
 
