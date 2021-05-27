@@ -22,7 +22,7 @@ void Weapon::Show() {
 	cout << "\tBron o obrazeniach na sekunde: " << dps << endl;
 	cout << "\tKategoria broni: " << category << endl;
 }
-
+//todo napisac klase Armour!!!!! i przetestowac w main.cpp
 
 
 
