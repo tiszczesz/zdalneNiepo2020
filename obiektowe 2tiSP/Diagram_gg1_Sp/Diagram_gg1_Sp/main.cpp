@@ -12,7 +12,7 @@ int main() {
 	Character c1("Postac 1", 100,items1);
 	c1.ShowEquipment();
 	Item* i4 = new Item("siekierka", 4, 20);
-	c1.AddItem((*i4));
+	c1.AddItem(i4);
 	c1.ShowEquipment();
 	for (auto item : items1) {
 		delete item;
