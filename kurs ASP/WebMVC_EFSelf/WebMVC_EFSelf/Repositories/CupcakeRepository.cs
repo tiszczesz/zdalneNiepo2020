@@ -33,9 +33,12 @@ namespace WebMVC_EFSelf.Repositories
             return _context.Cupcakes.ToList();
         }
 
-        public IQueryable<Bakery> PopulateBakeriesDropDownList()
-        {
-            throw new NotImplementedException();
+        public IQueryable<Bakery> PopulateBakeriesDropDownList() {
+            var bakieriesQuery = from b in _context.Bakeries
+                orderby b.BakeryName
+                select b;
+           // var dd = _context.Bakeries.OrderBy(b => b.BakeryName);
+            return bakieriesQuery;
         }
 
         public void SaveChanges()
