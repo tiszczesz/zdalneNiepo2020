@@ -13,8 +13,11 @@ public:
 	Character();
 	Character(string name, double health,vector<Item*> items);
 	void useItem(Item& myItem);
-	void AddItem(Item& newItem);
+	void AddItem( Item* newItem);
 	void ShowEquipment();
+	vector<Item*>& GetItems() {
+		return items;
+	}
 };
 
 

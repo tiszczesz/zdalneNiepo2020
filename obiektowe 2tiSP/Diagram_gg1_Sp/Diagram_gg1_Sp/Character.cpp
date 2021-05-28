@@ -8,8 +8,8 @@ Character::Character(string name, double health, vector<Item*> items) {
 	this->health = health;
 	this->items = items;
 }
-void Character::AddItem(Item& newItem) {
-	items.push_back(&newItem);
+void Character::AddItem(Item* newItem) {
+	items.push_back(newItem);
 }
 void Character::useItem(Item& myItem) {
 	//todo

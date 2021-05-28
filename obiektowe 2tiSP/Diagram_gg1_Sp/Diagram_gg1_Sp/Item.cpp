@@ -8,6 +8,11 @@ Item::Item(string name, int id, double weight) {
 	this->name = name;
 	this->weight = weight;
 }
+
+Item::~Item() {
+	cout << "Usuwanie obiektu Item...." << endl;
+}
+
 void Item::Show() {
 	cout << "\t ============ Informacje o elemencie ========\n";
 	cout << "\tNazwa: " << name << endl;
