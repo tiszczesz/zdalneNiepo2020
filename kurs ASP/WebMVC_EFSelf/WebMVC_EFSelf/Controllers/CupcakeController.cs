@@ -5,7 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using WebMVC_EFSelf.Data;
+
 using WebMVC_EFSelf.Repositories;
+using WebMVC_EFSelf.Models;
 
 namespace WebMVC_EFSelf.Controllers
 {
@@ -20,6 +22,11 @@ namespace WebMVC_EFSelf.Controllers
         {
             //CupcakeContext dContext = _environment.
             return View(_repository.GetCupcakes());
+        }
+
+
+        public IActionResult GetImage(int id) {
+            Cupcake reqCupcake = _repository.GetCupcakeById(id);
         }
     }
 }

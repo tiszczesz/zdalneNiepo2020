@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using WebMVC_EFSelf.Data;
 using WebMVC_EFSelf.Models;
 
@@ -23,9 +24,9 @@ namespace WebMVC_EFSelf.Repositories
             throw new NotImplementedException();
         }
 
-        public Cupcake GetCupcakeById(int id)
-        {
-            throw new NotImplementedException();
+        public Cupcake GetCupcakeById(int id) {
+            return _context.Cupcakes.Include(b => b.Bakery)
+                .SingleOrDefault(c => c.CupcakeId == id);
         }
 
         public IEnumerable<Cupcake> GetCupcakes() {
