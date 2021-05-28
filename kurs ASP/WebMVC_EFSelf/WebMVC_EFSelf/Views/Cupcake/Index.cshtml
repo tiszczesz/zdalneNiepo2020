@@ -24,7 +24,7 @@
             </h3>
             @if (item.ImageName != null)
             {
-                <img class="photo-display-img" src="images/@item.ImageName" />
+                <img class="photo-display-img" src="@Url.Action("GetImage","Cupcake",new{Id=item.CupcakeId})" />
             }
             <div>
                 <p class="display-label">

@@ -40,7 +40,6 @@ namespace WebMVC_EFSelf.Controllers
                     using (BinaryReader br = new BinaryReader(fileOnDisk)) {
                         fileBytes = br.ReadBytes((int) fileOnDisk.Length);
                     }
-
                     return File(fileBytes, reqCupcake.ImageMimeType);
                 }
                 else {
