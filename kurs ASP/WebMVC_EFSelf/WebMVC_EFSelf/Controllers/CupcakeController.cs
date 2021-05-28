@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using WebMVC_EFSelf.Data;
 
@@ -27,6 +29,18 @@ namespace WebMVC_EFSelf.Controllers
             return View(_repository.GetCupcakes());
         }
 
+        [HttpGet]
+        public IActionResult Create() {
+            PopulateBakieriesDropDownList();
+            return View();
+        }
+
+        private void PopulateBakieriesDropDownList(int? selectedBakery = null) {
+            var bakieries = _repository.PopulateBakeriesDropDownList();
+            ViewBag.BakeryID =
+                new SelectList(bakieries.AsNoTracking(), "BakeryId",
+                          "BakeryName", selectedBakery);
+        }
 
         public IActionResult GetImage(int id) {
             Cupcake reqCupcake = _repository.GetCupcakeById(id);

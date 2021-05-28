@@ -15,6 +15,7 @@
 <div class="container">
     <div class="main-title">
         <p class="into">Witamy w Naszym Słodkim Sklepiku</p>
+        <button type="button" onclick="location.href = '@Url.Action("Create","Cupcake")'">Dodaj ciastko</button>
     </div>
     <div class="img-container">
         @foreach (Cupcake item in Model) {
