@@ -35,6 +35,16 @@ namespace WebMVC_EFSelf.Controllers
             return View();
         }
 
+        [HttpPost, ActionName("Create")]
+        public IActionResult CreatePost(Cupcake cupcake) {
+            if (ModelState.IsValid) {
+                _repository.CreateCupcake(cupcake);
+                return RedirectToAction(nameof(Index));
+            }
+            PopulateBakieriesDropDownList(cupcake.BakeryId);
+            return View(cupcake);
+        }
+
         private void PopulateBakieriesDropDownList(int? selectedBakery = null) {
             var bakieries = _repository.PopulateBakeriesDropDownList();
             ViewBag.BakeryID =
