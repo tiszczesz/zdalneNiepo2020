@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebMVC_EFSelf.Data;
 using Microsoft.EntityFrameworkCore;
+using WebMVC_EFSelf.Repositories;
 
 namespace WebMVC_EFSelf
 {
@@ -24,6 +25,8 @@ namespace WebMVC_EFSelf
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             var c = Configuration.GetConnectionString("DefaultConnection");
+
+            services.AddTransient<ICupcakeRepository, CupcakeRepository>();
             services.AddDbContext<CupcakeContext>(
                 options => options
                     .UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
