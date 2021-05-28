@@ -44,8 +44,10 @@ namespace WebMVC_EFSelf.Models
         public string ImageMimeType { get; set; }
 
         [Required(ErrorMessage = "Wybierz cukiernię")]
+        [Display(Name = "Wybierz piekarnię")]
         public int? BakeryId { get; set; }
 
+        [Display(Name = "Wybierz piekarnię")]
         public virtual Bakery Bakery { get; set; }
 
     }
