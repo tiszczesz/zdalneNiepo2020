@@ -207,5 +207,9 @@ namespace WinForms_cw1_5Net {
 
         }
 
+        private void BooksListView_DoubleClick(object sender, EventArgs e)
+        {
+            editBookButton_Click(sender,e);
+        }
     }
 }

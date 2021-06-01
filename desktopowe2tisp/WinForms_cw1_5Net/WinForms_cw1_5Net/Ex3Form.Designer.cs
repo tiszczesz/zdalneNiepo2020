@@ -218,6 +218,7 @@ namespace WinForms_cw1_5Net
             this.BooksListView.TabIndex = 10;
             this.BooksListView.UseCompatibleStateImageBehavior = false;
             this.BooksListView.View = System.Windows.Forms.View.Details;
+            this.BooksListView.DoubleClick += new System.EventHandler(this.BooksListView_DoubleClick);
             // 
             // columnHeader1
             // 
