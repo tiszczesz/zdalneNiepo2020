@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>13</zoom_level>
+  <zoom_level>14</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>247</x>
-      <y>78</y>
-      <w>364</w>
-      <h>182</h>
+      <x>490</x>
+      <y>42</y>
+      <w>392</w>
+      <h>196</h>
     </coordinates>
     <panel_attributes>User
 --
@@ -24,10 +24,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>338</x>
-      <y>351</y>
-      <w>260</w>
-      <h>91</h>
+      <x>630</x>
+      <y>336</y>
+      <w>280</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>Admin
 --
@@ -39,10 +39,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>442</x>
-      <y>247</y>
-      <w>39</w>
-      <h>130</h>
+      <x>742</x>
+      <y>224</y>
+      <w>42</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -50,10 +50,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>728</x>
-      <y>364</y>
-      <w>273</w>
-      <h>91</h>
+      <x>1008</x>
+      <y>350</y>
+      <w>294</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>AdvUser
 --
@@ -66,10 +66,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>598</x>
-      <y>169</y>
-      <w>260</w>
-      <h>221</h>
+      <x>868</x>
+      <y>140</y>
+      <w>280</w>
+      <h>238</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;180.0;10.0;180.0;150.0</additional_attributes>
@@ -77,10 +77,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>728</x>
+      <x>1008</x>
       <y>546</y>
-      <w>273</w>
-      <h>130</h>
+      <w>294</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>Remainder
 -
@@ -91,10 +91,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>832</x>
-      <y>442</y>
-      <w>39</w>
-      <h>130</h>
+      <x>1120</x>
+      <y>434</y>
+      <w>42</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -102,10 +102,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>910</x>
-      <y>143</y>
-      <w>130</w>
-      <h>117</h>
+      <x>1204</x>
+      <y>112</y>
+      <w>140</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ILogin
@@ -117,34 +117,38 @@ ILogin
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>117</x>
-      <y>351</y>
-      <w>169</w>
-      <h>130</h>
+      <x>350</x>
+      <y>336</y>
+      <w>252</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>Guest
 --
--todo:string</panel_attributes>
+-message:string
+--
++SendMsg(user:User):bool
++SetMsg(msg:string):void
++GetMsg():string</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
-      <y>208</y>
-      <w>351</w>
-      <h>221</h>
+      <x>896</x>
+      <y>182</y>
+      <w>336</w>
+      <h>238</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>250.0;10.0;50.0;10.0;50.0;150.0;10.0;150.0</additional_attributes>
+    <additional_attributes>220.0;10.0;20.0;10.0;20.0;150.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>182</x>
-      <y>169</y>
-      <w>91</w>
-      <h>208</h>
+      <x>420</x>
+      <y>140</y>
+      <w>98</w>
+      <h>224</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>50.0;10.0;10.0;10.0;10.0;140.0</additional_attributes>
@@ -152,12 +156,38 @@ ILogin
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>949</x>
-      <y>247</y>
-      <w>39</w>
-      <h>143</h>
+      <x>1246</x>
+      <y>224</y>
+      <w>42</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>56</y>
+      <w>238</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>UserRepo
+--
++users:vector&lt;User*&gt;
++FillUsers():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>98</y>
+      <w>210</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
   </element>
 </diagram>
