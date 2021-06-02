@@ -31,3 +31,7 @@ function toTable(array $dane):string {
     }
     return $html."</table>";
 }
+function addNewContact(string $firstName, string $lastName, 
+                      string $phone):void {
+
+}
