@@ -70,3 +70,12 @@ function getMinPrice():float {
     return $max;
 
 }
+function insertBook(string $title,string $author, float $price):bool {
+    $conn = getConnection();
+    if($conn==null) return false;
+    $sql = "INSERT INTO books(title,author,price) VALUES('{$title}','{$author}',{$price})";
+    //echo $sql;
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}

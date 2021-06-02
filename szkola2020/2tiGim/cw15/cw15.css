@@ -1,0 +1,28 @@
+.container{
+    width: 900px;
+    margin: auto;
+}
+table{
+    border-collapse: collapse;
+    width: 80%;
+    border: solid 1px black ;
+}
+th,td{
+    border: solid 1px black;
+    padding: 6px;
+}
+th{background-color: cornflowerblue;}
+tr:nth-child(even){
+    background-color: lightcyan;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+nav a:hover{
+    font-weight: bold;
+}
+nav ul{
+    list-style: none;
+}
