@@ -90,7 +90,31 @@ namespace FirstWinForms_GIM {
         }
 
         private void UpdateFilm() {
-           
+            if (String.IsNullOrWhiteSpace(titleTexBox.Text) ||
+                String.IsNullOrWhiteSpace(authorTextBox.Text) ||
+                String.IsNullOrWhiteSpace(priceTextBox.Text))
+            {
+                Close();
+            }
+
+            try
+            {
+                Film newFilm = new Film()
+                {
+                    Title = titleTexBox.Text.Trim(),
+                    Author = authorTextBox.Text.Trim(),
+                    Price = Convert.ToDecimal(priceTextBox.Text)
+                };
+                parent.UpdateFilm(newFilm);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error chyba cena: " + exception.Message);
+            }
+            finally
+            {
+                Close();
+            }
         }
 
         private void NewFilmDetails_Load(object sender, EventArgs e)

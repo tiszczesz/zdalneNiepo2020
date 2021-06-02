@@ -154,5 +154,20 @@ namespace FirstWinForms_GIM {
         public ListView GetListView() {
             return listViewDemo;
         }
+
+        public void UpdateFilm(Film film) {
+            Film toUpdateFilm = getFilmByName();
+            toUpdateFilm.Title = film.Title;
+            toUpdateFilm.Author = film.Author;
+            toUpdateFilm.Price = film.Price;
+            FillListViewDemo();
+        }
+
+        private Film getFilmByName() {
+            var result = listViewDemo.SelectedItems[0].SubItems;
+            Film film = Filmy.FirstOrDefault(f => f.Title == result[1].Text);
+
+            return film;
+        }
     }
 }
