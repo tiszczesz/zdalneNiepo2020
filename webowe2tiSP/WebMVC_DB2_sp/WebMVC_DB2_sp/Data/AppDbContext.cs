@@ -16,7 +16,43 @@ namespace WebMVC_DB2_sp.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
-            int dd = 0;
+            modelBuilder.Entity<Animal>().HasData(
+                new Animal {
+                    Id = 1,
+                    Name = "Pikuś",
+                    Description = "Mały biały piesek bez łat",
+                    Weight = 2000
+                },
+                new Animal
+                {
+                    Id = 1,
+                    Name = "Rybka",
+                    Description = "Coś na ząbek",
+                    Weight = 20
+                },
+                new Animal
+                {
+                    Id = 1,
+                    Name = "Kanarek",
+                    Description = "Mały żółty ptaszek śpiewający",
+                    Weight = 100
+                },
+                new Animal
+                {
+                    Id = 1,
+                    Name = "Mruczek",
+                    Description = "Mały czarny kotek bez łat",
+                    Weight = 1000
+                },
+                new Animal
+                {
+                    Id = 1,
+                    Name = "Bonifacy",
+                    Description = "Duży biały kotek bez łat",
+                    Weight = 2000
+                }
+
+                );
         }
     }
 }
