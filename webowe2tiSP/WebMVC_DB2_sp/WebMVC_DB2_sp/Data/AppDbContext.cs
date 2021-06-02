@@ -25,28 +25,28 @@ namespace WebMVC_DB2_sp.Data
                 },
                 new Animal
                 {
-                    Id = 1,
+                    Id = 2,
                     Name = "Rybka",
                     Description = "Coś na ząbek",
                     Weight = 20
                 },
                 new Animal
                 {
-                    Id = 1,
+                    Id = 3,
                     Name = "Kanarek",
                     Description = "Mały żółty ptaszek śpiewający",
                     Weight = 100
                 },
                 new Animal
                 {
-                    Id = 1,
+                    Id = 4,
                     Name = "Mruczek",
                     Description = "Mały czarny kotek bez łat",
                     Weight = 1000
                 },
                 new Animal
                 {
-                    Id = 1,
+                    Id = 5,
                     Name = "Bonifacy",
                     Description = "Duży biały kotek bez łat",
                     Weight = 2000
