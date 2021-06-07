@@ -33,5 +33,5 @@ function toTable(array $dane):string {
 }
 function addNewContact(string $firstName, string $lastName, 
                       string $phone):void {
-
+                        //TODO
 }
