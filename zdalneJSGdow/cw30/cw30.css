@@ -1,0 +1,20 @@
+.container{
+    margin: auto;
+    width: 900px;
+}
+.scene{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#kw1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+#kw2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: none;
+}
