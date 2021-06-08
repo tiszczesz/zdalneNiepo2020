@@ -1,0 +1,40 @@
+.line{
+    margin: 10px;
+}
+.container{
+    margin: auto;
+    width: 900px;
+}
+label{
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+    margin-right: 5px;
+}
+select{
+    width: 150px;
+}
+input[type=radio]{
+    margin-left: 150px;
+}
+input[type=button]{
+    margin-left: 150px;
+    padding: 10px;
+    width: 120px;
+}
+input[type=text]{    
+    width: 120px;
+}
+.form{
+    border: solid black 1px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    background-color: khaki;
+}
+#wynik{
+    margin: 40px;
+    font-size: 3em;
+    font-weight: bold;
+    color: darkred;
+}

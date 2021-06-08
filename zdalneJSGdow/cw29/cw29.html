@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cw29.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="line">
+                <label for="imie">Podaj imię: </label>
+                <input type="text" name="imie" id="imie">
+            </div>
+            <div class="line">
+                <label for="nazwisko">Podaj nazwisko: </label>
+                <input type="text" name="nazwisko" id="nazwisko">
+            </div>
+            <div class="line">
+                <label for="klasa">wybierz klasę: </label>
+                <select name="klasa" id="klasa">
+                    <option value="1A">1A</option>
+                    <option value="1B">1B</option>
+                    <option value="1C">1C</option>
+                    <option value="1T">1T</option>
+                </select>
+            </div>
+            <div class="line">
+                <label for="plec">wybierz płeć: </label><br>
+                <input type="radio" name="plec" id="kobieta" value="kobieta" checked="">kobieta <br>
+                <input type="radio" name="plec" id="mężczyzna" value="mężczyzna">mężczyzna <br>
+            </div>
+            <div class="line">
+                <input type="button" id="zapisz" value="zapisz">
+            </div>
+        </div>
+        <div id="wynik">
+
+        </div>
+    </div>
+    <script src="cw29.js"></script>
+</body>
+</html>
