@@ -70,3 +70,73 @@ function getMinPrice():float {
     return $max;
 
 }
+function insertBook(string $title,string $author, float $price):bool {
+    $conn = getConnection();
+    if($conn==null) return false;
+    $sql = "INSERT INTO books(title,author,price) VALUES('{$title}','{$author}',{$price})";
+    //echo $sql;
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;
+}
+function bookToForm(array $b=[]): string {
+    if(count($b)==0){
+        $action = "addNewBook.php";
+        $title = "";
+        $author = "";
+        $price = "";
+    }else{
+        $action = "editBookPost.php";
+        $title = $b[0];
+        $author = $b[1];
+        $price = $b[2];
+    }
+    $html = <<<TEXT
+    
+     <form action="{$action}" method="post">
+         <div class="mb-3 row">
+             <label for="title" class="col-sm-2 col-form-label text-end">Tytuł książki:</label>
+             <div class="col-sm-10">
+               <input type="text" class="form-control" id="title" name="title" value="{$b[0]}">
+               <span></span>
+             </div>
+           </div>
+           <div class="mb-3 row">
+             <label for="author" class="col-sm-2 col-form-label text-end">Autor:</label>
+             <div class="col-sm-10">
+               <input type="text" class="form-control" id="author" name="author" value="{$b[1]}">
+               <span></span>
+             </div>
+           </div>
+           <div class="mb-3 row">
+             <label for="price" class="col-sm-2 col-form-label text-end">Cena:</label>
+             <div class="col-sm-10">
+               <input type="text" class="form-control" id="price" name="price" value="{$b[2]}">
+               <span></span>
+             </div>
+           </div>
+           <div class="mb-3 row">
+             <label for="button" class="col-sm-2 col-form-label text-end"></label>
+             <div class="col-sm-10">
+               <input type="submit" class="btn btn-primary w-25 p-2" id="button"  value="Zapisz">
+               <input type="reset" class="btn btn-primary w-25 p-2" id="cancel"  value="Anuluj">
+               
+             </div>
+           </div>
+ </form>
+ </div>
+TEXT;
+return $html;
+}
+function getBookById(int $id):array{
+    $conn = getConnection();
+    if($conn === null) return [];
+    $data = [];
+    $sql = "SELECT * FROM books WHERE id={$id}";
+    $result = $conn->query($sql);
+    if($result){      
+            $data = $result->fetch_row();      
+    }
+    $conn->close();
+    return $data; 
+}

@@ -10,7 +10,7 @@ protected:
 public:
 	User();
 	User(std::string login, std::string password);
-	std::string Info();
+	virtual std::string Info();
 	void LogOn(std::string login, std::string password);
 	void LogOut();
 };

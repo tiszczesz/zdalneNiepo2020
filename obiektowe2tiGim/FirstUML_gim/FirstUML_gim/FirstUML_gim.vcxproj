@@ -142,10 +142,12 @@
     <ClCompile Include="Guest.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="User.cpp" />
+    <ClCompile Include="UserRepo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Guest.h" />
     <ClInclude Include="User.h" />
+    <ClInclude Include="UserRepo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

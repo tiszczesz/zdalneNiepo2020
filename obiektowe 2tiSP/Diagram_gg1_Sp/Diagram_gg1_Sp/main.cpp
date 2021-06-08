@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Character.h"
 #include "Weapon.h"
+#include "Armour.h"
 
 using namespace std;
 
@@ -17,6 +18,15 @@ int main() {
 	c1.AddItem(i4);
 	c1.AddItem(sword);
 	c1.ShowEquipment();
+	cout << "Dodajemy zbroje....." << endl;
+	c1.AddItem(new Armour("wielka zbroja", 5, 100,
+		                              20, 100));
+	c1.ShowEquipment();
+	Item* lastItem = c1.GetItems()[c1.GetItems().size() - 1];
+	Armour* armour = dynamic_cast<Armour*>(lastItem);
+	armour->Regeneration(100);
+	c1.ShowEquipment();
+	//c1.GetItems()[c1.GetItems().size()-1]->Re
 	for (auto item : c1.GetItems()) {
 		delete item;
 		item = nullptr;
