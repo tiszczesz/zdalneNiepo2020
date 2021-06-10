@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
 
+#include "ILogin.h"
 #include "User.h"
-class Admin : public User
+class Admin : public User, public ILogin
 {
 private:
 	std::vector<std::string> privilage;
