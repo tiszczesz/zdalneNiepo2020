@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>14</zoom_level>
+  <zoom_level>15</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
-      <y>42</y>
-      <w>392</w>
-      <h>196</h>
+      <x>510</x>
+      <y>15</y>
+      <w>420</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>User
 --
@@ -16,18 +16,17 @@
 # isLogin: bool
 --
 +Info(): string
-+LogOn(login:string,password:string):void
-+LoOut():void
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>630</x>
-      <y>336</y>
-      <w>280</w>
-      <h>98</h>
+      <x>660</x>
+      <y>330</y>
+      <w>300</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>Admin
 --
@@ -39,10 +38,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>742</x>
-      <y>224</y>
-      <w>42</w>
-      <h>140</h>
+      <x>780</x>
+      <y>210</y>
+      <w>45</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -50,10 +49,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1008</x>
-      <y>350</y>
-      <w>294</w>
-      <h>98</h>
+      <x>1065</x>
+      <y>345</y>
+      <w>315</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>AdvUser
 --
@@ -66,21 +65,21 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>868</x>
-      <y>140</y>
-      <w>280</w>
-      <h>238</h>
+      <x>915</x>
+      <y>120</y>
+      <w>225</w>
+      <h>255</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;10.0;180.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0;130.0;150.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1008</x>
-      <y>546</y>
-      <w>294</w>
-      <h>140</h>
+      <x>1065</x>
+      <y>555</y>
+      <w>315</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Remainder
 -
@@ -91,10 +90,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1120</x>
-      <y>434</y>
-      <w>42</w>
-      <h>140</h>
+      <x>1185</x>
+      <y>435</y>
+      <w>45</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -102,25 +101,27 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1204</x>
-      <y>112</y>
-      <w>140</w>
-      <h>126</h>
+      <x>1155</x>
+      <y>105</y>
+      <w>435</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 ILogin
 -
 -
-+Login():bool</panel_attributes>
++LogOn(login:string,password:string):void
++LogOut():bool
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>336</y>
-      <w>252</w>
-      <h>140</h>
+      <x>195</x>
+      <y>345</y>
+      <w>270</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Guest
 --
@@ -134,43 +135,43 @@ ILogin
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>896</x>
-      <y>182</y>
-      <w>336</w>
-      <h>238</h>
+      <x>945</x>
+      <y>165</y>
+      <w>240</w>
+      <h>255</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>220.0;10.0;20.0;10.0;20.0;150.0;10.0;150.0</additional_attributes>
+    <additional_attributes>140.0;10.0;20.0;10.0;20.0;150.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>140</y>
-      <w>98</w>
-      <h>224</h>
+      <x>270</x>
+      <y>165</y>
+      <w>270</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;10.0;10.0;140.0</additional_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1246</x>
-      <y>224</y>
-      <w>42</w>
-      <h>154</h>
+      <x>1245</x>
+      <y>225</y>
+      <w>45</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
-      <y>56</y>
-      <w>238</w>
-      <h>112</h>
+      <x>75</x>
+      <y>30</y>
+      <w>255</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>UserRepo
 --
@@ -182,10 +183,10 @@ ILogin
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>308</x>
-      <y>98</y>
-      <w>210</w>
-      <h>42</h>
+      <x>315</x>
+      <y>75</y>
+      <w>225</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
