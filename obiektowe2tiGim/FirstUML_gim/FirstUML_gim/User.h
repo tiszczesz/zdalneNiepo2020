@@ -11,7 +11,8 @@ public:
 	User();
 	User(std::string login, std::string password);
 	virtual std::string Info();
-	void LogOn(std::string login, std::string password);
-	void LogOut();
+	virtual void LogOn(std::string login, std::string password);
+	virtual void LogOut();
+	virtual ~User();
 };
 

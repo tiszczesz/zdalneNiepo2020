@@ -1,5 +1,6 @@
 #include "User.h"
 
+#include <iostream>
 #include <ostream>
 
 #include "Guest.h"
@@ -16,6 +17,11 @@ void User::LogOn(std::string login, std::string password) {
 void User::LogOut() {
 	isLogin = false;
 }
+
+User::~User() {
+	std::cout << "Niszczenie obiektu user....." << std::endl;
+}
+
 User::User() {
 	login = "";
 	password = "";
