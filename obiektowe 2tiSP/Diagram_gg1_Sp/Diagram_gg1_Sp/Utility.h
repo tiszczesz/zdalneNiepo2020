@@ -10,6 +10,6 @@ public:
 	Utility(string name, int id, double weight
 		, int maxCapacity, int capacity);
 	~Utility() override;
-	void Show() override;
+	virtual void Show() override;
 };
 

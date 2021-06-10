@@ -21,4 +21,6 @@ Utility::~Utility() {
 void Utility::Show() {
 	Item::Show();
 	std::cout << "\n ======= Informacja o narzêdziu: =======\n";
+	std::cout << "\t maksymalna pojemnosc: " << maxCapacity << std::endl;
+	std::cout << "\t  pojemnosc: " << capacity << std::endl;
 }
