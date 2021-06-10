@@ -7,7 +7,7 @@
       <FileName>Armour.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Character" Collapsed="true">
+  <Class Name="Character">
     <Position X="9.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAgAAAIAgAAEAgAAAAAAAAAACAg=</HashCode>
@@ -38,7 +38,7 @@
   <Class Name="Flask" Collapsed="true">
     <Position X="7.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAECAAAAAAIAAAAAAA=</HashCode>
       <FileName>Flask.h</FileName>
     </TypeIdentifier>
   </Class>
