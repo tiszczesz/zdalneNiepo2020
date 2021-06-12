@@ -2,10 +2,11 @@
     margin: auto;
     width: 900px;
 }
-.scene{
+.scene, .scene2{
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 #kw1{
     width: 100px;
@@ -17,4 +18,32 @@
     height: 100px;
     background-color: blue;
     display: none;
+}#kw3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(69, 184, 107);
+   
+}
+#kw4{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(192, 202, 45);
+    display: none;
+
+}#kw5{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(95, 68, 131);
+    
+}#kw6{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(240, 25, 168);
+    
+}
+#kw7{
+    width: 100px; 
+    height: 100px;
+    background-color: rgb(53, 49, 52);
+    
 }
