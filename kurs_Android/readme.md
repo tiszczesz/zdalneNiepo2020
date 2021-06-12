@@ -29,3 +29,12 @@ https://flutter.dev/
 
 https://developer.android.com/studio
 
+# Tworzenie wyglądu aplikacji mobilnej
+
+https://material.io/
+
+https://material.io/blog/jetpack-compose-catalog
+
+# Podstawy Kotlin
+
+https://kotlinlang.org/docs/basic-syntax.html

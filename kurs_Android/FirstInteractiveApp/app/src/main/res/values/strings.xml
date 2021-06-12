@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FirstInteractiveApp</string>
+    <string name="btn_label">Hello</string>
+    <string name="btn2_label">Data</string>
+</resources>
