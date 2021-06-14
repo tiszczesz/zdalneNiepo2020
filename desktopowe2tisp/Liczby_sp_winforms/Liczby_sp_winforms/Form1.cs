@@ -17,5 +17,13 @@ namespace Liczby_sp_winforms
             InitializeComponent();
         }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e) {
+            new AboutWin().ShowDialog();
+        }
     }
 }
