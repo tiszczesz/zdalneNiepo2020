@@ -11,7 +11,7 @@ namespace WebMVC_selfDB.Models
         [Key]
         public int Id { get; set; }
 
-        [Display(Name ="Produkt")]
+        [Display(Name ="Nazwa produktu")]
         [MaxLength(50,ErrorMessage = "Maksymalnie 50 znaków")]
         [Required]
         public string Name { get; set; }

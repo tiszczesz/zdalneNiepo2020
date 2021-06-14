@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebMVC_selfDB.Models.Product>
+
+<div class="container">
+    <h1>Lista produktów</h1>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>@Html.DisplayNameFor(model=>model.Name)</th>
+            <th>@Html.DisplayNameFor(model=>model.Price)</th>
+            <th>@Html.DisplayNameFor(model => model.Description)</th>
+            <th></th>
+           
+        </tr>
+        @*<tr>
+            <th>Nazwa</th>
+            <th>Cena</th>
+            <th>Opis</th>
+            <th></th>
+           
+        </tr>*@
+        
+        @foreach (Product item in Model) {
+            @*<tr>
+                <td>@Html.DisplayFor(model => item.Name)</td>
+                <td>@Html.DisplayFor(model => item.Price)</td>
+                <td>@Html.DisplayFor(model => item.Description)</td>
+                <td></td>
+            </tr>*@
+    <tr>
+        <td>@item.Name</td>
+        <td class="text-right">@item.Price</td>
+        <td>@item.Description></td>
+        <td>
+            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Usuń</a> 
+            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edytuj</a> 
+        </td>
+    </tr>
+           
+        }
+
+    </table>
+</div>

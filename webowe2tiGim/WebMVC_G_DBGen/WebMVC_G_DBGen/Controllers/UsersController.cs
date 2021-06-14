@@ -111,7 +111,7 @@ namespace WebMVC_G_DBGen.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));             
             }
             return View(user);
         }
