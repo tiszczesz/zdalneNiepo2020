@@ -22,10 +22,12 @@ dt{
     padding: 10px;
     border: solid black 1px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 dt::first-letter{
     color: black;    
     font-size: 1.5em;
+    font-family: 'Dancing Script', cursive;
 }
 dd{
     font-style: italic;
