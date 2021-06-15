@@ -24,8 +24,10 @@ namespace WebMVC_DB2_sp
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
+
             services.AddDbContext<AppDbContext>(options => options
                 .UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
+
             services.AddControllersWithViews();
 
         }

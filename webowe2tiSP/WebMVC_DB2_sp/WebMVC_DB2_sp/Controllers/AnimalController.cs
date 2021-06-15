@@ -18,5 +18,10 @@ namespace WebMVC_DB2_sp.Controllers
             List<Animal> animals = _db.Animals.ToList();
             return View(animals);
         }
+
+        public IActionResult Delete(int? id) {
+           // Animal animal = _db.Animals.S
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
