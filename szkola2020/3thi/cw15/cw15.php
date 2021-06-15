@@ -12,27 +12,28 @@
 
 <body>
     <div class="container">
-        <h1 class="border-bottom text-center">Zbiór kontaktów</h1>
-        <div class="row">
-            <nav>
-                <ul class="list-group">
-                    <li class="list-group-item"><a class="btn btn-secondary w-50" href="addNew.html">Dodaj kontakt</a></li>
-                    <li class="list-group-item"><a class="btn btn-secondary w-50" href="">Atrapa</a></li>
-                    <li class="list-group-item"><a class="btn btn-secondary w-50" href="">Atrapa</a></li>
-                </ul>
+       
 
-            </nav>
-            <div>
-                <?php
-                require_once "functions.php";
-                $contacts = getAll();
-                echo toTable($contacts);
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="cw15.php">Lista kontaktów</a></li>
+                <li class="nav-item active"><a class="nav-link" href="addNew.html">Dodaj kontakt</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Atrapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Atrapa</a></li>
+            </ul>
 
-                ?>
+        </nav> <h1 class="border-bottom text-center mt-10">Lista kontaktów</h1>
+        <div>
+            <?php
+            require_once "functions.php";
+            $contacts = getAll();
+            echo toTable($contacts);
 
-            </div>
+            ?>
 
         </div>
+
+
 
     </div>
 

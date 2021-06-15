@@ -33,3 +33,29 @@ function workersToTable(array $workers):string {
     }
     return $html."</table>";
 }
+function getSelect():?string {
+    $conn = getConnection();
+    if($conn==null) return null;
+    $sql = "SELECT * FROM dzial";
+    $result = $conn->query($sql);
+    $html = "<select name='dzial' class='form-select'>";    
+    if($result){
+       while($row = $result->fetch_row()){
+           //var_dump($row);
+            $html .= "<option value='{$row[0]}'>{$row[1]}</option>";
+       }
+    }
+    $conn->close();
+    return $html."</select>";
+}
+function insertWorker(string $imie,string $nazwisko, int $dzial):?bool {
+    $conn = getConnection();
+    if($conn==null) return null; 
+    $sql = "INSERT INTO pracownik(Nazwisko,Imie,Dzial_id) "
+     ." VALUES('{$imie}','{$nazwisko}',{$dzial})";
+    // echo $sql;
+     $result = $conn->query($sql);
+    //todo
+    $conn->close();
+    return $result;
+}

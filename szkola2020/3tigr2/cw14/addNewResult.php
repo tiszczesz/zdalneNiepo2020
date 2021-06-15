@@ -8,5 +8,7 @@ if(isset($_POST['imie'])){
         insertWorker($imie,$nazwisko,$dzial);
     }
 
-    
+    header("Location: cw14.php");
+}else{
+    header("Location: addNew.php");
 }

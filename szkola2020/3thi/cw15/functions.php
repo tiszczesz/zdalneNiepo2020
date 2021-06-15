@@ -31,7 +31,12 @@ function toTable(array $dane):string {
     }
     return $html."</table>";
 }
-function addNewContact(string $firstName, string $lastName, 
-                      string $phone):void {
-                        //TODO
+function addNewContact(string $firstName, string $lastName, string $phone):bool {
+    $conn = getConnection();
+    if($conn==null) return false; 
+    $sql = "INSERT INTO persons(firstName,lastName,phone)"
+            ." VALUES('{$firstName}','{$lastName}','{$phone}')"; 
+    $result = $conn->query($sql);
+    $conn->close();
+    return $result;                 
 }

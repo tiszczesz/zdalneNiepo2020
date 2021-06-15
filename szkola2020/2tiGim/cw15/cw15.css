@@ -33,7 +33,7 @@ nav ul{
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .line{
     margin: 10px;

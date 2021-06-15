@@ -9,3 +9,4 @@ if(isset($_POST['firstName'])){
         addNewContact($firstName,$lastName,$phone);
     }
 }
+header("Location: cw15.php");

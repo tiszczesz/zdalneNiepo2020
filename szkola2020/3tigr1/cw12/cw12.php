@@ -10,6 +10,7 @@
     <h1>Ćwiczenie 12 - mysqli wstęp</h1>
     <?php
         $conn = new mysqli("localhost","root",null,"3ti_gr1_cw1");
+        
         //var_dump($conn);
         if($conn->connect_errno!==0){
             echo $conn->connect_error."<br>";
@@ -49,6 +50,9 @@
     </div>
     <div>
         <a href="delete.php">usuń film/y film</a>
+    </div>
+    <div>
+        <a href="list.php">lista filmów</a>
     </div>
 </body>
 </html>
