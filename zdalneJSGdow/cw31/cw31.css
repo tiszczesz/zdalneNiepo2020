@@ -1,0 +1,33 @@
+.container{
+    margin: auto;
+    width: 900px;
+   
+    padding: 10px;
+}
+body{
+    background-color: blanchedalmond;
+}
+.baner{
+    background-color: rgb(204, 124, 66);
+    color: brown;
+    border:solid brown 2px;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 20px;
+}
+dt{
+    background-color: rgb(161, 116, 97);
+    font-size: 1.4em;
+    padding: 10px;
+    border: solid black 1px;
+    margin-bottom: 10px;
+}
+dt::first-letter{
+    color: black;    
+    font-size: 1.5em;
+}
+dd{
+    font-style: italic;
+    margin-bottom: 20px;
+}
