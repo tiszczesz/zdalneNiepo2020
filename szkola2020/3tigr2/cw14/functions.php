@@ -29,12 +29,14 @@ function workersToTable(array $workers):string {
     $lp = 0;
     foreach($workers as $w){
         $lp++;
-        $html .= "<tr><td>{$lp}</td><td>{$w['Imie']}</td><td>{$w['Nazwisko']}</td></tr>";
+        $html .= "<tr><td>{$lp}</td><td>{$w['Imie']}</td><td>{$w['Nazwisko']}</td>"
+          ."<td><a href='deleteWorker.php?id={$w['Id']}' class='btn btn-danger'>Usuń</a>"
+              ." <a href='editeWorker.php?id={$w['Id']}' class='btn btn-primary'>Edytuj</a></td></tr>";
     }
     return $html."</table>";
 }
-function getSelect():?string {
-    $conn = getConnection();
+function getSelect(int $id=-1):?string {
+    $conn = getConnection($id);
     if($conn==null) return null;
     $sql = "SELECT * FROM dzial";
     $result = $conn->query($sql);
@@ -58,4 +60,51 @@ function insertWorker(string $imie,string $nazwisko, int $dzial):?bool {
     //todo
     $conn->close();
     return $result;
+}
+function deleteWorker(int $id):bool {
+    $conn = getConnection();
+    if($conn==null) return false;
+    $sql = "DELETE FROM pracownik WHERE Id={$id}";
+    $result = $conn->query($sql);
+    $conn->close();
+    var_dump($result);
+    return $result;
+}
+function workerToForm(array $worker=[],int $id=-1):string {
+    if(count($worker)==0){
+        $action = "addNewResult.php";
+        $imie = "";
+        $nazwisko = "";
+        $dzialId = -1;        
+    }else{
+        $action = "editResult.php";
+        $imie = $worker[0];
+        $nazwisko = $worker[1];
+        $dzialId = $worker[2];
+        $dzialId=$id;
+    }
+    $select = getSelect($dzialId);
+    $html=<<<TEXT
+    <form action="{$action}" method="POST">
+    <div class="form-row m-3">
+      <label for="imie">Imię: </label>
+      <input type="text" name="imie" id="imie" class="form-control" value="{$imie}">
+    </div>
+    <div class="form-row m-3">
+      <label for="nazwisko">Nazwisko: </label>
+      <input type="text" name="nazwisko" id="nazwisko"
+           class="form-control" value="{$nazwisko}">
+    </div>
+    <div class="form-row m-3">
+      <label for="imie">Dział: </label>
+      {$select}
+    </div>
+    <div class="form-row m-3">
+
+      <input type="submit" class="btn btn-primary w-100" value="Zapisz">
+    </div>
+
+  </form>
+TEXT;
+ return $html;
 }

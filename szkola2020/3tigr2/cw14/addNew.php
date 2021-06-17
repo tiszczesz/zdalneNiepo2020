@@ -19,13 +19,13 @@
           <a class="dropdown-item" href="cw14.php">Lista pracowników</a>
         </li>
         <li class="nav-item">
-          <a class="dropdown-item" href="addNew.php" href="">Dodaj nowego pracownika</a>
+          <a class="dropdown-item" href="addNew.php" >Dodaj nowego pracownika</a>
         </li>
         <li class="nav-item">
-          <a class="dropdown-item" href="listDiv.php" href="">Lista działów</a>
+          <a class="dropdown-item" href="listDiv.php" >Lista działów</a>
         </li>
         <li class="nav-item">
-          <a class="dropdown-item" href="addNewDiv.php" href="">Dodaj nowy dział</a>
+          <a class="dropdown-item" href="addNewDiv.php" >Dodaj nowy dział</a>
         </li>
       </ul>
 
@@ -35,25 +35,7 @@
     ?>
     <div class="container">
       <h1>Dodawanie nowego pracownika</h1>
-      <form action="addNewResult.php" method="POST">
-        <div class="form-row m-3">
-          <label for="imie">Imię: </label>
-          <input type="text" name="imie" id="imie" class="form-control">
-        </div>
-        <div class="form-row m-3">
-          <label for="nazwisko">Nazwisko: </label>
-          <input type="text" name="nazwisko" id="nazwisko" class="form-control">
-        </div>
-        <div class="form-row m-3">
-          <label for="imie">Dział: </label>
-          <?php echo getSelect() ?>
-        </div>
-        <div class="form-row m-3">
-
-          <input type="submit" class="btn btn-primary w-100" value="Zapisz">
-        </div>
-
-      </form>
+      <?=workerToForm()?>
     </div>
   </div>
 </body>
