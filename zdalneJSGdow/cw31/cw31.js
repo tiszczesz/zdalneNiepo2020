@@ -1,3 +1,4 @@
+/* eslint-env jquery */
 $(function(){
     $("dt").each(function(i,e){
         //console.log(e);
