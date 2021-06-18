@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cw31.css">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+
+<div class="messagepop pop">
+  <form method="post" id="new_message" action="/messages">
+    <p><label for="email">Your email or name</label><input type="text" size="30" name="email" id="email" /></p>
+    <p><label for="body">Message</label><textarea rows="6" name="body" id="body" cols="35"></textarea></p>
+    <p><input type="submit" value="Send Message" name="commit" id="message_submit" /> or <a class="close"
+        href="/">Cancel</a></p>
+  </form>
+</div>
+
+<a href="/contact" id="contact">Contact Us</a>
+<script src="jquery-3.6.0.js"></script>
+<script src="cw31_pop.js"></script>
+</body>
+</html>
