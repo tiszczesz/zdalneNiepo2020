@@ -38,3 +38,39 @@ https://material.io/blog/jetpack-compose-catalog
 # Podstawy Kotlin
 
 https://kotlinlang.org/docs/basic-syntax.html
+
+# Pętle i instrukcje warunkowe
+
+https://kotlinlang.org/docs/control-flow.html
+
+## if
+
+```kotlin
+var max = a
+if (a < b) max = b
+
+// With else
+var max: Int
+if (a > b) {
+    max = a
+} else {
+    max = b
+}
+
+// As expression
+val max = if (a > b) a else b
+
+```
+
+## when
+
+```kotlin
+when (x) {
+    1 -> print("x == 1")
+    2 -> print("x == 2")
+    else -> { // Note the block
+        print("x is neither 1 nor 2")
+    }
+}
+
+```
