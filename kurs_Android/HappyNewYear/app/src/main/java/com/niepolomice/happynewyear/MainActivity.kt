@@ -2,9 +2,7 @@ package com.niepolomice.happynewyear
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import java.time.LocalDate
 import java.time.Period
 import java.time.format.DateTimeFormatter
@@ -17,12 +15,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val imageView = findViewById<ImageView>(R.id.imageView)
         val button = findViewById<Button>(R.id.button)
+        val myfirstName = findViewById<EditText>(R.id.editText)
+        var friendTextView = findViewById<TextView>(R.id.friendTextView)
         imageView.setOnClickListener {
             Toast.makeText(this@MainActivity,getDaysToNewYear(),Toast.LENGTH_LONG)
                 .show()
         }
         button.setOnClickListener {
-           
+           if(myfirstName.text.toString().trim()==""){
+               friendTextView.setText("Brak danych")
+           }else if(getMyFriends().contains(myfirstName.text.toString().trim())){
+               friendTextView.setText("${myfirstName.text} to Twój znajomy")
+           }else{
+               friendTextView.setText("${myfirstName.text} to nie Twój znajomy")
+           }
         }
     }
 

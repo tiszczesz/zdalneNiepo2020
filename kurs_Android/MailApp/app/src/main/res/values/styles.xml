@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="textView_my">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="android:layout_marginEnd">@dimen/low_margin</item>
+    </style>
+
+
+</resources>
