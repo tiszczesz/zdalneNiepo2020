@@ -74,3 +74,15 @@ when (x) {
 }
 
 ```
+
+# Layouts w Android
+
+https://developer.android.com/guide/topics/ui/declaring-layout
+
+### Przykład użycia: constraint-layout
+
+https://developer.android.com/training/constraint-layout
+
+## Ćwiczenie
+
+Klasa period (różnica dat): https://developer.android.com/reference/kotlin/java/time/Period
