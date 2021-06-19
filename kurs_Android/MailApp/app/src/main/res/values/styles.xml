@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="buttons_style">
-    <item name="android:background">#124532</item>
+    <item name="backgroundColor">#124532</item>
     <item name="android:padding">8dp</item>
-    <item name="android:textColor">#DACDF8</item>
+    <item name="android:textColor">#FAED6F</item>
+        <item name="android:textSize">32sp</item>
 </style>
     <style name="textView_my">
         <item name="android:textColor">@color/purple_700</item>
         <item name="android:textSize">@dimen/medium_text</item>
         <item name="android:layout_marginEnd">@dimen/low_margin</item>
-        <item name="android:background">#BBDDDA</item>
+
+        <item name="android:width">50dp</item>
     </style>
 
 
