@@ -26,10 +26,14 @@
         android:text="@string/my_name"
         android:textColor="@color/black"
         android:textSize="36sp" />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/medium_margin"
@@ -38,16 +42,29 @@
 
         <EditText
             android:id="@+id/editText"
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/edit_hint"
-            android:text="RRRRRR" />
+            />
 
         <Button
             android:id="@+id/button"
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DDDDDD" />
+            android:text="@string/button_label" />
     </LinearLayout>
+ <TextView
+     android:id="@+id/friendTextView"
+     android:layout_marginTop="@dimen/low_margin"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="@string/is_friend"
+     android:textSize="18sp"
+     android:gravity="center_horizontal"
+     android:textColor="@color/black"
+     />
+</LinearLayout>
 
 </RelativeLayout>

@@ -3,4 +3,6 @@
     <string name="image_description">Happy New Year</string>
     <string name="my_name">Roman Boman</string>
     <string name="edit_hint">Podaj imię</string>
+    <string name="button_label">Sprawdź znajomość</string>
+    <string name="is_friend">Czy to Twój znajomy</string>
 </resources>
