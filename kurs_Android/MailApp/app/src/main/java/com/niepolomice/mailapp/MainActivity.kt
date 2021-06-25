@@ -15,16 +15,16 @@ class MainActivity : AppCompatActivity() {
         val topicEditText = findViewById<EditText>(R.id.topicEditText)
         buttonSend.setOnClickListener {
 
-           // val toEmailText = emailTo.text.toString().trim()
-            var liczba: Int = emailTo.text.toString()!!.toInt()
-            liczba += 12
-//            if(toEmailText!=""){
-//                Toast.makeText(this@MainActivity,
-//                    "Wysłano email do: ${toEmailText}",Toast.LENGTH_LONG).show()
-//            }else{
-//                Toast.makeText(this@MainActivity,
-//                    "Brak adresu",Toast.LENGTH_LONG).show()
-//            }
+            val toEmailText = emailTo.text.toString().trim()
+//            var liczba: Int = emailTo.text.toString()!!.toInt()
+//            liczba += 12
+            if(toEmailText!=""){
+                Toast.makeText(this@MainActivity,
+                    "Wysłano email do: ${toEmailText}",Toast.LENGTH_LONG).show()
+            }else{
+                Toast.makeText(this@MainActivity,
+                    "Brak adresu",Toast.LENGTH_LONG).show()
+            }
         }
     }
 }
