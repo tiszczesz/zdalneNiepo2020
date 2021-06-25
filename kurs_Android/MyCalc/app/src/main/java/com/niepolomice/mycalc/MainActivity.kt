@@ -8,8 +8,16 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
+
+
 class MainActivity : AppCompatActivity() {
     lateinit var editText:EditText
+    var numberOne:Float = 0.0f
+    var isPlus:Boolean = false
+    var isMinus:Boolean = false
+    var isDivide:Boolean = false
+    var isTimes:Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     fun operationFunction(view: View) {
        // Toast.makeText(this@MainActivity,"Click: ${view.id}",Toast.LENGTH_SHORT).show()
+
         when(view.id){
             R.id.button_one -> {
                 numberClicked(1)
@@ -50,7 +59,101 @@ class MainActivity : AppCompatActivity() {
             R.id.button_zero -> {
                 numberClicked(0)
             }
+            R.id.button_clear -> {
+                editText.setText("")
+            }
+            R.id.button_dot -> {
+                dotIsClicked()
+            }
+            R.id.button_plus -> {
+                plusClicked()
+            }
+            R.id.button_equal ->{
+                equalClicked()
+            }
+            R.id.button_minus -> {
+                minusClicked()
+            }
+            R.id.button_divide -> {
+                divideClicked()
+            }
+            R.id.button_times -> {
+                timesClicked()
+            }
         }
+    }
+
+    private fun timesClicked() {
+        numberOne = editText.text.toString().toFloat()
+        editText.setText("")
+        isTimes = true
+    }
+
+    private fun divideClicked() {
+        numberOne = editText.text.toString().toFloat()
+        editText.setText("")
+        isDivide = true
+    }
+
+    private fun minusClicked() {
+        numberOne = editText.text.toString().toFloat()
+        editText.setText("")
+        isMinus = true
+    }
+
+    private fun equalClicked() {
+        when{
+            isPlus ->{
+                plus()
+            }
+            isMinus ->{
+                minus()
+            }
+            isDivide -> {
+                divide()
+            }
+            isTimes -> {
+                times()
+            }
+        }
+    }
+
+    private fun divide() {
+        numberOne = editText.text.toString().toFloat()
+        editText.setText("")
+        isDivide = true
+    }
+
+    private fun minus() {
+        val numberTwo = editText.text.toString().toFloat()
+        val result = numberOne-numberTwo
+        editText.setText(result.toString())
+        isMinus = false
+    }
+
+    private fun plus() {
+        val numberTwo = editText.text.toString().toFloat()
+        val result = numberOne+numberTwo
+        editText.setText(result.toString())
+        isPlus = false
+    }
+    private fun times(){
+        val numberTwo = editText.text.toString().toFloat()
+        val result = numberOne*numberTwo
+        editText.setText(result.toString())
+        isTimes = false
+    }
+
+    private fun plusClicked() {
+        numberOne = editText.text.toString().toFloat()
+        editText.setText("")
+        isPlus = true
+    }
+
+    private fun dotIsClicked() {
+        if(editText.text.length==0 || editText.text.contains(".")) return
+        val number = editText.text.toString()+"."
+        editText.setText(number)
     }
 
     private fun numberClicked(numberClicked: Int) {
