@@ -32,19 +32,24 @@
             <Button
                 android:id="@+id/button_one"
                 style="@style/button_style"
-                android:text="1"/>
+                android:text="1"
+                android:onClick="operationFunction"
+                />
             <Button
                 android:id="@+id/button_two"
                 style="@style/button_style"
-                android:text="2"/>
+                android:text="2"
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_three"
                 style="@style/button_style"
-                android:text="3"/>
+                android:text="3"
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_plus"
                 style="@style/button_style"
-                android:text="+"/>
+                android:text="+"
+                android:onClick="operationFunction"/>
         </LinearLayout>
 
         <LinearLayout
@@ -55,42 +60,52 @@
             <Button
                 android:id="@+id/button_four"
                 style="@style/button_style"
-                android:text="4"/>
+                android:text="4"
+                android:onClick="operationFunction"
+                />
             <Button
                 android:id="@+id/button_five"
                 style="@style/button_style"
-                android:text="5"/>
+                android:text="5"
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_six"
                 style="@style/button_style"
-                android:text="6"/>
+                android:text="6"
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_minus"
                 style="@style/button_style"
-                android:text="-"/>
+                android:text="-"
+                android:onClick="operationFunction"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_weight="4">
+            android:layout_weight="4"
+            >
             <Button
                 android:id="@+id/button_seven"
                 style="@style/button_style"
-                android:text="7"/>
+                android:text="7"
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_eight"
                 style="@style/button_style"
-                android:text="8"/>
+                android:text="8"
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_nine"
                 style="@style/button_style"
-                android:text="9"/>
+                android:text="9"
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_times"
                 style="@style/button_style"
-                android:text="*"/>
+                android:text="*"
+                android:onClick="operationFunction"/>
         </LinearLayout>
 
         <LinearLayout
@@ -101,19 +116,23 @@
             <Button
                 android:id="@+id/button_zero"
                 style="@style/button_style"
-                android:text="0"/>
+                android:text="0"
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_dot"
                 style="@style/button_style"
-                android:text="."/>
+                android:text="."
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_clear"
                 style="@style/button_style"
-                android:text="C"/>
+                android:text="C"
+                android:onClick="operationFunction"/>
             <Button
                 android:id="@+id/button_divide"
                 style="@style/button_style"
-                android:text="/"/>
+                android:text="/"
+                android:onClick="operationFunction"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -123,7 +142,8 @@
             <Button
                 android:id="@+id/button_equal"
                 style="@style/button_style"
-                android:text="="/>
+                android:text="="
+                android:onClick="operationFunction"/>
 
         </LinearLayout>
     </LinearLayout>
