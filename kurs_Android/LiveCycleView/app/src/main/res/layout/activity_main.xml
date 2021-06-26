@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-
+        android:gravity="center_horizontal"
         android:hint="Tu będzie tekst"
         android:textColor="@color/purple_500"
         android:textSize="20sp"

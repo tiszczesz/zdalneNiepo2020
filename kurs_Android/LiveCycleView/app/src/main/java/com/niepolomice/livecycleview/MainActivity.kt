@@ -18,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         Log.i(TAG,"onCreate")
 
+        bind.button.setOnClickListener {
+            //todo z editText do TextView
+        }
     }
 
     override fun onStart() {
@@ -53,10 +56,14 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Log.i(TAG,"onSaveInstanceState")
+        val userText = bind.editTextTextPersonName.text
+        outState.putCharSequence("savedText",userText)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         Log.i(TAG,"onRestoreInstanceState")
+        val userText = savedInstanceState.getCharSequence("savedText")
+        bind.editTextTextPersonName.setText(userText)
     }
 }
