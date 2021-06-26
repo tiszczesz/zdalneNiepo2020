@@ -1,0 +1,2 @@
+rootProject.name = "GenerateActivity"
+include ':app'
