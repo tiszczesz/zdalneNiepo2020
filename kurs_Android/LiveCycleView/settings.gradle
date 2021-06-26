@@ -1,0 +1,2 @@
+rootProject.name = "Live Cycle View"
+include ':app'

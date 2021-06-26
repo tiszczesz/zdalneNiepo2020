@@ -86,3 +86,11 @@ https://developer.android.com/training/constraint-layout
 ## Ćwiczenie
 
 Klasa period (różnica dat): https://developer.android.com/reference/kotlin/java/time/Period
+
+## Activity
+
+https://developer.android.com/guide/components/activities/intro-activities
+
+## View Binding
+
+https://developer.android.com/topic/libraries/view-binding
