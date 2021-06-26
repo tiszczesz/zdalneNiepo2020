@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-
+import java.lang.Exception
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     var isMinus:Boolean = false
     var isDivide:Boolean = false
     var isTimes:Boolean = false
+    var isEqual:Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,38 +28,21 @@ class MainActivity : AppCompatActivity() {
 
     fun operationFunction(view: View) {
        // Toast.makeText(this@MainActivity,"Click: ${view.id}",Toast.LENGTH_SHORT).show()
-
+        val buttonID = arrayListOf<Int>(R.id.button_one,R.id.button_two,R.id.button_three
+            ,R.id.button_four,R.id.button_five,R.id.button_six,R.id.button_seven
+            ,R.id.button_eight,R.id.button_nine,R.id.button_zero)
+        if(isEqual) {
+            editText.setText("")
+            isEqual=false
+        }
+        if((editText.text.toString()==null || editText.text.toString()=="") && view.id  !in buttonID){
+            return
+        }
         when(view.id){
-            R.id.button_one -> {
-                numberClicked(1)
+            in buttonID ->{
+                numberClicked((view as Button)?.text.toString())
             }
-            R.id.button_two -> {
-                numberClicked(2)
-            }
-            R.id.button_three -> {
-                numberClicked(3)
-            }
-            R.id.button_four -> {
-                numberClicked(4)
-            }
-            R.id.button_five -> {
-                numberClicked(5)
-            }
-            R.id.button_six -> {
-                numberClicked(6)
-            }
-            R.id.button_seven -> {
-                numberClicked(7)
-            }
-            R.id.button_eight -> {
-                numberClicked(8)
-            }
-            R.id.button_nine -> {
-                numberClicked(9)
-            }
-            R.id.button_zero -> {
-                numberClicked(0)
-            }
+
             R.id.button_clear -> {
                 editText.setText("")
             }
@@ -84,6 +68,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun timesClicked() {
+
         numberOne = editText.text.toString().toFloat()
         editText.setText("")
         isTimes = true
@@ -102,6 +87,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun equalClicked() {
+        isEqual=true
         when{
             isPlus ->{
                 plus()
@@ -125,10 +111,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun minus() {
-        val numberTwo = editText.text.toString().toFloat()
-        val result = numberOne-numberTwo
-        editText.setText(result.toString())
-        isMinus = false
+        try{
+            val numberTwo = editText.text.toString().toFloat()
+            val result = numberOne-numberTwo
+            editText.setText(result.toString())
+            isMinus = false
+        }catch (ex:Exception){
+            Toast.makeText(this,"Błędne dane!!!",Toast.LENGTH_SHORT)
+        }
+
+
     }
 
     private fun plus() {
@@ -156,8 +148,8 @@ class MainActivity : AppCompatActivity() {
         editText.setText(number)
     }
 
-    private fun numberClicked(numberClicked: Int) {
-        val number = editText.text.toString()+numberClicked.toString()
+    private fun numberClicked(numberClicked: String) {
+        val number = editText.text.toString()+numberClicked
         editText.setText(number)
     }
 
