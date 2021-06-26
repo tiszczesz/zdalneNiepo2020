@@ -10,5 +10,6 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bind = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(bind.root)
+        
     }
 }
