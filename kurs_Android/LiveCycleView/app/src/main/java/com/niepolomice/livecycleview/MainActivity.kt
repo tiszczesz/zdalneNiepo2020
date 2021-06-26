@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.widget.Toast
 import com.niepolomice.livecycleview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +20,13 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG,"onCreate")
 
         bind.button.setOnClickListener {
-            //todo z editText do TextView
+            var text = bind.editTextTextPersonName.text.toString()
+            if(text!=""){
+                bind.textView.setText(text)
+            }else{
+                Toast.makeText(it.context,"Brak danych",Toast.LENGTH_LONG).show()
+            }
+
         }
     }
 
