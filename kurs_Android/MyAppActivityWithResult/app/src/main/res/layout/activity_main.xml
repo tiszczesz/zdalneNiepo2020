@@ -4,6 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn_lunch_activity_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Przejdź do drugiej aktywności"
+        app:layout_constraintEnd_toEndOf="@+id/tv_first_activity_result"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/tv_first_activity_result"
+        app:layout_constraintTop_toBottomOf="@+id/tv_first_activity_result" />
+
+    <TextView
+        android:id="@+id/tv_first_activity_result"
+        android:layout_marginTop="44dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/btn_launch_activity_first"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="@+id/btn_launch_activity_first"
+        app:layout_constraintTop_toBottomOf="@+id/btn_launch_activity_first"
+        style="@style/text_view_style" />
+
+    <Button
+        android:id="@+id/btn_launch_activity_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Przejdź do pierwszej aktywności"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_second_activity_result"
+        style="@style/text_view_style"
+
+        android:layout_width="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/btn_lunch_activity_second"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/btn_lunch_activity_second"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lunch_activity_second" />
 </androidx.constraintlayout.widget.ConstraintLayout>
