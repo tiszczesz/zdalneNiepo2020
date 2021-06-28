@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 if(data!=null){
                     val name = data.getStringExtra(NAME)
                     val email = data.getStringExtra(EMAIL)
-                    bind.tvSecondActivityResult.text = "nazwa: $name adres mailowy: $email"
+                    bind.tvSecondActivityResult.text = "nazwa: $name\n adres mailowy: $email"
                 }
             }
         }else{

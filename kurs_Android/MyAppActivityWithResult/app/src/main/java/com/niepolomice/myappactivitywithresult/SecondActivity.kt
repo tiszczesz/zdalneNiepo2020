@@ -15,8 +15,8 @@ class SecondActivity : AppCompatActivity() {
 
         bind.btnSubmit.setOnClickListener {
             val intent = Intent()
-            intent.putExtra(MainActivity.NAME,bind.etName.toString())
-            intent.putExtra(MainActivity.EMAIL,bind.etEmail.toString())
+            intent.putExtra(MainActivity.NAME,bind.etName.text.toString())
+            intent.putExtra(MainActivity.EMAIL,bind.etEmail.text.toString())
 
             setResult(Activity.RESULT_OK,intent)
             finish()
