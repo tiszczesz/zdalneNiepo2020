@@ -1,12 +1,16 @@
 package com.niepolomice.myquiz
 
+import android.graphics.Color
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.View
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 
 import com.niepolomice.myquiz.databinding.ActivityQuizQuestionsBinding
 
-class QuizQuestionsActivity : AppCompatActivity() {
+class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mCurrentPosition: Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
@@ -26,12 +30,19 @@ class QuizQuestionsActivity : AppCompatActivity() {
         mUserName = intent.getStringExtra(Constants.USER_NAME)
 
         setQuestion()
+
+        bind.tvOptionOne.setOnClickListener(this)
+        bind.tvOptionTwo.setOnClickListener(this)
+        bind.tvOptionThree.setOnClickListener(this)
+        bind.tvOptionFour.setOnClickListener(this)
+        bind.btnSubmit.setOnClickListener(this)
+
     }
 
     private fun setQuestion() {
         val question = mQuestionsList!!.get(mCurrentPosition-1)
 
-        //defaultOptionView()
+        defaultOptionView()
 
         if(mCurrentPosition==mQuestionsList!!.size){
             bind.btnSubmit.text = "KONIEC"
@@ -52,6 +63,49 @@ class QuizQuestionsActivity : AppCompatActivity() {
     }
 
     private fun defaultOptionView() {
-        TODO("Not yet implemented")
+        val options = ArrayList<TextView>()
+        options.add(0,bind.tvOptionOne)
+        options.add(1,bind.tvOptionTwo)
+        options.add(2,bind.tvOptionThree)
+        options.add(3,bind.tvOptionFour)
+
+        for(option in options){
+            option.setTextColor(Color.parseColor("#7A8089"))
+            option.typeface = Typeface.DEFAULT
+            option.background = ContextCompat
+                .getDrawable(this@QuizQuestionsActivity,R.drawable.default_option_borders_bg)
+        }
+
+    }
+
+    override fun onClick(v: View?) {
+//        Toast.makeText(this@QuizQuestionsActivity,"Kliknięto przycisk: "
+//           +v?.id,Toast.LENGTH_SHORT).show()
+        when(v?.id){
+            R.id.tv_option_one -> {
+                selectOptionView(bind.tvOptionOne,1)
+            }
+            R.id.tv_option_two -> {
+                selectOptionView(bind.tvOptionTwo,2)
+            }
+            R.id.tv_option_three -> {
+                selectOptionView(bind.tvOptionThree,3)
+            }
+            R.id.tv_option_four -> {
+                selectOptionView(bind.tvOptionFour,4)
+            }
+            R.id.btn_submit -> {
+
+            }
+        }
+    }
+
+    private fun selectOptionView(tv: TextView, selectedOptionNumber: Int) {
+        defaultOptionView()
+        mSelectedOptionPosition = selectedOptionNumber
+        tv.setTextColor(Color.parseColor("#363A43"))
+        tv.setTypeface(tv.typeface,Typeface.BOLD)
+        tv.background=ContextCompat
+            .getDrawable(this@QuizQuestionsActivity,R.drawable.selected_option_borders_bg)
     }
 }
