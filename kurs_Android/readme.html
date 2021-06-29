@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pocz&aogon;tek kursu</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="początek-kursu">Początek kursu</h1>
+<h2 id="przydatne-linki">Przydatne linki:</h2>
+<h3 id="system-android">System Android:</h3>
+<p><a href="https://pl.wikipedia.org/wiki/Android_(system_operacyjny)">https://pl.wikipedia.org/wiki/Android_(system_operacyjny)</a></p>
+<h3 id="wersje-android">Wersje Android:</h3>
+<p><a href="https://pl.wikipedia.org/wiki/Wersje_systemu_Android">https://pl.wikipedia.org/wiki/Wersje_systemu_Android</a></p>
+<h3 id="strona-dla-programistów-android">Strona dla programistów Android</h3>
+<p><a href="https://developer.android.com/">https://developer.android.com/</a></p>
+<h1 id="narzędzia-do-pracy-z-systemami-na-urządzenia-mobilne">Narzędzia do pracy z systemami na urządzenia mobilne:</h1>
+<h3 id="cordova">Cordova:</h3>
+<p><a href="https://cordova.apache.org/">https://cordova.apache.org/</a></p>
+<h3 id="visual-studio-tools-for-xamarin">Visual Studio Tools for Xamarin:</h3>
+<p><a href="https://visualstudio.microsoft.com/pl/vs/features/mobile-app-development/">https://visualstudio.microsoft.com/pl/vs/features/mobile-app-development/</a></p>
+<h3 id="react-native">React Native:</h3>
+<p><a href="https://reactnative.dev/">https://reactnative.dev/</a></p>
+<h3 id="flutter-is-googles-ui-toolkit-for-building-beautiful-natively-compiled-applications-for-mobile-web-desktop-and-embedded-devices-from-a-single-codebase">Flutter is Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, desktop, and embedded devices from a single codebase.</h3>
+<p><a href="https://flutter.dev/">https://flutter.dev/</a></p>
+<h3 id="android-studio">Android Studio</h3>
+<p><a href="https://developer.android.com/studio">https://developer.android.com/studio</a></p>
+<h1 id="tworzenie-wyglądu-aplikacji-mobilnej">Tworzenie wyglądu aplikacji mobilnej</h1>
+<p><a href="https://material.io/">https://material.io/</a></p>
+<p><a href="https://material.io/blog/jetpack-compose-catalog">https://material.io/blog/jetpack-compose-catalog</a></p>
+<h1 id="podstawy-kotlin">Podstawy Kotlin</h1>
+<p><a href="https://kotlinlang.org/docs/basic-syntax.html">https://kotlinlang.org/docs/basic-syntax.html</a></p>
+<h1 id="pętle-i-instrukcje-warunkowe">Pętle i instrukcje warunkowe</h1>
+<p><a href="https://kotlinlang.org/docs/control-flow.html">https://kotlinlang.org/docs/control-flow.html</a></p>
+<h2 id="if">if</h2>
+<pre><code class="language-kotlin"><div><span class="hljs-keyword">var</span> max = a
+<span class="hljs-keyword">if</span> (a &lt; b) max = b
+
+<span class="hljs-comment">// With else</span>
+<span class="hljs-keyword">var</span> max: <span class="hljs-built_in">Int</span>
+<span class="hljs-keyword">if</span> (a &gt; b) {
+    max = a
+} <span class="hljs-keyword">else</span> {
+    max = b
+}
+
+<span class="hljs-comment">// As expression</span>
+<span class="hljs-keyword">val</span> max = <span class="hljs-keyword">if</span> (a &gt; b) a <span class="hljs-keyword">else</span> b
+
+</div></code></pre>
+<h2 id="when">when</h2>
+<pre><code class="language-kotlin"><div><span class="hljs-keyword">when</span> (x) {
+    <span class="hljs-number">1</span> -&gt; print(<span class="hljs-string">&quot;x == 1&quot;</span>)
+    <span class="hljs-number">2</span> -&gt; print(<span class="hljs-string">&quot;x == 2&quot;</span>)
+    <span class="hljs-keyword">else</span> -&gt; { <span class="hljs-comment">// Note the block</span>
+        print(<span class="hljs-string">&quot;x is neither 1 nor 2&quot;</span>)
+    }
+}
+
+</div></code></pre>
+<h1 id="layouts-w-android">Layouts w Android</h1>
+<p><a href="https://developer.android.com/guide/topics/ui/declaring-layout">https://developer.android.com/guide/topics/ui/declaring-layout</a></p>
+<h3 id="przykład-użycia-constraint-layout">Przykład użycia: constraint-layout</h3>
+<p><a href="https://developer.android.com/training/constraint-layout">https://developer.android.com/training/constraint-layout</a></p>
+<h2 id="ćwiczenie">Ćwiczenie</h2>
+<p>Klasa period (różnica dat): <a href="https://developer.android.com/reference/kotlin/java/time/Period">https://developer.android.com/reference/kotlin/java/time/Period</a></p>
+<h2 id="activity">Activity</h2>
+<p><a href="https://developer.android.com/guide/components/activities/intro-activities">https://developer.android.com/guide/components/activities/intro-activities</a></p>
+<h2 id="view-binding">View Binding</h2>
+<p><a href="https://developer.android.com/topic/libraries/view-binding">https://developer.android.com/topic/libraries/view-binding</a></p>
+<h1 id="ćwiczenie-końcowe">Ćwiczenie końcowe</h1>
+<p><a href="https://developer.android.com/codelabs/android-room-with-a-view-kotlin#0">https://developer.android.com/codelabs/android-room-with-a-view-kotlin#0</a></p>
+
+    </body>
+    </html>
