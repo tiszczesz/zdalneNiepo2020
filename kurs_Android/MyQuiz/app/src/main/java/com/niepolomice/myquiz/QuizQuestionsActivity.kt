@@ -1,5 +1,6 @@
 package com.niepolomice.myquiz
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -102,7 +103,15 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                             setQuestion()
                         }
                         else -> {
-                           //todo podsumowanie
+                           val intent = Intent(
+                               this@QuizQuestionsActivity,
+                               ResultActivity::class.java
+                           )
+                            intent.putExtra(Constants.USER_NAME,mUserName)
+                            intent.putExtra(Constants.CORECT_ANSWER,mCorrectAnswer)
+                            intent.putExtra(Constants.TOTAL_QUESTIONS,mQuestionsList!!.size)
+                            startActivity(intent)
+                            finish()
                         }
                     }
                 } else {
