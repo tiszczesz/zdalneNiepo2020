@@ -94,3 +94,7 @@ https://developer.android.com/guide/components/activities/intro-activities
 ## View Binding
 
 https://developer.android.com/topic/libraries/view-binding
+
+# Ćwiczenie końcowe
+
+https://developer.android.com/codelabs/android-room-with-a-view-kotlin#0
