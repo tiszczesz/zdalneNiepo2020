@@ -1,8 +1,8 @@
 package com.niepolomice.myquiz
 
 object Constants {
-    val TOTAL_QUESTIONS: String? = "totoal_questions"
-    val CORECT_ANSWER: String? = "correct_answer"
+    val TOTAL_QUESTIONS: String = "totoal_questions"
+    val CORECT_ANSWER: String = "correct_answer"
     const val USER_NAME:String = "user_name"
 
     fun getQuestions(): ArrayList<Question> {
