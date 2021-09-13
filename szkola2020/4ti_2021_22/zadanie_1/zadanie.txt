@@ -1,0 +1,40 @@
+﻿Egzamin praktyczny próbny w zakresie E14. Czas 150 minut. Liczby w nawiasach, to punkty które możesz otrzymać, za prawidłowe wykonanie zadania (maksymalnie 100 punktów).  
+
+----------------------------------------------------------
+1. Utwórz folder i nazwij go swoim nazwiskiem - będzie to folder główny. W tym folderze utwórz następujące foldery i pliki:
+- obrazki 
+- funkcje_js.js (tutaj zdefiniujesz funkcje JavaScript) (1)
+- funkcje_php.php (tutaj zdefiniujesz funkcje PHP) (1)
+- style.css (zewętrzny arkusz stylów) (1)
+- index.html (1)
+- minimum.html (strona na której wybierana jest najmniejsza z trzech podanych liczb) (1)
+- w_przedziale.php (strona na której jest sprawdzane, czy podana liczba, znajduje się w danym przedziale) (1)
+
+..........................................................
+Po ukończeniu prac, przekopiuj folder główny na pendriva
+..........................................................
+
+Jak widzisz, Twoje zadanie polega na utworzeniu witryny internetowej, składajęcej się z trzech stron. Tytuły tych stron(1):
+- Zabawy matematyczne
+- Zabawy matematyczne - najmniejsza liczba
+- Zabawy matematyczne - czy liczba jest w przedziale
+
+Jako autora wpisz swoje imię i nazwisko (1). Podaj kodowanie (1), opis strony (1) oraz słowa kluczowe (1). Zezwól robotom sieciowym na pełną analizę Twojej witryny (1).
+
+Na stronie zastosuj czcionkę bezszeryfową, rozmiar 20px, kolor navy. Te wielkości dotyczą także linków. (1)
+
+Przeanalizuj screen1.jpg - tak ma wyglądać witryna (5). Elementami stałymi każdej ze stron jest baner, obszar nawigacyjny z linkami do stron, obszar w którym umieścisz treści oraz przesuwający się napis na dole strony. W tym wypadku jest to strona główna. Zwróć uwagę na wygląd linku wskazywanego myszką oraz wygląd napisu wskazującego stronę aktualnie otwartą.
+
+--------------------------------------------------------
+2. Wykonanie banera (10). Baner ma wymiary 900 px na 100px i wyglądać jak na screenach.
+Plik banera zapisz w folderze obrazki jako baner.jpg. Najechanie wskaźnikiem myszki na baner powoduje, że staje się on jaśniejszy screen2.jpg, kilknięcie banera otwierza stronę główną (2). 
+
+---------------------------------------------------------
+3. Wykonanie przesuwającego w dole strony napisu "Zabawy matematyczne" (10). Należy zastosować JavaScript.
+				
+---------------------------------------------------------				
+4. Wykonanie strony pokazującej najmniejszą z trzech wpisanych liczb (30). Wygląd ma być zgodny z screen3.jpg. Działanie strony należy zaimplementować w JavaScript. Użytkownik podaje trzy różne liczby całkowite dodatnie, w przypadku błędnych wpisów powinien pojawić się komunikat pokazany w screen4.jpg albo komunikat pokazany w screen5.jpg. 
+	
+---------------------------------------------------------
+5. Wykonanie strony pokazującej czy dana liczba należy do danego przedziału liczbowego (30). Wygląd ma być zgodny z screen6.jpg. Działanie strony należy zaimplementować w PHP. Użytkownik podaje granice przedziału liczbowego oraz liczbę. W przypadku błędnych wpisów powinien pojawić się któryś z komunikatów generowanych przez JavaScript: screen7.jpg lub screen8.jpg
+	
