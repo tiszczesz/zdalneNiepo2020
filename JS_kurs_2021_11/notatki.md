@@ -24,3 +24,27 @@
    - object
     ```javascript
     const person = {firstname: "Adam",lastname:"Nowak",age:12};
+4. Funkcje w JS
+```javascript
+function Nazwa(arg1,arg2){ //definicja funkcji
+   //ciało funkcji
+}
+Nazwa(2,4); // wywołanie funkcji
+
+(function(arg){
+   //ciało ....
+}(23)); //autowywołanie funkcji
+
+const f1 = function(arg...){
+   //ciało funkcji
+}
+
+f1(34);
+
+//array function
+const f2 = (arg,tt) => {
+   //ciało funkcji
+}
+
+f2("ppp",55);
+```
