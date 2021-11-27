@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #square {
+        width: 200px;
+        height: 200px;
+        border: solid 1px black;
+        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <title>Ćwiczenie 1</title>
+  </head>
+  <body>
+    <div class="cc"></div>
+    <div id="result"></div>
+    <div id="square"></div>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        // console.log(typeof a);
+        const colors = ["purple", "yellow", "green", "blue", "red", "black"];
+        const select = document.createElement("select");
+        for (let c of colors) {
+          let option = document.createElement("option");
+          option.value = c;
+          let text = document.createTextNode(c);
+          option.appendChild(text);
+          select.appendChild(option);
+        }
+        console.log(select);
+        document.querySelector("#result").appendChild(select);
+        document
+          .querySelector("#square")
+          .addEventListener("click", function (e) {
+            const rndColor = colors[Math.floor(Math.random() * colors.length)];
+            if (e.target.innerText == "") {
+              e.target.innerHTML = "<span>Hello from JS</span>";
+              e.target.style.color = rndColor;
+            } else {
+              e.target.innerHTML = "";
+              e.target.style.color = "black";
+            }
+            console.log(rndColor);
+          });
+        document.querySelector("#square").style.backgroundColor = select.value;
+        select.addEventListener("change", function (e) {
+          console.log(e.target);
+          document.querySelector("#square").style.backgroundColor =
+            e.target.value;
+        });
+      });
+    </script>
+  </body>
+</html>
