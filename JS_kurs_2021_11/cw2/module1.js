@@ -1,4 +1,8 @@
-const  Add = function(a,b){
+const Add =  function(a,b){
     return a+b;
-}
-export default Add;
+};
+
+const Multiple = (a,b) => {
+    return a*b;
+};
+export {Add,Multiple};

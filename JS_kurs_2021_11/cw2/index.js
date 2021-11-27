@@ -1,3 +1,6 @@
-import {Add} from "./module1.js";
+ import * as fun from "./module1.js";
 
-console.log(Add(12,77));
+ console.log(fun.Add(4,5));
+ console.log(fun.Multiple(4,5));
+
+
