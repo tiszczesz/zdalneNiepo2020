@@ -58,3 +58,6 @@ npm install  typescript ts-node --save-dev
 # komplikowanie
 npx tsc index.ts
 ```
+
+https://www.section.io/engineering-education/how-to-use-typescript-with-nodejs/
+
