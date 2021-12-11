@@ -55,9 +55,30 @@ f2("ppp",55);
 ```console
 npm init
 npm install  typescript ts-node --save-dev
-# komplikowanie
+## komplikowanie
 npx tsc index.ts
 ```
 
 https://www.section.io/engineering-education/how-to-use-typescript-with-nodejs/
 
+### instalacja dokumentacji
+```console
+ npm install @types/node --save-dev
+```
+
+### Wymuszenie lokalnego użycia ts-node
+### dodajemy do package.json
+```console
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node": "ts-node"
+  },
+
+  ## uruchamiamy
+  npm run ts-node nazwapliku.ts
+
+```
+
+## Typescript typy danych (dokumentacja)
+
+https://www.typescriptlang.org/docs/handbook/basic-types.html
