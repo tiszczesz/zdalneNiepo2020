@@ -48,3 +48,13 @@ const f2 = (arg,tt) => {
 
 f2("ppp",55);
 ```
+
+# TypeScript
+## Instalacja
+### Instalacja lokalna
+```console
+npm init
+npm install  typescript ts-node --save-dev
+# komplikowanie
+npx tsc index.ts
+```
