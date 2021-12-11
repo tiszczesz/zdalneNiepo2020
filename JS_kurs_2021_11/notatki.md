@@ -82,3 +82,6 @@ https://www.section.io/engineering-education/how-to-use-typescript-with-nodejs/
 ## Typescript typy danych (dokumentacja)
 
 https://www.typescriptlang.org/docs/handbook/basic-types.html
+
+## Fake Api
+https://jsonplaceholder.typicode.com/posts
