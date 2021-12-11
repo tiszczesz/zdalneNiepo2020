@@ -1,5 +1,5 @@
 let a = [];
-fetch("https://jsonplaceholder.typicode.com/posts")
+fetch("https://jsonplaceholder.typicode.com/users")
                .then(response=>response.json())
                .then((json)=>{
                     a = json;
@@ -9,3 +9,15 @@ fetch("https://jsonplaceholder.typicode.com/posts")
                });
  setTimeout(()=>{console.log(a);},2000);              
 
+//drugi sposób
+
+
+
+(async ()=>{
+     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+                     
+     if(response.ok){
+          const result = await response.json();
+          console.log(result);
+     }
+})()
