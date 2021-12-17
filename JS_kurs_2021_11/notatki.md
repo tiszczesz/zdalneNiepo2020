@@ -89,3 +89,8 @@ https://jsonplaceholder.typicode.com/posts
 
 # Praca z React'em
 https://pl.reactjs.org/
+
+### Intalacja react z typescript
+```console
+npx create-react-app nazwaAplikacji --template typescript
+```
