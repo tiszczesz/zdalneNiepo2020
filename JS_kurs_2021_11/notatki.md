@@ -85,3 +85,7 @@ https://www.typescriptlang.org/docs/handbook/basic-types.html
 
 ## Fake Api
 https://jsonplaceholder.typicode.com/posts
+
+
+# Praca z React'em
+https://pl.reactjs.org/
