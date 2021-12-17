@@ -7,10 +7,11 @@ fetch("https://jsonplaceholder.typicode.com/users")
                     //a = json;
                     //document.querySelector("#root").innerHTML = data[0].title;
                });
+console.log("przed promisem:" ,a);
 // setTimeout(()=>{console.log(a);},2000);              
 (async ()=>{
       a = await fetch("https://jsonplaceholder.typicode.com/users")
-     .then(response=>response.json());
+               .then(response=>response.json());
      console.log('async await: ' ,a);
 })();
 //drugi sposób
@@ -22,6 +23,6 @@ fetch("https://jsonplaceholder.typicode.com/users")
                      
      if(response.ok){
           const result = await response.json();
-          console.log(result);
+          console.log("sam result: ",result);
      }
 })()
