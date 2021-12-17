@@ -20,6 +20,8 @@ function App() {
         >
           Learn React
         </a>
+        <p>Natomiat mój projekt jest</p>
+        <a className="App-link" href="https://github.com/tiszczesz/zdalneNiepo2020/tree/main/JS_kurs_2021_11">GitHub projekt</a>
       </header>
     </div>
   );
