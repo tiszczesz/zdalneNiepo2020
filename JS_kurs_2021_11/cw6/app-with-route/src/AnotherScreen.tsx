@@ -5,7 +5,8 @@ const AnotherScreen: FC = ()=>{
     return (
         <div>
             Hello from AnotherScreen <br />
-            <Link to="home">Powrót na główny ekran</Link>
+            <Link to="/">Powrót na główny ekran</Link>
         </div>
     );
 }
+export default AnotherScreen;
