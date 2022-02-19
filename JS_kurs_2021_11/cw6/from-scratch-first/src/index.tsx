@@ -1,5 +1,6 @@
 import React from "react";
 import  ReactDOM  from "react-dom";
+import Counter from "./Counter";
 
 
 const App = ()=>{
@@ -10,7 +11,11 @@ const App = ()=>{
 const App2 = ()=>{
   // return React.createElement('h1',{},React.createElement('input',{},null));
   return (
-   <h1><input type="button" value="ggg"/></h1>
+  <>
+   <h1>Aplikacja</h1>
+    <Counter />
+  </>
+  
   )
 }
 ReactDOM.render(  <App2 />,  document.querySelector("#root"))
