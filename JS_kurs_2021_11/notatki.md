@@ -92,5 +92,26 @@ https://pl.reactjs.org/
 
 ### Intalacja react z typescript
 ```console
-npx create-react-app nazwaAplikacji --template typescript
+npx create-react-app nazwaAplikacji --template typescript //tworzenie nowego projeku typescript
+npm install //pobranie do node-modules
+npm start  //kompilacja i uruchomienie serwera
+```
+## Komponenty funkcyjne i klasowe
+
+```ts
+//komponent funkcyjny
+function Welcome(props) {
+  return <h1>Cześć, {props.name}</h1>;
+}
+//albo:
+const Welcome = (props)=>{
+   return <h1>Cześć, {props.name}</h1>;
+}
+//komponent klasowy
+class Welcome extends React.Component {
+  render() {
+    return <h1>Cześć, {this.props.name}</h1>;
+  }
+}
+
 ```
