@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <div>Jest już 2022 rok</div>
       <input className='ggg' type="button" value="Click"/>
       <label>Fajny napis w Label</label>
       <header className="App-header">
