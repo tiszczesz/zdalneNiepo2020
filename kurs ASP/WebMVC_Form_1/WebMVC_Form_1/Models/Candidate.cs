@@ -24,6 +24,6 @@ namespace WebMVC_Form_1.Models
 
         [Display(Name = "Data Urodzenia")]
         [DataType(DataType.Date)]
-        public DateTime DateBirth { get; set; }
+        public DateTime DateBirth { get; set; } 
     }
 }
