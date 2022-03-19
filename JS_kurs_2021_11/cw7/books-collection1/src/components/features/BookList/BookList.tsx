@@ -41,7 +41,7 @@ const BookList = ({ books,addBook }: BookListProps) => {
                         </Form.Group>
                         <Form.Group controlId="price">
                             <Form.Label>Tytuł: </Form.Label>
-                            <Form.Control type="number" name="price" value={price} onChange={e=>setPrice(parseFloat(e.target.value))} />
+                            <Form.Control type="number" name="price" value={price} onChange={e=>isNaN(parseFloat(e.target.value))?0:setPrice(parseFloat(e.target.value))} />
                         </Form.Group>
                         <Button variant="primary" type="submit">Dodaj książkę</Button>
                     </Form>
