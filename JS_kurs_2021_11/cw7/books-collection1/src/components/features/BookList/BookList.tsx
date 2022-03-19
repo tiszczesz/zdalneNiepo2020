@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card, ListGroup, Form, Button } from "react-bootstrap";
 import { Book } from "../../../interfaces/book";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { nanoid } from 'nanoid';
 
 interface BookListProps {
@@ -25,7 +26,7 @@ const BookList = ({ books,addBook }: BookListProps) => {
         <div>
             <h2>Lista książek</h2>
             <ListGroup className="mt-4">
-               {books.map(book=><ListGroup.Item className="bg-light" key={book.id}>{book.title} {book.author} cena: {book.price} zł </ListGroup.Item>)}
+               {books.map(book=><ListGroup.Item className="bg-light" key={book.id}>{book.title} {book.author} cena: {book.price} zł <DeleteForeverIcon style={{float:"right"}} /> </ListGroup.Item>)}
             </ListGroup>
             <Card border="secondary" className="p-2 bg-light">
                 <Card.Header>Dodaj nową książkę</Card.Header>
